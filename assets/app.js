@@ -18,10 +18,12 @@
     red: ["red"], amber: ["amber", "yellow", "orange"], green: ["green"], blue: ["blue"], white: ["white", "grey", "gray"]
   };
   var HOME_LIMIT = 12;
+  var DASH_CATS = { car: true, ev: true };   // coloured warning lights: colour filter + legend apply
   var EXAMPLES = [
     "squiggly car", "horseshoe with !", "genie lamp", "square with a circle", "fan in a circle",
     "triangle crossed out", "iron with dots", "submarine", "snowflake", "pitchfork",
-    "bucket with a hand", "two arrows in a circle", "zigzag", "spring"
+    "bucket with a hand", "two arrows in a circle", "zigzag", "spring", "turtle", "two squares",
+    "four loops", "radiator", "water drop"
   ];
 
   // ───────────── Text processing ─────────────
@@ -59,7 +61,20 @@
     "bin trash rubbish garbage dustbin wheelie",
     "tshirt shirt clothe clothing garment",
     "headlight headlamp",
-    "spring coil"
+    "spring coil",
+    "turtle tortoise",
+    "plug socket outlet",
+    "radiator heater",
+    "tap faucet",
+    "flame fire",
+    "keyboard key",
+    "command cmd",
+    "option alt",
+    "control ctrl",
+    "charger adapter adaptor brick",
+    "aircon ac conditioner conditioning",
+    "boiler furnace",
+    "electric ev hybrid"
   ].map(function (g) { return g.split(" ").map(stem); });
   var groupOf = {};
   GROUPS.forEach(function (g, n) { g.forEach(function (w) { groupOf[w] = n; }); });
@@ -162,10 +177,12 @@
       }
       if (matched < need) return;
       if (phrase.length > 3) {
-        for (var p = 0; p < entry.phrases.length; p++) {
-          if (entry.phrases[p] === phrase) { score += 25; break; }
-          if (entry.phrases[p].indexOf(phrase) !== -1) { score += 12; break; }
+        var bonus = 0;
+        for (var p = 0; p < entry.phrases.length && bonus < 25; p++) {
+          if (entry.phrases[p] === phrase) bonus = 25;
+          else if (entry.phrases[p].indexOf(phrase) !== -1) bonus = Math.max(bonus, 12);
         }
+        score += bonus;
       }
       hits.push({ icon: entry.icon, score: score, matched: matched });
     });
@@ -305,7 +322,7 @@
   }
 
   function renderColors() {
-    var show = !photo && (state.c === "car" || (state.c === "all" && !state.q.trim()));
+    var show = !photo && (DASH_CATS[state.c] || (state.c === "all" && !state.q.trim()));
     el.colors.hidden = !show;
     if (!show) return;
     var opts = [["", "Any", "any"], ["red", "Red", "red"], ["amber", "Amber / yellow", "amber"], ["green", "Green", "green"], ["blue", "Blue", "blue"]];
@@ -353,7 +370,7 @@
           '<h2 class="section__title">' + esc(c.name) + "</h2>" +
           '<p class="section__blurb">' + esc(c.blurb) + "</p></div>" +
           (list.length > HOME_LIMIT ? '<button type="button" class="section__more" data-cat="' + c.id + '">See all ' + list.length + "</button>" : "") +
-          "</div>" + (c.id === "car" ? legendHtml() : "") +
+          "</div>" + (DASH_CATS[c.id] ? legendHtml() : "") +
           '<div class="grid">' + list.slice(0, HOME_LIMIT).map(function (i) { return card(i, false); }).join("") + "</div></section>";
       });
     } else {
@@ -364,7 +381,7 @@
         '<h2 class="section__title">' + esc(title) + (state.color ? ", " + esc(state.color) : "") + "</h2>" +
         '<p class="section__blurb">' + list.length + " symbol" + (list.length === 1 ? "" : "s") +
         (state.c !== "all" ? " &middot; " + esc(catById[state.c].blurb) : "") + "</p>" +
-        "</div></div>" + ((state.c === "car" || state.color) ? legendHtml() : "") +
+        "</div></div>" + ((DASH_CATS[state.c] || state.color) ? legendHtml() : "") +
         (list.length ? '<div class="grid">' + list.map(function (i) { return card(i, state.c === "all"); }).join("") + "</div>" : emptyHtml("", "")) +
         "</section>";
     }
@@ -394,7 +411,7 @@
       '<div class="detail__grid">' +
         '<div class="detail__side detail__side--tile">' +
           '<div class="' + tileClass(icon) + '">' + WTF.svg(icon, icon.name) + "</div>" +
-          (icon.color && (icon.category === "car" || icon.category === "carcontrols")
+          (icon.color && (DASH_CATS[icon.category] || icon.category === "carcontrols")
             ? '<div class="detail__lit"><span class="lit is-' + icon.color + '">' + WTF.svg(icon) + "</span>How it looks lit up</div>"
             : "") +
         "</div>" +
@@ -538,7 +555,7 @@
     } else if (t.hasAttribute("data-cat")) {
       photo = null; syncSearching();
       state.c = t.getAttribute("data-cat");
-      if (state.c !== "car" && state.c !== "all") state.color = "";
+      if (!DASH_CATS[state.c] && state.c !== "all") state.color = "";
       replaceUrl();
       renderCats(); renderColors(); renderResults();
       if (t.classList.contains("section__more") || t.hasAttribute("data-scroll")) { e.preventDefault(); scrollToBrowse(); }

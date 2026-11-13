@@ -6,12 +6,17 @@ window.WTF = window.WTF || {};
 WTF.categories = [
   { id: "car",         name: "Car dashboard",      blurb: "Warning lights that glow at you",        tile: "dash"   },
   { id: "carcontrols", name: "Car buttons",        blurb: "Climate, lights & the mystery switches", tile: "dash"   },
+  { id: "ev",          name: "Electric & hybrid cars", blurb: "Turtles, plugs and READY lights",    tile: "dash"   },
   { id: "laundry",     name: "Clothing labels",    blurb: "The hieroglyphs on the care tag",        tile: "label"  },
   { id: "washer",      name: "Washing machine",    blurb: "Dials, buttons & blinking lights",       tile: "panel"  },
   { id: "dryer",       name: "Tumble dryer",       blurb: "Why is it beeping?",                     tile: "panel"  },
   { id: "oven",        name: "Oven, hob & microwave", blurb: "Fans, squiggles & lines",             tile: "panel"  },
   { id: "dishwasher",  name: "Dishwasher",         blurb: "Salt? Rinse aid? Sparkles?",             tile: "panel"  },
+  { id: "aircon",      name: "Air con & heat pumps", blurb: "Snowflakes, suns, drops & fans",       tile: "panel"  },
+  { id: "heating",     name: "Boilers & heating",  blurb: "Radiators, taps, flames & dials",        tile: "panel"  },
   { id: "tech",        name: "Phones & gadgets",   blurb: "Ports, status bars & buttons",           tile: "device" },
+  { id: "keyboard",    name: "Keyboard symbols",   blurb: "The squiggles printed on your keys",     tile: "device" },
+  { id: "power",       name: "Chargers & plugs",   blurb: "The tiny print on power bricks",         tile: "device" },
   { id: "packaging",   name: "Packaging & labels", blurb: "Recycling, safety & small print",        tile: "pack"   }
 ];
 

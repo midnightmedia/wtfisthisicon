@@ -141,7 +141,7 @@ WTF.add([
     category: "tech",
     aka: ["DND", "Focus mode", "quiet mode", "silent notifications", "sleep"],
     looksLike: ["moon", "crescent moon", "half moon", "banana", "c shape", "crescent"],
-    meaning: "On a phone the moon means Do Not Disturb (on iPhone, one of the Focus modes): calls and notifications arrive silently. On a laptop, keyboard or power menu the same moon means Sleep. Next to a chat in Messages, it means you've muted that conversation.",
+    meaning: "On a phone the moon means Do Not Disturb (on iPhone, one of the Focus modes): calls and notifications arrive silently. On a Windows power menu or some PC keyboards the moon means Sleep, but on newer Mac keyboards (2021 onwards) the moon key switches Do Not Disturb on and off. Next to a chat in Messages, it means you've muted that conversation.",
     action: "Missing calls? Open Control Centre / Quick Settings and tap the moon (or Focus) to switch it off, and check it isn't scheduled to turn on automatically at night.",
     tip: "Many Android phones use a different Do Not Disturb icon: a circle with a horizontal line, like a no-entry sign.",
     svg: `<path d="M30.54 10.05A22 22 0 1 0 53.32 37.39A18 18 0 0 1 30.54 10.05Z" fill="currentColor" stroke-width="2"/>`
