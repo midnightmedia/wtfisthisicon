@@ -15,6 +15,10 @@ Then open http://localhost:5178. (Opening `index.html` directly from disk works 
 
 ## Deploy
 
+Before pushing, run `node dev/stamp-assets.mjs`. It adds a content fingerprint (`?v=…`) to every
+script and stylesheet link in `index.html`, so browsers never mix a fresh page with stale cached
+files (GitHub Pages lets browsers cache for 10 minutes).
+
 Upload the folder as-is to any static host — Netlify (drag-and-drop), Vercel, Cloudflare Pages
 or GitHub Pages. The `dev/` folder isn't needed in production.
 
@@ -30,6 +34,7 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `data/README.md` | **Icon format and drawing rules — read this before adding icons** |
 | `dev/check.mjs` | `node dev/check.mjs` validates all icon data |
 | `dev/gallery.html` | Every icon on one page for visual checking (`?cat=car` to filter) |
+| `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` — run before every push |
 | `dev/build-catalog.mjs` | Exports the icon list the photo Worker matches against |
 | `assets/config.js` | Site settings (the photo Worker URL) |
 | `worker/` | Cloudflare Worker that identifies photos with Claude |

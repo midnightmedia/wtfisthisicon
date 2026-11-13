@@ -595,6 +595,36 @@
   window.addEventListener("popstate", onNavigate);
   window.addEventListener("hashchange", onNavigate);
 
+  // ───────────── Light / dark theme ─────────────
+  // The <head> script already picked the theme (saved choice, else the device setting).
+  var themeBtn = $("#theme-toggle");
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  var darkQuery = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  function savedTheme() {
+    try { var t = localStorage.getItem("wtf-theme"); return t === "light" || t === "dark" ? t : null; } catch (e) { return null; }
+  }
+  function applyTheme(theme, fade) {
+    var root = document.documentElement;
+    if (fade) {
+      root.classList.add("theme-fade");
+      setTimeout(function () { root.classList.remove("theme-fade"); }, 350);
+    }
+    root.setAttribute("data-theme", theme);
+    themeBtn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#0b0b0c" : "#ffffff");
+  }
+  applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
+  themeBtn.addEventListener("click", function () {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    try { localStorage.setItem("wtf-theme", next); } catch (e) {}
+    applyTheme(next, true);
+  });
+  if (darkQuery && darkQuery.addEventListener) {
+    darkQuery.addEventListener("change", function (e) {
+      if (!savedTheme()) applyTheme(e.matches ? "dark" : "light", true);
+    });
+  }
+
   // Logo: back to the start, clearing any search or photo
   el.logo.addEventListener("click", function (e) {
     e.preventDefault();
