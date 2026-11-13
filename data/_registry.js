@@ -15,6 +15,7 @@ WTF.categories = [
   { id: "fridge",      name: "Fridge & freezer",   blurb: "Stars, snowflakes & beeping doors",      tile: "panel"  },
   { id: "aircon",      name: "Air con & heat pumps", blurb: "Snowflakes, suns, drops & fans",       tile: "panel"  },
   { id: "heating",     name: "Boilers & heating",  blurb: "Radiators, taps, flames & dials",        tile: "panel"  },
+  { id: "toilet",      name: "Japanese toilets",   blurb: "Which button stops the water?",          tile: "panel"  },
   { id: "tech",        name: "Phones & gadgets",   blurb: "Ports, status bars & buttons",           tile: "device" },
   { id: "keyboard",    name: "Keyboard symbols",   blurb: "The squiggles printed on your keys",     tile: "device" },
   { id: "power",       name: "Chargers & plugs",   blurb: "The tiny print on power bricks",         tile: "device" },

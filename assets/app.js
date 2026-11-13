@@ -83,7 +83,11 @@
     "compost compostable",
     "hourglass sandglass",
     "book leaflet manual instruction",
-    "bottle jar"
+    "bottle jar",
+    "toilet loo wc lavatory restroom washlet",
+    "bum butt bottom backside rear",
+    "spray jet squirt fountain",
+    "bidet feminine"
   ].map(function (g) { return g.split(" ").map(stem); });
   var groupOf = {};
   GROUPS.forEach(function (g, n) { g.forEach(function (w) { groupOf[w] = n; }); });
