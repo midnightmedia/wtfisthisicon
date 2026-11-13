@@ -237,7 +237,8 @@
     form: $("#search-form"), q: $("#q"), clear: $("#clear"), tryBox: $("#try"),
     cats: $("#cats"), colors: $("#colors"), status: $("#status"), results: $("#results"),
     dialog: $("#detail"), detail: $("#detail-inner"),
-    browse: $("#browse"), toolbar: document.querySelector(".toolbar")
+    browse: $("#browse"), toolbar: document.querySelector(".toolbar"),
+    photoBtn: $("#photo-btn"), photoInput: $("#photo-input"), logo: document.querySelector(".logo")
   };
 
   function esc(s) {
@@ -259,8 +260,9 @@
   }
   function iconHref(icon) { return buildHash(icon.id); }
 
-  function card(icon, showCat) {
+  function card(icon, showCat, extraMeta) {
     var meta = [];
+    if (extraMeta) meta.push(extraMeta);
     if (icon.urgency) meta.push(badge(icon));
     if (showCat) meta.push("<span>" + esc(catById[icon.category].name) + "</span>");
     return '<a class="card" href="' + iconHref(icon) + '" data-icon="' + icon.id + '">' +
@@ -301,7 +303,7 @@
   }
 
   function renderColors() {
-    var show = state.c === "car" || (state.c === "all" && !state.q.trim());
+    var show = !photo && (state.c === "car" || (state.c === "all" && !state.q.trim()));
     el.colors.hidden = !show;
     if (!show) return;
     var opts = [["", "Any", "any"], ["red", "Red", "red"], ["amber", "Amber / yellow", "amber"], ["green", "Green", "green"], ["blue", "Blue", "blue"]];
@@ -321,6 +323,11 @@
 
   function renderResults() {
     var q = state.q.trim();
+    if (photo && !q) {
+      el.status.hidden = true;
+      el.results.innerHTML = photoHtml();
+      return;
+    }
     var filter = pool();
     var html = "";
     var status = "";
@@ -450,7 +457,7 @@
 
   // ───────────── Wiring ─────────────
   function syncSearching() {
-    document.body.classList.toggle("is-searching", !!state.q.trim());
+    document.body.classList.toggle("is-searching", !!state.q.trim() || !!photo);
   }
 
   function renderAll() {
@@ -464,6 +471,7 @@
   }
 
   function setQuery(q, opts) {
+    if (q.trim()) photo = null;
     state.q = q;
     el.form.classList.toggle("has-q", !!q);
     el.clear.hidden = !q;
@@ -516,7 +524,7 @@
 
   // Delegated clicks (cards, chips, categories, detail actions)
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse]");
+    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-again], [data-photo-describe]");
     if (!t) {
       if (e.target === el.dialog) closeIcon(); // backdrop click
       return;
@@ -526,6 +534,7 @@
       e.preventDefault();
       openIcon(t.getAttribute("data-icon"));
     } else if (t.hasAttribute("data-cat")) {
+      photo = null; syncSearching();
       state.c = t.getAttribute("data-cat");
       if (state.c !== "car" && state.c !== "all") state.color = "";
       replaceUrl();
@@ -552,7 +561,14 @@
     } else if (t.hasAttribute("data-scroll-browse")) {
       e.preventDefault();
       scrollToBrowse();
+    } else if (t.hasAttribute("data-photo-again")) {
+      el.photoInput.click();
+    } else if (t.hasAttribute("data-photo-describe")) {
+      photo = null;
+      renderAll();
+      el.q.focus();
     } else if (t.hasAttribute("data-reset-filters")) {
+      photo = null;
       state.c = "all"; state.color = "";
       replaceUrl();
       renderCats(); renderColors(); renderResults();
@@ -578,6 +594,159 @@
   }
   window.addEventListener("popstate", onNavigate);
   window.addEventListener("hashchange", onNavigate);
+
+  // Logo: back to the start, clearing any search or photo
+  el.logo.addEventListener("click", function (e) {
+    e.preventDefault();
+    photo = null; photoSeq++;
+    state.q = ""; state.c = "all"; state.color = "";
+    if (state.icon) { state.icon = null; pushedIcon = false; syncDialog(); }
+    replaceUrl();
+    renderAll();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ───────────── Photo lookup (Claude vision via worker/) ─────────────
+  var PHOTO_API = ((window.WTF_CONFIG && window.WTF_CONFIG.PHOTO_API) || "").replace(/\/+$/, "");
+  var photo = null;      // { status: "loading" | "done" | "error", thumb, seen, matches, error }
+  var photoSeq = 0;      // ignores responses for photos the user has since replaced
+  var CONFIDENCE = { high: "Strong match", medium: "Likely", low: "Possible" };
+  var PHOTO_ERRORS = {
+    rate_limited: "Whoa, easy. That's a lot of photos. Try again in a minute.",
+    decode: "Couldn't open that image. Try a regular photo (JPEG or PNG).",
+    too_large: "That image is too big. Try a regular photo (JPEG or PNG).",
+    refused: "Couldn't read that photo. Try a clearer, closer shot of the symbol.",
+    unreadable_image: "Couldn't read that photo. Try a clearer, closer shot of the symbol.",
+    not_configured: "Photo lookup isn't switched on yet. Describe it instead for now.",
+    other: "Couldn't reach the photo service. Check your connection and try again."
+  };
+
+  if (PHOTO_API && el.photoBtn) {
+    el.photoBtn.hidden = false;
+    el.photoBtn.addEventListener("click", function () { el.photoInput.click(); });
+    el.photoInput.addEventListener("change", function () {
+      var file = el.photoInput.files && el.photoInput.files[0];
+      el.photoInput.value = "";
+      if (file) identifyPhoto(file);
+    });
+  }
+
+  function loadImageElement(file) {
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function () { URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error("decode")); };
+      img.src = url;
+    });
+  }
+
+  // Shrinks the photo to ≤1280px JPEG: fast to upload, plenty for recognition.
+  function prepareImage(file) {
+    var loading = window.createImageBitmap
+      ? createImageBitmap(file, { imageOrientation: "from-image" }).catch(function () { return loadImageElement(file); })
+      : loadImageElement(file);
+    return loading.then(function (img) {
+      var w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
+      if (!w || !h) throw new Error("decode");
+      var scale = Math.min(1, 1280 / Math.max(w, h));
+      var canvas = document.createElement("canvas");
+      canvas.width = Math.round(w * scale);
+      canvas.height = Math.round(h * scale);
+      canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+      if (img.close) img.close();
+      var dataUrl = canvas.toDataURL("image/jpeg", 0.85);
+      return { url: dataUrl, base64: dataUrl.slice(dataUrl.indexOf(",") + 1) };
+    });
+  }
+
+  function identifyPhoto(file) {
+    var seq = ++photoSeq;
+    if (state.icon) { state.icon = null; pushedIcon = false; syncDialog(); }
+    state.q = ""; state.c = "all"; state.color = "";
+    photo = { status: "loading" };
+    replaceUrl();
+    renderAll();
+    scrollToBrowse();
+
+    prepareImage(file).then(function (img) {
+      if (seq !== photoSeq) return null;
+      photo.thumb = img.url;
+      renderResults();
+      var ctrl = new AbortController();
+      var timer = setTimeout(function () { ctrl.abort(); }, 45000);
+      return fetch(PHOTO_API + "/identify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: img.base64, mediaType: "image/jpeg" }),
+        signal: ctrl.signal
+      }).then(function (res) {
+        clearTimeout(timer);
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          return { ok: res.ok, data: data || {} };
+        });
+      });
+    }).then(function (r) {
+      if (!r || seq !== photoSeq || !photo) return;
+      if (!r.ok) {
+        photo.status = "error";
+        photo.error = r.data.error;
+      } else {
+        photo.status = "done";
+        photo.seen = r.data.seen || "";
+        photo.matches = (r.data.matches || []).filter(function (m) { return iconById[m.id]; });
+      }
+      renderResults();
+    }).catch(function (err) {
+      if (seq !== photoSeq || !photo) return;
+      photo.status = "error";
+      photo.error = err && err.message === "decode" ? "decode" : "other";
+      renderResults();
+    });
+  }
+
+  function photoHtml() {
+    var loading = photo.status === "loading";
+    var title, sub = "", grid = "";
+    if (loading) {
+      title = "Looking at your photo&hellip;";
+      sub = "This usually takes a few seconds.";
+    } else if (photo.status === "error") {
+      title = "Well, that didn&rsquo;t work.";
+      sub = PHOTO_ERRORS[photo.error] || PHOTO_ERRORS.other;
+    } else if (!photo.matches.length) {
+      title = "Not sure WTF that is.";
+      sub = (photo.seen ? photo.seen + " " : "") + "Try a closer, sharper photo, or describe it instead.";
+    } else {
+      var strong = photo.matches.filter(function (m) { return m.confidence === "high"; }).length;
+      title = photo.matches.length === 1 ? "We think it&rsquo;s this."
+        : strong >= 2 ? "We spotted these symbols."
+        : "We think it&rsquo;s one of these.";
+      sub = photo.seen;
+      grid = '<div class="grid">' + photo.matches.map(function (m) {
+        var conf = '<span class="conf conf--' + m.confidence + '">' + (CONFIDENCE[m.confidence] || "Possible") + "</span>";
+        return card(iconById[m.id], true, conf);
+      }).join("") + "</div>";
+    }
+    var actions = loading ? "" :
+      '<div class="photo__actions">' +
+        '<button type="button" class="btn" data-photo-again>Try another photo</button>' +
+        '<button type="button" class="btn btn--light" data-photo-describe>Describe it instead</button>' +
+      "</div>";
+    return '<section class="photo' + (loading ? " is-loading" : "") + '">' +
+      '<div class="photo__head">' +
+        '<div class="photo__frame">' +
+          (photo.thumb ? '<img class="photo__img" src="' + photo.thumb + '" alt="Your photo">' : "") +
+          (loading ? '<span class="photo__scan" aria-hidden="true"></span>' : "") +
+        "</div>" +
+        '<div class="photo__text">' +
+          '<p class="photo__label">Photo lookup</p>' +
+          '<h2 class="section__title">' + title + "</h2>" +
+          (sub ? '<p class="section__blurb">' + esc(sub) + "</p>" : "") +
+          actions +
+        "</div>" +
+      "</div>" + grid + "</section>";
+  }
 
   // Boot
   readHash();

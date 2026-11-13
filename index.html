@@ -34,6 +34,11 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
       </button>
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
+      <button type="button" class="search__photo" id="photo-btn" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+        <span>Photo</span>
+      </button>
+      <input type="file" id="photo-input" accept="image/*" hidden>
     </form>
 
     <div class="try" id="try"><span class="try__label">Try</span></div>
@@ -67,6 +72,7 @@
   <div class="detail__inner" id="detail-inner"></div>
 </dialog>
 
+<script src="assets/config.js"></script>
 <script src="data/_registry.js"></script>
 <script src="data/car.js"></script>
 <script src="data/laundry.js"></script>

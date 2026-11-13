@@ -1,0 +1,17 @@
+{
+  "name": "wtf-photo",
+  "private": true,
+  "type": "module",
+  "description": "Photo recognition endpoint for WTF is this icon? (Cloudflare Worker + Claude vision)",
+  "scripts": {
+    "catalog": "node ../dev/build-catalog.mjs",
+    "dev": "wrangler dev",
+    "deploy": "node ../dev/build-catalog.mjs && wrangler deploy"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.161.0"
+  }
+}
