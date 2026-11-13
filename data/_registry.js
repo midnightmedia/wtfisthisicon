@@ -13,6 +13,7 @@ WTF.categories = [
   { id: "oven",        name: "Oven, hob & microwave", blurb: "Fans, squiggles & lines",             tile: "panel"  },
   { id: "dishwasher",  name: "Dishwasher",         blurb: "Salt? Rinse aid? Sparkles?",             tile: "panel"  },
   { id: "fridge",      name: "Fridge & freezer",   blurb: "Stars, snowflakes & beeping doors",      tile: "panel"  },
+  { id: "coffee",      name: "Coffee machines",    blurb: "Descale? Grounds? Why is it blinking?",  tile: "panel"  },
   { id: "aircon",      name: "Air con & heat pumps", blurb: "Snowflakes, suns, drops & fans",       tile: "panel"  },
   { id: "heating",     name: "Boilers & heating",  blurb: "Radiators, taps, flames & dials",        tile: "panel"  },
   { id: "toilet",      name: "Japanese toilets",   blurb: "Which button stops the water?",          tile: "panel"  },

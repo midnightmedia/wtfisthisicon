@@ -87,7 +87,11 @@
     "toilet loo wc lavatory restroom washlet",
     "bum butt bottom backside rear",
     "spray jet squirt fountain",
-    "bidet feminine"
+    "bidet feminine",
+    "coffee espresso",
+    "cup mug",
+    "descale descaling limescale decalcify decalcification calc",
+    "steam vapour vapor"
   ].map(function (g) { return g.split(" ").map(stem); });
   var groupOf = {};
   GROUPS.forEach(function (g, n) { g.forEach(function (w) { groupOf[w] = n; }); });
@@ -276,7 +280,7 @@
     cats: $("#cats"), catsRow: document.querySelector(".cats-row"), catsPrev: $("#cats-prev"), catsNext: $("#cats-next"),
     colors: $("#colors"), status: $("#status"), results: $("#results"),
     dialog: $("#detail"), detail: $("#detail-inner"),
-    browse: $("#browse"), toolbar: document.querySelector(".toolbar"),
+    browse: $("#browse"), toolbar: document.querySelector(".toolbar"), wotw: $("#wotw"),
     photoBtn: $("#photo-btn"), photoInput: $("#photo-input"), cameraInput: $("#camera-input"), photoMenu: $("#photo-menu"),
     camera: $("#camera"), cameraVideo: $("#camera-video"), cameraFlip: document.querySelector("[data-camera-flip]"),
     logo: document.querySelector(".logo")
@@ -454,6 +458,107 @@
       "</ul></div>";
   }
 
+  // ───────────── Icon of the week ─────────────
+  // Weeks start on Monday, UK time. data/featured.js holds the hand-picked schedule; a week
+  // with no entry gets an automatic pick that's the same for everyone (seeded by the week).
+  var DAY = 864e5;
+  var MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
+  function ukToday() {
+    try {
+      var m = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" })
+        .format(new Date()).match(/(\d{4})-(\d{2})-(\d{2})/);
+      if (m) return Date.UTC(+m[1], m[2] - 1, +m[3]);
+    } catch (e) { /* very old browser: fall back to the device's own date */ }
+    var d = new Date();
+    return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  function mondayOf(t) { return t - ((new Date(t).getUTCDay() + 6) % 7) * DAY; }
+  function isoDay(t) { return new Date(t).toISOString().slice(0, 10); }
+  function weekLabel(t) {
+    var a = new Date(t), b = new Date(t + 6 * DAY);
+    var end = b.getUTCDate() + " " + MONTHS[b.getUTCMonth()];
+    return a.getUTCMonth() === b.getUTCMonth()
+      ? a.getUTCDate() + "–" + end
+      : a.getUTCDate() + " " + MONTHS[a.getUTCMonth()] + " – " + end;
+  }
+  function firstSentence(text) {
+    var m = String(text || "").match(/^.+?[.!?](?=\s|$)/);
+    return (m ? m[0] : String(text || "")).trim();
+  }
+  // A teaser: whole sentences, at least ~70 characters where the text allows (CSS clamps it).
+  function teaser(text) {
+    var s = String(text || ""), out = "";
+    while (s && out.length < 70) {
+      var one = firstSentence(s);
+      out += (out ? " " : "") + one;
+      s = s.slice(s.indexOf(one) + one.length).trim();
+    }
+    return out;
+  }
+  function shortName(icon) { return icon.name.replace(/\s*\([^)]*\)\s*$/, "") || icon.name; }
+
+  var FEATURED = (WTF.featured && WTF.featured.weeks) || [];
+  var featuredByWeek = {};
+  FEATURED.forEach(function (f) { if (iconById[f.id]) featuredByWeek[f.week] = f; });
+  var autoPool = ICONS.filter(function (i) { return i.tip; });
+
+  function pickForWeek(t) {
+    var f = featuredByWeek[isoDay(t)];
+    if (f) return { icon: iconById[f.id], hook: f.hook, week: t };
+    if (!autoPool.length) return null;
+    var icon = autoPool[(Math.floor(t / (7 * DAY)) * 7919) % autoPool.length];
+    return { icon: icon, hook: firstSentence(icon.tip), week: t };
+  }
+
+  var thisWeek = mondayOf(ukToday());
+  var wotw = pickForWeek(thisWeek);
+
+  function renderWotw() {
+    if (!wotw || !el.wotw) return;
+    var i = wotw.icon, href = "#/icon/" + i.id;
+    var since = (WTF.featured && WTF.featured.since) || isoDay(thisWeek);
+    var past = [];
+    for (var k = 1; k <= 4; k++) {
+      var t = thisWeek - 7 * k * DAY;
+      if (isoDay(t) < since) break;
+      var p = pickForWeek(t);
+      if (p) past.push(p);
+    }
+    el.wotw.innerHTML =
+      '<div class="wotw__card">' +
+        '<a class="tile wotw__tile" href="' + href + '" data-icon="' + i.id + '" tabindex="-1" aria-hidden="true">' + WTF.svg(i) + "</a>" +
+        '<div class="wotw__body">' +
+          '<p class="wotw__label"><span class="wotw__tag">Icon of the week</span>' + esc(weekLabel(wotw.week)) + "</p>" +
+          '<h2 class="wotw__title" id="wotw-title"><a href="' + href + '" data-icon="' + i.id + '">' + esc(shortName(i)) + "</a></h2>" +
+          '<p class="wotw__hook">' + esc(wotw.hook) + "</p>" +
+          '<p class="wotw__meaning">' + esc(teaser(i.meaning)) + "</p>" +
+          '<div class="wotw__actions">' +
+            '<a class="btn" href="' + href + '" data-icon="' + i.id + '">Read it</a>' +
+            '<button type="button" class="btn btn--light" data-share-wotw>Share</button>' +
+          "</div>" +
+        "</div>" +
+      "</div>" +
+      (past.length
+        ? '<div class="wotw__past"><h3>Past weeks</h3><div class="mini-grid">' + past.map(function (p) {
+            return '<a class="mini" href="#/icon/' + p.icon.id + '" data-icon="' + p.icon.id + '"><div class="' + tileClass(p.icon) + '">' + WTF.svg(p.icon) + "</div>" +
+              "<span>" + esc(p.icon.name) + "<small>" + esc(weekLabel(p.week)) + "</small></span></a>";
+          }).join("") + "</div></div>"
+        : "");
+    el.wotw.hidden = false;
+  }
+
+  function shareWotw(btn) {
+    var i = wotw.icon;
+    var url = location.origin + location.pathname + "#/icon/" + i.id;
+    if (navigator.share && coarsePointer) {
+      navigator.share({ title: "Icon of the week: " + i.name, text: wotw.hook, url: url }).catch(function () {});
+      return;
+    }
+    var done = function () { btn.textContent = "Link copied"; setTimeout(function () { btn.textContent = "Share"; }, 1600); };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt("Copy this link:", url); });
+    else prompt("Copy this link:", url);
+  }
+
   // ───────────── Detail view ─────────────
   function renderDetail(icon) {
     var cat = catById[icon.category];
@@ -476,7 +581,7 @@
           '<div class="detail__actions"><button type="button" class="btn" data-copy>Copy link</button></div>' +
         "</aside>" +
         '<div class="detail__main">' +
-          '<p class="detail__cat">' + esc(cat.name) + (icon.color ? " &middot; " + esc(icon.color.charAt(0).toUpperCase() + icon.color.slice(1)) + " light" : "") + "</p>" +
+          '<p class="detail__cat">' + (wotw && wotw.icon === icon ? '<span class="wotw-chip">Icon of the week</span>' : "") + esc(cat.name) + (icon.color ? " &middot; " + esc(icon.color.charAt(0).toUpperCase() + icon.color.slice(1)) + " light" : "") + "</p>" +
           '<h2 class="detail__title" id="d-title">' + esc(icon.name) + "</h2>" +
           (icon.aka && icon.aka.length ? '<p class="detail__aka">Also called: ' + esc(icon.aka.join(", ")) + "</p>" : "") +
           badge(icon) +
@@ -595,7 +700,7 @@
 
   // Delegated clicks (cards, chips, categories, detail actions)
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-source], [data-photo-describe], [data-camera-snap], [data-camera-cancel], [data-camera-flip]");
+    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-source], [data-photo-describe], [data-camera-snap], [data-camera-cancel], [data-camera-flip], [data-share-wotw]");
     if (!t) {
       if (e.target === el.dialog) closeIcon(); // backdrop click
       return;
@@ -629,6 +734,8 @@
       var done = function () { t.textContent = "Copied!"; setTimeout(function () { t.textContent = "Copy link"; }, 1600); };
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt("Copy this link:", url); });
       else prompt("Copy this link:", url);
+    } else if (t.hasAttribute("data-share-wotw")) {
+      shareWotw(t);
     } else if (t.hasAttribute("data-scroll-browse")) {
       e.preventDefault();
       scrollToBrowse();
@@ -952,9 +1059,11 @@
 
   // Boot
   readHash();
+  renderWotw();
   renderAll();
   syncDialog();
 
   // Expose for debugging / tests
+  WTF.iconOfTheWeek = function () { return wotw && { id: wotw.icon.id, hook: wotw.hook, week: isoDay(wotw.week) }; };
   WTF.search = function (q) { return search(q).map(function (i) { return i.id; }); };
 })();

@@ -33,6 +33,7 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `data/_registry.js` | Category list + helpers; loaded first |
 | `data/*.js` | The icons, one file per group of categories |
 | `data/README.md` | **Icon format and drawing rules — read this before adding icons** |
+| `data/featured.js` | Icon of the week schedule (see below) |
 | `dev/check.mjs` | `node dev/check.mjs` validates all icon data |
 | `dev/gallery.html` | Every icon on one page for visual checking (`?cat=car` to filter) |
 | `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` — run before every push |
@@ -64,6 +65,23 @@ npx wrangler secret put ANTHROPIC_API_KEY   # paste your key when asked
 
 Then put the Worker URL in `assets/config.js` and push. After adding or changing icons,
 run `npm run deploy` inside `worker/` so the Worker knows about them.
+
+## Icon of the week
+
+The home page features one symbol each week, in a neon card above the categories. The pick
+switches over at midnight on Monday, UK time, straight from `data/featured.js`, so you can
+queue up weeks in advance and they go live by themselves with no deploy:
+
+```js
+{ week: "2026-11-16", id: "car-tyre-pressure", hook: "Cold mornings drop tyre pressure. That's why this light just came on." },
+```
+
+- `week` must be a Monday, `id` any icon id, `hook` one short line (under ~90 characters).
+- A week with no entry gets an automatic pick, the same for everyone, using the icon's tip as
+  the hook, so the card never goes stale.
+- "Past weeks" shows the last four picks, back as far as `since`.
+- `node dev/check.mjs` checks the dates are Mondays and the ids exist, and says how many weeks
+  are still queued up. `WTF.iconOfTheWeek()` in the browser console shows the current pick.
 
 ## Adding an icon
 

@@ -90,6 +90,26 @@ for (const icon of sandbox.WTF.icons) {
   if (typeof icon.svg === "string") checkSvg(icon.svg, where);
 }
 
+// Icon of the week schedule (data/featured.js)
+const featured = sandbox.WTF.featured;
+if (featured) {
+  const isMonday = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s) && new Date(s + "T00:00:00Z").getUTCDay() === 1;
+  if (featured.since && !isMonday(featured.since)) errors.push(`featured.js: "since" must be a Monday (YYYY-MM-DD)`);
+  const weeks = new Set();
+  for (const f of featured.weeks || []) {
+    const where = `featured.js › ${f.week}`;
+    if (!isMonday(f.week)) errors.push(`${where}: week must be a Monday (YYYY-MM-DD)`);
+    if (weeks.has(f.week)) errors.push(`${where}: week listed twice`);
+    weeks.add(f.week);
+    if (!ids.has(f.id)) errors.push(`${where}: unknown icon id "${f.id}"`);
+    if (typeof f.hook !== "string" || !f.hook.trim()) errors.push(`${where}: missing hook`);
+    else if (f.hook.length > 90) warn.push(`${where}: hook is ${f.hook.length} chars (keep it under ~90)`);
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  const ahead = [...weeks].filter((w) => w >= today).length;
+  console.log(`Icon of the week: ${weeks.size} weeks scheduled, ${ahead} still to come`);
+}
+
 const byCat = {};
 for (const i of sandbox.WTF.icons) byCat[i.category] = (byCat[i.category] || 0) + 1;
 console.log(`Loaded ${sandbox.WTF.icons.length} icons from ${files.length} files:`, byCat);
