@@ -185,6 +185,60 @@ a { color: inherit; }
 .search__photo svg { width: 18px; height: 18px; }
 .search__photo:hover { background: var(--on-neon); color: var(--neon); }
 
+/* Photo source menu */
+.photo-menu {
+  position: absolute; top: calc(100% + 10px); right: 0; z-index: 20;
+  min-width: 248px; padding: 6px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 50px -16px rgba(0, 0, 0, .35);
+  animation: rise .16s cubic-bezier(.2, .8, .2, 1);
+}
+.photo-menu[hidden] { display: none; }
+.photo-menu button {
+  display: flex; align-items: center; gap: 14px; width: 100%;
+  padding: 12px 14px; border: 0; border-radius: 10px; background: none; text-align: left;
+  font-size: 15px; font-weight: 600; color: var(--fg);
+  transition: background .12s;
+}
+.photo-menu button:hover, .photo-menu button:focus-visible { background: var(--surface); outline: none; box-shadow: none; }
+.photo-menu svg { width: 22px; height: 22px; flex: none; padding: 7px; box-sizing: content-box; border-radius: 10px; background: var(--neon); color: var(--on-neon); }
+.photo-menu small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: var(--muted); }
+
+/* In-page camera (laptops & desktops) */
+.camera {
+  width: min(760px, 100% - 32px);
+  padding: 20px;
+  border: 0; border-radius: 24px;
+  background: #0b0b0c; color: #f4f4f5;
+  box-shadow: var(--shadow);
+}
+.camera::backdrop { background: rgba(0, 0, 0, .75); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.camera[open] { animation: rise .22s cubic-bezier(.2, .8, .2, 1); }
+.camera__view { position: relative; border-radius: 16px; overflow: hidden; background: #000; aspect-ratio: 4 / 3; }
+.camera__view video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.camera__guide {
+  position: absolute; inset: 22% 28%;
+  border-radius: 18px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .35), inset 0 0 0 3px var(--neon);
+  pointer-events: none;
+}
+.camera__hint { margin: 16px 0 0; text-align: center; font-size: 14px; color: #a1a1a8; }
+.camera__bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin-top: 16px; }
+.camera__bar .btn.btn--light { background: #1f1f22; color: #f4f4f5; justify-self: start; }
+.camera__bar [data-camera-flip] { justify-self: end; }
+.camera__bar [data-camera-flip][hidden] { display: none; }
+.camera__bar .btn.btn--light:hover { background: var(--neon); color: var(--on-neon); }
+.camera__shutter {
+  width: 72px; height: 72px; padding: 0;
+  border: 4px solid #f4f4f5; border-radius: 50%;
+  background: #f4f4f5; box-shadow: inset 0 0 0 4px #0b0b0c;
+  transition: background .15s, transform .1s;
+}
+.camera__shutter:hover { background: var(--neon); }
+.camera__shutter:active { transform: scale(.94); }
+
 .try { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 20px; max-width: 680px; }
 .try__label { font-size: 13px; color: var(--muted); margin-right: 6px; }
 .try button {
@@ -347,7 +401,8 @@ a { color: inherit; }
 .photo__label { margin: 0 0 12px; font-size: 13px; color: var(--muted); }
 .photo__text .section__blurb { max-width: 560px; line-height: 1.55; }
 .photo__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.btn--light { background: var(--surface); color: var(--fg); }
+.btn.btn--light { background: var(--surface); color: var(--fg); }
+.btn.btn--light:hover { background: var(--neon); color: var(--on-neon); }
 .conf { display: inline-flex; align-items: center; gap: 7px; font-weight: 500; color: var(--fg); }
 .conf::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--dim); }
 .conf--high::before { background: var(--neon); box-shadow: 0 0 0 1px var(--fg); }

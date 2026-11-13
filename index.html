@@ -18,7 +18,7 @@
     document.documentElement.setAttribute("data-theme", t);
   })();
 </script>
-<link rel="stylesheet" href="assets/styles.css?v=365e70f3">
+<link rel="stylesheet" href="assets/styles.css?v=0179f84a">
 </head>
 <body>
 <a class="skip" href="#results">Skip to results</a>
@@ -49,11 +49,22 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
       </button>
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
-      <button type="button" class="search__photo" id="photo-btn" hidden>
+      <button type="button" class="search__photo" id="photo-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="photo-menu" hidden>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
         <span>Photo</span>
       </button>
       <input type="file" id="photo-input" accept="image/*" hidden>
+      <input type="file" id="camera-input" accept="image/*" capture="environment" hidden>
+      <div class="photo-menu" id="photo-menu" role="menu" hidden>
+        <button type="button" role="menuitem" data-photo-source="camera">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+          <span>Take a photo<small>Use your camera</small></span>
+        </button>
+        <button type="button" role="menuitem" data-photo-source="upload">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>
+          <span>Upload a photo<small>From your photos or files</small></span>
+        </button>
+      </div>
     </form>
 
     <div class="try" id="try"><span class="try__label">Try</span></div>
@@ -80,6 +91,19 @@
   </div>
 </footer>
 
+<dialog class="camera" id="camera" aria-label="Camera">
+  <div class="camera__view">
+    <video id="camera-video" playsinline muted autoplay></video>
+    <div class="camera__guide" aria-hidden="true"></div>
+  </div>
+  <p class="camera__hint">Fill the box with the symbol, then tap the button.</p>
+  <div class="camera__bar">
+    <button type="button" class="btn btn--light" data-camera-cancel>Cancel</button>
+    <button type="button" class="camera__shutter" data-camera-snap aria-label="Take photo"></button>
+    <button type="button" class="btn btn--light" data-camera-flip hidden>Flip</button>
+  </div>
+</dialog>
+
 <dialog class="detail" id="detail" aria-labelledby="d-title">
   <button type="button" class="detail__close" data-close aria-label="Close">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
@@ -93,6 +117,6 @@
 <script src="data/laundry.js?v=250dd544"></script>
 <script src="data/kitchen.js?v=9c6ab55e"></script>
 <script src="data/tech.js?v=8f3fbbab"></script>
-<script src="assets/app.js?v=fef62101"></script>
+<script src="assets/app.js?v=3143d19d"></script>
 </body>
 </html>

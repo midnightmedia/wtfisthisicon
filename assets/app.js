@@ -238,7 +238,9 @@
     cats: $("#cats"), colors: $("#colors"), status: $("#status"), results: $("#results"),
     dialog: $("#detail"), detail: $("#detail-inner"),
     browse: $("#browse"), toolbar: document.querySelector(".toolbar"),
-    photoBtn: $("#photo-btn"), photoInput: $("#photo-input"), logo: document.querySelector(".logo")
+    photoBtn: $("#photo-btn"), photoInput: $("#photo-input"), cameraInput: $("#camera-input"), photoMenu: $("#photo-menu"),
+    camera: $("#camera"), cameraVideo: $("#camera-video"), cameraFlip: document.querySelector("[data-camera-flip]"),
+    logo: document.querySelector(".logo")
   };
 
   function esc(s) {
@@ -524,7 +526,7 @@
 
   // Delegated clicks (cards, chips, categories, detail actions)
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-again], [data-photo-describe]");
+    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-source], [data-photo-describe], [data-camera-snap], [data-camera-cancel], [data-camera-flip]");
     if (!t) {
       if (e.target === el.dialog) closeIcon(); // backdrop click
       return;
@@ -561,8 +563,15 @@
     } else if (t.hasAttribute("data-scroll-browse")) {
       e.preventDefault();
       scrollToBrowse();
-    } else if (t.hasAttribute("data-photo-again")) {
-      el.photoInput.click();
+    } else if (t.hasAttribute("data-photo-source")) {
+      choosePhotoSource(t.getAttribute("data-photo-source"));
+    } else if (t.hasAttribute("data-camera-snap")) {
+      snapCamera();
+    } else if (t.hasAttribute("data-camera-cancel")) {
+      closeCamera();
+    } else if (t.hasAttribute("data-camera-flip")) {
+      cameraFacing = cameraFacing === "environment" ? "user" : "environment";
+      startCameraStream().catch(function () { showPhotoError("camera_missing"); closeCamera(); });
     } else if (t.hasAttribute("data-photo-describe")) {
       photo = null;
       renderAll();
@@ -648,17 +657,110 @@
     refused: "Couldn't read that photo. Try a clearer, closer shot of the symbol.",
     unreadable_image: "Couldn't read that photo. Try a clearer, closer shot of the symbol.",
     not_configured: "Photo lookup isn't switched on yet. Describe it instead for now.",
+    camera_denied: "Camera access is blocked. Allow the camera for this site in your browser settings, or upload a photo instead.",
+    camera_missing: "Couldn't find a camera on this device. Upload a photo instead.",
     other: "Couldn't reach the photo service. Check your connection and try again."
   };
 
+  // Photo button → small menu: "Take a photo" or "Upload a photo"
+  function setPhotoMenu(open) {
+    el.photoMenu.hidden = !open;
+    el.photoBtn.setAttribute("aria-expanded", String(open));
+    if (open) el.photoMenu.querySelector("button").focus();
+  }
+
   if (PHOTO_API && el.photoBtn) {
     el.photoBtn.hidden = false;
-    el.photoBtn.addEventListener("click", function () { el.photoInput.click(); });
-    el.photoInput.addEventListener("change", function () {
-      var file = el.photoInput.files && el.photoInput.files[0];
-      el.photoInput.value = "";
-      if (file) identifyPhoto(file);
+    el.photoBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setPhotoMenu(el.photoMenu.hidden);
     });
+    [el.photoInput, el.cameraInput].forEach(function (input) {
+      input.addEventListener("change", function () {
+        var file = input.files && input.files[0];
+        input.value = "";
+        if (file) identifyPhoto(file);
+      });
+    });
+    document.addEventListener("click", function (e) {
+      if (!el.photoMenu.hidden && !el.photoMenu.contains(e.target)) setPhotoMenu(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !el.photoMenu.hidden) { setPhotoMenu(false); el.photoBtn.focus(); }
+    });
+  }
+
+  // ── Camera ──
+  // Phones & tablets hand over to the native camera app (autofocus, flash, full resolution).
+  // Laptops/desktops get a live viewfinder on the page.
+  var cameraStream = null;
+  var cameraFacing = "environment";
+  var coarsePointer = !!(window.matchMedia && matchMedia("(pointer: coarse)").matches);
+
+  function choosePhotoSource(source) {
+    setPhotoMenu(false);
+    if (source === "upload") { el.photoInput.click(); return; }
+    if (coarsePointer || !(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)) { el.cameraInput.click(); return; }
+    openCamera();
+  }
+
+  function stopCamera() {
+    if (cameraStream) cameraStream.getTracks().forEach(function (track) { track.stop(); });
+    cameraStream = null;
+    el.cameraVideo.srcObject = null;
+  }
+
+  function startCameraStream() {
+    stopCamera();
+    return navigator.mediaDevices.getUserMedia({
+      audio: false,
+      video: { facingMode: { ideal: cameraFacing }, width: { ideal: 1920 }, height: { ideal: 1080 } }
+    }).then(function (stream) {
+      cameraStream = stream;
+      el.cameraVideo.srcObject = stream;
+      return el.cameraVideo.play().catch(function () {});
+    });
+  }
+
+  function openCamera() {
+    startCameraStream().then(function () {
+      if (!el.camera.open) el.camera.showModal();
+      navigator.mediaDevices.enumerateDevices().then(function (devices) {
+        el.cameraFlip.hidden = devices.filter(function (d) { return d.kind === "videoinput"; }).length < 2;
+      }).catch(function () {});
+    }).catch(function (err) {
+      var blocked = err && (err.name === "NotAllowedError" || err.name === "SecurityError");
+      showPhotoError(blocked ? "camera_denied" : "camera_missing");
+    });
+  }
+
+  function closeCamera() {
+    stopCamera();
+    if (el.camera.open) el.camera.close();
+  }
+
+  function snapCamera() {
+    var w = el.cameraVideo.videoWidth, h = el.cameraVideo.videoHeight;
+    if (!w || !h) return;
+    var canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    canvas.getContext("2d").drawImage(el.cameraVideo, 0, 0, w, h);
+    closeCamera();
+    canvas.toBlob(function (blob) {
+      if (blob) identifyPhoto(new File([blob], "camera.jpg", { type: "image/jpeg" }));
+    }, "image/jpeg", 0.92);
+  }
+
+  el.camera.addEventListener("close", stopCamera); // Esc or Cancel: always release the camera
+
+  function showPhotoError(code) {
+    photoSeq++;
+    state.q = ""; state.c = "all"; state.color = "";
+    photo = { status: "error", error: code };
+    replaceUrl();
+    renderAll();
+    scrollToBrowse();
   }
 
   function loadImageElement(file) {
@@ -760,7 +862,8 @@
     }
     var actions = loading ? "" :
       '<div class="photo__actions">' +
-        '<button type="button" class="btn" data-photo-again>Try another photo</button>' +
+        '<button type="button" class="btn" data-photo-source="camera">Take another photo</button>' +
+        '<button type="button" class="btn btn--light" data-photo-source="upload">Upload a photo</button>' +
         '<button type="button" class="btn btn--light" data-photo-describe>Describe it instead</button>' +
       "</div>";
     return '<section class="photo' + (loading ? " is-loading" : "") + '">' +
