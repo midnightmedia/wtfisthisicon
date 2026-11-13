@@ -1,7 +1,8 @@
 # WTF is this icon?
 
 A website where people describe a confusing symbol — on a car dashboard, washing machine,
-oven, clothing label, phone or packaging — and find out what it means (and whether to panic).
+fridge, oven, clothing label, phone, recycling label or medicine box — and find out what it
+means (and whether to panic).
 
 Plain HTML/CSS/JS. No build step, no dependencies, no backend.
 

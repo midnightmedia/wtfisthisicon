@@ -18,7 +18,7 @@
     document.documentElement.setAttribute("data-theme", t);
   })();
 </script>
-<link rel="stylesheet" href="assets/styles.css?v=0179f84a">
+<link rel="stylesheet" href="assets/styles.css?v=7e1b83bf">
 </head>
 <body>
 <a class="skip" href="#results">Skip to results</a>
@@ -73,7 +73,11 @@
 
 <main class="wrap main" id="browse">
   <div class="toolbar">
-    <nav class="cats" id="cats" aria-label="Categories"></nav>
+    <div class="cats-row">
+      <button type="button" class="cats__nav cats__nav--prev" id="cats-prev" aria-label="Scroll categories left" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <nav class="cats" id="cats" aria-label="Categories"></nav>
+      <button type="button" class="cats__nav cats__nav--next" id="cats-next" aria-label="Scroll categories right" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
     <div class="filters" id="colors" hidden></div>
   </div>
   <div class="status" id="status" aria-live="polite"></div>
@@ -112,14 +116,17 @@
 </dialog>
 
 <script src="assets/config.js?v=9664b819"></script>
-<script src="data/_registry.js?v=7daa1428"></script>
+<script src="data/_registry.js?v=3824e321"></script>
 <script src="data/car.js?v=a3b17f14"></script>
 <script src="data/laundry.js?v=250dd544"></script>
 <script src="data/kitchen.js?v=9c6ab55e"></script>
-<script src="data/tech.js?v=898d020c"></script>
+<script src="data/tech.js?v=654c3b00"></script>
 <script src="data/ev-power.js?v=46922b8e"></script>
 <script src="data/home-climate.js?v=82492da4"></script>
 <script src="data/keyboard.js?v=0eeb9ee1"></script>
-<script src="assets/app.js?v=2e085f28"></script>
+<script src="data/fridge.js?v=5bd6029b"></script>
+<script src="data/recycling.js?v=9a2fc7e6"></script>
+<script src="data/medicine.js?v=baf9fe61"></script>
+<script src="assets/app.js?v=0e74e0c6"></script>
 </body>
 </html>

@@ -23,7 +23,8 @@
     "squiggly car", "horseshoe with !", "genie lamp", "square with a circle", "fan in a circle",
     "triangle crossed out", "iron with dots", "submarine", "snowflake", "pitchfork",
     "bucket with a hand", "two arrows in a circle", "zigzag", "spring", "turtle", "two squares",
-    "four loops", "radiator", "water drop"
+    "four loops", "radiator", "water drop", "star with three small stars", "hourglass", "seedling",
+    "upside down triangle", "tree with a tick"
   ];
 
   // ───────────── Text processing ─────────────
@@ -74,7 +75,15 @@
     "charger adapter adaptor brick",
     "aircon ac conditioner conditioning",
     "boiler furnace",
-    "electric ev hybrid"
+    "electric ev hybrid",
+    "fridge refrigerator freezer",
+    "star asterisk",
+    "medicine medication medicinal drug pill tablet capsule",
+    "pharmacy pharmacist chemist",
+    "compost compostable",
+    "hourglass sandglass",
+    "book leaflet manual instruction",
+    "bottle jar"
   ].map(function (g) { return g.split(" ").map(stem); });
   var groupOf = {};
   GROUPS.forEach(function (g, n) { g.forEach(function (w) { groupOf[w] = n; }); });
@@ -230,10 +239,18 @@
     var path = qi === -1 ? h : h.slice(0, qi);
     var params = new URLSearchParams(qi === -1 ? "" : h.slice(qi + 1));
     var m = path.match(/^icon\/([a-z0-9-]+)/);
-    state.icon = m && iconById[m[1]] ? m[1] : null;
+    var id = m ? currentId(m[1]) : null;
+    state.icon = id && iconById[id] ? id : null;
+    if (m && state.icon && state.icon !== m[1]) history.replaceState(null, "", "#/" + h.replace(m[1], state.icon));
     state.q = params.get("q") || "";
     state.c = catById[params.get("c")] ? params.get("c") : "all";
     state.color = COLOR_WORDS[params.get("color")] ? params.get("color") : "";
+  }
+  // Old links keep working after an icon moves category (packaging-mobius-loop → recycling-mobius-loop).
+  function currentId(id) {
+    if (iconById[id]) return id;
+    var moved = id.replace(/^packaging-/, "recycling-");
+    return iconById[moved] ? moved : id;
   }
   function buildHash(withIcon) {
     var p = new URLSearchParams();
@@ -252,7 +269,8 @@
   var $ = function (s) { return document.querySelector(s); };
   var el = {
     form: $("#search-form"), q: $("#q"), clear: $("#clear"), tryBox: $("#try"),
-    cats: $("#cats"), colors: $("#colors"), status: $("#status"), results: $("#results"),
+    cats: $("#cats"), catsRow: document.querySelector(".cats-row"), catsPrev: $("#cats-prev"), catsNext: $("#cats-next"),
+    colors: $("#colors"), status: $("#status"), results: $("#results"),
     dialog: $("#detail"), detail: $("#detail-inner"),
     browse: $("#browse"), toolbar: document.querySelector(".toolbar"),
     photoBtn: $("#photo-btn"), photoInput: $("#photo-input"), cameraInput: $("#camera-input"), photoMenu: $("#photo-menu"),
@@ -319,7 +337,37 @@
         esc(c.name) + '<span class="cat__n">' + n + "</span></button>";
     });
     el.cats.innerHTML = html;
+    if (state.c !== revealedCat) revealActiveCat(revealedCat !== null);
+    syncCatsNav();
   }
+
+  // The category row scrolls sideways: arrows + edge fades show there's more, and the
+  // chosen category is scrolled into view when it changes.
+  var revealedCat = null;
+  function revealActiveCat(smooth) {
+    revealedCat = state.c;
+    var on = el.cats.querySelector('[aria-pressed="true"]');
+    if (!on) return;
+    var r = on.getBoundingClientRect(), box = el.cats.getBoundingClientRect(), edge = 56, dx = 0;
+    if (r.left < box.left + edge) dx = r.left - box.left - edge;
+    else if (r.right > box.right - edge) dx = r.right - box.right + edge;
+    if (dx) el.cats.scrollTo({ left: el.cats.scrollLeft + dx, behavior: smooth ? "smooth" : "auto" });
+  }
+  function syncCatsNav() {
+    var x = el.cats.scrollLeft, max = el.cats.scrollWidth - el.cats.clientWidth;
+    var prev = x > 4, next = x < max - 4;
+    el.catsRow.classList.toggle("can-prev", prev);
+    el.catsRow.classList.toggle("can-next", next);
+    el.catsPrev.hidden = !prev;
+    el.catsNext.hidden = !next;
+  }
+  el.cats.addEventListener("scroll", syncCatsNav, { passive: true });
+  window.addEventListener("resize", syncCatsNav);
+  [[el.catsPrev, -1], [el.catsNext, 1]].forEach(function (b) {
+    b[0].addEventListener("click", function () {
+      el.cats.scrollBy({ left: b[1] * Math.max(160, el.cats.clientWidth * 0.7), behavior: "smooth" });
+    });
+  });
 
   function renderColors() {
     var show = !photo && (DASH_CATS[state.c] || (state.c === "all" && !state.q.trim()));

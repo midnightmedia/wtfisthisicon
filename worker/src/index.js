@@ -22,7 +22,7 @@ const ALLOWED_ORIGINS = new Set([
 const KNOWN_IDS = new Set(CATALOG.map((i) => i.id));
 
 // Frozen system prompt (cached): instructions + the full symbol catalog.
-const SYSTEM_PROMPT = `You identify symbols for "WTF is this icon?", a site that explains confusing symbols on car dashboards, car buttons, clothing care labels, washing machines, tumble dryers, ovens/hobs/microwaves, dishwashers, phones/gadgets and packaging.
+const SYSTEM_PROMPT = `You identify symbols for "WTF is this icon?", a site that explains confusing symbols on car dashboards, car buttons, electric/hybrid cars, clothing care labels, washing machines, tumble dryers, ovens/hobs/microwaves, dishwashers, fridges/freezers, air conditioners/heat pumps, boilers/heating controls, phones/gadgets, keyboards, chargers/plugs, recycling labels, packaging and medicine/medical devices.
 
 You receive one photo taken by a member of the public. Work out which symbol(s) from the catalog below are visible in it.
 

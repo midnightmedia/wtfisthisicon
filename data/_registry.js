@@ -12,12 +12,15 @@ WTF.categories = [
   { id: "dryer",       name: "Tumble dryer",       blurb: "Why is it beeping?",                     tile: "panel"  },
   { id: "oven",        name: "Oven, hob & microwave", blurb: "Fans, squiggles & lines",             tile: "panel"  },
   { id: "dishwasher",  name: "Dishwasher",         blurb: "Salt? Rinse aid? Sparkles?",             tile: "panel"  },
+  { id: "fridge",      name: "Fridge & freezer",   blurb: "Stars, snowflakes & beeping doors",      tile: "panel"  },
   { id: "aircon",      name: "Air con & heat pumps", blurb: "Snowflakes, suns, drops & fans",       tile: "panel"  },
   { id: "heating",     name: "Boilers & heating",  blurb: "Radiators, taps, flames & dials",        tile: "panel"  },
   { id: "tech",        name: "Phones & gadgets",   blurb: "Ports, status bars & buttons",           tile: "device" },
   { id: "keyboard",    name: "Keyboard symbols",   blurb: "The squiggles printed on your keys",     tile: "device" },
   { id: "power",       name: "Chargers & plugs",   blurb: "The tiny print on power bricks",         tile: "device" },
-  { id: "packaging",   name: "Packaging & labels", blurb: "Recycling, safety & small print",        tile: "pack"   }
+  { id: "recycling",   name: "Recycling labels",   blurb: "Which bin? The arrows, decoded",         tile: "pack"   },
+  { id: "packaging",   name: "Packaging & labels", blurb: "Safety, storage & small print",          tile: "pack"   },
+  { id: "medicine",    name: "Medicine & medical", blurb: "Pill packs, prescriptions & first aid",  tile: "pack"   }
 ];
 
 WTF.icons = WTF.icons || [];
