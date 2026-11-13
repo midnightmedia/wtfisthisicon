@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WTF is this icon? — decode the symbols on your car, oven, washing machine &amp; more</title>
+<meta name="description" content="Describe the symbol on your car dashboard, washing machine, oven, clothing label or packaging and get a plain-English answer.">
+<meta property="og:title" content="WTF is this icon?">
+<meta property="og:description" content="Describe the symbol. Get a plain-English answer.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='46' font-family='Helvetica,Arial,sans-serif' font-weight='800' font-size='40' text-anchor='middle' fill='%23ffffff'%3E%3F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#results">Skip to results</a>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="logo" href="#/">WTF is this icon?</a>
+    <a class="top__link" href="#browse" data-scroll-browse>Browse all</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="hero__title"><mark>WTF</mark> is this&nbsp;icon?</h1>
+    <p class="hero__sub">Describe the symbol on your car, oven, washing machine or clothing label. Get a plain-English answer.</p>
+
+    <form class="search" role="search" id="search-form">
+      <label for="q" class="sr-only">Describe the icon</label>
+      <svg class="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Describe it&hellip;">
+      <button type="button" class="search__clear" id="clear" aria-label="Clear search" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+      </button>
+      <kbd class="search__kbd" aria-hidden="true">/</kbd>
+    </form>
+
+    <div class="try" id="try"><span class="try__label">Try</span></div>
+  </div>
+</section>
+
+<main class="wrap main" id="browse">
+  <div class="toolbar">
+    <nav class="cats" id="cats" aria-label="Categories"></nav>
+    <div class="filters" id="colors" hidden></div>
+  </div>
+  <div class="status" id="status" aria-live="polite"></div>
+  <div id="results"></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span class="foot__brand">WTF is this icon?</span>
+    <p class="foot__small">Symbols vary between manufacturers and countries. This is general guidance, not a substitute for your manual or a professional. If a red warning light comes on while driving, stop somewhere safe first.</p>
+  </div>
+</footer>
+
+<dialog class="detail" id="detail" aria-labelledby="d-title">
+  <button type="button" class="detail__close" data-close aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+  </button>
+  <div class="detail__inner" id="detail-inner"></div>
+</dialog>
+
+<script src="data/_registry.js"></script>
+<script src="data/car.js"></script>
+<script src="data/laundry.js"></script>
+<script src="data/kitchen.js"></script>
+<script src="data/tech.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
