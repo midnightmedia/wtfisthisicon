@@ -18,6 +18,7 @@ WTF.add([
   {
     id: "tech-power-switch",
     name: "I and O on a switch",
+    quiz: "On / off switch",
     category: "tech",
     aka: ["rocker switch", "on/off switch", "I/O switch", "power switch"],
     looksLike: ["line and circle", "i and o", "1 and 0", "stick and ring", "| o", "switch with a line and a circle"],
@@ -73,6 +74,7 @@ WTF.add([
   {
     id: "tech-hdmi",
     name: "HDMI port",
+    quiz: "Picture and sound to a TV",
     category: "tech",
     aka: ["HDMI ARC", "eARC", "mini HDMI", "micro HDMI", "HDMI 2.1"],
     looksLike: ["wide trapezoid slot", "flat port with cut corners", "hdmi", "letters hdmi", "squashed hexagon port"],
@@ -172,6 +174,7 @@ WTF.add([
   {
     id: "tech-network-type",
     name: "Network letters (E, 3G, H+, 4G, LTE, 5G)",
+    quiz: "Type of mobile data connection",
     category: "tech",
     aka: ["LTE", "4G", "4G+", "LTE+", "5G", "5G+", "5G UW", "H+", "E", "EDGE", "G", "GPRS", "3G"],
     looksLike: ["letters next to signal bars", "lte", "4g", "5g", "e", "h+", "3g"],
@@ -183,6 +186,7 @@ WTF.add([
   {
     id: "tech-volte",
     name: "VoLTE / HD voice",
+    quiz: "HD voice calls over 4G",
     category: "tech",
     aka: ["Voice over LTE", "HD voice", "VoWiFi", "Wi-Fi calling", "Vo LTE", "4G calling"],
     looksLike: ["volte", "vo lte", "letters in a box", "hd", "phone with wifi"],
@@ -315,6 +319,7 @@ WTF.add([
   {
     id: "tech-hearing-loop",
     name: "Hearing loop / T-coil",
+    quiz: "Hearing loop installed",
     category: "tech",
     aka: ["hearing loop", "induction loop", "T-coil", "telecoil", "hearing aid compatible", "HAC", "T setting"],
     looksLike: ["ear with a t", "ear", "ear and letter t", "question mark with t", "ear symbol"],
@@ -326,6 +331,7 @@ WTF.add([
   {
     id: "tech-sos",
     name: "SOS in the status bar",
+    quiz: "Emergency calls only",
     category: "tech",
     aka: ["SOS only", "emergency calls only", "no service"],
     looksLike: ["sos", "letters sos", "sos instead of bars"],
@@ -350,6 +356,7 @@ WTF.add([
   {
     id: "packaging-estimated",
     name: "℮ (estimated sign)",
+    quiz: "Pack filled to an average quantity",
     category: "packaging",
     aka: ["e-mark", "estimated sign", "℮ symbol", "average quantity"],
     looksLike: ["e", "small e next to weight", "funny e", "e with a line", "rounded e", "e after grams"],
@@ -361,6 +368,7 @@ WTF.add([
   {
     id: "packaging-ce-mark",
     name: "CE mark",
+    quiz: "Declared to meet EU safety rules",
     category: "packaging",
     aka: ["CE", "Conformité Européenne", "European conformity", "CE marking"],
     looksLike: ["ce", "letters ce", "two c's", "c and e", "ce in circles"],
@@ -372,6 +380,7 @@ WTF.add([
   {
     id: "packaging-ukca",
     name: "UKCA mark",
+    quiz: "Declared to meet GB safety rules",
     category: "packaging",
     aka: ["UKCA", "UK Conformity Assessed", "UKNI"],
     looksLike: ["uk ca", "letters uk ca", "uk over ca", "four letters in a square"],
@@ -438,6 +447,7 @@ WTF.add([
   {
     id: "packaging-under-3",
     name: "Not suitable for children under 3",
+    quiz: "Not for babies and toddlers",
     category: "packaging",
     aka: ["0-3 symbol", "choking hazard", "small parts warning", "not for under 3s", "age warning"],
     looksLike: ["baby face crossed out", "0-3 crossed out", "face in a circle with a line", "no babies sign", "circle with a line through a face", "0-3 in a circle"],

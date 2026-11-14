@@ -128,6 +128,7 @@ WTF.add([
   {
     id: "keyboard-globe-fn",
     name: "Fn / Globe key",
+    quiz: "Switch keys to their second job",
     category: "keyboard",
     aka: ["fn", "Fn", "function key", "globe key", "🌐", "Fn Lock", "FnLock", "world key"],
     looksLike: ["globe", "world", "earth", "fn", "circle with lines", "ball with lines", "planet"],
@@ -209,6 +210,7 @@ WTF.add([
   {
     id: "keyboard-print-screen",
     name: "Print Screen (PrtSc)",
+    quiz: "Take a screenshot",
     category: "keyboard",
     aka: ["PrtSc", "PrtScn", "Prt Sc", "Print Scrn", "Print Screen", "SysRq", "Druck", "screenshot key"],
     looksLike: ["prtsc", "prt sc", "prtscn", "print scrn", "prt scr", "key with letters prtsc"],
@@ -220,6 +222,7 @@ WTF.add([
   {
     id: "keyboard-scroll-lock",
     name: "Scroll Lock (ScrLk)",
+    quiz: "Arrow keys scroll the page",
     category: "keyboard",
     aka: ["Scroll Lock", "ScrLk", "Scr Lk", "ScrLock", "Rollen"],
     looksLike: ["padlock with an arrow", "lock with a down arrow", "padlock with arrow pointing down", "lock with an arrow inside", "scrlk"],
@@ -231,6 +234,7 @@ WTF.add([
   {
     id: "keyboard-pause-break",
     name: "Pause / Break",
+    quiz: "Freeze start-up text or stop a program",
     category: "keyboard",
     aka: ["Pause", "Break", "Pause Break", "Pause/Break", "Ctrl + Break", "Pause key"],
     looksLike: ["pause break", "letters pause and break", "pause", "break", "key with two words"],
@@ -242,6 +246,7 @@ WTF.add([
   {
     id: "keyboard-insert",
     name: "Insert key (Ins)",
+    quiz: "Overtype mode on / off",
     category: "keyboard",
     aka: ["Insert", "Ins", "overtype", "overwrite mode", "Einfg"],
     looksLike: ["ins", "insert", "letters ins", "key with ins"],
@@ -275,6 +280,7 @@ WTF.add([
   {
     id: "keyboard-num-lock",
     name: "Num Lock (padlock with a 1)",
+    quiz: "Number pad on / off",
     category: "keyboard",
     aka: ["Num Lock", "NumLk", "Num Lk", "number lock", "numeric lock", "number pad lock"],
     looksLike: ["padlock with a 1", "lock with number 1", "padlock with a number", "lock with a 1 inside", "numlk", "num"],

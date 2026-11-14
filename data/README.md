@@ -9,6 +9,7 @@ WTF.add([
   {
     id: "car-check-engine",          // REQUIRED. kebab-case, globally unique, MUST start with the category id + "-"
     name: "Check engine light",      // REQUIRED. The common name people would recognise
+    quiz: "Engine fault",            // optional. Short label for the quiz, saying what it MEANS (see below)
     category: "car",                 // REQUIRED. One of the ids in data/_registry.js
     color: "amber",                  // optional. Real-world colour of the light: red | amber | green | blue | white
     urgency: "soon",                 // optional. stop = deal with it now/danger, soon = sort it out soon, info = just letting you know
@@ -31,6 +32,19 @@ WTF.add([
   "fan", "wavy lines", "genie lamp", "dots". Give 3–8 phrases, lowercase.
 - `urgency` only where it genuinely applies (dashboard lights, appliance faults). Omit for care-label symbols, modes, ports, etc.
 - `color` only for things that are actually shown in a specific colour (dashboard lights). Omit otherwise.
+
+## Quiz label (`quiz`)
+
+The quiz shows a label and asks people to match it to the symbol (or the other way round), so the
+label must say what the symbol **means**, never what it **looks like**. If `name` already does that
+("Fan grill", "Low fuel", "Do not tumble dry"), leave `quiz` out and the quiz uses `name` (without any
+bracketed part). Add `quiz` when the name describes the picture or repeats text printed on it:
+
+- `"Heart with a lightning bolt (defibrillator / AED)"` → `quiz: "Defibrillator (AED)"`
+- `"Hourglass (use-by date)"` → `quiz: "Use-by date"`
+- `"LOT (batch number)"` → `quiz: "Batch number"`
+
+Keep it short (under ~48 characters), sentence case, no em dashes.
 
 ## Drawing rules (`svg`)
 

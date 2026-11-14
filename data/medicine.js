@@ -60,6 +60,7 @@
     {
       id: "medicine-black-triangle",
       name: "Black triangle ▼ (additional monitoring)",
+      quiz: "Extra side-effect monitoring",
       category: "medicine",
       aka: ["black triangle", "▼", "additional monitoring", "black triangle scheme", "subject to additional monitoring", "inverted triangle"],
       looksLike: ["upside down triangle", "black triangle", "triangle pointing down", "solid triangle", "inverted triangle", "black arrow pointing down"],
@@ -73,6 +74,7 @@
     {
       id: "medicine-uk-legal-category",
       name: "P or POM in a box (UK medicine categories)",
+      quiz: "UK pharmacy or prescription medicine",
       category: "medicine",
       aka: ["POM", "P", "prescription only medicine", "prescription-only", "pharmacy medicine", "pharmacy only", "GSL", "general sale list", "legal category"],
       looksLike: ["pom in a box", "p in a box", "letter p in a square", "pom", "box with p", "letters in a box"],
@@ -88,6 +90,7 @@
     {
       id: "medicine-rx-only",
       name: "Rx only (US prescription symbol)",
+      quiz: "Prescription needed (US)",
       category: "medicine",
       aka: ["Rx", "℞", "Rx only", "prescription only", "prescription", "federal law restricts this device"],
       looksLike: ["rx", "rx only", "r with an x", "r with a line through its leg", "crossed r", "r and x"],
@@ -103,6 +106,7 @@
     {
       id: "medicine-pregnancy-warning",
       name: "Pregnant woman crossed out (pregnancy warning)",
+      quiz: "Can harm an unborn baby",
       category: "medicine",
       aka: ["pregnancy warning", "pictogramme grossesse", "femmes enceintes", "grossesse = interdit", "grossesse = danger", "valproate warning", "not for pregnant women"],
       looksLike: ["pregnant woman crossed out", "pregnant woman in a circle", "pregnant woman in a triangle", "pregnant lady crossed out", "red circle with pregnant woman", "baby bump crossed out", "pregnant silhouette"],
@@ -122,6 +126,7 @@
     {
       id: "medicine-driving-warning",
       name: "Car in a triangle (may affect driving, France)",
+      quiz: "May affect your driving",
       category: "medicine",
       aka: ["niveau 1", "niveau 2", "niveau 3", "soyez prudent", "soyez très prudent", "ne pas conduire", "driving warning", "pictogramme conduite"],
       looksLike: ["car in a triangle", "car in a yellow triangle", "car in an orange triangle", "car in a red triangle", "triangle with a car", "warning triangle with a car"],
@@ -141,6 +146,7 @@
     {
       id: "medicine-pill-calendar",
       name: "Days and arrows on a pill pack",
+      quiz: "Take one a day, in order",
       category: "medicine",
       aka: ["calendar pack", "contraceptive pill pack", "blister pack", "21-day pack", "28-day pack", "ED pack", "every day pack", "pill strip"],
       looksLike: ["arrows on a blister pack", "days of the week on pills", "pill pack with arrows", "mon tue wed on the foil", "blister with arrows", "pill calendar"],
@@ -162,6 +168,7 @@
     {
       id: "medicine-manufacturer",
       name: "Solid factory (manufacturer)",
+      quiz: "Manufacturer",
       category: "medicine",
       aka: ["manufacturer", "made by", "legal manufacturer", "factory symbol", "ISO 7000-3082"],
       looksLike: ["factory", "black factory", "solid factory", "factory with chimney", "building with a zigzag roof", "sawtooth roof"],
@@ -175,6 +182,7 @@
     {
       id: "medicine-date-of-manufacture",
       name: "Outline factory (date of manufacture)",
+      quiz: "Date of manufacture",
       category: "medicine",
       aka: ["date of manufacture", "manufactured on", "production date", "MFG", "ISO 7000-2497"],
       looksLike: ["empty factory", "outline factory", "factory with a date", "white factory", "hollow factory", "building with a zigzag roof"],
@@ -188,6 +196,7 @@
     {
       id: "medicine-use-by",
       name: "Hourglass (use-by date)",
+      quiz: "Use-by date",
       category: "medicine",
       aka: ["use by", "use-by date", "expiry date", "EXP", "expiration date", "ISO 7000-2607"],
       looksLike: ["hourglass", "egg timer", "sand timer", "hourglass with a date", "two triangles", "timer"],
@@ -205,6 +214,7 @@
     {
       id: "medicine-lot",
       name: "LOT (batch number)",
+      quiz: "Batch number",
       category: "medicine",
       aka: ["LOT", "batch", "batch code", "batch number", "Lot no.", "BN", "REF", "catalogue number", "SN", "serial number"],
       looksLike: ["lot in a box", "lot", "ref in a box", "sn in a box", "letters in a rectangle", "box with lot"],
@@ -218,6 +228,7 @@
     {
       id: "medicine-do-not-reuse",
       name: "Crossed-out 2 (single use only)",
+      quiz: "Single use only",
       category: "medicine",
       aka: ["do not re-use", "do not reuse", "single use", "single-use only", "use only once", "disposable", "ISO 7000-1051"],
       looksLike: ["crossed out 2", "2 in a circle with a line", "number 2 crossed out", "no 2", "2 with a slash", "circle with a 2"],
@@ -231,6 +242,7 @@
     {
       id: "medicine-caution",
       name: "Triangle with exclamation mark (caution)",
+      quiz: "Caution: read the warnings",
       category: "medicine",
       aka: ["caution", "warning", "attention", "see warnings", "ISO 7000-0434A"],
       looksLike: ["triangle with exclamation mark", "exclamation mark in a triangle", "warning triangle", "! in a triangle", "triangle with !", "hazard triangle"],
@@ -246,6 +258,7 @@
     {
       id: "medicine-sterile",
       name: "STERILE (and STERILE EO, R or A)",
+      quiz: "Germ-free until opened",
       category: "medicine",
       aka: ["sterile", "STERILE EO", "STERILE R", "STERILE A", "ethylene oxide", "irradiated", "gamma sterilised", "do not resterilise", "non sterile"],
       looksLike: ["sterile in a box", "sterile eo", "sterile r", "sterile crossed out", "word sterile", "sterile with letters"],
@@ -261,6 +274,7 @@
     {
       id: "medicine-package-damaged",
       name: "Crossed-out torn box (don't use if package is damaged)",
+      quiz: "Don't use if packaging is damaged",
       category: "medicine",
       urgency: "soon",
       aka: ["do not use if package is damaged", "do not use if package damaged", "damaged packaging", "check packaging", "ISO 7000-2606"],
@@ -278,6 +292,7 @@
     {
       id: "medicine-temperature-limit",
       name: "Thermometer with two lines (temperature limit)",
+      quiz: "Storage temperature range",
       category: "medicine",
       aka: ["temperature limit", "store between", "storage temperature", "2°C–8°C", "2°C–30°C", "store in a fridge", "ISO 7000-0632"],
       looksLike: ["thermometer", "thermometer with lines", "thermometer with numbers", "thermometer with a diagonal line", "thermometer with 2 and 30", "temperature symbol"],
@@ -294,6 +309,7 @@
     {
       id: "medicine-latex",
       name: "LATEX in a rounded triangle (contains natural rubber latex)",
+      quiz: "Contains natural rubber",
       category: "medicine",
       aka: ["latex", "contains latex", "natural rubber latex", "latex free", "not made with natural rubber latex", "ISO 7000-2725"],
       looksLike: ["latex", "latex in a triangle", "upside down triangle with latex", "latex crossed out", "word latex in a shape", "rounded triangle"],
@@ -309,6 +325,7 @@
     {
       id: "medicine-medical-device",
       name: "MD in a box (medical device)",
+      quiz: "Classed as a device, not a medicine",
       category: "medicine",
       aka: ["MD", "medical device", "medical device symbol"],
       looksLike: ["md in a box", "md", "letters md", "md in a rectangle", "box with md"],
@@ -322,6 +339,7 @@
     {
       id: "medicine-test-count",
       name: "Σ with a number (number of tests in the box)",
+      quiz: "Number of tests in the kit",
       category: "medicine",
       aka: ["sigma", "Σ", "contains sufficient for n tests", "number of tests", "tests per kit", "IVD", "in vitro diagnostic"],
       looksLike: ["sigma", "e with a pointy middle", "m on its side", "zigzag e", "Σ with a number", "funny e"],
@@ -337,6 +355,7 @@
     {
       id: "medicine-test-lines",
       name: "C and T lines on a test",
+      quiz: "Rapid test result",
       category: "medicine",
       aka: ["C line", "T line", "control line", "test line", "lateral flow test", "LFT", "rapid test", "pregnancy test result", "COVID test"],
       looksLike: ["c and t", "two lines", "one line", "faint line", "lines on a test", "c t window", "test strip with lines"],
@@ -354,6 +373,7 @@
     {
       id: "medicine-type-bf",
       name: "Person in a box (type BF applied part)",
+      quiz: "Electrically safe for skin contact",
       category: "medicine",
       aka: ["type BF", "BF applied part", "applied part", "IEC 60417-5333", "type B", "type CF", "body floating"],
       looksLike: ["person in a box", "man in a square", "stick man in a box", "little man in a box", "person with arms out in a square", "figure in a square"],
@@ -370,6 +390,7 @@
     {
       id: "medicine-mri",
       name: "MR in a triangle, square or crossed circle (MRI safety)",
+      quiz: "Magnetic scanner safety",
       category: "medicine",
       aka: ["MR conditional", "MR safe", "MR unsafe", "MRI safe", "MRI symbol", "ASTM F2503", "implant card"],
       looksLike: ["mr in a triangle", "mr in a square", "mr crossed out", "mr in a circle with a line", "triangle with mr", "mr"],
@@ -387,6 +408,7 @@
     {
       id: "medicine-no-alcohol",
       name: "Crossed-out glass (don't drink alcohol)",
+      quiz: "Don't drink alcohol",
       category: "medicine",
       aka: ["no alcohol", "avoid alcohol", "do not drink alcoholic beverages", "auxiliary label", "pharmacy sticker", "warning sticker"],
       looksLike: ["glass crossed out", "wine glass crossed out", "crossed out drink", "cocktail glass with a line", "beer crossed out", "no drinking sign"],
@@ -403,6 +425,7 @@
     {
       id: "medicine-drowsiness",
       name: "Closed eye or Zzz (may cause drowsiness)",
+      quiz: "May make you sleepy",
       category: "medicine",
       aka: ["may cause drowsiness", "drowsiness", "may make you sleepy", "do not drive", "auxiliary label", "pharmacy sticker"],
       looksLike: ["closed eye", "sleepy eye", "zzz", "eye with zz", "sleeping face", "closed eye with lashes"],
@@ -423,6 +446,7 @@
     {
       id: "medicine-first-aid",
       name: "White cross on green (first aid)",
+      quiz: "First aid",
       category: "medicine",
       aka: ["first aid", "first aid kit", "first aid station", "first aider", "green cross", "ISO 7010 E003"],
       looksLike: ["white cross on green", "green square with a cross", "plus sign", "cross in a square", "green cross", "medical cross"],
@@ -438,6 +462,7 @@
     {
       id: "medicine-aed",
       name: "Heart with a lightning bolt (defibrillator / AED)",
+      quiz: "Defibrillator (AED)",
       category: "medicine",
       aka: ["AED", "defibrillator", "defib", "automated external defibrillator", "public access defibrillator", "PAD", "ISO 7010 E010"],
       looksLike: ["heart with lightning", "heart with a lightning bolt", "heart with a zigzag", "heart and a cross", "green sign with a heart", "heart with an arrow"],

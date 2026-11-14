@@ -55,6 +55,7 @@ WTF.add([
   {
     id: "car-parking-brake",
     name: "Parking brake on",
+    quiz: "Handbrake on",
     category: "car",
     color: "red",
     urgency: "info",
@@ -167,6 +168,7 @@ WTF.add([
   {
     id: "car-abs",
     name: "ABS warning",
+    quiz: "Anti-lock brake fault",
     category: "car",
     color: "amber",
     urgency: "soon",
@@ -423,6 +425,7 @@ WTF.add([
   {
     id: "car-auto-start-stop",
     name: "Auto start-stop",
+    quiz: "Engine start-stop system",
     category: "car",
     color: "green",
     urgency: "info",

@@ -85,7 +85,14 @@ for (const icon of sandbox.WTF.icons) {
     if (icon[k] !== undefined && !Array.isArray(icon[k])) errors.push(`${where}: "${k}" must be an array`);
   }
   if (!icon.looksLike || icon.looksLike.length < 2) warn.push(`${where}: fewer than 2 looksLike phrases`);
-  const known = new Set(["id", "name", "category", "color", "urgency", "aka", "looksLike", "meaning", "action", "tip", "svg"]);
+  if (icon.quiz !== undefined) {
+    if (typeof icon.quiz !== "string" || !icon.quiz.trim()) errors.push(`${where}: "quiz" must be a non-empty string`);
+    else {
+      if (icon.quiz.length > 48) warn.push(`${where}: quiz label is ${icon.quiz.length} chars (keep it under ~48)`);
+      if (/—/.test(icon.quiz)) errors.push(`${where}: quiz label has an em dash`);
+    }
+  }
+  const known = new Set(["id", "name", "quiz", "category", "color", "urgency", "aka", "looksLike", "meaning", "action", "tip", "svg"]);
   for (const k of Object.keys(icon)) if (!known.has(k)) errors.push(`${where}: unknown field "${k}"`);
   if (typeof icon.svg === "string") checkSvg(icon.svg, where);
 }

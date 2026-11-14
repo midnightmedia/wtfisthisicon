@@ -150,6 +150,7 @@
     {
       id: "coffee-descale-calc",
       name: "CALC / calc'nClean (descale needed)",
+      quiz: "Time to descale",
       category: "coffee",
       urgency: "soon",
       aka: ["calc", "CALC", "calc'nClean", "Calc'n'Clean", "Calc / clean", "descale", "decalcify", "limescale", "descaling light"],
@@ -166,6 +167,7 @@
     {
       id: "coffee-descale",
       name: "Descale (pipe full of limescale)",
+      quiz: "Time to descale",
       category: "coffee",
       urgency: "soon",
       aka: ["descale", "descaling", "decalcify", "limescale", "scale", "calc", "descale light", "decalcify machine"],
@@ -184,6 +186,7 @@
     {
       id: "coffee-descale-calc-clean",
       name: "Calc / clean (Philips descale light)",
+      quiz: "Time to descale",
       category: "coffee",
       urgency: "soon",
       aka: ["Calc / clean", "calc clean", "descale", "Philips descale", "descaling light", "LatteGo descale"],
@@ -200,6 +203,7 @@
     {
       id: "coffee-descale-spray",
       name: "Descale light (spray symbol)",
+      quiz: "Time to descale",
       category: "coffee",
       urgency: "soon",
       aka: ["descale", "descaling indicator", "calc", "Tassimo descale light", "Dolce Gusto descale light", "Genio descale"],
@@ -406,6 +410,7 @@
     {
       id: "coffee-steam",
       name: "Steam (milk frothing)",
+      quiz: "Froth milk with the wand",
       category: "coffee",
       aka: ["steam", "steam wand", "milk frother", "cappuccino maker", "Pannarello", "froth milk", "steam button"],
       looksLike: ["cloud with lines", "lines going into a cloud", "puff of smoke", "three lines and a cloud", "nozzle with steam", "cloud", "jets into a cloud"],
@@ -469,6 +474,7 @@
     {
       id: "coffee-thermometer",
       name: "Thermometer (heating up / temperature)",
+      quiz: "Coffee temperature",
       category: "coffee",
       aka: ["temperature", "heating up", "warming up", "hot/cold", "coffee temperature", "thermometer light", "cold mode"],
       looksLike: ["thermometer", "thermometer with lines", "temperature", "thermometer with bars", "red thermometer", "blue thermometer", "flashing thermometer"],
@@ -485,6 +491,7 @@
     {
       id: "coffee-flashing-power",
       name: "Flashing lights while warming up",
+      quiz: "Still heating up, not ready yet",
       category: "coffee",
       urgency: "info",
       aka: ["blinking", "flashing", "warming up", "heating up", "power light flashing", "not ready", "blinking buttons"],
@@ -501,6 +508,7 @@
     {
       id: "coffee-pressure-gauge",
       name: "Pressure gauge (Sage espresso machines)",
+      quiz: "Espresso extraction pressure",
       category: "coffee",
       aka: ["pressure gauge", "espresso range", "extraction gauge", "Barista Express gauge", "pre-infusion", "Breville gauge"],
       looksLike: ["dial", "gauge", "speedometer", "dial with a grey zone", "needle", "clock with one hand", "meter", "pressure dial"],
@@ -518,6 +526,7 @@
     {
       id: "coffee-vertuo-light",
       name: "Nespresso Vertuo orange light",
+      quiz: "Status light with blink codes",
       category: "coffee",
       color: "amber",
       urgency: "soon",
@@ -535,6 +544,7 @@
     {
       id: "coffee-eco",
       name: "ECO / energy saving",
+      quiz: "Saves power between drinks",
       category: "coffee",
       color: "green",
       aka: ["ECO", "energy saving", "standby", "auto-off", "eco mode", "power saving"],

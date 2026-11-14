@@ -8,6 +8,7 @@ WTF.add([
   {
     id: "recycling-mobius-loop",
     name: "Recycling symbol (Mobius loop)",
+    quiz: "Technically recyclable",
     category: "recycling",
     aka: ["Mobius loop", "recyclable symbol", "chasing arrows", "universal recycling symbol"],
     looksLike: ["three arrows in a triangle", "triangle of arrows", "arrows chasing in a triangle", "recycling triangle", "folded arrows", "three bent arrows"],
@@ -19,6 +20,7 @@ WTF.add([
   {
     id: "recycling-mobius-loop-percent",
     name: "Recycling symbol with a percentage",
+    quiz: "Amount of recycled material",
     category: "recycling",
     aka: ["recycled content", "Mobius loop with percentage", "% recycled"],
     looksLike: ["triangle of arrows with a percentage", "recycling triangle with %", "arrows with a number and percent", "three arrows with 50%"],
@@ -30,6 +32,7 @@ WTF.add([
   {
     id: "recycling-resin-1",
     name: "Plastic code 1 (PET)",
+    quiz: "Clear drinks-bottle plastic",
     category: "recycling",
     aka: ["PET", "PETE", "polyethylene terephthalate", "resin identification code 1", "RIC 1"],
     looksLike: ["triangle of arrows with a number", "triangle with 1", "recycling triangle with 1", "number 1 in a triangle", "pet"],
@@ -41,6 +44,7 @@ WTF.add([
   {
     id: "recycling-resin-2",
     name: "Plastic code 2 (HDPE)",
+    quiz: "Milk-bottle plastic",
     category: "recycling",
     aka: ["HDPE", "PE-HD", "high-density polyethylene", "resin identification code 2", "RIC 2"],
     looksLike: ["triangle of arrows with a number", "triangle with 2", "recycling triangle with 2", "number 2 in a triangle", "hdpe"],
@@ -52,6 +56,7 @@ WTF.add([
   {
     id: "recycling-resin-3",
     name: "Plastic code 3 (PVC)",
+    quiz: "Vinyl plastic",
     category: "recycling",
     aka: ["PVC", "V", "vinyl", "polyvinyl chloride", "resin identification code 3", "RIC 3"],
     looksLike: ["triangle of arrows with a number", "triangle with 3", "recycling triangle with 3", "number 3 in a triangle", "pvc"],
@@ -63,6 +68,7 @@ WTF.add([
   {
     id: "recycling-resin-4",
     name: "Plastic code 4 (LDPE)",
+    quiz: "Carrier-bag and film plastic",
     category: "recycling",
     aka: ["LDPE", "PE-LD", "low-density polyethylene", "soft plastic", "plastic film", "resin identification code 4", "RIC 4"],
     looksLike: ["triangle of arrows with a number", "triangle with 4", "recycling triangle with 4", "number 4 in a triangle", "ldpe"],
@@ -74,6 +80,7 @@ WTF.add([
   {
     id: "recycling-resin-5",
     name: "Plastic code 5 (PP)",
+    quiz: "Food-tub and bottle-cap plastic",
     category: "recycling",
     aka: ["PP", "polypropylene", "resin identification code 5", "RIC 5"],
     looksLike: ["triangle of arrows with a number", "triangle with 5", "recycling triangle with 5", "number 5 in a triangle", "pp"],
@@ -85,6 +92,7 @@ WTF.add([
   {
     id: "recycling-resin-6",
     name: "Plastic code 6 (PS)",
+    quiz: "Foam takeaway-box plastic",
     category: "recycling",
     aka: ["PS", "polystyrene", "EPS", "Styrofoam", "resin identification code 6", "RIC 6"],
     looksLike: ["triangle of arrows with a number", "triangle with 6", "recycling triangle with 6", "number 6 in a triangle", "ps"],
@@ -96,6 +104,7 @@ WTF.add([
   {
     id: "recycling-resin-7",
     name: "Plastic code 7 (Other)",
+    quiz: "Mixed or less common plastics",
     category: "recycling",
     aka: ["Other", "O", "polycarbonate", "PC", "PLA", "bioplastic", "mixed plastic", "resin identification code 7", "RIC 7"],
     looksLike: ["triangle of arrows with a number", "triangle with 7", "recycling triangle with 7", "number 7 in a triangle", "other"],
@@ -107,6 +116,7 @@ WTF.add([
   {
     id: "recycling-green-dot",
     name: "Green Dot",
+    quiz: "Packaging recovery fee paid",
     category: "recycling",
     aka: ["Der Grüne Punkt", "Grüne Punkt", "Green Point", "Point Vert", "Punto Verde"],
     looksLike: ["two arrows in a circle", "circle with two arrows", "yin yang arrows", "green circle with arrows", "arrows chasing in a circle", "two-tone circle"],
@@ -118,6 +128,7 @@ WTF.add([
   {
     id: "recycling-weee",
     name: "Crossed-out wheelie bin (WEEE)",
+    quiz: "Don't put it in the household bin",
     category: "recycling",
     aka: ["WEEE", "do not bin", "e-waste symbol", "waste electrical and electronic equipment"],
     looksLike: ["bin with a cross", "crossed out bin", "trash can with an x", "wheelie bin crossed out", "dustbin with x", "bin with a line under it"],
@@ -129,6 +140,7 @@ WTF.add([
   {
     id: "recycling-tidyman",
     name: "Tidyman (don't litter)",
+    quiz: "Don't drop litter",
     category: "recycling",
     aka: ["Tidyman", "Tidy Man", "dispose of tidily", "keep tidy", "litter symbol"],
     looksLike: ["person putting litter in a bin", "stick man with a bin", "man throwing rubbish", "person and bin", "figure dropping something in a bin"],
@@ -215,6 +227,7 @@ WTF.add([
     {
       id: "recycling-oprl-recycle",
       name: "Recycle (UK on-pack label)",
+      quiz: "Most UK councils collect it",
       category: "recycling",
       aka: ["OPRL", "On-Pack Recycling Label", "Recycle label", "widely recycled", "check locally", "Recycle Now swoosh", "green recycling label"],
       looksLike: ["green box with a white arrow", "arrow going round with a heart", "circle arrow with a heart", "arrow in a green square", "swoosh arrow", "recycle in a box"],
@@ -226,6 +239,7 @@ WTF.add([
     {
       id: "recycling-oprl-dont-recycle",
       name: "Don't recycle (UK on-pack label)",
+      quiz: "Keep it out of the recycling",
       category: "recycling",
       aka: ["Don't Recycle", "Do not recycle", "not yet recycled", "not currently recycled", "OPRL", "crossed-out recycling label"],
       looksLike: ["arrow with a line through it", "crossed out circle arrow", "black box with a crossed arrow", "recycle symbol with a slash", "heart arrow crossed out", "dont recycle"],
@@ -237,6 +251,7 @@ WTF.add([
     {
       id: "recycling-oprl-rinse",
       name: "Rinse | Recycle (UK on-pack label)",
+      quiz: "Clean it before recycling",
       category: "recycling",
       aka: ["Rinse", "Clean", "Empty", "Scrape", "Scrunch", "OPRL", "call to action"],
       looksLike: ["recycle label with rinse", "rinse above a recycle box", "green box saying rinse", "rinse recycle", "word rinse on a recycling label"],
@@ -248,6 +263,7 @@ WTF.add([
     {
       id: "recycling-oprl-lid-on",
       name: "Lid on / Cap on | Recycle (UK on-pack label)",
+      quiz: "Put the top back before recycling",
       category: "recycling",
       aka: ["Lid on", "Cap on", "Flatten", "Flatten | Cap on", "Insert straw", "OPRL"],
       looksLike: ["recycle label with lid on", "lid on above a recycle box", "cap on recycle", "green box saying lid on", "flatten cap on", "lid on"],
@@ -259,6 +275,7 @@ WTF.add([
     {
       id: "recycling-oprl-remove-film",
       name: "Multi-part label (Remove film / sleeve)",
+      quiz: "Separate the parts first",
       category: "recycling",
       aka: ["Remove film", "Remove sleeve", "multi-component label", "Tray recycle, Film don't recycle", "OPRL"],
       looksLike: ["two recycle labels side by side", "tray and film labels", "one arrow crossed out and one not", "two boxes with arrows", "tray film", "remove sleeve"],
@@ -270,6 +287,7 @@ WTF.add([
     {
       id: "recycling-oprl-bags-at-supermarket",
       name: "Recycle with bags at large supermarkets",
+      quiz: "Take it to a big supermarket",
       category: "recycling",
       aka: ["Don't recycle at home", "front of store collection", "soft plastics", "flexible plastic", "plastic film", "recycle with bags at larger stores", "recycle at store", "OPRL"],
       looksLike: ["recycle with bags", "bags at large supermarket", "arrow above a box of text", "dont recycle at home", "soft plastic label", "crisp packet label"],
@@ -284,6 +302,7 @@ WTF.add([
     {
       id: "recycling-code-paper",
       name: "PAP 20, 21, 22 (paper and card code)",
+      quiz: "Paper and card",
       category: "recycling",
       aka: ["PAP", "PAP 20", "PAP 21", "PAP 22", "paper code", "cardboard code", "material identification code"],
       looksLike: ["triangle with 20", "triangle with 21", "triangle with 22", "pap", "arrows with pap", "pap 20", "number 20 in a triangle"],
@@ -295,6 +314,7 @@ WTF.add([
     {
       id: "recycling-code-carton",
       name: "C/PAP 81–84 (drinks carton code)",
+      quiz: "Drinks cartons",
       category: "recycling",
       aka: ["C/PAP", "C/PAP 81", "C/PAP 84", "PapAl", "PapPet", "composite", "Tetra Pak", "beverage carton"],
       looksLike: ["triangle with 84", "triangle with 81", "c/pap", "cpap", "arrows with c/pap", "tetra pak symbol", "carton recycling code"],
@@ -306,6 +326,7 @@ WTF.add([
     {
       id: "recycling-code-glass",
       name: "GL 70, 71, 72 (glass code)",
+      quiz: "Glass",
       category: "recycling",
       aka: ["GL", "GL 70", "GL 71", "GL 72", "glass code", "clear glass", "green glass", "brown glass"],
       looksLike: ["triangle with 70", "triangle with 71", "triangle with 72", "gl", "arrows with gl", "gl 70", "number 70 in a triangle"],
@@ -317,6 +338,7 @@ WTF.add([
     {
       id: "recycling-code-steel",
       name: "FE 40 (steel code)",
+      quiz: "Steel",
       category: "recycling",
       aka: ["FE", "FE 40", "steel", "tinplate", "tin can", "ferrous", "steel code"],
       looksLike: ["triangle with 40", "fe", "arrows with fe", "fe 40", "number 40 in a triangle"],
@@ -328,6 +350,7 @@ WTF.add([
     {
       id: "recycling-code-aluminium",
       name: "ALU 41 (aluminium code)",
+      quiz: "Aluminium",
       category: "recycling",
       aka: ["ALU", "ALU 41", "aluminium", "aluminum", "aluminium code"],
       looksLike: ["triangle with 41", "alu 41", "arrows with alu", "alu", "number 41 in a triangle"],
@@ -341,6 +364,7 @@ WTF.add([
     {
       id: "recycling-alu",
       name: "\"alu\" recycling mark",
+      quiz: "Aluminium",
       category: "recycling",
       aka: ["alu", "recyclable aluminium", "aluminium recycling symbol", "aluminum"],
       looksLike: ["alu in a circle", "alu with arrows", "two arrows around alu", "circle of arrows with alu", "arrows round the word alu", "alu"],
@@ -352,6 +376,7 @@ WTF.add([
     {
       id: "recycling-metal-recycles-forever",
       name: "Metal Recycles Forever",
+      quiz: "Cans and tins recycle endlessly",
       category: "recycling",
       aka: ["Metal Recycles Forever", "infinity loop", "metal packaging recycling mark", "Metal Packaging Europe"],
       looksLike: ["infinity sign with an arrow", "infinity symbol", "figure of eight arrow", "sideways 8 with an arrow", "metal recycles forever", "infinity loop on a can"],
@@ -365,6 +390,7 @@ WTF.add([
     {
       id: "recycling-glass-bottle-bank",
       name: "Glass recycling figure (bottle into a bin)",
+      quiz: "Glass",
       category: "recycling",
       aka: ["bottle bank symbol", "glass recycling symbol", "recycle glass", "please recycle glass"],
       looksLike: ["person putting a bottle in a bin", "man throwing a bottle", "stick man with a bottle", "bottle into a bin", "person and bottle bank", "figure dropping a bottle"],
@@ -381,6 +407,7 @@ WTF.add([
     {
       id: "recycling-seedling",
       name: "Seedling (industrially compostable)",
+      quiz: "Industrial composting only",
       category: "recycling",
       aka: ["Seedling logo", "compostable", "industrially compostable", "EN 13432", "European Bioplastics", "DIN CERTCO"],
       looksLike: ["seedling", "sprout", "little plant", "two leaves", "plant with a swirl", "leaves on a curly stem", "compostable logo"],
@@ -395,6 +422,7 @@ WTF.add([
     {
       id: "recycling-ok-compost-home",
       name: "OK compost HOME",
+      quiz: "Breaks down in a garden heap",
       category: "recycling",
       aka: ["OK compost HOME", "home compostable", "TÜV Austria", "Vinçotte", "OK compost"],
       looksLike: ["three arrows pointing down with a flower", "half a flower", "down arrows and a daisy", "ok compost home", "flower and arrows", "ok compost"],
@@ -406,6 +434,7 @@ WTF.add([
     {
       id: "recycling-ok-compost-industrial",
       name: "OK compost INDUSTRIAL",
+      quiz: "Industrial composting only",
       category: "recycling",
       aka: ["OK compost INDUSTRIAL", "industrially compostable", "EN 13432", "TÜV Austria", "Vinçotte", "OK compost"],
       looksLike: ["three arrows pointing down with a flower", "half a flower", "down arrows and a daisy", "ok compost industrial", "industrial", "ok compost"],
@@ -419,6 +448,7 @@ WTF.add([
     {
       id: "recycling-fsc",
       name: "FSC (tree with a tick)",
+      quiz: "Responsibly sourced wood and paper",
       category: "recycling",
       aka: ["FSC", "Forest Stewardship Council", "FSC Mix", "FSC 100%", "FSC Recycled", "checkmark and tree"],
       looksLike: ["tree with a tick", "tick tree", "tree and check mark", "tree with a checkmark", "tree logo", "fsc"],
@@ -431,6 +461,7 @@ WTF.add([
     {
       id: "recycling-pefc",
       name: "PEFC (two trees in a circle)",
+      quiz: "Responsibly sourced wood and paper",
       category: "recycling",
       aka: ["PEFC", "Programme for the Endorsement of Forest Certification", "PEFC certified", "PEFC recycled"],
       looksLike: ["two trees in a circle", "trees with an arrow around them", "two trees", "tree in a circle with an arrow", "circle arrow around trees", "pefc"],
@@ -447,6 +478,7 @@ WTF.add([
     {
       id: "recycling-batteries",
       name: "Crossed-out bin with Pb, Cd or Hg (batteries)",
+      quiz: "Battery contains heavy metals",
       category: "recycling",
       aka: ["battery symbol", "Pb", "Cd", "Hg", "lead", "cadmium", "mercury", "battery disposal", "WEEE"],
       looksLike: ["crossed out bin with letters", "bin with a cross and pb", "bin with hg", "bin with cd", "pb under a bin", "battery bin symbol", "wheelie bin with pb"],
@@ -460,6 +492,7 @@ WTF.add([
     {
       id: "recycling-single-use-plastic",
       name: "Plastic in product (turtle marking)",
+      quiz: "Harms wildlife if flushed or littered",
       category: "recycling",
       aka: ["PLASTIC IN PRODUCT", "PLASTIC IN FILTER", "single-use plastics marking", "SUP marking", "turtle logo", "dead turtle logo"],
       looksLike: ["turtle with plastic", "turtle", "plastic in product", "crossed out toilet and turtle", "red and blue label with a turtle", "turtle and toilet", "turtle with a cup"],
@@ -480,6 +513,7 @@ WTF.add([
     {
       id: "recycling-triman",
       name: "Triman (France)",
+      quiz: "Sorting rules apply in France",
       category: "recycling",
       aka: ["Triman", "Info-tri", "French recycling logo", "French sorting logo"],
       looksLike: ["person with arrows", "man with three arrows", "figure in a circle with arrows", "stick man with arrows pointing out", "person inside a circle arrow", "triman"],
@@ -508,6 +542,7 @@ WTF.add([
     {
       id: "recycling-recycled-paperboard",
       name: "100% Recycled Paperboard (US)",
+      quiz: "Made wholly from recycled card",
       category: "recycling",
       aka: ["100% Recycled Paperboard", "RPA-100%", "recycled paperboard symbol", "recycled content"],
       looksLike: ["semicircle of arrows", "circle of little arrows", "arrows in a circle", "arc of arrows", "ring of arrows with 100%", "100% recycled paperboard"],

@@ -158,6 +158,7 @@
     {
       id: "aircon-auto-mode",
       name: "Auto mode",
+      quiz: "Picks heating or cooling itself",
       category: "aircon",
       aka: ["AUTO", "automatic", "auto changeover", "heat/cool auto", "smart mode"],
       looksLike: ["letter a", "a with circular arrows", "circular arrows", "arrows going round", "a in a circle", "recycling arrows"],
@@ -376,6 +377,7 @@
     {
       id: "heating-flame",
       name: "Flame (burner on)",
+      quiz: "Heating is on right now",
       category: "heating",
       aka: ["flame", "burner on", "boiler firing", "burner lit", "ignition", "fire"],
       looksLike: ["flame", "fire", "candle flame", "teardrop", "flame symbol"],
@@ -389,6 +391,7 @@
     {
       id: "heating-flashing-symbol",
       name: "Flashing radiator or tap symbol",
+      quiz: "Heating is on right now",
       category: "heating",
       urgency: "info",
       aka: ["flashing radiator", "flashing tap", "blinking symbol", "radiator icon flashing", "tap icon flashing"],
@@ -440,6 +443,7 @@
     {
       id: "heating-service",
       name: "Service / spanner symbol",
+      quiz: "Service due or engineer needed",
       category: "heating",
       urgency: "soon",
       aka: ["service due", "spanner", "wrench", "maintenance", "service mode", "engineer needed"],
@@ -468,6 +472,7 @@
     {
       id: "heating-eco-preheat",
       name: "ECO / pre-heat (combi boilers)",
+      quiz: "Hot water pre-heat on / off",
       category: "heating",
       aka: ["eco", "ECO button", "pre-heat", "preheat", "comfort", "keep warm", "warm start"],
       looksLike: ["eco", "eco button", "word eco", "button with eco", "leaf"],
@@ -497,6 +502,7 @@
     {
       id: "heating-thermostat-flame",
       name: "Flame on the thermostat (calling for heat)",
+      quiz: "Heating is on right now",
       category: "heating",
       aka: ["heat demand", "calling for heat", "heating on", "thermostat flame", "HEAT ON"],
       looksLike: ["flame in a circle", "flame on the thermostat", "fire on the thermostat", "flame on a screen", "flame symbol"],
@@ -510,6 +516,7 @@
     {
       id: "heating-heat-waves",
       name: "Wavy lines going up (heat on)",
+      quiz: "Heating is on right now",
       category: "heating",
       aka: ["heat", "heating on", "heating active", "heat demand", "underfloor heating", "heat symbol"],
       looksLike: ["wavy lines up", "three wavy lines", "squiggly lines going up", "steam", "wiggly lines", "heat waves"],
@@ -525,6 +532,7 @@
     {
       id: "heating-trv",
       name: "Radiator valve numbers (TRV)",
+      quiz: "Room temperature for one radiator",
       category: "heating",
       aka: ["TRV", "thermostatic radiator valve", "radiator knob", "radiator dial", "valve head", "frost setting"],
       looksLike: ["snowflake and numbers", "numbers 1 to 5", "radiator knob", "dial with numbers", "knob with a snowflake", "asterisk and numbers", "valve on the radiator"],
@@ -573,6 +581,7 @@
     {
       id: "heating-comfort-eco",
       name: "Sun & moon (comfort and eco temperatures)",
+      quiz: "Day and night temperatures",
       category: "heating",
       aka: ["comfort", "eco", "day", "night", "setback", "economy", "comfort temperature", "reduced temperature"],
       looksLike: ["sun and moon", "sun", "moon", "sun and crescent moon", "day and night", "sun slash moon"],

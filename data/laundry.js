@@ -583,6 +583,7 @@
     {
       id: "washer-eco-40-60",
       name: "Eco 40-60",
+      quiz: "Energy-saving programme for cottons",
       category: "washer",
       aka: ["eco", "eco programme", "energy saving", "eco 40-60 programme"],
       looksLike: ["eco 40-60", "text eco", "40-60", "eco with numbers"],

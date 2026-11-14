@@ -74,6 +74,7 @@
     {
       id: "fridge-freezer-one-star",
       name: "One star (*) freezer compartment",
+      quiz: "Keeps frozen food for about a week",
       category: "fridge",
       aka: ["1 star", "one star", "*", "ice box", "frozen food compartment", "-6°C", "star rating"],
       looksLike: ["one star", "single star", "star", "asterisk", "star on the ice box", "one snowflake"],
@@ -87,6 +88,7 @@
     {
       id: "fridge-freezer-two-star",
       name: "Two star (**) freezer compartment",
+      quiz: "Keeps frozen food for about a month",
       category: "fridge",
       aka: ["2 star", "two star", "**", "ice box", "frozen food compartment", "-12°C", "star rating"],
       looksLike: ["two stars", "2 stars", "two asterisks", "double star", "stars on the ice box", "two snowflakes"],
@@ -100,6 +102,7 @@
     {
       id: "fridge-freezer-three-star",
       name: "Three star (***) freezer compartment",
+      quiz: "Keeps frozen food for about 3 months",
       category: "fridge",
       aka: ["3 star", "three star", "***", "frozen food compartment", "-18°C", "star rating"],
       looksLike: ["three stars", "3 stars", "three asterisks", "row of stars", "stars on the freezer", "three snowflakes"],
@@ -113,6 +116,7 @@
     {
       id: "fridge-freezer-four-star",
       name: "Four star freezer (big star + three small stars)",
+      quiz: "Freezer that can freeze fresh food",
       category: "fridge",
       aka: ["4 star", "four star", "****", "food freezer", "freeze fresh food", "-18°C", "star rating"],
       looksLike: ["big star and three small stars", "star with three small stars", "four stars", "one big star three little stars", "large star and small stars", "snowflake and three stars"],
@@ -225,6 +229,7 @@
     {
       id: "fridge-temperature-alarm",
       name: "High temperature alarm / red light",
+      quiz: "Freezer or fridge too warm",
       category: "fridge",
       color: "red",
       urgency: "soon",
@@ -331,6 +336,7 @@
     {
       id: "fridge-ice-maker-off",
       name: "Ice maker off",
+      quiz: "Ice maker disabled",
       category: "fridge",
       aka: ["ice off", "ice maker off", "ice on/off", "ice maker", "ICE OFF", "ice"],
       looksLike: ["ice cubes", "ice cubes with off", "two cubes", "cubes with the word off", "ice off", "dice"],
@@ -366,6 +372,7 @@
     {
       id: "fridge-humidity-slider",
       name: "Humidity slider (salad drawer)",
+      quiz: "Salad drawer vent setting",
       category: "fridge",
       aka: ["humidity control", "crisper", "salad drawer", "vegetable drawer", "fruit and veg", "high / low humidity", "VitaFresh"],
       looksLike: ["slider with drops", "small drop and big drop", "water drops", "slider with fruit and vegetables", "apple and carrot", "slider on the drawer"],
@@ -382,6 +389,7 @@
     {
       id: "fridge-zero-degree-zone",
       name: "0°C fresh / chill zone",
+      quiz: "Extra-cold drawer for meat and fish",
       category: "fridge",
       aka: ["0°C", "chill zone", "fresh zone", "VitaFresh", "BioFresh", "Fresh 0 Zone", "chiller drawer", "meat drawer"],
       looksLike: ["0°c", "0 degrees", "zero degrees", "zero with a degree sign", "drawer with 0°c", "0c"],
@@ -397,6 +405,7 @@
     {
       id: "fridge-ok-indicator",
       name: "'OK' temperature indicator",
+      quiz: "Fridge is cold enough",
       category: "fridge",
       aka: ["OK", "temperature indicator", "OK indicator", "coldest zone", "fridge thermometer", "OK sticker"],
       looksLike: ["ok", "the word ok", "ok in a box", "ok sticker", "ok window", "black box", "blank box"],
@@ -412,6 +421,7 @@
     {
       id: "fridge-no-frost",
       name: "No Frost / Frost Free",
+      quiz: "Defrosts itself automatically",
       category: "fridge",
       aka: ["no frost", "frost free", "total no frost", "NoFrost", "auto defrost", "low frost", "NO FROST"],
       looksLike: ["no frost", "snowflake with a line through it", "crossed out snowflake", "frost free badge", "snowflake with no", "snowflake crossed out"],
@@ -449,6 +459,7 @@
     {
       id: "fridge-climate-class",
       name: "Climate class (SN, N, ST, T)",
+      quiz: "Room temperatures it's built for",
       category: "fridge",
       aka: ["climate class", "SN", "N", "ST", "T", "SN-T", "SN-ST", "ambient temperature", "rating plate"],
       looksLike: ["sn", "sn-t", "sn-st", "st", "class sn", "letters on the sticker", "letters on the rating plate"],

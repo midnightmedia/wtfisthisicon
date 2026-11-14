@@ -49,6 +49,7 @@ WTF.add([
   {
     id: "ev-turtle-mode",
     name: "Turtle (reduced power mode)",
+    quiz: "Reduced power mode",
     category: "ev",
     color: "amber",
     urgency: "soon",
@@ -103,6 +104,7 @@ WTF.add([
   {
     id: "ev-ready",
     name: "READY light",
+    quiz: "Switched on, good to drive",
     category: "ev",
     color: "green",
     urgency: "info",
@@ -116,6 +118,7 @@ WTF.add([
   {
     id: "ev-ready-to-drive",
     name: "Ready-to-drive light (car with arrows)",
+    quiz: "Switched on, good to drive",
     category: "ev",
     color: "green",
     urgency: "info",
@@ -155,6 +158,7 @@ WTF.add([
   {
     id: "ev-ev-mode",
     name: "EV mode (electric-only driving)",
+    quiz: "Electric-only driving",
     category: "ev",
     color: "green",
     urgency: "info",
@@ -181,6 +185,7 @@ WTF.add([
   {
     id: "ev-b-mode",
     name: "B mode (regenerative braking)",
+    quiz: "Strong regenerative braking",
     category: "ev",
     urgency: "info",
     aka: ["B gear", "brake mode", "regen mode", "regenerative braking", "regen", "engine braking", "one-pedal driving"],
@@ -338,6 +343,7 @@ WTF.add([
   {
     id: "power-fcc",
     name: "FCC logo",
+    quiz: "US radio interference approval",
     category: "power",
     aka: ["Federal Communications Commission", "FCC mark", "FCC ID", "FCC Part 15"],
     looksLike: ["fcc", "f and two c's", "f with c's", "fc", "letters fcc", "f with brackets"],
@@ -349,6 +355,7 @@ WTF.add([
   {
     id: "power-ul",
     name: "UL Listed (UL in a circle)",
+    quiz: "Safety tested by a US lab",
     category: "power",
     aka: ["UL", "Underwriters Laboratories", "UL Listed", "cULus", "UL mark"],
     looksLike: ["ul in a circle", "letters ul in a circle", "u and l", "circle with ul", "ul logo"],
@@ -360,6 +367,7 @@ WTF.add([
   {
     id: "power-ccc",
     name: "CCC mark (China)",
+    quiz: "China mandatory safety mark",
     category: "power",
     aka: ["China Compulsory Certificate", "China Compulsory Certification", "3C", "CCC"],
     looksLike: ["ccc", "three c's", "letters ccc in an oval", "ccc in a circle", "c c c"],
@@ -371,6 +379,7 @@ WTF.add([
   {
     id: "power-pse",
     name: "PSE mark (Japan)",
+    quiz: "Japan electrical safety mark",
     category: "power",
     aka: ["PSE", "Product Safety Electrical Appliance & Material", "DENAN", "Japanese electrical safety mark"],
     looksLike: ["pse in a diamond", "diamond with pse", "letters pse", "pse in a circle", "rhombus with pse"],

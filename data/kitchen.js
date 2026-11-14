@@ -111,6 +111,7 @@
     {
       id: "oven-fan-only",
       name: "Plain fan (defrost or fan oven)",
+      quiz: "Fan only (defrost or fan oven)",
       category: "oven",
       aka: ["defrost", "fan with no heat", "air circulation", "cool fan", "fan oven"],
       looksLike: ["fan", "fan in a box", "propeller", "windmill", "three petals", "flower in a square"],
@@ -380,6 +381,7 @@
     {
       id: "oven-auto-flashing",
       name: "AUTO flashing on the clock",
+      quiz: "Timed mode, or clock needs setting",
       category: "oven",
       urgency: "soon",
       aka: ["auto", "A flashing", "clock flashing", "auto mode", "timer mode"],
@@ -441,6 +443,7 @@
     {
       id: "oven-hob-residual-heat",
       name: "Residual heat 'H'",
+      quiz: "Hob zone still hot",
       category: "oven",
       urgency: "info",
       aka: ["hot surface", "residual heat indicator", "hot hob", "H light"],
@@ -473,6 +476,7 @@
     {
       id: "oven-hob-boost",
       name: "Power boost 'P'",
+      quiz: "Extra-fast heating boost",
       category: "oven",
       aka: ["boost", "power boost", "PowerBoost", "booster"],
       looksLike: ["letter p", "p on the hob", "p on the display", "capital p"],
@@ -626,6 +630,7 @@
     {
       id: "dishwasher-auto",
       name: "Auto programme",
+      quiz: "Self-adjusting sensor programme",
       category: "dishwasher",
       aka: ["auto", "automatic", "sensor wash", "auto 45-65", "smart wash"],
       looksLike: ["a in a circle", "letter a with an arrow round it", "circular arrow", "the word auto", "a in a circle arrow"],

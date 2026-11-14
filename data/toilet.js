@@ -124,6 +124,7 @@
     {
       id: "toilet-stop",
       name: "Stop (止)",
+      quiz: "Stop the spray",
       category: "toilet",
       color: "amber",
       aka: ["止 (tome)", "止める (tomeru)", "STOP", "stop button", "停止 (teishi)"],
@@ -182,6 +183,7 @@
     {
       id: "toilet-flush-full",
       name: "Big flush (大)",
+      quiz: "Flush after a poo",
       category: "toilet",
       aka: ["大 (dai)", "流す 大 (nagasu dai)", "便器洗浄 大 (benki senjō dai)", "full flush", "large flush", "FLUSH"],
       looksLike: ["big swirl", "spiral", "swirl with dots", "whirlpool", "spiral with dots", "big wave", "大", "snail"],
@@ -195,6 +197,7 @@
     {
       id: "toilet-flush-small",
       name: "Small flush (小)",
+      quiz: "Flush after a wee",
       category: "toilet",
       aka: ["小 (shō)", "流す 小 (nagasu shō)", "便器洗浄 小 (benki senjō shō)", "half flush", "light flush", "eco flush", "LIGHT FLUSH"],
       looksLike: ["small swirl", "little spiral", "small spiral with dots", "small wave", "小", "swirl"],
@@ -400,6 +403,7 @@
     {
       id: "toilet-flush-sensor",
       name: "Hand-wave flush sensor",
+      quiz: "Touch-free flush",
       category: "toilet",
       aka: ["センサー (sensā)", "手をかざす (te o kazasu)", "touchless flush", "sensor flush", "auto flush", "オート洗浄"],
       looksLike: ["hand", "hand with waves", "hand over a sensor", "palm", "wave your hand", "hand and lines"],
@@ -433,6 +437,7 @@
     {
       id: "toilet-emergency-call",
       name: "Emergency call button (呼出)",
+      quiz: "Call for help",
       category: "toilet",
       color: "red",
       aka: ["呼出 (yobidashi)", "呼出し (yobidashi)", "非常呼出 (hijō yobidashi)", "呼出ボタン", "CALL", "emergency button", "help button", "assistance alarm"],

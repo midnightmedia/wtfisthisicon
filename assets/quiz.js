@@ -55,12 +55,17 @@
     return a;
   }
 
-  // Skip icons that print their own answer ("ECO", "LOT", "30", 止…): no free points.
+  // What the quiz calls an icon: its quiz label (what it MEANS) if it has one, else its name
+  // without any bracketed part. Names that describe the picture get a quiz label in the data.
+  function label(icon) { return icon.quiz || ui.shortName(icon); }
+
+  // Skip icons whose drawing prints the label shown ("ECO" for "Eco mode", "30" for "Wash at 30 °C"):
+  // no free points.
   function givesAway(icon) {
-    var hay = (icon.name + " " + (icon.aka || []).join(" ")).toLowerCase();
+    var hay = label(icon).toLowerCase();
     var re = /<text[^>]*>([^<]*)<\/text>/g, m;
     while ((m = re.exec(icon.svg))) {
-      var t = m[1].trim().toLowerCase();
+      var t = m[1].trim().toLowerCase().replace(/['\u2019]/g, ""); // DON'T → dont, not "don" + "t"
       if (!t) continue;
       if (/[^\x00-\x7f]/.test(t) && hay.indexOf(t) !== -1) return true;
       var words = t.split(/[^a-z0-9%]+/);
@@ -72,17 +77,31 @@
   }
   var ELIGIBLE = ICONS.filter(function (i) { return !givesAway(i); });
 
-  var label = function (icon) { return ui.shortName(icon); };
   var nameKey = function (icon) { return label(icon).toLowerCase(); };
   var look = function (icon) { return icon.svg + "|" + (icon.color || ""); };
 
+  // Key words of a label, for spotting the same idea on different appliances ("Eco mode" on a car
+  // and "Eco / energy-saving mode" on a fridge): both would be right, so they never meet.
+  var COMMON = toSet("the and for with from your you its not no off on mode light symbol sign button key only setting indicator warning alarm".split(" "));
+  function toSet(list) { var o = {}; list.forEach(function (w) { o[w] = true; }); return o; }
+  function keyWords(icon) {
+    return label(icon).toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/)
+      .filter(function (w) { return w.length > 2 && !COMMON[w]; })
+      .map(function (w) { return w.replace(/s$/, ""); });
+  }
+  function sameIdea(a, b) {
+    if (a.category === b.category) return false; // near-misses on one appliance are the fun part
+    var kb = keyWords(b);
+    return keyWords(a).some(function (w) { return kb.indexOf(w) !== -1; });
+  }
+
   // Three wrong answers: lookalikes first (the fun part), then the same category, then anything.
-  // Never two options with the same name or the same drawing.
+  // Never two options with the same name, the same drawing, or the same idea on another appliance.
   function wrongAnswers(icon, rnd) {
     var out = [], names = {}, looks = {};
     names[nameKey(icon)] = looks[look(icon)] = true;
     function add(c) {
-      if (out.length >= 3 || c === icon || names[nameKey(c)] || looks[look(c)]) return;
+      if (out.length >= 3 || c === icon || names[nameKey(c)] || looks[look(c)] || sameIdea(icon, c)) return;
       names[nameKey(c)] = looks[look(c)] = true;
       out.push(c);
     }
