@@ -548,8 +548,12 @@
   }
 
   function shareWotw(btn) {
-    var i = wotw.icon;
-    var url = location.origin + location.pathname + "#/icon/" + i.id;
+    var i = wotw.icon, key = isoDay(wotw.week);
+    // Scheduled weeks have their own page (week/<monday>/, built by dev/build-weeks.mjs) with a
+    // proper link preview; automatic picks share the plain icon link.
+    var url = featuredByWeek[key]
+      ? location.origin + "/week/" + key + "/"
+      : location.origin + location.pathname + "#/icon/" + i.id;
     if (navigator.share && coarsePointer) {
       navigator.share({ title: "Icon of the week: " + i.name, text: wotw.hook, url: url }).catch(function () {});
       return;

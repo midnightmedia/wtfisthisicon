@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Icon of the week · WTF is this icon?</title>
+<meta name="description" content="One confusing symbol, decoded every Monday.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WTF is this icon?">
+<meta property="og:title" content="Icon of the week">
+<meta property="og:description" content="One confusing symbol, decoded every Monday.">
+<meta property="og:url" content="https://wtfisthisicon.com/week/">
+<meta property="og:image" content="https://wtfisthisicon.com/week/card.png?v=c089daed">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Icon of the week on WTF is this icon?">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function () {
+  var W = {"2026-11-09":"fridge-freezer-four-star","2026-11-16":"car-tyre-pressure","2026-11-23":"heating-low-pressure","2026-11-30":"car-frost-warning","2026-12-07":"laundry-do-not-tumble-dry","2026-12-14":"carcontrols-rear-demist","2026-12-21":"oven-true-fan","2026-12-28":"recycling-oprl-dont-recycle","2027-01-04":"car-glow-plug","2027-01-11":"ev-cold-battery","2027-01-18":"coffee-descale","2027-01-25":"toilet-stop"}, t;
+  try {
+    var m = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).match(/(\d{4})-(\d{2})-(\d{2})/);
+    t = Date.UTC(+m[1], m[2] - 1, +m[3]);
+  } catch (e) { var d = new Date(); t = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()); }
+  t -= ((new Date(t).getUTCDay() + 6) % 7) * 864e5;
+  var id = W[new Date(t).toISOString().slice(0, 10)];
+  location.replace(id ? "/#/icon/" + id : "/");
+})();</script>
+<style>body { margin: 48px 24px; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; color: #0a0a0a; }</style>
+</head>
+<body>
+<p><a href="/">Icon of the week on WTF is this icon?</a></p>
+</body>
+</html>

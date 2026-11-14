@@ -18,7 +18,8 @@ Then open http://localhost:5178. (Opening `index.html` directly from disk works 
 
 Before pushing, run `node dev/stamp-assets.mjs`. It adds a content fingerprint (`?v=…`) to every
 script and stylesheet link in `index.html`, so browsers never mix a fresh page with stale cached
-files (GitHub Pages lets browsers cache for 10 minutes).
+files (GitHub Pages lets browsers cache for 10 minutes). It also rebuilds the Icon of the week
+share pages in `week/` (needs Google Chrome installed, for the preview images).
 
 Upload the folder as-is to any static host — Netlify (drag-and-drop), Vercel, Cloudflare Pages
 or GitHub Pages. The `dev/` folder isn't needed in production.
@@ -36,7 +37,9 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `data/featured.js` | Icon of the week schedule (see below) |
 | `dev/check.mjs` | `node dev/check.mjs` validates all icon data |
 | `dev/gallery.html` | Every icon on one page for visual checking (`?cat=car` to filter) |
-| `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` — run before every push |
+| `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` and rebuilds `week/` — run before every push |
+| `dev/build-weeks.mjs` | Builds the Icon of the week share pages and preview images |
+| `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week — don't edit by hand |
 | `dev/build-catalog.mjs` | Exports the icon list the photo Worker matches against |
 | `assets/config.js` | Site settings (the photo Worker URL) |
 | `worker/` | Cloudflare Worker that identifies photos with Claude |
@@ -82,6 +85,18 @@ queue up weeks in advance and they go live by themselves with no deploy:
 - "Past weeks" shows the last four picks, back as far as `since`.
 - `node dev/check.mjs` checks the dates are Mondays and the ids exist, and says how many weeks
   are still queued up. `WTF.iconOfTheWeek()` in the browser console shows the current pick.
+
+**Sharing.** Every scheduled week gets its own page, e.g. `wtfisthisicon.com/week/2026-11-09/`,
+with a title, description and a 1200×630 neon preview card, so the link shows that week's icon
+when it's pasted into WhatsApp, iMessage, X, Facebook, Slack and so on. Opening it takes people
+straight to that icon on the site. The Share button on the home page uses this link.
+
+- `wtfisthisicon.com/week/` is the stable "this week's icon" link (for a bio or a newsletter).
+  Its preview is a general Icon of the week card, and it forwards to whatever is on this week.
+- `node dev/stamp-assets.mjs` builds the pages (via `dev/build-weeks.mjs`) and only re-renders
+  cards whose icon or hook changed. `node dev/build-weeks.mjs --force` re-renders them all.
+- Pages are never deleted, so a link shared in an old week keeps its preview.
+- Automatic picks (weeks with no entry) don't get a page; Share falls back to the plain icon link.
 
 ## Adding an icon
 

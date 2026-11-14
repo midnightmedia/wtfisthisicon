@@ -105,6 +105,14 @@ if (featured) {
     if (typeof f.hook !== "string" || !f.hook.trim()) errors.push(`${where}: missing hook`);
     else if (f.hook.length > 90) warn.push(`${where}: hook is ${f.hook.length} chars (keep it under ~90)`);
   }
+  // Share pages (week/<monday>/) are built by dev/build-weeks.mjs, which stamp-assets runs.
+  const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const stale = (featured.weeks || []).filter((f) => {
+    let page = "";
+    try { page = fs.readFileSync(path.join(root, "week", f.week, "index.html"), "utf8"); } catch {}
+    return !page.includes(`og:description" content="${esc(f.hook)}"`) || !page.includes(`/#/icon/${f.id}"`);
+  });
+  if (stale.length) warn.push(`featured.js: share pages out of date for ${stale.map((f) => f.week).join(", ")} — run node dev/stamp-assets.mjs`);
   const today = new Date().toISOString().slice(0, 10);
   const ahead = [...weeks].filter((w) => w >= today).length;
   console.log(`Icon of the week: ${weeks.size} weeks scheduled, ${ahead} still to come`);
