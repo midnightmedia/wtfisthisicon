@@ -2,7 +2,9 @@
 //
 //   assets/og-card.png         the site's own 1200×630 preview; index.html's og:image points at it
 //                              (any wtfisthisicon.com link, including #/icon/… ones, shows this)
-//   quiz/index.html + card.png the daily quiz link people share with their score; forwards to #/quiz
+//   quiz/index.html + card.png the general quiz link; forwards to #/quiz
+//   quiz/<0-10>/               one page + card per score ("I scored 8/10…"), which is what
+//                              "Share your score" links to; also forwards to #/quiz
 //
 // and the Icon of the week share pages from data/featured.js:
 //
@@ -44,6 +46,7 @@ const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
 for (const [, src] of indexHtml.matchAll(/<script src="(data\/[^"?]+)/g)) {
   vm.runInContext(fs.readFileSync(path.join(root, src), "utf8"), sb, { filename: src });
 }
+vm.runInContext(fs.readFileSync(path.join(root, "assets", "quiz-tiers.js"), "utf8"), sb, { filename: "quiz-tiers.js" });
 const WTF = sb.WTF;
 const byId = new Map(WTF.icons.map((i) => [i.id, i]));
 const weeks = ((WTF.featured && WTF.featured.weeks) || []).filter((w) => byId.has(w.id));
@@ -271,6 +274,35 @@ fs.writeFileSync(path.join(root, "quiz", "index.html"), pageHtml({
   fallbackText: "Play the daily symbol quiz on WTF is this icon?",
 }));
 
+// One page per possible score, so a shared result previews as "I scored 8/10".
+const tierFor = (n) => WTF.quizTiers.find((t) => n >= t[0]) || WTF.quizTiers[WTF.quizTiers.length - 1];
+for (let n = 0; n <= 10; n++) {
+  const dir = path.join(root, "quiz", String(n));
+  fs.mkdirSync(dir, { recursive: true });
+  const tier = tierFor(n);
+  const dare = n === 10 ? "Think you can match a perfect score?" : n === 0 ? "Surely you can beat that." : "Can you beat it?";
+  const bar = Array.from({ length: 10 }, (_, k) =>
+    `<span style="flex:1;height:22px;border-radius:6px;background:currentColor;opacity:${k < n ? 1 : 0.18}"></span>`).join("");
+  const art = '<div style="width:400px">' +
+    `<div style="font-size:250px;font-weight:800;letter-spacing:-0.07em;line-height:.8">${n}<span style="font-size:96px;letter-spacing:-0.04em;opacity:.55">/10</span></div>` +
+    `<div style="display:flex;gap:9px;margin-top:44px">${bar}</div></div>`;
+  const h = card(`_score${n}`, {
+    art, tag: "Daily quiz", label: "", title: tier[1], hook: `I scored ${n}/10 on today's symbol quiz. ${dare}`,
+  }, path.join(dir, "card.png"));
+  const url = `${SITE}/quiz/${n}/`;
+  fs.writeFileSync(path.join(dir, "index.html"), pageHtml({
+    title: `I scored ${n}/10 · Daily quiz · WTF is this icon?`,
+    ogTitle: `I scored ${n}/10 on the WTF is this icon? daily quiz`,
+    description: `${tier[1]}. Ten confusing symbols a day. ${dare}`,
+    url,
+    image: h ? `${url}card.png?v=${h}` : "",
+    imageAlt: `${n} out of 10 on the WTF is this icon? daily symbol quiz`,
+    script: 'location.replace("/#/quiz");',
+    fallbackHref: "/#/quiz",
+    fallbackText: "Play the daily symbol quiz on WTF is this icon?",
+  }));
+}
+
 // The site's own preview card, and its cache-busting version in index.html's og:image.
 const WALL = ["car-check-engine", "car-oil-pressure", "car-tyre-pressure", "laundry-tumble-dry", "laundry-hand-wash",
   "oven-true-fan", "recycling-mobius-loop", "fridge-freezer-four-star", "toilet-rear-wash"];
@@ -288,4 +320,4 @@ fs.writeFileSync(manifestPath, JSON.stringify(next, null, 2) + "\n");
 fs.rmSync(tmp, { recursive: true, force: true });
 
 if (!chrome) console.warn("build-share: Chrome not found (set CHROME=/path/to/chrome), so share pages were written without new preview images");
-console.log(`Share previews: site + quiz cards, Icon of the week pages: ${weeks.length} weeks, ${rendered} card(s) rendered, ${skipped} unchanged`);
+console.log(`Share previews: site, quiz and 11 score cards, Icon of the week pages: ${weeks.length} weeks, ${rendered} card(s) rendered, ${skipped} unchanged`);

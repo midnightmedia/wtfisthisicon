@@ -33,6 +33,7 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `assets/styles.css` | All styling |
 | `assets/app.js` | Search, filters, routing (`#/icon/<id>`), detail view |
 | `assets/quiz.js` | The daily quiz and practice rounds (`#/quiz`) |
+| `assets/quiz-tiers.js` | Quiz score titles (used by the quiz and the score preview cards) |
 | `data/_registry.js` | Category list + helpers; loaded first |
 | `data/*.js` | The icons, one file per group of categories |
 | `data/README.md` | **Icon format and drawing rules. Read this before adding icons** |
@@ -42,7 +43,7 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` and rebuilds the share previews. Run before every push |
 | `dev/build-share.mjs` | Builds the link-preview images: the site card and the Icon of the week pages |
 | `assets/og-card.png` | Generated preview image for any wtfisthisicon.com link (don't edit by hand) |
-| `quiz/` | Generated share page for the quiz (`/quiz/`) (don't edit by hand) |
+| `quiz/` | Generated share pages for the quiz: `/quiz/` and one per score, `/quiz/0/` to `/quiz/10/` (don't edit by hand) |
 | `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week (don't edit by hand) |
 | `dev/build-catalog.mjs` | Exports the icon list the photo Worker matches against |
 | `assets/config.js` | Site settings (the photo Worker URL) |
@@ -108,7 +109,11 @@ straight to that icon on the site. The Share button on the home page uses this l
 
 - **Daily quiz:** the same ten questions for everyone, changing at midnight UK time. Your score and
   streak are saved on your own device, and **Share your score** copies a result like
-  `8/10 🟩🟩🟥🟩…` with a link to `wtfisthisicon.com/quiz/` (which has its own preview card).
+  `8/10 🟩🟩🟥🟩…` with a link to that score's page, e.g. `wtfisthisicon.com/quiz/8/`. Each score
+  (0 to 10) has its own preview card ("I scored 8/10… Can you beat it?") and the page opens the quiz.
+  `wtfisthisicon.com/quiz/` is the general quiz link.
+- Score titles ("Fluent in symbol" and so on) live in `assets/quiz-tiers.js`, shared by the quiz and
+  the card builder, so the cards always match the results screen.
 - **Practice:** unlimited rounds by topic (Car, Laundry, Kitchen, Home, Tech, Labels & packs, Everything).
 - Questions are made from the icon data, so new icons join the quiz automatically. Two kinds:
   "What's this?" (pick the name) and "Which one is the…?" (pick the icon). Wrong answers come from

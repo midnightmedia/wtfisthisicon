@@ -32,14 +32,7 @@
   var topicById = {};
   TOPICS.forEach(function (t) { topicById[t.id] = t; });
 
-  var TIERS = [
-    [10, "Symbol whisperer", "Ten out of ten. You could write the manuals."],
-    [8, "Fluent in symbol", "Most people would have panicked at least twice more."],
-    [6, "Getting the hang of it", "Respectable. Most of your appliances are on your side."],
-    [4, "Professional panicker", "Half right, which still beats pressing every button."],
-    [2, "Reads the manual (eventually)", "Plenty to learn. The ones that got you are below."],
-    [0, "Just presses all the buttons", "Bold strategy. Start with the ones below."]
-  ];
+  var TIERS = WTF.quizTiers || [[0, "Your score", ""]]; // assets/quiz-tiers.js
 
   // Building questions
   // Seeded random numbers, so the daily quiz is identical for everyone.
@@ -297,7 +290,9 @@
 
   // Sharing
   function share(btn) {
-    var s = score(Q.answers), url = location.origin + "/quiz/";
+    // Each score has its own page (quiz/<score>/, built by dev/build-share.mjs) whose link preview
+    // says "I scored 8/10". Anything other than a full ten falls back to the general quiz link.
+    var s = score(Q.answers), url = location.origin + "/quiz/" + (Q.round.length === 10 ? s + "/" : "");
     var text = "WTF is this icon? Daily quiz · " + dayLabel(Q.day) + "\n" + s + "/" + Q.round.length + " " +
       Q.answers.map(function (a) { return a ? "🟩" : "🟥"; }).join("");
     if (navigator.share && ui.coarsePointer) {
