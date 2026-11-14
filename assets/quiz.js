@@ -95,19 +95,31 @@
     return keyWords(a).some(function (w) { return kb.indexOf(w) !== -1; });
   }
 
-  // Three wrong answers: lookalikes first (the fun part), then the same category, then anything.
-  // Never two options with the same name, the same drawing, or the same idea on another appliance.
-  function wrongAnswers(icon, rnd) {
-    var out = [], names = {}, looks = {};
+  // Three wrong answers, all from the same section as the right one, so knowing the theme (the
+  // question shows it) never rules an option out: lookalikes from the same category first (the
+  // near-misses are the fun part), then the rest of the category, then the rest of the quiz topic,
+  // and only then anything at all. When the options are pictures, skip icons that print their own
+  // name. Never two options with the same name, the same drawing, or the same idea elsewhere.
+  var eligibleId = {};
+  ELIGIBLE.forEach(function (i) { eligibleId[i.id] = true; });
+  function topicOf(cat) {
+    for (var t = 0; t < TOPICS.length; t++) if (TOPICS[t].cats && TOPICS[t].cats.indexOf(cat) !== -1) return TOPICS[t];
+    return null;
+  }
+  function wrongAnswers(icon, type, rnd) {
+    var out = [], names = {}, looks = {}, topic = topicOf(icon.category);
     names[nameKey(icon)] = looks[look(icon)] = true;
-    function add(c) {
+    function add(c, anyIcon) {
       if (out.length >= 3 || c === icon || names[nameKey(c)] || looks[look(c)] || sameIdea(icon, c)) return;
+      if (type === "name" && !eligibleId[c.id] && !anyIcon) return;
       names[nameKey(c)] = looks[look(c)] = true;
       out.push(c);
     }
-    shuffled(ui.lookalikes(icon, 6), rnd).forEach(add);
-    if (out.length < 3) shuffled(ICONS.filter(function (c) { return c.category === icon.category; }), rnd).forEach(add);
-    if (out.length < 3) shuffled(ICONS, rnd).forEach(add);
+    var sameCat = function (c) { return c.category === icon.category; };
+    shuffled(ui.lookalikes(icon, 12).filter(sameCat), rnd).forEach(function (c) { add(c); });
+    if (out.length < 3) shuffled(ICONS.filter(sameCat), rnd).forEach(function (c) { add(c); });
+    if (out.length < 3 && topic) shuffled(ICONS.filter(function (c) { return topic.cats.indexOf(c.category) !== -1; }), rnd).forEach(function (c) { add(c); });
+    if (out.length < 3) shuffled(ICONS, rnd).forEach(function (c) { add(c, true); });
     return out;
   }
 
@@ -121,7 +133,8 @@
         if (picked.length < LEN && (count[i.category] || 0) < perCat) { picked.push(i); count[i.category] = (count[i.category] || 0) + 1; }
       });
     return picked.map(function (icon) {
-      return { icon: icon, type: rnd() < 0.5 ? "name" : "icon", options: shuffled([icon].concat(wrongAnswers(icon, rnd)), rnd) };
+      var type = rnd() < 0.5 ? "name" : "icon";
+      return { icon: icon, type: type, options: shuffled([icon].concat(wrongAnswers(icon, type, rnd)), rnd) };
     });
   }
 
@@ -246,7 +259,7 @@
       ? '<h2 class="quiz__ask" id="quiz-title">What&rsquo;s this?</h2>' + where + tile(icon, "quiz__tile")
       : '<p class="quiz__ask-small" id="quiz-title">Which one is the&hellip;</p><h2 class="quiz__name">' + esc(label(icon)) + "</h2>" + where;
 
-    var feedback = "";
+    var feedback = "", nextBtn = "";
     if (answered) {
       var right = q.options[Q.picked] === icon, picked = q.options[Q.picked], last = Q.i === Q.round.length - 1;
       var verdict = right
@@ -258,8 +271,9 @@
         '<p class="quiz__verdict">' + verdict + "</p>" +
         '<p class="quiz__meaning">' + esc(ui.teaser(icon.meaning)) +
           ' <a href="' + ui.pagePath(icon) + '" data-icon="' + icon.id + '">Read more</a></p>' +
-        '<button type="button" class="btn" data-quiz="next">' + (last ? "See your score" : "Next question") + "</button>" +
       "</div>";
+      // Outside the question, so on phones it can stay pinned to the bottom of the screen.
+      nextBtn = '<div class="quiz__next"><button type="button" class="btn" data-quiz="next">' + (last ? "See your score" : "Next question") + "</button></div>";
     }
 
     return '<div class="quiz__bar"><span>' + esc(modeLabel()) + '</span><span>' + (Q.i + 1) + " / " + Q.round.length + "</span></div>" +
@@ -267,7 +281,7 @@
       '<div class="quiz__q quiz__q--' + q.type + '">' + head +
         '<div class="quiz__options quiz__options--' + (q.type === "icon" ? "names" : "icons") + '">' + opts + "</div>" +
         feedback +
-      "</div>";
+      "</div>" + nextBtn;
   }
 
   function tierFor(s, total) {

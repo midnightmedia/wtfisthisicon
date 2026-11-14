@@ -431,6 +431,8 @@ const re = /<!-- cats -->[\s\S]*?<!-- \/cats -->/;
 if (re.test(html)) fs.writeFileSync(indexPath, html.replace(re, `<!-- cats -->\n  ${footCats()}\n  <!-- /cats -->`));
 else console.warn("build-pages: no <!-- cats --> markers in index.html, so its footer category links weren't updated");
 
-fs.writeFileSync(manifestPath, JSON.stringify(nextManifest, null, 2) + "\n");
+// Saved in icon order, so rebuilds don't reshuffle the file (cards finish rendering in any order)
+const ordered = Object.fromEntries(ICONS.filter((i) => nextManifest[i.id]).map((i) => [i.id, nextManifest[i.id]]));
+fs.writeFileSync(manifestPath, JSON.stringify(ordered, null, 2) + "\n");
 if (!chrome) console.warn("build-pages: Chrome not found (set CHROME=/path/to/chrome), so new icons have no preview card yet");
 console.log(`Icon pages: ${ICONS.length} icons in ${CATS.filter((c) => byCat[c.id].length).length} categories, ${jobs.length} card(s) rendered, sitemap has ${urls.length} URLs`);
