@@ -202,7 +202,7 @@ WTF.add([
     category: "keyboard",
     aka: ["Menu key", "Application key", "App key", "context menu key", "right-click key", "≣"],
     looksLike: ["list with cursor", "menu with a mouse pointer", "box with lines and an arrow", "page with lines", "document with an arrow", "notepad with a pointer", "three lines and a pointer"],
-    meaning: "Opens the right-click menu (context menu) for whatever is selected or wherever the cursor is, just as if you'd clicked the right mouse button.",
+    meaning: "Opens the right-click menu (context menu) for whatever is selected or wherever the cursor is, just as if you'd clicked the right mouse button. The key nobody notices until the mouse dies.",
     action: "Handy when your mouse or touchpad won't right-click. No menu key? Shift + F10 does the same on Windows. On a Mac, hold Control and click.",
     tip: "It usually sits between the right-hand Alt and Ctrl keys. Many laptops have dropped it, and some newer Windows laptops have a Copilot key in that corner instead.",
     svg: `<rect x="10" y="9" width="32" height="40" rx="3" stroke-width="3"/><path d="M17 19H35M17 27H35M17 35H29" stroke-width="3"/><polygon class="knock" points="37,33 37,52 42,47.5 45.5,55 49,53.5 45.7,46.5 52,46" stroke-width="6"/><polygon points="37,33 37,52 42,47.5 45.5,55 49,53.5 45.7,46.5 52,46" fill="currentColor" stroke-width="1.5"/>`
@@ -272,7 +272,7 @@ WTF.add([
     category: "keyboard",
     aka: ["PgUp", "PgDn", "Page Up", "Page Down", "⇞", "⇟", "Bild auf", "Bild ab"],
     looksLike: ["arrows with two lines across", "arrow with lines through it", "up and down arrows with bars", "railway track arrows", "ladder arrows", "arrows with crossbars"],
-    meaning: "Page Up and Page Down scroll up or down one screenful at a time. Some keyboards and Mac menus show them as arrows with two lines across the stem.",
+    meaning: "Page Up and Page Down scroll up or down one screenful at a time, which beats a lot of frantic scrolling. Some keyboards and Mac menus show them as arrows with two lines across the stem.",
     action: "On a Mac laptop, press Fn + Up Arrow or Fn + Down Arrow. Ctrl + Page Up / Page Down switches between browser tabs, and between sheets in Excel.",
     tip: "In a web browser, the Space bar does the same as Page Down, and Shift + Space goes back up.",
     svg: `<path d="M20 54V21M13 33H27M13 42H27M44 10V43M37 22H51M37 31H51"/><g fill="currentColor" stroke-width="2"><polygon points="20,9 12,21 28,21"/><polygon points="44,55 36,43 52,43"/></g>`

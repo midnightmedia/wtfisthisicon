@@ -387,7 +387,7 @@
       aka: ["auto", "A flashing", "clock flashing", "auto mode", "timer mode"],
       looksLike: ["the word auto", "auto", "flashing auto", "letter a flashing", "auto on the clock"],
       meaning:
-        "The oven clock is in automatic (timed) mode, or it has just had a power cut and is waiting for the time to be set. Many ovens won't heat until you sort it out.",
+        "The oven clock is in automatic (timed) mode, or there's been a power cut and it's waiting for you to set the time. Many ovens flatly refuse to heat until you sort it out.",
       action:
         "Set the time of day (often by pressing two buttons together, or the clock button, then + or −). Then press the manual/hand button or cancel the timed programme. When AUTO goes out or stops flashing, the oven will heat normally.",
       tip: "AUTO flashing after a power cut is one of the most common reasons an oven seems to have 'stopped working'. It's the clock sulking, not the oven.",
@@ -587,7 +587,7 @@
       aka: ["tap", "faucet", "water supply", "no water", "check water supply", "water inlet"],
       looksLike: ["tap", "faucet", "tap with a drop", "dripping tap", "water tap"],
       meaning:
-        "The dishwasher isn't getting enough water. The tap may be off, the hose kinked or squashed, the inlet filter blocked, or the water pressure too low.",
+        "Your dishwasher isn't getting enough water. The tap may be off, the hose kinked or squashed, the inlet filter blocked, or the water pressure too low.",
       action:
         "Check the tap under the sink is fully open and the hose isn't kinked or squashed behind the machine. Still showing? Switch off, turn the tap off, unscrew the hose from the machine and rinse the little mesh filter inside the connection. Then restart the programme.",
       tip: "After plumbing work or a cold snap, the usual culprit is a blocked inlet filter or a frozen pipe.",
@@ -635,7 +635,7 @@
       aka: ["auto", "automatic", "sensor wash", "auto 45-65", "smart wash"],
       looksLike: ["a in a circle", "letter a with an arrow round it", "circular arrow", "the word auto", "a in a circle arrow"],
       meaning:
-        "The machine senses how dirty the water is and adjusts the temperature, water and time to suit the load.",
+        "The machine senses how dirty the water is and adjusts the temperature, water and time to suit the load. It's the 'you decide' button.",
       action:
         "Use it for mixed loads when you're not sure which programme to pick. It's a little less efficient than Eco, but it takes the guesswork out.",
       tip: "Auto symbols vary a lot. Often it's just the word 'Auto', or a glass and plate with an 'A'.",
@@ -666,7 +666,7 @@
       aka: ["glass", "glass 40", "delicate", "glassware", "gentle", "crystal"],
       looksLike: ["wine glass", "glass", "goblet", "cocktail glass", "champagne glass"],
       meaning:
-        "A gentle, lower-temperature programme (around 40°C) for glasses and delicate items that hot water could damage.",
+        "A gentle, lower-temperature programme (around 40°C) for glasses and delicate items that hot water could damage. The nice wine glasses' programme.",
       action:
         "Use it for wine glasses and lightly dirty delicate items, and make sure the glasses don't touch in the rack. Crystal, hand-painted and antique glass should still be washed by hand. Sorry.",
       tip: "Cloudy glasses? If the film wipes off with vinegar, it's limescale (top up the salt and rinse aid). If it won't come off, it's permanent etching from hot, soft water.",
@@ -696,7 +696,7 @@
       aka: ["pre rinse", "prewash", "rinse and hold", "rinse only", "soak"],
       looksLike: ["shower head", "shower", "watering can", "drops falling", "sprinkler", "rain"],
       meaning:
-        "A short cold rinse with no detergent, to stop food drying onto the dishes when you won't run a full wash for a while.",
+        "A short cold rinse with no detergent, to stop food drying onto the dishes when the full wash is still a while off.",
       action:
         "Use it when the machine is half full and you won't run it until tomorrow. It stops smells and dried-on egg. Run a normal programme later.",
       tip: "No need to rinse plates under the tap before loading. Scraping off leftovers is enough, and modern detergents work better with a bit of food to grab onto.",
@@ -727,7 +727,7 @@
       aka: ["extra dry", "extra drying", "heated dry", "dry plus", "drying boost"],
       looksLike: ["wavy lines over a plate", "heat lines", "steam over a dish", "squiggly lines", "wavy lines above a line"],
       meaning:
-        "An option that adds extra drying, usually a hotter final rinse or a longer drying phase, for plastics and loads that come out wet.",
+        "An option that adds extra drying, usually a hotter final rinse or a longer drying phase, for plastics and anything that keeps coming out soggy.",
       action:
         "Turn it on if cups and plastic tubs keep coming out wet. It adds a little time and energy. Opening the door a crack at the end of the cycle also helps a lot.",
       tip: "Plastic always dries worse than glass or china because it doesn't hold heat. It's not you, it's the tub. Rinse aid helps more than any setting.",
@@ -757,7 +757,7 @@
       aka: ["delay", "delay start", "delayed start", "start later", "time delay", "3h 6h 9h"],
       looksLike: ["clock", "clock face", "clock with hands", "clock with h", "3h 6h 9h", "watch"],
       meaning:
-        "Sets the dishwasher to start later, after a chosen number of hours, so it can run overnight on cheaper electricity or finish when you're up.",
+        "Sets the dishwasher to start later, after a chosen number of hours, so it can run overnight on cheaper electricity or be finished by the time you're up.",
       action:
         "Press it until the delay you want shows (like 1–24h, or 3/6/9h), then press start and close the door. The countdown begins. To cancel, press it again or hold the start/reset button.",
       tip: "Some machines count down to the END of the wash rather than the start, so check what the number means on yours.",

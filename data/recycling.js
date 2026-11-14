@@ -36,7 +36,7 @@ WTF.add([
     category: "recycling",
     aka: ["PET", "PETE", "polyethylene terephthalate", "resin identification code 1", "RIC 1"],
     looksLike: ["triangle of arrows with a number", "triangle with 1", "recycling triangle with 1", "number 1 in a triangle", "pet"],
-    meaning: "Identifies the plastic type, not whether it can be recycled. 1 = PET: clear drinks bottles, food trays and punnets. It happens to be one of the most widely recycled plastics.",
+    meaning: "Despite the arrows, this only tells you the plastic type, not whether it can be recycled. 1 = PET: clear drinks bottles, food trays and punnets. It happens to be one of the most widely recycled plastics.",
     action: "Bottles usually go in household recycling. Empty them, and put the lid back on if your council asks. Check local rules for trays and punnets.",
     tip: "Recycled PET is turned into new bottles and polyester fabric like fleece.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">1</text><text x="32" y="58" font-size="11">PET</text>`
@@ -48,7 +48,7 @@ WTF.add([
     category: "recycling",
     aka: ["HDPE", "PE-HD", "high-density polyethylene", "resin identification code 2", "RIC 2"],
     looksLike: ["triangle of arrows with a number", "triangle with 2", "recycling triangle with 2", "number 2 in a triangle", "hdpe"],
-    meaning: "Identifies the plastic type, not whether it can be recycled. 2 = HDPE: milk bottles, shampoo, detergent and cleaning-product bottles. Widely recycled.",
+    meaning: "Despite the arrows, this only tells you the plastic type, not whether it can be recycled. 2 = HDPE: milk bottles, shampoo, detergent and cleaning-product bottles. Widely recycled.",
     action: "Usually fine for household recycling. Rinse it out, and check your council's rules.",
     tip: "Newer packs may show the number in a plain solid triangle without arrows. The industry standard switched to that in 2013 precisely so people would stop reading these codes as \"recyclable\", which, with arrows round them, was fair enough.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">2</text><text x="32" y="58" font-size="11">HDPE</text>`
@@ -60,7 +60,7 @@ WTF.add([
     category: "recycling",
     aka: ["PVC", "V", "vinyl", "polyvinyl chloride", "resin identification code 3", "RIC 3"],
     looksLike: ["triangle of arrows with a number", "triangle with 3", "recycling triangle with 3", "number 3 in a triangle", "pvc"],
-    meaning: "Identifies the plastic type, not whether it can be recycled. 3 = PVC (vinyl): pipes, window frames, some blister packs and some cling film. Rarely accepted in household recycling.",
+    meaning: "Despite the arrows, this only tells you the plastic type, not whether it can be recycled. 3 = PVC (vinyl): pipes, window frames, some blister packs and some cling film. Rarely accepted in household recycling.",
     action: "Usually general waste, unless your council or recycling centre says otherwise.",
     tip: "Sometimes marked with just a \"V\" under the triangle.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">3</text><text x="32" y="58" font-size="11">PVC</text>`
@@ -72,7 +72,7 @@ WTF.add([
     category: "recycling",
     aka: ["LDPE", "PE-LD", "low-density polyethylene", "soft plastic", "plastic film", "resin identification code 4", "RIC 4"],
     looksLike: ["triangle of arrows with a number", "triangle with 4", "recycling triangle with 4", "number 4 in a triangle", "ldpe"],
-    meaning: "Identifies the plastic type, not whether it can be recycled. 4 = LDPE: carrier bags, bread bags, bubble wrap, squeezy bottles and plastic film.",
+    meaning: "Despite the arrows, this only tells you the plastic type, not whether it can be recycled. 4 = LDPE: carrier bags, bread bags, bubble wrap, squeezy bottles and plastic film.",
     action: "Soft film often isn't collected from your doorstep, but many supermarkets have collection points for bags and wrappers. Check local rules.",
     tip: "Soft plastic can jam the sorting machines, which is why many councils still don't want it in the household recycling bin.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">4</text><text x="32" y="58" font-size="11">LDPE</text>`
@@ -84,7 +84,7 @@ WTF.add([
     category: "recycling",
     aka: ["PP", "polypropylene", "resin identification code 5", "RIC 5"],
     looksLike: ["triangle of arrows with a number", "triangle with 5", "recycling triangle with 5", "number 5 in a triangle", "pp"],
-    meaning: "Identifies the plastic type, not whether it can be recycled. 5 = PP (polypropylene): margarine and yoghurt tubs, ready-meal trays, bottle caps and takeaway tubs.",
+    meaning: "Despite the arrows, this only tells you the plastic type, not whether it can be recycled. 5 = PP (polypropylene): margarine and yoghurt tubs, ready-meal trays, bottle caps and takeaway tubs.",
     action: "Increasingly accepted in household recycling. Give it a rinse and check your council's list.",
     tip: "PP copes with heat, which is why it's popular for microwaveable containers.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">5</text><text x="32" y="58" font-size="11">PP</text>`
@@ -96,7 +96,7 @@ WTF.add([
     category: "recycling",
     aka: ["PS", "polystyrene", "EPS", "Styrofoam", "resin identification code 6", "RIC 6"],
     looksLike: ["triangle of arrows with a number", "triangle with 6", "recycling triangle with 6", "number 6 in a triangle", "ps"],
-    meaning: "Identifies the plastic type, not whether it can be recycled. 6 = PS (polystyrene): foam takeaway boxes and packing blocks, disposable cups and cutlery, some yoghurt pots. Rarely recycled.",
+    meaning: "Despite the arrows, this only tells you the plastic type, not whether it can be recycled. 6 = PS (polystyrene): foam takeaway boxes and packing blocks, disposable cups and cutlery, some yoghurt pots. Rarely recycled.",
     action: "Usually general waste. Some recycling centres take clean packing foam, but check before you drive there.",
     tip: "Expanded polystyrene foam is around 98% air, which is a big part of why it's so uneconomical to collect and transport. Mostly, you'd be paying to move air.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">6</text><text x="32" y="58" font-size="11">PS</text>`
@@ -243,7 +243,7 @@ WTF.add([
       category: "recycling",
       aka: ["Don't Recycle", "Do not recycle", "not yet recycled", "not currently recycled", "OPRL", "crossed-out recycling label"],
       looksLike: ["arrow with a line through it", "crossed out circle arrow", "black box with a crossed arrow", "recycle symbol with a slash", "heart arrow crossed out", "dont recycle"],
-      meaning: "Fewer than half of UK councils collect this, or it can't yet be sorted and reprocessed properly. Putting it in the recycling can contaminate everything else in the load.",
+      meaning: "Fewer than half of UK councils collect this, or it can't yet be sorted and reprocessed properly. Put it in the recycling anyway and it can contaminate everything else in the load.",
       action: "Put it in general waste, unless the pack sends you somewhere specific (a supermarket collection point or a take-back scheme). If your own council's list says it takes it, your council wins.",
       tip: "On a multi-part label, \"Don't recycle\" may only apply to one piece (often a film lid or a sleeve) while the rest says \"Recycle\". Separate them.",
       svg: oprl(14, 4, 34, true) + t(32, 49.5, 10, "DON’T") + t(32, 59.5, 10, "RECYCLE")
@@ -279,9 +279,9 @@ WTF.add([
       category: "recycling",
       aka: ["Remove film", "Remove sleeve", "multi-component label", "Tray recycle, Film don't recycle", "OPRL"],
       looksLike: ["two recycle labels side by side", "tray and film labels", "one arrow crossed out and one not", "two boxes with arrows", "tray film", "remove sleeve"],
-      meaning: "The pack is made of parts that go different ways, so each part (tray, film, sleeve, box…) gets its own label. Typically the tray says \"Recycle\" and the film lid says \"Don't recycle\". \"Remove film\" or \"Remove sleeve\" means peel that part off first.",
+      meaning: "The pack is made of bits that go different ways, so each part (tray, film, sleeve, box…) gets its own label. Typically the tray says \"Recycle\" and the film lid says \"Don't recycle\". \"Remove film\" or \"Remove sleeve\" means peel that bit off first.",
       action: "Separate the pieces and follow each label: recyclable parts in the recycling, \"Don't recycle\" parts in general waste (or a supermarket collection point if the film's label says so).",
-      tip: "A plastic sleeve left on a bottle can make the sorting machines misread what the bottle is made of. Look for a perforated strip or \"peel here\".",
+      tip: "A plastic sleeve left on a bottle can fool the sorting machines about what the bottle is made of. Look for a perforated strip or \"peel here\".",
       svg: oprl(5, 13, 25) + oprl(34, 13, 25, true) + t(17.5, 51, 10, "TRAY") + t(46.5, 51, 10, "FILM")
     },
     {
@@ -330,7 +330,7 @@ WTF.add([
       category: "recycling",
       aka: ["GL", "GL 70", "GL 71", "GL 72", "glass code", "clear glass", "green glass", "brown glass"],
       looksLike: ["triangle with 70", "triangle with 71", "triangle with 72", "gl", "arrows with gl", "gl 70", "number 70 in a triangle"],
-      meaning: "European material code for glass: 70 = clear, 71 = green, 72 = brown. Glass bottles and jars can be recycled over and over without losing quality.",
+      meaning: "European material code for glass: 70 = clear, 71 = green, 72 = brown. Glass bottles and jars can be recycled over and over without losing quality, which makes glass the overachiever of the recycling bin.",
       action: "Empty bottles and jars go in your glass collection or a bottle bank; if the bank has separate slots, sort by colour. Glass is glass, except when it isn't: drinking glasses, Pyrex, window glass and light bulbs don't belong there.",
       tip: "Ovenproof and drinking glass melt at a different temperature from bottle glass, so even a little can spoil a whole batch.",
       svg: code("70", "GL")
@@ -342,7 +342,7 @@ WTF.add([
       category: "recycling",
       aka: ["FE", "FE 40", "steel", "tinplate", "tin can", "ferrous", "steel code"],
       looksLike: ["triangle with 40", "fe", "arrows with fe", "fe 40", "number 40 in a triangle"],
-      meaning: "European material code for steel (FE is from ferrum, Latin for iron): food tins, pet-food tins, some aerosols and jar lids.",
+      meaning: "European material code for steel (FE is from ferrum, Latin for iron, because why make it easy): food tins, pet-food tins, some aerosols and jar lids.",
       action: "Empty and rinse it, then put it in your metal recycling. Steel tins are collected by virtually every UK council.",
       tip: "Steel is the easiest packaging to sort: at the sorting plant, big magnets simply pull it out of the mix.",
       svg: code("40", "FE")
@@ -426,7 +426,7 @@ WTF.add([
       category: "recycling",
       aka: ["OK compost HOME", "home compostable", "TÜV Austria", "Vinçotte", "OK compost"],
       looksLike: ["three arrows pointing down with a flower", "half a flower", "down arrows and a daisy", "ok compost home", "flower and arrows", "ok compost"],
-      meaning: "Certified by TÜV Austria to break down in a home compost heap, at the lower, less steady temperatures of a garden bin, not just in an industrial plant.",
+      meaning: "Certified by TÜV Austria to break down in an ordinary home compost heap, at the cooler, less steady temperatures of a garden bin, not just in an industrial plant.",
       action: "It can go on your home compost heap (tear it up to help it along). Keep it out of your plastic recycling. Whether your food-waste caddy can take it is up to your council.",
       tip: "Home compostable still needs a compost heap's microbes, warmth and moisture: it's no excuse for littering.",
       svg: okCompost("HOME", 11)
@@ -438,7 +438,7 @@ WTF.add([
       category: "recycling",
       aka: ["OK compost INDUSTRIAL", "industrially compostable", "EN 13432", "TÜV Austria", "Vinçotte", "OK compost"],
       looksLike: ["three arrows pointing down with a flower", "half a flower", "down arrows and a daisy", "ok compost industrial", "industrial", "ok compost"],
-      meaning: "Certified to break down only in industrial composting plants, which run at about 55–60 °C (standard EN 13432). It won't break down properly in your garden compost heap.",
+      meaning: "Certified to break down only in industrial composting plants, which run at about 55–60 °C (standard EN 13432). Your garden compost heap won't get anywhere near hot enough.",
       action: "Not for your home compost heap or your plastic recycling. Use your food-waste caddy only if your council says it takes compostable packaging; otherwise general waste.",
       tip: "Same idea as the Seedling logo, from a different certifier. Industrial compostable is not home compostable: if it doesn't say HOME, assume your garden heap can't handle it.",
       svg: okCompost("INDUSTRIAL", 9)
@@ -452,9 +452,9 @@ WTF.add([
       category: "recycling",
       aka: ["FSC", "Forest Stewardship Council", "FSC Mix", "FSC 100%", "FSC Recycled", "checkmark and tree"],
       looksLike: ["tree with a tick", "tick tree", "tree and check mark", "tree with a checkmark", "tree logo", "fsc"],
-      meaning: "The wood, paper or card comes from FSC-certified, responsibly managed forests and/or recycled material. \"FSC 100%\" = all from FSC forests; \"FSC Mix\" = a blend of FSC, recycled and checked (\"controlled\") sources; \"FSC Recycled\" = recycled material. It's about where it came from, not how to get rid of it.",
+      meaning: "The wood, paper or card comes from FSC-certified, responsibly managed forests and/or recycled material. \"FSC 100%\" = all from FSC forests; \"FSC Mix\" = a blend of FSC, recycled and checked (\"controlled\") sources; \"FSC Recycled\" = recycled material. It's about where the card came from, not where it goes next.",
       action: "Nothing to do because of this logo. For disposal, look for a recycling label; plain paper and card usually go in your paper and card recycling.",
-      tip: "Every FSC label carries a licence code (FSC® C followed by numbers) that you can look up on the FSC website to see who's using it.",
+      tip: "Every FSC label carries a licence code (FSC® C followed by numbers) that you can look up on the FSC website to see who's using it. Niche, but satisfying.",
       svg: '<path d="M13 29L20 41L28 13.5C30 8 38 7 41 12C46 10.5 51 15 49.5 20C54 23 52.5 31 47 31.5C48 36 43.5 39.5 40 37V45H34V38.5" stroke-width="3.5"/>' +
         t(32, 58.5, 13, "FSC")
     },
@@ -467,7 +467,7 @@ WTF.add([
       looksLike: ["two trees in a circle", "trees with an arrow around them", "two trees", "tree in a circle with an arrow", "circle arrow around trees", "pefc"],
       meaning: "The wood, paper or card comes from PEFC-certified, sustainably managed forests (or, on the \"PEFC recycled\" version, recycled material). Like FSC, it's a sourcing label, not a recycling instruction, despite the arrow round the trees.",
       action: "Nothing to do because of this logo. Follow the recycling label or your council's rules to dispose of the packaging.",
-      tip: "PEFC and FSC are rival schemes, so a pack normally shows one or the other, not both.",
+      tip: "PEFC and FSC are rival schemes, so a pack normally shows one or the other, not both. Forestry has its own turf wars.",
       svg: arcArrow(31, 26, 18, -100, -400, 4.5, 8, 5.5) +
         '<g fill="currentColor" stroke="none" transform="translate(-1 0)"><circle cx="26" cy="24" r="5.5"/><rect x="24.8" y="27" width="2.4" height="9"/>' +
         '<polygon points="38.5,13.5 44.5,31 32.5,31"/><rect x="37.3" y="30" width="2.4" height="6"/></g>' +
@@ -496,7 +496,7 @@ WTF.add([
       category: "recycling",
       aka: ["PLASTIC IN PRODUCT", "PLASTIC IN FILTER", "single-use plastics marking", "SUP marking", "turtle logo", "dead turtle logo"],
       looksLike: ["turtle with plastic", "turtle", "plastic in product", "crossed out toilet and turtle", "red and blue label with a turtle", "turtle and toilet", "turtle with a cup"],
-      meaning: "EU marking for single-use products that contain plastic: wet wipes, sanitary pads, tampons and applicators, cigarette filters and disposable cups. It warns that there's plastic in it and that flushing or littering it harms wildlife.",
+      meaning: "EU marking for single-use products that contain plastic: wet wipes, sanitary pads, tampons and applicators, cigarette filters and disposable cups. The turtle isn't there to look cute: it's warning you there's plastic in it and that flushing or littering it harms wildlife.",
       action: "Never flush wipes, pads or tampons: bag them and put them in general waste. Bin cups and cigarette ends rather than dropping them.",
       tip: "The left-hand picture and wording change by product: a crossed-out toilet on wipes and sanitary products, a crossed-out cup or cigarette on cups and filters. It's an EU rule, but you'll see it on plenty of products in UK shops.",
       svg: '<rect x="5.25" y="7.5" width="53.5" height="49" rx="3" stroke-width="2.5"/><line x1="32" y1="7.5" x2="32" y2="44" stroke-width="2.5"/>' +
@@ -532,7 +532,7 @@ WTF.add([
       category: "recycling",
       aka: ["Pfand", "Einwegpfand", "DPG", "Deutsche Pfandsystem", "deposit return", "bottle deposit"],
       looksLike: ["bottle and can with an arrow", "bottle can arrow", "pfand logo", "bottle and can with corners", "arrow under a bottle and can", "deposit symbol"],
-      meaning: "German deposit logo for single-use drinks bottles and cans (0.1 to 3 litres). A €0.25 deposit was added when the drink was sold in Germany, and you get it back when you return the empty.",
+      meaning: "German deposit logo for single-use drinks bottles and cans (0.1 to 3 litres). A €0.25 deposit was added when the drink was sold in Germany, and you get it back when you return the empty. Free money, as long as you're in Germany.",
       action: "In Germany, take it back empty and uncrushed (the machine has to read the label) to pretty much any shop that sells drinks in that kind of container. In the UK the deposit doesn't apply, sadly: recycle it as normal.",
       tip: "Reusable (Mehrweg) bottles carry a smaller deposit, usually 8 or 15 cents. Other countries have their own deposit logos, such as Ireland's Re-turn.",
       svg: '<g fill="currentColor" stroke="none"><polygon points="6,6 18,6 6,18"/><polygon points="58,6 46,6 58,18"/><rect x="6" y="52" width="6" height="6"/><rect x="52" y="52" width="6" height="6"/>' +

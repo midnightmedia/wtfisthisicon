@@ -155,7 +155,7 @@
       aka: ["super cool", "fast cool", "quick cool", "power cool", "express cool", "quick fridge", "super cooling"],
       looksLike: ["water drop with a snowflake", "drop and snowflake", "snowflake with a drop", "snowflake next to the fridge temperature", "raindrop and snowflake"],
       meaning:
-        "Runs the fridge section at its coldest for a few hours to chill a big shop or warm drinks quickly, then goes back to your normal temperature by itself.",
+        "Runs the fridge section at its coldest for a few hours to chill a big shop or warm drinks quickly, then calms back down to your normal temperature by itself.",
       action:
         "Turn it on just before you load a big shop (on Samsung, hold the fridge button for about 3 seconds). It usually switches off after around 6 hours, up to 15 on some models, or you can press the button again to cancel. It's a bit noisier while it runs.",
       tip: "Icons vary a lot: a drop with a snowflake, a snowflake by the fridge temperature or, mercifully, just the word. If lettuce at the back is freezing, check super cool isn't stuck on and the fridge isn't set colder than about 3°C.",
@@ -216,7 +216,7 @@
       aka: ["fan", "fan button", "air circulation", "multi airflow", "fan on/off", "ventilation"],
       looksLike: ["fan", "propeller", "three blades", "fan in a circle", "windmill", "pinwheel", "flower"],
       meaning:
-        "Some fridges (Hotpoint, Indesit and others) have a fan inside the fridge section with its own on/off button. It stirs the cold air so the top and bottom shelves stay at the same temperature.",
+        "Some fridges (Hotpoint, Indesit and others) have a fan inside the fridge section with its own on/off button. It stirs the cold air so the top and bottom shelves stop disagreeing about the temperature.",
       action:
         "Leave it on in a warm kitchen: Hotpoint suggests having it on when the room is above about 27°C, or if droplets form on the glass shelves. It starts and stops by itself, so a still fan may just be having a rest while switched on.",
       tip: "Bigger fridges sell the same idea as 'Multi Airflow': cold air blown out of several vents so there are fewer warm spots. Either way, don't block the vents with food.",
@@ -289,7 +289,7 @@
       aka: ["water", "chilled water", "dispenser", "water dispenser", "cold water", "WATER"],
       looksLike: ["glass with a drop", "glass of water", "cup with water", "glass", "tumbler", "glass with a water drop"],
       meaning:
-        "Sets the dispenser on the front of the door to give chilled, filtered water when you press the paddle or button.",
+        "Sets the dispenser on the front of the door to give chilled, filtered water when you press the paddle or button. The fridge's party trick.",
       action:
         "Select it, then push your glass against the paddle. After installing, or fitting a new filter, run a few litres through and pour them away to flush out air and filter dust. Spluttering or slow water usually means air in the pipe, or a filter that's due a change.",
       tip: "Water only flows if the fridge is plumbed into the mains or has a built-in tank you fill yourself. If nothing at all comes out, check the dispenser lock isn't on.",
@@ -464,7 +464,7 @@
       aka: ["climate class", "SN", "N", "ST", "T", "SN-T", "SN-ST", "ambient temperature", "rating plate"],
       looksLike: ["sn", "sn-t", "sn-st", "st", "class sn", "letters on the sticker", "letters on the rating plate"],
       meaning:
-        "Printed on the rating plate (the sticker inside the fridge or on the back), it says what room temperatures the appliance is built to work in: SN 10–32°C, N 16–32°C, ST 16–38°C, T 16–43°C. Combined codes like SN-T cover the whole span, 10–43°C.",
+        "Printed on the rating plate (the sticker inside the fridge or on the back), it says what room temperatures the appliance is built to cope with: SN 10–32°C, N 16–32°C, ST 16–38°C, T 16–43°C. Combined codes like SN-T cover the whole span, 10–43°C.",
       action:
         "Check it before putting a fridge or freezer in a garage, shed or conservatory. Yes, a room can be too cold: a fridge-freezer with one thermostat can stop cooling the freezer, so the food defrosts. Too hot, and it runs flat out and can overheat.",
       tip: "Most UK models are SN or SN-ST. Some are sold specifically as suitable for garages and keep working in much colder rooms: look for that if yours lives in an outbuilding.",

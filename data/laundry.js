@@ -253,7 +253,7 @@
       category: "laundry",
       aka: ["no dryer", "no tumble dry", "air dry only"],
       looksLike: ["square with circle crossed out", "crossed out square", "box with an x", "square with circle and x", "circle in a square with a cross"],
-      meaning: "Keep it out of the tumble dryer. The heat and tumbling could shrink, melt, pill or misshape it.",
+      meaning: "Keep it out of the tumble dryer. The heat and tumbling could shrink, melt, pill or misshape it, and none of those come out in the wash.",
       action: "Air-dry instead. One of the natural-drying symbols (a square with lines) should show you how.",
       tip: "You'll often see it on wool, very stretchy clothes, printed T-shirts and anything with rubbery or plastic parts.",
       svg: TUMBLE + cross(9, 9, 55, 55)
@@ -266,7 +266,7 @@
       category: "laundry",
       aka: ["hang to dry", "clothesline", "hang dry"],
       looksLike: ["square with a curve", "envelope", "square with a smile", "square with curved line at the top", "square with a hammock"],
-      meaning: "Hang it up to dry on a clothesline, airer or hanger.",
+      meaning: "Hang it up to dry on a clothesline, airer or hanger. No machine required.",
       action: "Shake it out, hang it up and let it air-dry, indoors or out.",
       tip: "This curved-line version is common on US and older labels. The newer European (ISO) version has a single vertical line in the square instead.",
       svg: SQUARE + '<path d="M9 12 Q32 36 55 12"/>'
@@ -334,7 +334,7 @@
       category: "laundry",
       aka: ["cool iron", "low iron", "110 °C"],
       looksLike: ["iron with one dot", "iron with a dot", "iron one dot"],
-      meaning: "Iron at a low temperature, max 110 °C (230 °F). Typical for delicate synthetics like acrylic, nylon or acetate.",
+      meaning: "Iron at a low temperature, max 110 °C (230 °F). One dot means go gently: it's typical for delicate synthetics like acrylic, nylon or acetate.",
       action: "Set the iron to its one-dot setting and skip the steam. At this setting, steam can cause permanent damage.",
       tip: "Most irons have the same dots printed on the dial, so just match them up. A rare bit of joined-up thinking.",
       svg: IRON + dot(36, 39)
@@ -345,7 +345,7 @@
       category: "laundry",
       aka: ["warm iron", "medium iron", "150 °C"],
       looksLike: ["iron with two dots", "iron with dots", "iron 2 dots"],
-      meaning: "Iron at a medium temperature, max 150 °C (300 °F). Typical for polyester, wool, silk and blends.",
+      meaning: "Iron at a medium temperature, max 150 °C (300 °F). Two dots is the middle setting, typical for polyester, wool, silk and blends.",
       action: "Set the iron to two dots. For wool and silk, iron inside out or use a pressing cloth to avoid shiny patches.",
       tip: "Just match the dots on the label to the ones on your iron's dial.",
       svg: IRON + dot(30, 39) + dot(42, 39)
@@ -378,7 +378,7 @@
       category: "laundry",
       aka: ["no steam", "iron without steam", "dry iron only"],
       looksLike: ["iron with an x underneath", "iron with crossed lines below", "iron with a cross under it", "iron with crossed out steam"],
-      meaning: "You can iron it, but without steam. Steam could leave water marks or damage the fabric.",
+      meaning: "You can iron it, but without steam. The crossed-out lines under the iron are the steam, and steam could leave water marks or damage the fabric.",
       action: "Switch off the steam (or empty the water tank) and dry-iron at the temperature the label allows.",
       tip: "Silk and some synthetics get water spots from steam, and they're hard to get out again.",
       svg: '<g transform="translate(0,-7)">' + IRON + "</g>" + cross(25, 46, 39, 56)
@@ -413,7 +413,7 @@
       category: "laundry",
       aka: ["hydrocarbon solvent", "petroleum solvent", "gentle dry clean"],
       looksLike: ["circle with f", "f in a circle", "letter f in a circle"],
-      meaning: "Professional dry cleaning with hydrocarbon (petroleum-based) solvents only. It's milder than the standard 'P' process.",
+      meaning: "One for the professionals: dry cleaning with hydrocarbon (petroleum-based) solvents only. It's milder than the standard 'P' process.",
       action: "Take it to a dry cleaner and point out the F. Not every cleaner uses hydrocarbon solvents.",
       tip: "F items often have sequins, beads, plastic trims or bonded fabrics that the stronger 'perc' solvent could damage.",
       svg: letter("F")
@@ -486,7 +486,7 @@
       category: "washer",
       aka: ["rinse plus", "rinse+", "additional rinse", "allergy rinse"],
       looksLike: ["bucket with a plus", "rinse with a plus", "shower bucket with plus", "tub with dotted lines and a plus"],
-      meaning: "Adds one more rinse at the end of the programme to wash out more detergent.",
+      meaning: "Adds one more rinse at the end of the programme to wash out more detergent. Handy if your skin has opinions about the stuff.",
       action: "Turn it on for babies' clothes, sensitive skin or allergies, or if white detergent marks show up on dark clothes.",
       tip: "It costs extra water and time, so leave it off for everyday loads.",
       svg: '<g transform="translate(0,6)">' + TUB + "</g>" + shower([17, 28, 39]) + '<path d="M51 5.5 V16.5 M45.5 11 H56.5"/>'
@@ -519,7 +519,7 @@
       category: "washer",
       aka: ["spin off", "spin stop", "0 rpm"],
       looksLike: ["spiral crossed out", "crossed out swirl", "snail with an x", "spiral with an x"],
-      meaning: "The final spin is switched off, so the cycle ends after draining and the laundry comes out very wet.",
+      meaning: "The final spin is switched off, so the cycle ends after draining and the laundry comes out very wet. Not a fault, just a very damp choice.",
       action: "Use it for drip-dry items or delicates that crease badly. Have a basin ready: it'll be soggy.",
       tip: "This matches the 'drip dry' symbols on care labels. Hang things up straight away.",
       svg: SPIRAL + cross(10, 10, 54, 54)
@@ -530,7 +530,7 @@
       category: "washer",
       aka: ["pump out", "drain only", "empty water", "spin/drain"],
       looksLike: ["bucket with an arrow down", "tub with a downward arrow", "arrow out of a bucket", "bucket with arrow"],
-      meaning: "Pumps the water out of the drum, either on its own or as part of a spin/drain programme.",
+      meaning: "Pumps the water out of the drum, either on its own or as part of a spin/drain programme. The arrow pointing down is the water leaving.",
       action: "Use it to empty the machine after rinse hold or after cancelling a programme halfway. The door usually unlocks once the water's gone.",
       tip: "If the machine won't drain, the pump filter (behind a small flap at the bottom front) is probably clogged with the usual suspects: fluff, coins or hair clips.",
       svg: '<g transform="translate(0,-6)">' + TUB + '</g><path d="M32 24 V54 M25 47 L32 54 L39 47"/>'
@@ -541,7 +541,7 @@
       category: "washer",
       aka: ["door lock", "lock", "door closed"],
       looksLike: ["padlock", "lock", "closed padlock", "lock with keyhole", "handbag"],
-      meaning: "The door is locked for safety while the machine runs, and afterwards while there's still water in the drum or it's still hot.",
+      meaning: "The door is locked for safety while the machine runs, and it stays that way afterwards while there's still water in the drum or it's still hot.",
       action: "Wait for the light to go out, usually a minute or two after the programme ends. If it stays on, there may still be water inside: run a drain.",
       tip: "Never force the door. It's a safety lock, and it will break before it opens.",
       svg: LOCK + dot(32, 38.5) + '<path d="M32 40 V46"/>'
@@ -587,7 +587,7 @@
       category: "washer",
       aka: ["eco", "eco programme", "energy saving", "eco 40-60 programme"],
       looksLike: ["eco 40-60", "text eco", "40-60", "eco with numbers"],
-      meaning: "The EU's standard energy-saving programme. It cleans normally soiled cottons labelled for 40 °C or 60 °C, even mixed together, using as little energy and water as possible.",
+      meaning: "The EU's standard energy-saving programme. It washes normally soiled cottons labelled for 40 °C or 60 °C, even mixed together, using as little energy and water as it possibly can.",
       action: "Use it as your everyday programme for normal cotton loads. It's long (3 hours is normal) but cheap to run.",
       tip: "It saves energy by washing cooler for longer, so the water rarely reaches 40 or 60 °C, whatever the name says. The energy label on your machine is based on this programme.",
       svg: '<text x="32" y="28" font-size="20">eco</text><text x="32" y="48" font-size="16">40-60</text>'
@@ -610,9 +610,9 @@
       category: "washer",
       aka: ["easy care", "synthetics", "permanent press", "mixed fabrics"],
       looksLike: ["bucket with a line under it", "tub with a line", "underlined bucket", "shirt", "blouse"],
-      meaning: "A gentler programme for polyester, nylon and blends, with less drum movement and a slower spin to reduce creasing. It matches care labels with one line under the tub.",
+      meaning: "A gentler programme for polyester, nylon and blends: less tumbling and a slower spin, so things come out less creased. It's the one that matches care labels with one line under the tub.",
       action: "Use it for shirts, blouses, sportswear and anything labelled with one line. Don't overfill: half a drum is ideal.",
-      tip: "Some brands show this programme as a shirt or blouse instead of the tub with a line.",
+      tip: "Some brands show this programme as a shirt or blouse instead of the tub with a line. Same programme, different doodle.",
       svg: tubBars("", 1)
     },
     {
@@ -621,7 +621,7 @@
       category: "washer",
       aka: ["woollens", "wool programme", "woolmark"],
       looksLike: ["ball of yarn", "yarn ball", "ball of wool", "circle with lines and a tail", "ball with string"],
-      meaning: "A very gentle, cool programme for machine-washable wool and cashmere, with minimal drum movement and a low spin.",
+      meaning: "A very gentle, cool programme for machine-washable wool and cashmere, with minimal drum movement and a low spin, so your jumper comes out the size it went in.",
       action: "Use it for items with a washtub and two lines on the label, or marked 'machine washable wool', and use a wool detergent.",
       tip: "Machines with Woolmark approval have had this programme tested as safe even for some hand-wash wool.",
       svg: '<g transform="translate(-1.5,-1.5)"><circle cx="30" cy="30" r="19"/>' +
@@ -634,7 +634,7 @@
       category: "washer",
       aka: ["hand wash", "delicates", "silk", "gentle"],
       looksLike: ["hand in a bucket", "bucket with a hand", "hand in water", "tub with a hand"],
-      meaning: "An extra-gentle programme that imitates hand washing: cool water, slow rocking movements and very little spinning.",
+      meaning: "An extra-gentle programme that pretends to be you washing by hand: cool water, slow rocking movements and very little spinning.",
       action: "Use it for lingerie, silk and delicate items, but check your manual before trusting it with hand-wash-only labels. A mesh bag adds extra protection.",
       tip: "Some machines use a feather, flower or butterfly for their delicates programme instead, just to keep things interesting.",
       svg: HANDWASH
@@ -645,7 +645,7 @@
       category: "washer",
       aka: ["steam", "allergy care", "hygiene", "anti-allergen", "refresh"],
       looksLike: ["bucket with steam", "wavy lines above a bucket", "steaming bucket", "tub with squiggly lines", "hot bucket"],
-      meaning: "Adds steam to the wash to help kill bacteria and dust mites and loosen dirt. As a separate programme, it can also refresh and de-wrinkle dry clothes.",
+      meaning: "Adds steam to the wash to help kill bacteria and dust mites and loosen dirt. As a separate programme, it can also refresh and de-wrinkle dry clothes, which is as close as a washing machine gets to ironing.",
       action: "Use it for bedding, baby clothes or allergy sufferers. Check the care labels first: steam is hot, so it's not for wool or delicates.",
       tip: "Steam programmes take longer and use more energy than a normal wash, so save them for when hygiene really matters.",
       svg: '<g transform="translate(0,6)">' + TUB + '</g><path d="M20 22 q-4 -2.5 0 -5 t0 -5 t0 -5 M32 22 q-4 -2.5 0 -5 t0 -5 t0 -5 M44 22 q-4 -2.5 0 -5 t0 -5 t0 -5"/>'
@@ -679,7 +679,7 @@
       category: "washer",
       aka: ["temp", "°C", "heat", "water temperature"],
       looksLike: ["thermometer", "stick with a bulb", "lollipop", "thermometer with lines"],
-      meaning: "Sets the wash water temperature, usually from cold up to 90 °C.",
+      meaning: "Sets how hot the wash water gets, usually from cold up to 90 °C.",
       action: "Press it to cycle through the temperatures, and match the number in the washtub on your care labels. That number is a maximum.",
       tip: "Lower is often fine: modern detergents clean well at 30 °C, and every step down saves energy.",
       svg: '<path d="M24 37.92 V14 A5 5 0 0 1 34 14 V37.92 A9.5 9.5 0 1 1 24 37.92 Z"/>' +
@@ -761,7 +761,7 @@
       category: "dryer",
       aka: ["wrinkle guard", "wrinkle prevent", "crease guard", "anti-wrinkle", "extended tumble"],
       looksLike: ["t-shirt with a wavy line", "shirt with a wave", "top with a squiggle", "shirt"],
-      meaning: "After drying, the drum keeps turning briefly every few minutes with cool air, so clothes don't settle into creases if you can't unload straight away.",
+      meaning: "After drying, the drum keeps turning briefly every few minutes with cool air, so clothes don't settle into creases while they wait for you.",
       action: "Turn it on if you won't be there when the cycle ends. Opening the door stops it.",
       tip: "The display may say 'End' or keep blinking while it's in anti-crease mode. Whatever the blinking suggests, it's finished and you can open it any time.",
       svg: '<g transform="translate(1,0)">' + SHIRT + '<path d="M23 36 q2.25 -3.5 4.5 0 t4.5 0 t4.5 0 t4.5 0" stroke-width="3"/></g>'
@@ -772,7 +772,7 @@
       category: "dryer",
       aka: ["closet dry", "normal dry", "store dry", "dry to put away"],
       looksLike: ["wardrobe", "cupboard", "closet", "cabinet", "box with two doors"],
-      meaning: "Dries clothes completely, ready to fold and put straight into the cupboard.",
+      meaning: "Dries clothes completely, ready to fold and put straight into the cupboard. The setting most people mean when they just say 'dry'.",
       action: "Use it for everyday cottons and anything you won't be ironing.",
       tip: "The moisture sensor stops the dryer once the clothes are dry, so this is usually more efficient than a fixed timer.",
       svg: WARDROBE
@@ -794,7 +794,7 @@
       category: "dryer",
       aka: ["cupboard dry plus", "very dry", "cupboard plus"],
       looksLike: ["wardrobe with a plus", "cupboard with a plus", "closet plus", "cabinet with a plus sign"],
-      meaning: "Dries even more thoroughly than cupboard dry, for thick items like towels, jeans or bedding that stay damp in the seams.",
+      meaning: "Dries even more thoroughly than cupboard dry, for thick items like towels, jeans or bedding that stay stubbornly damp in the seams.",
       action: "Use it for heavy cottons, but not for everyday clothes: over-drying wastes energy and can shrink things.",
       tip: "If items are still damp after 'cupboard dry', try this rather than running a second full cycle.",
       svg: '<rect x="9" y="13" width="32" height="40" rx="2"/><path d="M25 13 V53 M21 30 V36 M29 30 V36 M13 53 V57 M37 53 V57"/>' +
@@ -806,7 +806,7 @@
       category: "dryer",
       aka: ["low temperature", "gentle", "delicates", "low heat"],
       looksLike: ["square with circle and one dot", "circle in a square with a dot", "one dot", "square circle dot"],
-      meaning: "Dries at a lower temperature for delicate, synthetic or heat-sensitive items. It's the same symbol as the care label for 'tumble dry, low heat'.",
+      meaning: "Dries at a lower temperature for delicate, synthetic or heat-sensitive items. It's the same symbol as the care label for 'tumble dry, low heat', a rare bit of joined-up thinking.",
       action: "Use it for anything whose label shows the tumble-dry symbol with one dot. It takes longer, but it saves your clothes.",
       tip: "Some brands show this as a feather or a flower instead.",
       svg: TUMBLE + dot(32, 32)
@@ -817,7 +817,7 @@
       category: "dryer",
       aka: ["time dry", "timer", "time programme", "manual dry"],
       looksLike: ["clock", "clock face", "watch", "circle with hands"],
-      meaning: "Dries for a fixed time you choose, instead of stopping automatically when the sensor decides the clothes are dry.",
+      meaning: "Dries for a fixed time you choose, instead of stopping when the sensor decides the clothes are dry. You're in charge, for better or worse.",
       action: "Use it for small loads, to finish off slightly damp items, or for things the sensor can't judge well, like pillows (if their label allows).",
       tip: "Timed drying can easily over-dry clothes, and there's no sensor looking out for them. Start short (20–30 minutes) and check.",
       svg: '<circle cx="32" cy="32" r="22"/><path d="M32 13 V16 M51 32 H48 M32 51 V48 M13 32 H16" stroke-width="3"/><path d="M32 32 V20 M32 32 L41 37"/>'

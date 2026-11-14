@@ -190,7 +190,7 @@ WTF.add([
     urgency: "info",
     aka: ["B gear", "brake mode", "regen mode", "regenerative braking", "regen", "engine braking", "one-pedal driving"],
     looksLike: ["letter b", "b on the gear lever", "b in a box", "b after d", "b gear", "p r n d b"],
-    meaning: "B makes the car slow down more strongly when you lift off the accelerator. In electric cars and many plug-ins, that braking comes from the motor acting as a generator (regenerative braking), which feeds energy back into the battery.",
+    meaning: "B makes the car slow down more strongly when you lift off the accelerator. In electric cars and many plug-ins, that braking comes from the motor acting as a generator (regenerative braking), which feeds energy back into the battery. Slowing down that pays you back.",
     action: "Handy in stop-start town traffic and on long downhill stretches, and it saves your brake pads. Driving in D the rest of the time is completely fine. On most EVs, the brake lights come on by themselves when regen slows the car firmly.",
     tip: "In Toyota and Lexus hybrids, B is mainly engine braking for long, steep hills. It doesn't recover noticeably more energy than D, so there's no point using it all the time, however virtuous it feels. Most hybrids and EVs show regen on the power meter as a blue or green 'CHARGE' / 'CHG' zone the needle dips into.",
     svg: `<rect x="12" y="12" width="40" height="40" rx="8"/><text x="32" y="43" font-size="30">B</text>`
@@ -203,7 +203,7 @@ WTF.add([
     category: "power",
     aka: ["Class II", "Class 2", "double insulation", "reinforced insulation", "IEC 60417-5172"],
     looksLike: ["square in a square", "two squares one inside the other", "double square", "box in a box", "nested squares", "square inside a square"],
-    meaning: "Class II, or double insulated: the live parts are wrapped in two layers of insulation (or one extra-strong layer), so the device doesn't need an earth connection to be safe. That's why most phone chargers, laptop bricks and hairdryers have just two pins.",
+    meaning: "Class II, or double insulated: the live parts are wrapped in two layers of insulation (or one extra-strong layer), so the device doesn't need an earth connection to be safe. That's why most phone chargers, laptop bricks and hairdryers get away with just two pins.",
     action: "Nothing to do. It's perfectly safe without an earth. Do stop using it if the casing is cracked or damaged, though: that insulation is the whole point.",
     tip: "UK plugs on double-insulated items still have a third pin, but it's often plastic, because it's only there to open the shutters in the socket. More doorman than earth.",
     svg: `<rect x="12" y="12" width="40" height="40"/><rect x="22" y="22" width="20" height="20"/>`
@@ -335,7 +335,7 @@ WTF.add([
     category: "power",
     aka: ["Regulatory Compliance Mark", "RCM", "C-Tick", "A-Tick", "Australian compliance mark"],
     looksLike: ["tick in a triangle", "check mark in a triangle", "triangle with a tick", "triangle with a check", "tick inside a triangle"],
-    meaning: "The Regulatory Compliance Mark: the product meets Australian and New Zealand rules for electrical safety and radio interference.",
+    meaning: "The Regulatory Compliance Mark: the product meets Australian and New Zealand rules for electrical safety and radio interference. A tick of approval from down under, basically.",
     action: "Nothing to do. In Australia or New Zealand, it's a good sign a charger was made to be sold legally there, so be wary of mains chargers without it.",
     tip: "It replaced the older C-Tick (a C with a tick inside) and A-Tick marks, which were phased out by 2016.",
     svg: `<path d="M32 9L57 53H7z"/><path d="M22 39.5l6.5 6.5 11-15" stroke-width="4.5"/>`

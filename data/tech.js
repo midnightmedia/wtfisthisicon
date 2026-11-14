@@ -66,7 +66,7 @@ WTF.add([
     category: "tech",
     aka: ["Thunderbolt 3", "Thunderbolt 4", "Thunderbolt 5", "TB3", "TB4", "Intel Thunderbolt"],
     looksLike: ["lightning bolt with an arrow", "zigzag arrow", "lightning arrow", "bolt with arrowhead", "zigzag line pointing down"],
-    meaning: "This port supports Thunderbolt, a super-fast connection for docks, multiple monitors, fast external drives and graphics boxes. Since Thunderbolt 3 it uses the USB-C shape, so it also works as a normal USB-C port.",
+    meaning: "This port supports Thunderbolt, a super-fast connection for docks, multiple monitors, fast external drives and graphics boxes. Since Thunderbolt 3 it uses the USB-C shape, so it also works as a normal USB-C port. Same hole, more talent.",
     action: "Plug docks, high-end monitors and fast drives in here for the best results. Use a Thunderbolt cable (it has the same bolt logo) to get full speed.",
     tip: "A plain lightning bolt without the arrowhead next to a port usually means charging, not Thunderbolt, so that little arrowhead is doing a lot of work. On Macs from about 2011–2015, Thunderbolt used the smaller, square Mini DisplayPort shape.",
     svg: `<polyline points="40,6 22,32 42,32 28,50" stroke-width="4"/><polygon points="23.09,56.31 22.87,46.01 33.13,53.99" fill="currentColor" stroke-width="1.5"/>`
@@ -78,7 +78,7 @@ WTF.add([
     category: "tech",
     aka: ["HDMI ARC", "eARC", "mini HDMI", "micro HDMI", "HDMI 2.1"],
     looksLike: ["wide trapezoid slot", "flat port with cut corners", "hdmi", "letters hdmi", "squashed hexagon port"],
-    meaning: "HDMI carries picture and sound together from a laptop, console, streaming stick or set-top box to a TV, monitor or projector.",
+    meaning: "HDMI carries picture and sound together from a laptop, console, streaming stick or set-top box to a TV, monitor or projector. One cable, both jobs.",
     action: "Plug the cable in, then press Input or Source on the TV remote and choose the matching number (HDMI 1, HDMI 2…). No picture? Check you're on the right input before blaming the cable.",
     tip: "The port labelled ARC or eARC is the one for a soundbar. It lets the TV send its sound back down the same cable.",
     svg: `<polygon points="7,12 57,12 57,21 50,30 14,30 7,21"/><line x1="16" y1="19" x2="48" y2="19" stroke-width="3"/><text x="32" y="52" font-size="16">HDMI</text>`
@@ -89,7 +89,7 @@ WTF.add([
     category: "tech",
     aka: ["LAN", "RJ45", "network cable", "wired internet", "Cat 5", "Cat 6"],
     looksLike: ["three squares connected", "boxes joined by lines", "three boxes", "family tree", "square socket with a notch", "squares with lines between"],
-    meaning: "The wired network (LAN) socket for an internet cable from your router. It's the chunky square socket with a clip notch, a bit wider than a phone socket.",
+    meaning: "The wired network (LAN) socket for an internet cable from your router. It's the chunky square socket with a clip notch, a bit wider than a phone socket, and still the most reliable way online.",
     action: "Plug an Ethernet cable from the router in here for internet that's usually faster and more reliable than Wi-Fi. Great for TVs, consoles and desktop PCs.",
     tip: "The little lights next to the socket should blink when data flows. No lights usually means a dead cable, or the router end isn't plugged in. A phone cable will fit, but it won't work.",
     svg: `<rect x="23" y="9" width="18" height="14" rx="2"/><rect x="7" y="41" width="18" height="14" rx="2"/><rect x="39" y="41" width="18" height="14" rx="2"/><polyline points="32,23 32,32"/><polyline points="16,41 16,32 48,32 48,41"/>`
@@ -100,7 +100,7 @@ WTF.add([
     category: "tech",
     aka: ["3.5mm jack", "audio jack", "aux", "combo jack", "mic jack", "line out"],
     looksLike: ["headphones", "earmuffs", "headset", "headphones with a microphone", "arch with two blocks", "microphone"],
-    meaning: "Marks the 3.5mm socket for wired headphones. A headset icon (headphones with a little microphone) means it's a combo jack that also takes a microphone.",
+    meaning: "Marks the 3.5mm socket for wired headphones, which plenty of phones have quietly abolished. A headset icon (headphones with a little microphone) means it's a combo jack that also takes a microphone.",
     action: "Plug headphones in here. On computers with separate sockets, the green one is for headphones/speakers and the pink one (with a microphone icon) is for a microphone. A light-blue socket is line-in.",
     tip: "Headset mic not working in a combo jack? The plug may need four contacts (three black rings). For computers with separate sockets, you need a cheap splitter.",
     svg: `<path d="M13 40V31A19 19 0 0 1 51 31V40"/><rect x="8" y="35" width="11" height="19" rx="4" fill="currentColor" stroke-width="2"/><rect x="45" y="35" width="11" height="19" rx="4" fill="currentColor" stroke-width="2"/>`
@@ -201,7 +201,7 @@ WTF.add([
     category: "tech",
     aka: ["location services", "GPS", "navigation arrow", "location arrow"],
     looksLike: ["arrow pointing up right", "paper plane", "cursor arrow", "triangle arrow", "pointer", "pin", "teardrop"],
-    meaning: "An app is using your location (GPS). iPhone shows this slanted arrow; Android shows a map pin or a target.",
+    meaning: "An app is using your location (GPS). iPhone shows this slanted arrow; Android shows a map pin or a target. Either way, something knows where you are.",
     action: "To see which app it is and stop it, go to Settings › Privacy & Security › Location Services (iPhone) or Settings › Location (Android). Then set apps to \"While Using\" or \"Never\".",
     tip: "In the iPhone Location Services list, a purple arrow means an app used your location recently, grey means within the last 24 hours, and a hollow outline means it may get your location under certain conditions.",
     svg: `<polygon points="53,11 11,28 30,34 36,53" fill="currentColor" stroke-width="3"/>`
@@ -223,7 +223,7 @@ WTF.add([
     category: "tech",
     aka: ["AirPlay", "screen mirroring", "stream to TV", "Apple TV"],
     looksLike: ["rectangle with a triangle", "tv with triangle", "screen with arrow", "triangle under a box", "monitor with triangle"],
-    meaning: "Apple's AirPlay: send the video, music or whole screen from your iPhone, iPad or Mac to an Apple TV, AirPlay TV or speaker. A version with circles instead of a rectangle means audio-only AirPlay.",
+    meaning: "Apple's AirPlay: beam the video, music or whole screen from your iPhone, iPad or Mac to an Apple TV, AirPlay TV or speaker. A version with circles instead of a rectangle means audio-only AirPlay.",
     action: "Tap it and choose the TV or speaker. Both devices must be on the same Wi-Fi. Sound suddenly vanished from your phone? It may still be playing on another device, possibly to an empty room. Tap here and choose your phone.",
     tip: "Screen Mirroring in iPhone's Control Centre is the icon of two overlapping rectangles.",
     svg: `<path d="M22 46H13A5 5 0 0 1 8 41V15A5 5 0 0 1 13 10H51A5 5 0 0 1 56 15V41A5 5 0 0 1 51 46H42"/><polygon points="32,36 44,52 20,52" fill="currentColor" stroke-width="2"/>`
@@ -245,7 +245,7 @@ WTF.add([
     category: "tech",
     aka: ["eject button", "open tray", "safely remove"],
     looksLike: ["triangle on a line", "triangle over a bar", "up arrow with line", "house shape", "triangle and rectangle"],
-    meaning: "Eject: open a disc tray, or (on a computer) safely disconnect a drive or memory stick.",
+    meaning: "Eject: open a disc tray, or (on a computer) safely disconnect a drive or memory stick. Same triangle, two jobs, one of them mostly retired.",
     action: "Before pulling out a USB stick or memory card on a Mac, click the eject symbol next to it in Finder (or \"Safely Remove\" on Windows) so files finish saving and don't get corrupted.",
     tip: "You'll see the same triangle-on-a-bar on old video and DVD remotes, where it opens the tray.",
     svg: `<polygon points="32,12 53,37 11,37" fill="currentColor" stroke-width="3"/><rect x="11" y="44" width="42" height="7" rx="1.5" fill="currentColor" stroke="none"/>`
@@ -267,7 +267,7 @@ WTF.add([
     category: "tech",
     aka: ["keyboard light", "backlit keyboard", "keyboard illumination", "keyboard brightness"],
     looksLike: ["keyboard with rays", "rectangle with rays", "half sun", "sunrise", "box with lines above", "lit up keyboard"],
-    meaning: "Turns the light behind the laptop keys on, off or brighter. It usually looks like a little keyboard or rectangle with rays shining out of the top.",
+    meaning: "Turns the light behind the laptop keys on, off or brighter, for typing in the dark. It usually looks like a little keyboard or rectangle with rays shining out of the top.",
     action: "Press it (often together with Fn) repeatedly to cycle through the light levels. On newer Macs you'll also find Keyboard Brightness in Control Centre.",
     tip: "Won't light up in a bright room? It may not be broken. Many laptops have a light sensor that turns the backlight off automatically in daylight.",
     svg: `<rect x="14" y="34" width="36" height="16" rx="3" stroke-width="3"/><g fill="currentColor" stroke="none"><circle cx="20" cy="39.8" r="1.5"/><circle cx="26" cy="39.8" r="1.5"/><circle cx="32" cy="39.8" r="1.5"/><circle cx="38" cy="39.8" r="1.5"/><circle cx="44" cy="39.8" r="1.5"/><circle cx="20" cy="45" r="1.5"/><circle cx="44" cy="45" r="1.5"/></g><line x1="25.5" y1="45" x2="38.5" y2="45" stroke-width="2.5"/><path d="M20.72 29.9L13.21 27.16M25.12 24.17L20.53 17.62M32 22L32 14M38.88 24.17L43.47 17.62M43.28 29.9L50.79 27.16"/>`
@@ -300,7 +300,7 @@ WTF.add([
     category: "tech",
     aka: ["portrait orientation lock", "screen rotation lock", "auto-rotate off"],
     looksLike: ["padlock in a circle", "lock with a circular arrow", "padlock with arrow around it", "lock in a circle arrow"],
-    meaning: "The screen is locked in its current orientation, so it won't turn sideways when you rotate the phone or tablet.",
+    meaning: "Your screen is locked the way it's facing, so it won't turn sideways when you rotate the phone or tablet.",
     action: "Want videos to go full-screen sideways? Open Control Centre (iPhone) and tap the padlock-and-arrow button, or switch on Auto-rotate in Android's Quick Settings.",
     tip: "Great for reading in bed on your side. That's exactly why it exists.",
     svg: `<path d="M37.69 10.75A22 22 0 1 1 17.86 15.15"/><polygon points="23.22,10.65 21.39,19.36 14.32,10.93" fill="currentColor" stroke-width="1.5"/><rect x="23" y="30" width="18" height="14" rx="2.5" fill="currentColor" stroke="none"/><path d="M26.5 30.5V26A5.5 5.5 0 0 1 37.5 26V30.5" stroke-width="3"/>`
@@ -384,8 +384,8 @@ WTF.add([
     category: "packaging",
     aka: ["UKCA", "UK Conformity Assessed", "UKNI"],
     looksLike: ["uk ca", "letters uk ca", "uk over ca", "four letters in a square"],
-    meaning: "UK Conformity Assessed: Great Britain's post-Brexit version of the CE mark, declaring a product meets GB safety rules.",
-    action: "Nothing to do. You'll often see it alongside the CE mark, as many products can still use either in Great Britain.",
+    meaning: "UK Conformity Assessed: Great Britain's post-Brexit version of the CE mark. It's the maker declaring the product meets GB safety rules.",
+    action: "Nothing to do. You'll often see it alongside the CE mark, as many products can still use either in Great Britain. Belt and braces.",
     tip: "Products for Northern Ireland use the CE mark (sometimes with a UKNI mark) instead.",
     svg: `<text x="32" y="29" font-size="25">UK</text><text x="32" y="54" font-size="25">CA</text>`
   },
@@ -473,7 +473,7 @@ WTF.add([
     category: "packaging",
     aka: ["this side up", "keep upright", "orientation arrows", "up arrows"],
     looksLike: ["two arrows", "two arrows pointing up", "arrows on a line", "double arrows", "two up arrows with a bar"],
-    meaning: "This way up: the arrows point to the top of the box. Keep it upright.",
+    meaning: "This way up: the arrows point to the top of the box. Keep it upright, whatever the courier thinks.",
     action: "Carry, store and stack the box with the arrows pointing up. It matters most for liquids, appliances and anything fragile inside.",
     tip: "Fridges and freezers often carry this mark because they should travel upright.",
     svg: `<g stroke-width="4"><line x1="22" y1="49" x2="22" y2="18"/><line x1="42" y1="49" x2="42" y2="18"/></g><polygon points="22,8 14.5,20 29.5,20" fill="currentColor" stroke-width="2"/><polygon points="42,8 34.5,20 49.5,20" fill="currentColor" stroke-width="2"/><line x1="10" y1="55" x2="54" y2="55" stroke-width="4"/>`
@@ -484,7 +484,7 @@ WTF.add([
     category: "packaging",
     aka: ["fragile", "handle with care", "breakable", "glass symbol"],
     looksLike: ["wine glass", "broken glass", "cracked glass", "goblet", "cocktail glass", "glass with a crack"],
-    meaning: "Fragile: handle with care. The contents can break.",
+    meaning: "Fragile: handle with care. The contents can break, and some couriers treat the label as a challenge.",
     action: "Don't drop, throw or stack heavy things on it. Open carefully and check the contents straight away so you can report any damage quickly.",
     tip: "It's sometimes shown as a whole glass and sometimes cracked. Both mean the same; the cracked one is just more dramatic.",
     svg: `<g fill="currentColor" stroke="none"><path d="M18 10H28.5L33 17L28 23L31 29L30.5 34C24 34 18 28 18 10Z"/><path d="M31.5 10H46C46 28 40 34 33.5 34L34 29L31 23L36 17Z"/><rect x="30" y="33" width="4" height="16"/><rect x="20" y="48" width="24" height="5.5" rx="2"/></g>`

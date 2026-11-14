@@ -173,7 +173,7 @@
       category: "toilet",
       aka: ["乾燥 (kansō)", "温風乾燥 (onpū kansō)", "warm air dryer", "DRYER", "dry"],
       looksLike: ["three wavy lines", "wavy lines", "wind", "waves", "squiggly lines", "air blowing", "three lines"],
-      meaning: "Blows warm air from under the back of the seat to dry your bottom after a wash.",
+      meaning: "Blows warm air from under the back of the seat to dry your bottom after a wash. Yes, really.",
       action:
         "Press it while you're still sitting, and 止 (stop) when you've had enough. It's in no hurry, so most people pat dry with paper first (or instead). On some seats pressing it again changes the air temperature.",
       tip: "It isn't a hand dryer or a fan for the room. Like the washes it only works while you're sitting, and it switches itself off after a few minutes.",
@@ -188,7 +188,7 @@
       aka: ["大 (dai)", "流す 大 (nagasu dai)", "便器洗浄 大 (benki senjō dai)", "full flush", "large flush", "FLUSH"],
       looksLike: ["big swirl", "spiral", "swirl with dots", "whirlpool", "spiral with dots", "big wave", "大", "snail"],
       meaning:
-        "Flushes with the full amount of water: for poo, or plenty of paper. The standard symbol is a big swirl (water spinning round the bowl) with drops around it, and the button or lever is usually marked 大, 'big'.",
+        "The full-strength flush: for poo, or plenty of paper. The standard symbol is a big swirl (water spinning round the bowl) with drops around it, and the button or lever is usually marked 大, 'big'.",
       action:
         "Press it once and give it a second to start. On a tank lever, 大 is one direction and 小 the other (look for the arrows). Nothing happening? The flush may be a separate wall button (流す), a hand sensor, or automatic when you stand up.",
       tip: "Toilet paper goes in the bowl in Japan: it's made to break up. Sanitary products go in the little bin.",
@@ -260,7 +260,7 @@
       aka: ["位置 (ichi)", "洗浄位置 (senjō ichi)", "ノズル位置 (nozuru ichi)", "前 / 後 (mae / ushiro)", "POSITION", "nozzle position"],
       looksLike: ["up and down triangles", "two triangles", "arrows up and down", "triangles", "▲▼", "front back", "位置"],
       meaning:
-        "Moves the spray further forward or further back so it hits the right spot. Usually ▲ ▼ buttons, or 前 (front) and 後 (back), with about five steps.",
+        "Moves the spray further forward or further back so it hits the right spot. Usually ▲ ▼ buttons, or 前 (front) and 後 (back), with about five steps. Aim, basically.",
       action:
         "Adjust it while the wash is running until it feels right. Sitting well back on the seat helps the spray line up and splash less.",
       tip: "Not the same as 水勢 (pressure), which changes how hard the water hits, not where.",
@@ -324,7 +324,7 @@
       meaning:
         "Turns the seat and water heaters down or off for hours at a time to save electricity, typically overnight. A green light shows it's on (on TOTO seats, next to a leaf symbol).",
       action:
-        "Want a warm seat and warm water? Press it to turn power saving off (the light goes out). Otherwise leave it: everything still works, just cooler.",
+        "Want a warm seat and warm water? Press it to turn power saving off (the light goes out). Otherwise leave it: everything still works, just a bit more bracing.",
       tip: "Some seats learn when the loo is rarely used and turn the heater off by themselves. TOTO calls this おまかせ節電, roughly 'leave it to us' power saving.",
       svg:
         '<path d="M22 37C20 23 30 12 46 10C48 25 40 37 26 37C24.5 37 23.2 37 22 37Z" fill="currentColor" stroke="none"/>' +
@@ -338,7 +338,7 @@
       category: "toilet",
       aka: ["ムーブ (mūbu)", "ムーブ洗浄 (mūbu senjō)", "OSCILLATE", "oscillating", "moving wash"],
       looksLike: ["spray with arrows", "fountain with left right arrow", "dots with double arrow", "moving spray", "back and forth arrow", "ムーブ"],
-      meaning: "Slides the nozzle back and forth while it sprays, so it washes a wider area rather than one spot.",
+      meaning: "Slides the nozzle back and forth while it sprays, so it washes a wider area rather than one spot. Think sprinkler, not jet.",
       action: "Press it during a wash to switch it on, and again to change mode or turn it off. 止 (stop) ends the wash completely.",
       tip: "On TOTO remotes it shares a button with massage (OSCILLATE / PULSATE): each press steps through move, massage, both, then off, with a different beep for each.",
       svg: fountain(32, 12, 3, 14, 2) + '<path d="M12 52H52M18 46L12 52L18 58M46 46L52 52L46 58"/>'
@@ -349,7 +349,7 @@
       category: "toilet",
       aka: ["マッサージ (massāji)", "マッサージ洗浄 (massāji senjō)", "PULSATE", "pulsating", "massage"],
       looksLike: ["spray with a wavy line", "fountain with a wave", "dots big and small", "pulsing water", "wave", "マッサージ"],
-      meaning: "Makes the spray pulse between strong and soft, which some people find more pleasant.",
+      meaning: "Makes the spray pulse between strong and soft, which some people find more pleasant. Japan has given this a lot of thought.",
       action: "Press it during a rear wash to start the pulsing and again to stop it. 止 (stop) ends the wash.",
       tip: "How strong the pulse feels depends on the pressure setting: big at +, barely noticeable at −.",
       svg: fountain(32, 12, 3, 14, 2) + '<path d="' + wave(10, 54, 52, 6) + '"/>'

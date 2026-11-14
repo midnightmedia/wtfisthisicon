@@ -195,7 +195,7 @@
       aka: ["fan speed", "FAN", "low / medium / high", "auto fan", "airflow", "blower speed"],
       looksLike: ["fan with bars", "bars going up", "signal bars", "steps", "staircase", "fan and bars"],
       meaning:
-        "Sets how hard the indoor fan blows. The bars show the level: one bar is low, two medium, three (or more) high. 'AUTO' or an 'A' by the fan lets the unit choose the speed itself.",
+        "Sets how hard the indoor fan blows. The bars show the level: one bar is low, two medium, three (or more) high. 'AUTO' or an 'A' by the fan lets the unit make up its own mind.",
       action:
         "Use high (or auto) to reach the temperature quickly, then drop to low for quieter running. Auto is a good everyday choice.",
       tip: "Some remotes show the speed as wind lines or growing blades instead of bars, and many squeeze 'quiet' in below low and 'turbo' above high on the same button.",
@@ -225,7 +225,7 @@
       aka: ["ECO", "econo", "econo cool", "energy saver", "economy", "power saving"],
       looksLike: ["leaf", "green leaf", "eco", "plant", "leaf with a line"],
       meaning:
-        "An energy-saving mode: the unit limits its maximum power, or nudges the set temperature a degree or two towards the outdoor temperature, so it uses less electricity.",
+        "An energy-saving mode: the unit caps its maximum power, or nudges the set temperature a degree or two towards the outdoor temperature, so it uses less electricity.",
       action:
         "Turn it on when the room is already comfortable and you just want to hold it there cheaply. Turn it off when you need the room cooled or heated quickly.",
       tip: "It works differently from brand to brand: some cap the compressor's power, some shift the temperature, and some also sweep the airflow so a warmer setting still feels cool. The leaf won't tell you which. The manual will.",
@@ -255,7 +255,7 @@
       aka: ["timer", "TIMER", "on timer", "off timer", "sleep timer", "delay"],
       looksLike: ["clock", "clock with a power button", "clock face", "watch", "clock with on/off symbol"],
       meaning:
-        "Sets the unit to switch itself on or off later. 'Timer on' starts it after a set time (or at a set clock time on some remotes); 'timer off' stops it.",
+        "Sets the unit to switch itself on or off later, so the room is comfortable by the time you get in. 'Timer on' starts it after a set time (or at a set clock time on some remotes); 'timer off' stops it.",
       action:
         "Press timer on or timer off, use the arrows to set the hours, then confirm (often by pressing the timer button again, or SET). A clock icon on the remote or a timer light on the indoor unit shows a timer is active.",
       tip: "A timer light on the indoor unit that keeps flashing may be an error code, not a timer. Several brands report faults by blinking the timer and power lights in a pattern, a sort of Morse code only the manual can translate.",
@@ -353,7 +353,7 @@
       aka: ["central heating", "CH", "heating", "radiator", "space heating", "flow temperature"],
       looksLike: ["radiator", "comb", "vertical bars", "fence", "bumpy rectangle", "box with lines", "radiator with legs"],
       meaning:
-        "On a boiler or heating control, the radiator means central heating: the hot water pumped round your radiators (or underfloor pipes). Lit up, it means heating is switched on or running right now.",
+        "On a boiler or heating control, the radiator means central heating: the hot water pumped round your radiators (or underfloor pipes). Lit up, it means the heating is on or working on it right now.",
       action:
         "Next to a temperature or +/− buttons, it sets how hot the water sent to the radiators gets (the 'flow temperature'). On a modern condensing boiler, turning it down to around 55–60°C (from the 70–80°C many are left on) usually saves gas. The house just warms up a little more slowly.",
       tip: "The radiator setting on the boiler controls how hot the radiators get, not how warm the room gets: that's your room thermostat's job. Got a hot water cylinder? Check the manual before turning it right down, as on some boilers one setting heats both.",
@@ -382,7 +382,7 @@
       aka: ["flame", "burner on", "boiler firing", "burner lit", "ignition", "fire"],
       looksLike: ["flame", "fire", "candle flame", "teardrop", "flame symbol"],
       meaning:
-        "The boiler's burner is lit: it's burning gas (or oil) right now to heat water. It comes and goes as the boiler fires up and turns down.",
+        "The boiler's burner is lit: it's burning gas (or oil) right now to heat water. It comes and goes as the boiler fires up and turns down, which is perfectly normal.",
       action:
         "Nothing to do: it's just a status light. If it never appears and you've no heating or hot water, check the boiler has power, the pressure is OK and your other gas appliances work. Then look for a fault code.",
       tip: "On a room thermostat, a flame means 'asking the boiler for heat' instead. A carbon monoxide alarm going off, a lazy yellow or orange flame, or soot marks around the boiler mean: switch it off, open windows, get outside and call the gas emergency line (0800 111 999 in Great Britain), and see a doctor if anyone feels unwell.",
@@ -449,7 +449,7 @@
       aka: ["service due", "spanner", "wrench", "maintenance", "service mode", "engineer needed"],
       looksLike: ["spanner", "wrench", "tool", "spanner symbol", "wrench on the display"],
       meaning:
-        "Depending on the boiler, the spanner means the annual service is due, the boiler is in engineer/service mode, or (usually shown with a code) there's a fault that needs an engineer.",
+        "Depending on your boiler, the spanner means the annual service is due, the boiler is in engineer/service mode, or (usually shown with a code) there's a fault that needs an engineer.",
       action:
         "If it's on its own and everything works, book a service: boilers should be checked every year by a Gas Safe registered engineer (OFTEC for oil). If it comes with a code and no heat, note the code and call an engineer. Don't open the boiler casing yourself.",
       tip: "Many installers set a reminder to pop up 12 months after fitting, and the engineer clears it at the service. UK landlords must have gas appliances safety-checked every year.",
@@ -463,7 +463,7 @@
       aka: ["frost", "frost protect", "frost mode", "anti-freeze", "freeze protection", "frost stat"],
       looksLike: ["snowflake", "star", "asterisk", "ice crystal", "snow"],
       meaning:
-        "Frost protection: the heating stays off, but switches itself on if the house (or the boiler) gets close to freezing, typically around 5°C, so pipes don't freeze and burst. Lit up, it means frost-only mode is set or it's protecting against frost right now.",
+        "Frost protection: the heating stays off, but switches itself on if the house (or the boiler) gets close to freezing, typically around 5°C, so pipes don't freeze and burst. Lit up, it means frost-only mode is set or it's protecting against frost right now. Burst pipes are an expensive way to find out where your pipes run.",
       action:
         "Going away in winter? Leave the boiler powered with frost protection on rather than switching it off at the wall: it needs electricity (and gas) to protect itself. For normal heating, switch the thermostat or boiler out of frost mode.",
       tip: "On a radiator valve, the snowflake setting is the same idea for one room: the valve only opens if that room is about to get freezing cold.",
@@ -491,7 +491,7 @@
       aka: ["boost", "+1h", "+1 hr", "one hour boost", "extra hour", "override"],
       looksLike: ["+1", "+1h", "plus one", "circle arrow with plus one", "clock with a plus", "arrow going round"],
       meaning:
-        "Turns the heating (or hot water) on right now for a fixed time, usually 30 minutes to an hour (more presses for 2 or 3 hours), whatever the schedule says. Then it goes back to the normal timetable by itself.",
+        "Turns the heating (or hot water) on right now for a fixed time, usually 30 minutes to an hour (more presses for 2 or 3 hours), whatever the schedule says. Then it goes back to the normal timetable by itself. The 'I'm cold now' button.",
       action:
         "Press it when you're cold or need hot water outside the usual times. Press it again (or cancel) to stop early.",
       tip: "Not the same as 'Advance', which jumps to the next on/off period in the schedule rather than adding a fixed time. Smart thermostats usually let you pick the boost length and temperature in the app.",
@@ -570,7 +570,7 @@
       aka: ["holiday", "vacation", "away", "away mode", "holiday mode"],
       looksLike: ["suitcase", "briefcase", "bag", "luggage", "case with a handle", "handbag"],
       meaning:
-        "Holiday (or away) mode pauses your normal heating schedule while you're away, holding the house at a low temperature (often 5–15°C, you choose) until the date you return.",
+        "Holiday (or away) mode pauses your normal heating schedule while you're away, holding the house at a low temperature (often 5–15°C, you choose) until the date you return. No point heating an empty house.",
       action:
         "Set the return date (and temperature, if it asks) before you leave. Some controls also switch off the hot water while you're away. If you can, set it to end a few hours before you get home so the house is warm when you walk in.",
       tip: "Better than switching the boiler off at the wall in winter, because frost protection keeps working. Some thermostats show a plane, a palm tree or a house with an arrow instead of a suitcase. The palm tree is aspirational.",

@@ -308,7 +308,7 @@ WTF.add([
     urgency: "soon",
     aka: ["lamp out", "light failure", "exterior light fault"],
     looksLike: ["light bulb with exclamation mark", "bulb with !", "lightbulb"],
-    meaning: "One of the exterior lights (headlight, brake light, indicator, number plate light) has blown.",
+    meaning: "One of the exterior lights (headlight, brake light, indicator, number plate light) has blown. The car knows which one. It just isn't saying.",
     action: "Walk round the car with the lights on (and get someone to press the brake) to find the dead bulb, then replace it. Driving with a blown light can get you fined.",
     svg: `<path d="M32 10a14 14 0 0 0-8 25.5V42h16v-6.5A14 14 0 0 0 32 10z"/><path d="M26 48h12"/><path d="M32 18v9"/><circle cx="32" cy="32.5" r="2" fill="currentColor" stroke="none"/>`
   },
@@ -346,7 +346,7 @@ WTF.add([
     urgency: "info",
     aka: ["high beam", "main beam", "brights"],
     looksLike: ["d with straight lines", "headlight with horizontal lines", "blue jellyfish", "half moon with lines", "comb"],
-    meaning: "Your full-beam / high-beam headlights are on.",
+    meaning: "Your full-beam / high-beam headlights are on. Brilliant for you, blinding for anyone coming the other way.",
     action: "Great on empty, dark roads. Switch back to dipped beam (usually by pulling or pushing the indicator stalk) when there's oncoming traffic or a car in front, or you'll dazzle them. They tend to let you know.",
     svg: `<path d="M36 16c10 0 18 7 18 16s-8 16-18 16c-3 0-4-4-4-16s1-16 4-16z"/><path d="M24 20H10M24 28H10M24 36H10M24 44H10"/>`
   },
@@ -358,7 +358,7 @@ WTF.add([
     urgency: "info",
     aka: ["fog lamps", "front fog lamps"],
     looksLike: ["headlight with a wavy line", "d with lines crossed by a squiggle", "jellyfish with a wave"],
-    meaning: "The front fog lights are on.",
+    meaning: "Your front fog lights are on: the low, wide beams meant for when you genuinely can't see far ahead.",
     action: "Use them only in fog or heavy rain or snow, and switch them off once visibility improves.",
     svg: `<path d="M36 16c10 0 18 7 18 16s-8 16-18 16c-3 0-4-4-4-16s1-16 4-16z"/><path d="M26 20L8 24M26 28L8 32M26 36L8 40M26 44L8 48" stroke-width="3"/><path d="M17 14c-3 4 3 8 0 12s3 8 0 12 3 8 0 12"/>`
   },
@@ -394,7 +394,7 @@ WTF.add([
     urgency: "info",
     aka: ["blinkers", "turn signal", "hazard lights"],
     looksLike: ["two arrows", "green arrows", "left and right arrows", "flashing arrows"],
-    meaning: "Your indicator is on (one arrow flashing), or your hazard lights are on (both flashing).",
+    meaning: "Your indicator is on (one arrow flashing), or your hazard lights are on (both flashing). The clicking is there in case the flashing didn't get your attention.",
     action: "If it's flashing much faster than usual, one of the indicator bulbs has probably blown. The frantic blinking is the car's way of telling you.",
     svg: `<path d="M6 32l13-12v7h8v10h-8v7z" fill="currentColor"/><path d="M58 32L45 20v7h-8v10h8v7z" fill="currentColor"/>`
   },
@@ -455,7 +455,7 @@ WTF.add([
     category: "carcontrols",
     aka: ["recirc", "recycled air", "inside air"],
     looksLike: ["car with a u-turn arrow", "car with circular arrow inside", "car with arrow going round", "car with loop"],
-    meaning: "The ventilation recycles the air already inside the car instead of pulling in fresh air from outside.",
+    meaning: "The ventilation recycles the air already inside the car instead of pulling in fresh air from outside. The arrow going round in circles is, for once, exactly what it looks like.",
     action: "Great for keeping out smells and fumes (tunnels, traffic, that farm) or cooling down fast with the air-con. Don't leave it on for long: the windows fog up and the air gets stuffy (and CO₂ builds up, making you drowsy).",
     svg: `<path d="M6 46V38c0-2 1-3 3-3.5l6-1.5 8-10h17l9 10 7 1.5c2 .5 2 1.5 2 3.5v8z"/><path d="M40 43v-4a8 8 0 0 0-16 0v4"/><path d="M20 39.5l4 4.5 4-4.5"/>`
   },
@@ -465,7 +465,7 @@ WTF.add([
     category: "carcontrols",
     aka: ["outside air", "air intake", "fresh air mode"],
     looksLike: ["car with arrow going in", "car with an arrow from outside", "arrow into a car"],
-    meaning: "The ventilation is pulling fresh air in from outside (the opposite of recirculation).",
+    meaning: "The ventilation is pulling fresh air in from outside (the opposite of recirculation). The giveaway is the arrow coming in from outside the car.",
     action: "Use this most of the time: it keeps the windows clear and the air fresh.",
     svg: `<path d="M6 52V44c0-2 1-3 3-3.5l6-1.5 8-10h17l9 10 7 1.5c2 .5 2 1.5 2 3.5v8z"/><path d="M4 10h17l11 22"/><path d="M26.7 29.2L32 32l.9-6"/>`
   },
@@ -516,7 +516,7 @@ WTF.add([
     category: "carcontrols",
     aka: ["seat heater", "seat warmer"],
     looksLike: ["chair with wavy lines", "seat with squiggles", "seat with steam"],
-    meaning: "Turns on the seat heater. Pressing it repeatedly usually cycles through heat levels (shown by little lights).",
+    meaning: "Turns on the seat heater, the best button in the car on a cold morning. Pressing it repeatedly usually cycles through heat levels (shown by little lights).",
     action: "Enjoy. A version with a fan or blue arrows is seat ventilation or cooling instead, which is a chilly surprise in winter.",
     svg: `<path d="M18 10l5 32a4 4 0 0 0 4 4h20" stroke-width="5"/><path d="M32 38c-3-3 3-6 0-9s3-6 0-9M40 38c-3-3 3-6 0-9s3-6 0-9M48 38c-3-3 3-6 0-9s3-6 0-9" stroke-width="3"/>`
   },
@@ -536,7 +536,7 @@ WTF.add([
     category: "carcontrols",
     aka: ["hazards", "flashers", "emergency lights"],
     looksLike: ["triangle in a triangle", "red triangle", "double triangle", "warning triangle"],
-    meaning: "Flashes all the indicators at once to warn other drivers that you're stopped or a hazard is ahead.",
+    meaning: "Flashes all the indicators at once to tell other drivers you've stopped or there's a hazard ahead.",
     action: "Use them when you've broken down, when you're stopped somewhere unsafe, or (in some countries) to warn of a sudden queue on a motorway. They're not a 'park anywhere' card, however often they get used as one.",
     svg: `<path d="M32 9L57 53H7z"/><path d="M32 25l11 19H21z"/>`
   }
