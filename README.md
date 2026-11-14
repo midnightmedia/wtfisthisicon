@@ -47,9 +47,24 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week (don't edit by hand) |
 | `dev/build-catalog.mjs` | Exports the icon list the photo Worker matches against |
 | `assets/icon.svg` | **The site icon** (the "unknown character" diamond). The master for every icon size |
+| `dev/build-post.mjs` | Social media post generator: any icon → a 5-slide carousel + caption (see below) |
 | `dev/build-icons.mjs` | Makes `favicon.ico`, `apple-touch-icon.png`, `assets/icon-*.png` and `site.webmanifest` from `assets/icon.svg` |
 | `assets/config.js` | Site settings (the photo Worker URL) |
 | `worker/` | Cloudflare Worker that identifies photos with Claude |
+
+## Social posts
+
+`node dev/build-post.mjs <icon-id>` turns any icon into a ready-to-post carousel in
+`social/posts/<icon-id>/`: five 1080×1350 slides (the symbol on neon with a hook that doesn't give the
+answer away, then "What it actually means", "What to do about it", "For the record" and a sign-off) plus
+`caption.txt`. The text comes straight from the site's data.
+
+- `node dev/build-post.mjs week` makes this week's Icon of the week post, using its hook.
+- `node dev/build-post.mjs hooks` makes every post that has a hand-written hook; `list` shows them.
+- Hooks and caption lines live in `social/hooks.json` (`{ "<id>": { "hook": "...", "caption": "..." } }`).
+  Icons without one get an automatic hook built from how people describe the symbol.
+- The whole `social/` folder is git-ignored, so drafts and unpublished posts stay private.
+- Needs Google Chrome, like the other image builders.
 
 ## Site icon
 
