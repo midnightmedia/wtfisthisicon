@@ -46,8 +46,18 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `quiz/` | Generated share pages for the quiz: `/quiz/` and one per score, `/quiz/0/` to `/quiz/10/` (don't edit by hand) |
 | `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week (don't edit by hand) |
 | `dev/build-catalog.mjs` | Exports the icon list the photo Worker matches against |
+| `assets/icon.svg` | **The site icon** (the "unknown character" diamond). The master for every icon size |
+| `dev/build-icons.mjs` | Makes `favicon.ico`, `apple-touch-icon.png`, `assets/icon-*.png` and `site.webmanifest` from `assets/icon.svg` |
 | `assets/config.js` | Site settings (the photo Worker URL) |
 | `worker/` | Cloudflare Worker that identifies photos with Claude |
+
+## Site icon
+
+The icon is the "unknown character" diamond: the black diamond with a question mark that phones
+and computers show when they can't display a symbol. `assets/icon.svg` is the master drawing.
+After changing it, run `node dev/build-icons.mjs` (needs Chrome) to remake the browser-tab icon,
+the iPhone/iPad and Android home-screen icons and the web manifest, then
+`node dev/stamp-assets.mjs`, which also redraws the link-preview cards (their footer shows the icon).
 
 ## Photo recognition
 

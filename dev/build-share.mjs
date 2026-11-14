@@ -35,6 +35,7 @@ const INK = "#0a0a0a";
 const TEMPLATE = 1; // bump to re-render every card after changing the card design below
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const ICON = fs.readFileSync(path.join(root, "assets", "icon.svg"), "utf8").replace(/<title>.*?<\/title>\s*/, "").trim();
 const weekDir = path.join(root, "week");
 const force = process.argv.includes("--force");
 
@@ -85,14 +86,14 @@ h1 { margin: 44px 0 0; font-size: ${size}px; line-height: 1; font-weight: 800; l
 .hook { margin: 28px 0 0; font-size: 29px; line-height: 1.32; font-weight: 500; letter-spacing: -0.01em; color: #262626;
   display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .foot { margin-top: auto; display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
-.foot::before { content: ""; width: 18px; height: 18px; border-radius: 5px; background: ${NEON}; box-shadow: 0 0 0 1px rgba(0,0,0,.1); }
+.foot svg { width: 30px; height: 30px; flex: none; }
 </style></head><body><div class="card">
 <div class="art">${art}</div>
 <div class="body">
   <div class="label"><span class="tag">${esc(tag)}</span>${label ? esc(label) : ""}</div>
   <h1>${esc(title)}</h1>
   <p class="hook">${esc(hook)}</p>
-  <div class="foot">wtfisthisicon.com</div>
+  <div class="foot">${ICON}wtfisthisicon.com</div>
 </div></div></body></html>`;
 }
 // The site's own card: big headline on white, a neon wall of well-known symbols on the right.
@@ -107,7 +108,7 @@ h1 { margin: 0; font-size: 116px; line-height: .92; font-weight: 800; letter-spa
 h1 mark { background: ${NEON}; color: ${INK}; padding: 0 .08em; margin: 0 -.02em; border-radius: .08em; }
 .sub { margin: 36px 0 0; font-size: 30px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: #262626; max-width: 15em; }
 .foot { margin-top: auto; display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
-.foot::before { content: ""; width: 18px; height: 18px; border-radius: 5px; background: ${NEON}; box-shadow: 0 0 0 1px rgba(0,0,0,.1); }
+.foot svg { width: 30px; height: 30px; flex: none; }
 .foot span { font-weight: 500; color: #8a8a8a; }
 .wall { flex: none; width: 470px; height: 630px; background: ${NEON}; display: grid; place-content: center;
   grid-template-columns: repeat(3, 100px); gap: 42px; color: ${INK}; }
@@ -118,7 +119,7 @@ h1 mark { background: ${NEON}; color: ${INK}; padding: 0 .08em; margin: 0 -.02em
 <div class="body">
   <h1><mark>WTF</mark> is this&nbsp;icon?</h1>
   <p class="sub">Describe the symbol. Get a <span style="white-space: nowrap">plain-English</span> answer.</p>
-  <div class="foot">wtfisthisicon.com <span>· ${count} symbols decoded</span></div>
+  <div class="foot">${ICON}wtfisthisicon.com <span>· ${count} symbols decoded</span></div>
 </div>
 <div class="wall">${icons.map(iconArt).join("")}</div>
 </div></body></html>`;
@@ -161,6 +162,9 @@ function pageHtml({ title, ogTitle, description, url, image, imageAlt, script, f
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WTF is this icon?">
 <meta property="og:title" content="${esc(ogTitle)}">
@@ -190,7 +194,7 @@ let rendered = 0, skipped = 0;
 // Returns the card's version hash (used to bust caches in og:image), or "" if there's no image.
 function card(key, spec, outPng, layout = cardHtml) {
   // Week cards change version via TEMPLATE; the site card re-renders whenever its layout code changes.
-  const h = hash({ TEMPLATE, ...(layout === cardHtml ? {} : { layout: layout.toString() }), ...spec });
+  const h = hash({ TEMPLATE, ICON, ...(layout === cardHtml ? {} : { layout: layout.toString() }), ...spec });
   const have = fs.existsSync(outPng);
   if (!force && have && manifest[key] === h) { next[key] = h; skipped++; return h; }
   if (!chrome) { // can't render: keep whatever image is already there
