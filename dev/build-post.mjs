@@ -14,7 +14,7 @@
 //   5-site.png      sign-off: the site and the daily quiz
 //   caption.txt     ready-to-paste caption with hashtags
 // 1080×1350 (4:5), Instagram's tallest carousel size. Text comes straight from the site's data.
-// Hooks: social/hooks.json ({ "<id>": { "hook": "...", "caption": "..." } }); icons without one get an
+// Hooks: social/hooks.json ({ "<id>": { "hook": "...", "caption": "...", "title": "..." } }); icons without one get an
 // automatic hook built from how people describe the symbol. Rendered with headless Chrome.
 import fs from "node:fs";
 import os from "node:os";
@@ -182,7 +182,8 @@ function build(id, hookOverride) {
   const dir = path.join(root, "social", "posts", id);
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
-  const title = icon.quiz || shortName(icon); // what it MEANS (quiz label), not what it looks like
+  // Reveal-slide title: a hand-picked one from hooks.json, else what it MEANS (quiz label), else the name
+  const title = h.title || icon.quiz || shortName(icon);
   const pages = icon.tip ? 5 : 4;
   const slides = [["1-hook", hookSlide(icon, hook, pages)]];
   let n = 2;
@@ -193,7 +194,7 @@ function build(id, hookOverride) {
   slides.push([`${n}-site`, siteSlide(n, pages)]);
   for (const [name, html] of slides) render(html, path.join(dir, name + ".png"));
   const caption = [hook, "", h.caption || ASK[icon.category] || "Did you know this one?", "",
-    `${title}, decoded. Swipe for what it means and what to do.`, "",
+    "Swipe for what it means and what to do about it.", "",
     "Describe any symbol at wtfisthisicon.com (link in bio)", "",
     `#wtfisthisicon ${TAGS[icon.category] || ""}`.trim()].join("\n");
   fs.writeFileSync(path.join(dir, "caption.txt"), caption + "\n");
