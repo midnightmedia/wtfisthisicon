@@ -257,7 +257,7 @@
       feedback = '<div class="quiz__feedback ' + (right ? "is-right" : "is-wrong") + '" role="status">' +
         '<p class="quiz__verdict">' + verdict + "</p>" +
         '<p class="quiz__meaning">' + esc(ui.teaser(icon.meaning)) +
-          ' <a href="#/icon/' + icon.id + '" data-icon="' + icon.id + '">Read more</a></p>' +
+          ' <a href="' + ui.pagePath(icon) + '" data-icon="' + icon.id + '">Read more</a></p>' +
         '<button type="button" class="btn" data-quiz="next">' + (last ? "See your score" : "Next question") + "</button>" +
       "</div>";
     }
@@ -295,7 +295,7 @@
       '<div class="quiz__actions">' + actions + "</div>" +
       (missed.length
         ? '<div class="quiz__missed"><h3>The ones that got you</h3><div class="mini-grid">' + missed.map(function (q) {
-            return '<a class="mini" href="#/icon/' + q.icon.id + '" data-icon="' + q.icon.id + '">' + tile(q.icon) +
+            return '<a class="mini" href="' + ui.pagePath(q.icon) + '" data-icon="' + q.icon.id + '">' + tile(q.icon) +
               "<span>" + esc(q.icon.name) + "<small>" + esc(ui.catById[q.icon.category].name) + "</small></span></a>";
           }).join("") + "</div></div>"
         : "") +

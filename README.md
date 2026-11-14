@@ -19,8 +19,8 @@ Then open http://localhost:5178. (Opening `index.html` directly from disk works 
 Before pushing, run `node dev/stamp-assets.mjs`. It adds a content fingerprint (`?v=…`) to every
 script and stylesheet link in `index.html`, so browsers never mix a fresh page with stale cached
 files (GitHub Pages lets browsers cache for 10 minutes). It also rebuilds the link previews:
-the site's preview card (`assets/og-card.png`) and the Icon of the week share pages in `week/`
-(needs Google Chrome installed, to draw the images).
+the site's preview card (`assets/og-card.png`), the Icon of the week share pages in `week/`, and
+every icon and category page with `sitemap.xml` (needs Google Chrome installed, to draw the images).
 
 Upload the folder as-is to any static host: Netlify (drag-and-drop), Vercel, Cloudflare Pages
 or GitHub Pages. The `dev/` folder isn't needed in production.
@@ -42,6 +42,10 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `dev/gallery.html` | Every icon on one page for visual checking (`?cat=car` to filter) |
 | `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` and rebuilds the share previews. Run before every push |
 | `dev/build-share.mjs` | Builds the link-preview images: the site card and the Icon of the week pages |
+| `dev/build-pages.mjs` | Builds a page per icon and per category, their preview cards and `sitemap.xml` (see below) |
+| `dev/cards.mjs` | Shared helpers for the two builders above (icon loading, the 1200×630 card) |
+| `<category>/` | Generated pages: `/car/` lists every car symbol, `/car/check-engine/` is one icon (don't edit by hand) |
+| `sitemap.xml`, `robots.txt` | For search engines. The sitemap is generated; `robots.txt` is hand-written |
 | `assets/og-card.png` | Generated preview image for any wtfisthisicon.com link (don't edit by hand) |
 | `quiz/` | Generated share pages for the quiz: `/quiz/` and one per score, `/quiz/0/` to `/quiz/10/` (don't edit by hand) |
 | `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week (don't edit by hand) |
@@ -126,7 +130,23 @@ straight to that icon on the site. The Share button on the home page uses this l
 - `node dev/stamp-assets.mjs` builds the pages (via `dev/build-share.mjs`) and only re-renders
   cards whose icon or hook changed. `node dev/build-share.mjs --force` re-renders them all.
 - Pages are never deleted, so a link shared in an old week keeps its preview.
-- Automatic picks (weeks with no entry) don't get a page; Share falls back to the plain icon link.
+- Automatic picks (weeks with no entry) don't get a page; Share falls back to the icon's own page.
+
+## Icon pages
+
+Every icon has a real page that search engines can index, at its category plus its id without the
+category prefix: `car-check-engine` lives at `wtfisthisicon.com/car/check-engine/`, and `/car/` lists
+the whole category. Each page has the full write-up, "Not to be confused with", a dozen neighbours
+from the same category, a search box, and its own 1200×630 preview card.
+
+- On the site, clicking an icon still opens the pop-up. The card links point at the pages, so
+  opening one in a new tab, "Copy link" and search engines all get the real page.
+- `node dev/stamp-assets.mjs` rebuilds them all (via `dev/build-pages.mjs`), re-rendering only the
+  cards whose text changed (`dev/page-cards.json` remembers them). `--force` re-renders everything.
+- Removing or renaming an icon removes its old folder. A category id can't be one of the site's own
+  folders (`assets`, `data`, `dev`, `quiz`, `week`, `worker`).
+- The category links in the home page footer are generated too (between `<!-- cats -->` markers).
+- `node dev/check.mjs` warns if an icon has no page yet.
 
 ## Quiz
 

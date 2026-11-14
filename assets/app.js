@@ -301,7 +301,10 @@
     if (!icon.urgency) return "";
     return '<span class="badge badge--' + icon.urgency + '">' + URGENCY[icon.urgency].label + "</span>";
   }
-  function iconHref(icon) { return buildHash(icon.id); }
+  // Every icon has its own page (built by dev/build-pages.mjs), e.g. /car/check-engine/. Links point
+  // there so new tabs, shared links and search engines get a real page; plain clicks open the pop-up.
+  function pagePath(icon) { return "/" + icon.category + "/" + icon.id.slice(icon.category.length + 1) + "/"; }
+  function iconHref(icon) { return pagePath(icon); }
 
   function card(icon, showCat, extraMeta) {
     var meta = [];
@@ -501,7 +504,7 @@
 
   function renderWotw() {
     if (!wotw || !el.wotw) return;
-    var i = wotw.icon, href = "#/icon/" + i.id;
+    var i = wotw.icon, href = pagePath(i);
     var since = (WTF.featured && WTF.featured.since) || isoDay(thisWeek);
     var past = [];
     for (var k = 1; k <= 4; k++) {
@@ -526,7 +529,7 @@
       "</div>" +
       (past.length
         ? '<div class="wotw__past"><h3>Past weeks</h3><div class="mini-grid">' + past.map(function (p) {
-            return '<a class="mini" href="#/icon/' + p.icon.id + '" data-icon="' + p.icon.id + '"><div class="' + tileClass(p.icon) + '">' + WTF.svg(p.icon) + "</div>" +
+            return '<a class="mini" href="' + pagePath(p.icon) + '" data-icon="' + p.icon.id + '"><div class="' + tileClass(p.icon) + '">' + WTF.svg(p.icon) + "</div>" +
               "<span>" + esc(p.icon.name) + "<small>" + esc(weekLabel(p.week)) + "</small></span></a>";
           }).join("") + "</div></div>"
         : "");
@@ -535,11 +538,11 @@
 
   function shareWotw(btn) {
     var i = wotw.icon, key = isoDay(wotw.week);
-    // Scheduled weeks have their own page (week/<monday>/, built by dev/build-share.mjs) with a
-    // proper link preview; automatic picks share the plain icon link.
+    // Scheduled weeks have their own page (week/<monday>/, built by dev/build-share.mjs) with an
+    // Icon of the week preview; automatic picks share the icon's own page.
     var url = featuredByWeek[key]
       ? location.origin + "/week/" + key + "/"
-      : location.origin + location.pathname + "#/icon/" + i.id;
+      : location.origin + pagePath(i);
     if (navigator.share && coarsePointer) {
       navigator.share({ title: "Icon of the week: " + i.name, text: wotw.hook, url: url }).catch(function () {});
       return;
@@ -713,7 +716,7 @@
     } else if (t.hasAttribute("data-close")) {
       closeIcon();
     } else if (t.hasAttribute("data-copy")) {
-      var url = location.href;
+      var url = state.icon && iconById[state.icon] ? location.origin + pagePath(iconById[state.icon]) : location.href;
       var done = function () { t.textContent = "Copied!"; setTimeout(function () { t.textContent = "Copy link"; }, 1600); };
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt("Copy this link:", url); });
       else prompt("Copy this link:", url);
@@ -1048,7 +1051,7 @@
 
   // Shared with assets/quiz.js
   WTF.ui = {
-    esc: esc, tileClass: tileClass, lookalikes: lookalikes, teaser: teaser, shortName: shortName,
+    esc: esc, tileClass: tileClass, lookalikes: lookalikes, teaser: teaser, shortName: shortName, pagePath: pagePath,
     ukToday: ukToday, isoDay: isoDay, catById: catById, coarsePointer: coarsePointer
   };
 

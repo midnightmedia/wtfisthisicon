@@ -125,6 +125,11 @@ if (featured) {
   console.log(`Icon of the week: ${weeks.size} weeks scheduled, ${ahead} still to come`);
 }
 
+// Icon pages (<category>/<slug>/) are built by dev/build-pages.mjs, which stamp-assets runs.
+const noPage = sandbox.WTF.icons.filter((i) => i.id && i.category && i.id.startsWith(i.category + "-") &&
+  !fs.existsSync(path.join(root, i.category, i.id.slice(i.category.length + 1), "index.html")));
+if (noPage.length) warn.push(`${noPage.length} icon(s) have no page yet (e.g. ${noPage[0].id}). Run node dev/stamp-assets.mjs`);
+
 const byCat = {};
 for (const i of sandbox.WTF.icons) byCat[i.category] = (byCat[i.category] || 0) + 1;
 console.log(`Loaded ${sandbox.WTF.icons.length} icons from ${files.length} files:`, byCat);

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /dev/
+Disallow: /worker/
+
+Sitemap: https://wtfisthisicon.com/sitemap.xml

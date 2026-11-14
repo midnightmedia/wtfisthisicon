@@ -24,31 +24,16 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import vm from "node:vm";
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { fileURLToPath } from "node:url";
+import { SITE, NEON, INK, ICON, root, loadWTF, shortName, esc, iconArt, cardHtml, findChrome, CHROME_ARGS } from "./cards.mjs";
 
-const SITE = "https://wtfisthisicon.com";
-const NEON = "#ccff00";
-const INK = "#0a0a0a";
-const TEMPLATE = 1; // bump to re-render every card after changing the card design below
+const TEMPLATE = 1; // bump to re-render every card after changing the card design (dev/cards.mjs)
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ICON = fs.readFileSync(path.join(root, "assets", "icon.svg"), "utf8").replace(/<title>.*?<\/title>\s*/, "").trim();
 const weekDir = path.join(root, "week");
 const force = process.argv.includes("--force");
 
-// Load the icons exactly as the site does (script order from index.html)
-const sb = {};
-sb.window = sb;
-vm.createContext(sb);
-const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
-for (const [, src] of indexHtml.matchAll(/<script src="(data\/[^"?]+)/g)) {
-  vm.runInContext(fs.readFileSync(path.join(root, src), "utf8"), sb, { filename: src });
-}
-vm.runInContext(fs.readFileSync(path.join(root, "assets", "quiz-tiers.js"), "utf8"), sb, { filename: "quiz-tiers.js" });
-const WTF = sb.WTF;
+const WTF = loadWTF();
 const byId = new Map(WTF.icons.map((i) => [i.id, i]));
 const weeks = ((WTF.featured && WTF.featured.weeks) || []).filter((w) => byId.has(w.id));
 
@@ -62,40 +47,8 @@ function weekLabel(iso) {
     ? a.getUTCDate() + "–" + end
     : a.getUTCDate() + " " + MONTHS[a.getUTCMonth()] + " – " + end;
 }
-const shortName = (icon) => icon.name.replace(/\s*\([^)]*\)\s*$/, "") || icon.name;
-const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const hash = (obj) => crypto.createHash("sha1").update(JSON.stringify(obj)).digest("hex").slice(0, 8);
 
-// The preview card (1200×630)
-function cardHtml({ art, tag, label, title, hook }) {
-  const size = title.length > 30 ? 52 : title.length > 18 ? 60 : 72;
-  return `<!doctype html><html><head><meta charset="utf-8"><style>
-html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #fff; color: ${INK};
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", sans-serif;
-  -webkit-font-smoothing: antialiased; }
-.card { display: flex; height: 630px; }
-.art { flex: none; width: 630px; height: 630px; background: ${NEON}; display: grid; place-items: center; color: ${INK}; }
-.art svg { width: 330px; height: 330px; overflow: visible; }
-.art svg text { font-family: inherit; font-weight: 700; fill: currentColor; stroke: none; text-anchor: middle; }
-.art svg .knock { fill: ${NEON}; stroke: ${NEON}; }
-.art .wtf { font-size: 190px; font-weight: 800; letter-spacing: -0.06em; line-height: 1; }
-.body { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 64px 60px 54px 60px; }
-.label { display: flex; align-items: center; gap: 16px; font-size: 22px; color: #8a8a8a; }
-.tag { background: ${INK}; color: ${NEON}; font-weight: 600; font-size: 20px; padding: 9px 18px; border-radius: 999px; }
-h1 { margin: 44px 0 0; font-size: ${size}px; line-height: 1; font-weight: 800; letter-spacing: -0.045em; }
-.hook { margin: 28px 0 0; font-size: 29px; line-height: 1.32; font-weight: 500; letter-spacing: -0.01em; color: #262626;
-  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-.foot { margin-top: auto; display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
-.foot svg { width: 30px; height: 30px; flex: none; }
-</style></head><body><div class="card">
-<div class="art">${art}</div>
-<div class="body">
-  <div class="label"><span class="tag">${esc(tag)}</span>${label ? esc(label) : ""}</div>
-  <h1>${esc(title)}</h1>
-  <p class="hook">${esc(hook)}</p>
-  <div class="foot">${ICON}wtfisthisicon.com</div>
-</div></div></body></html>`;
-}
 // The site's own card: big headline on white, a neon wall of well-known symbols on the right.
 function siteCardHtml({ icons, count }) {
   return `<!doctype html><html><head><meta charset="utf-8"><style>
@@ -125,27 +78,14 @@ h1 mark { background: ${NEON}; color: ${INK}; padding: 0 .08em; margin: 0 -.02em
 </div></body></html>`;
 }
 
-const iconArt = (icon) =>
-  `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">${icon.svg}</svg>`;
-
 // Headless Chrome, with a throwaway profile so it never touches your own browser
-function findChrome() {
-  const candidates = [
-    process.env.CHROME,
-    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-    "/Applications/Chromium.app/Contents/MacOS/Chromium",
-    "/usr/bin/google-chrome", "/usr/bin/chromium", "/usr/bin/chromium-browser",
-  ].filter(Boolean);
-  return candidates.find((p) => fs.existsSync(p));
-}
 const chrome = findChrome();
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "wtf-cards-"));
 function render(html, outPng) {
   const file = path.join(tmp, "card.html");
   fs.writeFileSync(file, html);
   execFileSync(chrome, [
-    "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-first-run", "--no-default-browser-check",
-    "--force-device-scale-factor=1", "--window-size=1200,630", `--user-data-dir=${path.join(tmp, "profile")}`,
+    ...CHROME_ARGS, `--user-data-dir=${path.join(tmp, "profile")}`,
     `--screenshot=${outPng}`, "file://" + file,
   ], { stdio: "ignore", timeout: 60000 });
   if (!fs.existsSync(outPng)) throw new Error("Chrome produced no image for " + outPng);
