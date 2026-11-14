@@ -115,7 +115,9 @@ straight to that icon on the site. The Share button on the home page uses this l
 
 ## Quiz
 
-"Do you speak symbol?" opens from the **Quiz** link in the header or the card on the home page.
+"Do you speak symbol?" opens from the **Quiz** link in the header. If a visitor hasn't played today's
+quiz, a small card slides into the corner after about 15 seconds, at most once a day; closing it or
+playing hides it until tomorrow.
 
 - **Daily quiz:** the same ten questions for everyone, changing at midnight UK time. Your score and
   streak are saved on your own device, and **Share your score** copies a result like

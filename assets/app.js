@@ -18,7 +18,7 @@
     red: ["red"], amber: ["amber", "yellow", "orange"], green: ["green"], blue: ["blue"], white: ["white", "grey", "gray"]
   };
   var HOME_LIMIT = 12;
-  var DASH_CATS = { car: true, ev: true };   // coloured warning lights: colour filter + legend apply
+  var DASH_CATS = { car: true, ev: true };   // coloured warning lights: the colour key (legend) applies
   var EXAMPLES = [
     "squiggly car", "horseshoe with !", "genie lamp", "square with a circle", "fan in a circle",
     "triangle crossed out", "iron with dots", "submarine", "snowflake", "pitchfork",
@@ -237,8 +237,8 @@
     return scored.slice(0, limit).map(function (s) { return s.icon; });
   }
 
-  // State & routing (#/icon/<id>?q=…&c=…&color=…)
-  var state = { q: "", c: "all", color: "", icon: null };
+  // State & routing (#/icon/<id>?q=…&c=…)
+  var state = { q: "", c: "all", icon: null };
   var pushedIcon = false;
 
   function readHash() {
@@ -252,7 +252,6 @@
     if (m && state.icon && state.icon !== m[1]) history.replaceState(null, "", "#/" + h.replace(m[1], state.icon));
     state.q = params.get("q") || "";
     state.c = catById[params.get("c")] ? params.get("c") : "all";
-    state.color = COLOR_WORDS[params.get("color")] ? params.get("color") : "";
   }
   // Old links keep working after an icon moves category (packaging-mobius-loop → recycling-mobius-loop).
   function currentId(id) {
@@ -264,7 +263,6 @@
     var p = new URLSearchParams();
     if (state.q) p.set("q", state.q);
     if (state.c !== "all") p.set("c", state.c);
-    if (state.color) p.set("color", state.color);
     var qs = p.toString();
     var path = withIcon ? "icon/" + withIcon : "";
     return "#/" + path + (qs ? "?" + qs : "");
@@ -278,7 +276,7 @@
   var el = {
     form: $("#search-form"), q: $("#q"), clear: $("#clear"), tryBox: $("#try"),
     cats: $("#cats"), catsRow: document.querySelector(".cats-row"), catsPrev: $("#cats-prev"), catsNext: $("#cats-next"),
-    colors: $("#colors"), status: $("#status"), results: $("#results"),
+    status: $("#status"), results: $("#results"),
     dialog: $("#detail"), detail: $("#detail-inner"),
     browse: $("#browse"), toolbar: document.querySelector(".toolbar"), wotw: $("#wotw"),
     photoBtn: $("#photo-btn"), photoInput: $("#photo-input"), cameraInput: $("#camera-input"), photoMenu: $("#photo-menu"),
@@ -377,21 +375,9 @@
     });
   });
 
-  function renderColors() {
-    var show = !photo && (DASH_CATS[state.c] || (state.c === "all" && !state.q.trim()));
-    el.colors.hidden = !show;
-    if (!show) return;
-    var opts = [["", "Any", "any"], ["red", "Red", "red"], ["amber", "Amber / yellow", "amber"], ["green", "Green", "green"], ["blue", "Blue", "blue"]];
-    el.colors.innerHTML = '<span class="filters__label">Dashboard light colour</span>' + opts.map(function (o) {
-      return '<button type="button" class="chip" data-color="' + o[0] + '" aria-pressed="' + (state.color === o[0]) + '">' +
-        '<i class="dot dot--' + o[2] + '"></i>' + o[1] + "</button>";
-    }).join("");
-  }
-
   function pool() {
     return function (i) {
       if (state.c !== "all" && i.category !== state.c) return false;
-      if (state.color && i.color !== state.color) return false;
       return true;
     };
   }
@@ -417,7 +403,7 @@
         status = "";
         html = emptyHtml(q, where);
       }
-    } else if (state.c === "all" && !state.color) {
+    } else if (state.c === "all") {
       status = "";
       CATS.forEach(function (c) {
         var list = sortForCategory(ICONS.filter(function (i) { return i.category === c.id; }));
@@ -431,14 +417,14 @@
       });
     } else {
       var list = sortForCategory(ICONS.filter(filter));
-      var title = state.c === "all" ? "Dashboard lights" : catById[state.c].name;
+      var title = catById[state.c].name;
       status = "";
       html = '<section class="section"><div class="section__head"><div>' +
-        '<h2 class="section__title">' + esc(title) + (state.color ? ", " + esc(state.color) : "") + "</h2>" +
+        '<h2 class="section__title">' + esc(title) + "</h2>" +
         '<p class="section__blurb">' + list.length + " symbol" + (list.length === 1 ? "" : "s") +
         (state.c !== "all" ? " &middot; " + esc(catById[state.c].blurb) : "") + "</p>" +
-        "</div></div>" + ((DASH_CATS[state.c] || state.color) ? legendHtml() : "") +
-        (list.length ? '<div class="grid">' + list.map(function (i) { return card(i, state.c === "all"); }).join("") + "</div>" : emptyHtml("", "")) +
+        "</div></div>" + (DASH_CATS[state.c] ? legendHtml() : "") +
+        (list.length ? '<div class="grid">' + list.map(function (i) { return card(i, false); }).join("") + "</div>" : emptyHtml("", "")) +
         "</section>";
     }
     el.status.innerHTML = status;
@@ -447,7 +433,7 @@
   }
 
   function emptyHtml(q, where) {
-    var alsoAll = state.c !== "all" || state.color
+    var alsoAll = state.c !== "all"
       ? '<li><button type="button" data-reset-filters>Search everything instead of just this category</button></li>' : "";
     return '<div class="empty"><h2>No idea WTF that is (yet).</h2>' +
       (q ? "<p>Nothing matched <strong>&ldquo;" + esc(q) + "&rdquo;</strong>" + esc(where) + ". A few tips:</p>" : "<p>Nothing here with those filters.</p>") +
@@ -646,7 +632,6 @@
     el.form.classList.toggle("has-q", !!state.q);
     el.clear.hidden = !state.q;
     renderCats();
-    renderColors();
     renderResults();
   }
 
@@ -657,7 +642,6 @@
     el.clear.hidden = !q;
     replaceUrl();
     syncSearching();
-    renderColors();
     renderResults();
     if (opts && opts.scroll) scrollToBrowse();
   }
@@ -704,7 +688,7 @@
 
   // Delegated clicks (cards, chips, categories, detail actions)
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-icon], [data-cat], [data-color], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-source], [data-photo-describe], [data-camera-snap], [data-camera-cancel], [data-camera-flip], [data-share-wotw]");
+    var t = e.target.closest("[data-icon], [data-cat], [data-search], [data-close], [data-copy], [data-reset-filters], [data-scroll-browse], [data-photo-source], [data-photo-describe], [data-camera-snap], [data-camera-cancel], [data-camera-flip], [data-share-wotw]");
     if (!t) {
       if (e.target === el.dialog) closeIcon(); // backdrop click
       return;
@@ -716,20 +700,15 @@
     } else if (t.hasAttribute("data-cat")) {
       photo = null; syncSearching();
       state.c = t.getAttribute("data-cat");
-      if (!DASH_CATS[state.c] && state.c !== "all") state.color = "";
       replaceUrl();
-      renderCats(); renderColors(); renderResults();
+      renderCats(); renderResults();
       if (t.classList.contains("section__more") || t.hasAttribute("data-scroll")) { e.preventDefault(); scrollToBrowse(); }
-    } else if (t.hasAttribute("data-color")) {
-      state.color = t.getAttribute("data-color");
-      replaceUrl();
-      renderColors(); renderResults();
     } else if (t.hasAttribute("data-search")) {
       var q = t.getAttribute("data-search");
       el.q.value = q;
       if (state.icon) { state.icon = null; pushedIcon = false; syncDialog(); }
-      state.c = "all"; state.color = "";
-      renderCats(); renderColors();
+      state.c = "all";
+      renderCats();
       setQuery(q, { scroll: true });
     } else if (t.hasAttribute("data-close")) {
       closeIcon();
@@ -758,9 +737,9 @@
       el.q.focus();
     } else if (t.hasAttribute("data-reset-filters")) {
       photo = null;
-      state.c = "all"; state.color = "";
+      state.c = "all";
       replaceUrl();
-      renderCats(); renderColors(); renderResults();
+      renderCats(); renderResults();
     }
   });
 
@@ -818,7 +797,7 @@
   el.logo.addEventListener("click", function (e) {
     e.preventDefault();
     photo = null; photoSeq++;
-    state.q = ""; state.c = "all"; state.color = "";
+    state.q = ""; state.c = "all";
     if (state.icon) { state.icon = null; pushedIcon = false; syncDialog(); }
     replaceUrl();
     renderAll();
@@ -936,7 +915,7 @@
 
   function showPhotoError(code) {
     photoSeq++;
-    state.q = ""; state.c = "all"; state.color = "";
+    state.q = ""; state.c = "all";
     photo = { status: "error", error: code };
     replaceUrl();
     renderAll();
@@ -975,7 +954,7 @@
   function identifyPhoto(file) {
     var seq = ++photoSeq;
     if (state.icon) { state.icon = null; pushedIcon = false; syncDialog(); }
-    state.q = ""; state.c = "all"; state.color = "";
+    state.q = ""; state.c = "all";
     photo = { status: "loading" };
     replaceUrl();
     renderAll();

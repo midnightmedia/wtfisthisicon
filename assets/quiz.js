@@ -13,7 +13,7 @@
   var ui = WTF.ui;
   var dlg = document.getElementById("quiz");
   var inner = document.getElementById("quiz-inner");
-  var cta = document.getElementById("quiz-cta");
+  var nudge = document.getElementById("quiz-nudge");
   if (!ui || !dlg || !inner) return;
 
   var ICONS = WTF.icons, esc = ui.esc;
@@ -163,7 +163,7 @@
     if (Q.i >= Q.round.length) {
       if (Q.mode === "daily") recordDaily(Q.answers);
       Q.screen = "results";
-      renderCta();
+      hideNudge(true);
     }
     render();
   }
@@ -305,19 +305,34 @@
     else prompt("Copy your score:", full);
   }
 
-  // Home page card
-  function renderCta() {
-    if (!cta) return;
-    var done = dailyDone(), streak = streakNow(load());
-    cta.innerHTML = '<div class="quiz-cta__inner">' +
-      '<div class="quiz-cta__text">' +
-        '<p class="wotw__label"><span class="wotw__tag">Daily quiz</span>' + esc(dayLabel(todayKey())) +
-          (streak ? " · " + streak + "-day streak" : "") + "</p>" +
-        '<p class="quiz-cta__title">' + (done ? "You scored " + score(done) + "/" + done.length + " today. Fancy some practice?" : "Ten symbols. How many do you speak?") + "</p>" +
-      "</div>" +
-      '<a class="btn" href="#/quiz" data-quiz-open="' + (done ? "intro" : "daily") + '">' + (done ? "Practice" : "Play today&rsquo;s quiz") + "</a>" +
-    "</div>";
-    cta.hidden = false;
+  // A small, dismissible card in the corner, at most once a day, only if today's quiz hasn't been
+  // played. It waits until the visitor has been around a little (and nothing else is open).
+  var NUDGE_KEY = "wtf-quiz-nudge", NUDGE_AFTER = 15000;
+  function nudgeSeen() { try { return localStorage.getItem(NUDGE_KEY) === todayKey(); } catch (e) { return true; } }
+  function showNudge() {
+    if (!nudge || nudgeSeen() || dailyDone()) return true;      // nothing to do: stop trying
+    if (document.querySelector("dialog[open]")) return false;   // busy: try again shortly
+    var streak = streakNow(load());
+    nudge.innerHTML =
+      '<button type="button" class="quiz-nudge__close" data-nudge-close aria-label="Dismiss">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg></button>' +
+      '<p class="wotw__label"><span class="wotw__tag">Daily quiz</span>' + esc(dayLabel(todayKey())) + "</p>" +
+      '<p class="quiz-nudge__title">' + (streak ? "Keep your " + streak + "-day streak going." : "Ten symbols. How many do you speak?") + "</p>" +
+      '<a class="btn" href="#/quiz" data-quiz-open="daily">Play today&rsquo;s quiz</a>';
+    nudge.hidden = false;
+    void nudge.offsetWidth; // apply the start position first, so the slide-in plays
+    nudge.classList.add("is-in");
+    return true;
+  }
+  function hideNudge(remember) {
+    if (remember) { try { localStorage.setItem(NUDGE_KEY, todayKey()); } catch (e) { /* fine */ } }
+    if (!nudge || nudge.hidden) return;
+    nudge.classList.remove("is-in");
+    setTimeout(function () { nudge.hidden = true; }, 300);
+  }
+  if (nudge) {
+    nudge.addEventListener("click", function (e) { if (e.target.closest("[data-nudge-close]")) hideNudge(true); });
+    (function wait(ms) { setTimeout(function () { if (!showNudge()) wait(4000); }, ms); })(NUDGE_AFTER);
   }
 
   // Routing: #/quiz opens the quiz
@@ -332,6 +347,7 @@
     }
   }
   function open(start) {
+    hideNudge(true);
     if (start === "daily") startDaily(); else { Q.screen = "intro"; render(); }
     if (!wanted()) { history.pushState(null, "", "#/quiz"); pushed = true; }
     if (!dlg.open) dlg.showModal();
@@ -368,12 +384,13 @@
     else if (e.key === "Enter" && Q.picked !== null && e.target.tagName !== "BUTTON" && e.target.tagName !== "A") { e.preventDefault(); next(); }
   });
 
-  renderCta();
+  if (wanted()) hideNudge(true);
   sync();
 
   // Debugging / tests
   WTF.quiz = {
     eligible: ELIGIBLE.length,
+    nudge: showNudge,
     daily: function (key) {
       return buildRound("all", "daily:" + (key || todayKey())).map(function (q) {
         return { id: q.icon.id, type: q.type, options: q.options.map(function (o) { return o.id; }) };
