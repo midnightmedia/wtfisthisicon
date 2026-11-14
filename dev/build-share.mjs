@@ -1,4 +1,9 @@
-// Builds the Icon of the week share pages from data/featured.js:
+// Builds the link previews (what WhatsApp, iMessage, X, Facebook, Slack… show for a link):
+//
+//   assets/og-card.png         the site's own 1200×630 preview; index.html's og:image points at it
+//                              (any wtfisthisicon.com link, including #/icon/… ones, shows this)
+//
+// and the Icon of the week share pages from data/featured.js:
 //
 //   week/<monday>/index.html   per-week page: its own title, description and 1200×630 preview
 //                              image for WhatsApp, iMessage, X, Facebook…; people who open it
@@ -10,8 +15,8 @@
 //   week/manifest.json         what each card was rendered from, so unchanged cards are skipped
 //
 // Runs as part of `node dev/stamp-assets.mjs` (before every push), or on its own:
-//   node dev/build-weeks.mjs            only (re)renders cards whose content changed
-//   node dev/build-weeks.mjs --force    re-renders every card
+//   node dev/build-share.mjs            only (re)renders cards whose content changed
+//   node dev/build-share.mjs --force    re-renders every card
 // Pages are kept for every week ever scheduled, so old shared links keep their preview.
 import fs from "node:fs";
 import os from "node:os";
@@ -86,6 +91,35 @@ h1 { margin: 44px 0 0; font-size: ${size}px; line-height: 1; font-weight: 800; l
   <div class="foot">wtfisthisicon.com</div>
 </div></div></body></html>`;
 }
+// The site's own card: big headline on white, a neon wall of well-known symbols on the right.
+function siteCardHtml({ icons, count }) {
+  return `<!doctype html><html><head><meta charset="utf-8"><style>
+html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #fff; color: ${INK};
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+.card { display: flex; height: 630px; }
+.body { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 70px 56px 54px 72px; }
+h1 { margin: 0; font-size: 116px; line-height: .92; font-weight: 800; letter-spacing: -0.055em; }
+h1 mark { background: ${NEON}; color: ${INK}; padding: 0 .08em; margin: 0 -.02em; border-radius: .08em; }
+.sub { margin: 36px 0 0; font-size: 30px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: #262626; max-width: 15em; }
+.foot { margin-top: auto; display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.foot::before { content: ""; width: 18px; height: 18px; border-radius: 5px; background: ${NEON}; box-shadow: 0 0 0 1px rgba(0,0,0,.1); }
+.foot span { font-weight: 500; color: #8a8a8a; }
+.wall { flex: none; width: 470px; height: 630px; background: ${NEON}; display: grid; place-content: center;
+  grid-template-columns: repeat(3, 100px); gap: 42px; color: ${INK}; }
+.wall svg { width: 100px; height: 100px; overflow: visible; }
+.wall svg text { font-family: inherit; font-weight: 700; fill: currentColor; stroke: none; text-anchor: middle; }
+.wall svg .knock { fill: ${NEON}; stroke: ${NEON}; }
+</style></head><body><div class="card">
+<div class="body">
+  <h1><mark>WTF</mark> is this&nbsp;icon?</h1>
+  <p class="sub">Describe the symbol. Get a <span style="white-space: nowrap">plain-English</span> answer.</p>
+  <div class="foot">wtfisthisicon.com <span>· ${count} symbols decoded</span></div>
+</div>
+<div class="wall">${icons.map(iconArt).join("")}</div>
+</div></body></html>`;
+}
+
 const iconArt = (icon) =>
   `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">${icon.svg}</svg>`;
 
@@ -150,15 +184,16 @@ const next = {};
 let rendered = 0, skipped = 0;
 
 // Returns the card's version hash (used to bust caches in og:image), or "" if there's no image.
-function card(key, spec, outPng) {
-  const h = hash({ TEMPLATE, ...spec });
+function card(key, spec, outPng, layout = cardHtml) {
+  // Week cards change version via TEMPLATE; the site card re-renders whenever its layout code changes.
+  const h = hash({ TEMPLATE, ...(layout === cardHtml ? {} : { layout: layout.toString() }), ...spec });
   const have = fs.existsSync(outPng);
   if (!force && have && manifest[key] === h) { next[key] = h; skipped++; return h; }
   if (!chrome) { // can't render: keep whatever image is already there
     if (have && manifest[key]) next[key] = manifest[key];
     return have ? manifest[key] || "" : "";
   }
-  render(cardHtml(spec), outPng);
+  render(layout(spec), outPng);
   next[key] = h;
   rendered++;
   return h;
@@ -213,8 +248,21 @@ fs.writeFileSync(path.join(weekDir, "index.html"), pageHtml({
   fallbackText: "Icon of the week on WTF is this icon?",
 }));
 
+// The site's own preview card, and its cache-busting version in index.html's og:image.
+const WALL = ["car-check-engine", "car-oil-pressure", "car-tyre-pressure", "laundry-tumble-dry", "laundry-hand-wash",
+  "oven-true-fan", "recycling-mobius-loop", "fridge-freezer-four-star", "toilet-rear-wash"];
+const sh = card("_site", {
+  icons: WALL.map((id) => byId.get(id)).filter(Boolean).map((i) => ({ svg: i.svg })),
+  count: Math.floor(WTF.icons.length / 25) * 25 + "+",
+}, path.join(root, "assets", "og-card.png"), siteCardHtml);
+if (sh) {
+  const re = /(<meta property="og:image" content="[^"?]+og-card\.png)(?:\?v=[^"]*)?(")/;
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  if (re.test(html)) fs.writeFileSync(path.join(root, "index.html"), html.replace(re, `$1?v=${sh}$2`));
+}
+
 fs.writeFileSync(manifestPath, JSON.stringify(next, null, 2) + "\n");
 fs.rmSync(tmp, { recursive: true, force: true });
 
-if (!chrome) console.warn("build-weeks: Chrome not found (set CHROME=/path/to/chrome) — share pages written without new preview images");
+if (!chrome) console.warn("build-share: Chrome not found (set CHROME=/path/to/chrome) — share pages written without new preview images");
 console.log(`Icon of the week pages: ${weeks.length} weeks, ${rendered} card(s) rendered, ${skipped} unchanged`);

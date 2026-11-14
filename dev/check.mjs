@@ -105,7 +105,7 @@ if (featured) {
     if (typeof f.hook !== "string" || !f.hook.trim()) errors.push(`${where}: missing hook`);
     else if (f.hook.length > 90) warn.push(`${where}: hook is ${f.hook.length} chars (keep it under ~90)`);
   }
-  // Share pages (week/<monday>/) are built by dev/build-weeks.mjs, which stamp-assets runs.
+  // Share pages (week/<monday>/) are built by dev/build-share.mjs, which stamp-assets runs.
   const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const stale = (featured.weeks || []).filter((f) => {
     let page = "";

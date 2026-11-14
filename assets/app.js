@@ -549,7 +549,7 @@
 
   function shareWotw(btn) {
     var i = wotw.icon, key = isoDay(wotw.week);
-    // Scheduled weeks have their own page (week/<monday>/, built by dev/build-weeks.mjs) with a
+    // Scheduled weeks have their own page (week/<monday>/, built by dev/build-share.mjs) with a
     // proper link preview; automatic picks share the plain icon link.
     var url = featuredByWeek[key]
       ? location.origin + "/week/" + key + "/"

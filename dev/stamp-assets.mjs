@@ -1,8 +1,8 @@
 // Adds a content fingerprint (?v=abc123) to every local script/stylesheet in index.html,
 // so browsers never mix a fresh page with stale cached JS/CSS after a deploy.
 // Run before pushing:  node dev/stamp-assets.mjs
-// It first rebuilds the Icon of the week share pages (dev/build-weeks.mjs).
-import "./build-weeks.mjs";
+// It first rebuilds the share previews: the site card and the Icon of the week pages (dev/build-share.mjs).
+import "./build-share.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
