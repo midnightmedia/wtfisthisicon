@@ -21,6 +21,8 @@
 <link rel="icon" href="assets/icon.svg?v=b0456ce1" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WTF icon">
 <script>
   /* Pick the theme before first paint: saved choice, else the device setting */
   (function () {
@@ -30,7 +32,7 @@
     document.documentElement.setAttribute("data-theme", t);
   })();
 </script>
-<link rel="stylesheet" href="assets/styles.css?v=4a5ed2f7">
+<link rel="stylesheet" href="assets/styles.css?v=e9be9cdd">
 </head>
 <body>
 <a class="skip" href="#results">Skip to results</a>
@@ -41,6 +43,7 @@
     <nav class="top__right" aria-label="Site">
       <a class="top__link" href="#/quiz" data-quiz-open="intro">Quiz</a>
       <a class="top__link top__link--browse" href="#browse" data-scroll-browse>Browse</a>
+      <button type="button" class="top__link" id="install-btn" hidden><span class="install-btn__long">Get the app</span><span class="install-btn__short">App</span></button>
       <button type="button" class="top__link theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
         <span class="theme-toggle__off">Lights off</span><span class="theme-toggle__on">Lights on</span>
       </button>
@@ -160,7 +163,9 @@
   <div class="detail__inner" id="detail-inner"></div>
 </dialog>
 
-<script src="assets/config.js?v=9664b819"></script>
+<script src="assets/config.js?v=f71af180"></script>
+<script src="assets/stats.js?v=3de45805"></script>
+<script src="assets/install.js?v=c68be86b"></script>
 <script src="data/_registry.js?v=bbd6258d"></script>
 <script src="data/car.js?v=bfd32fc8"></script>
 <script src="data/laundry.js?v=26874a0c"></script>
@@ -175,8 +180,8 @@
 <script src="data/toilet.js?v=ae6c9c8d"></script>
 <script src="data/coffee.js?v=f0de95f6"></script>
 <script src="data/featured.js?v=3a39c639"></script>
-<script src="assets/app.js?v=dfa3eafa"></script>
+<script src="assets/app.js?v=0e5016f1"></script>
 <script src="assets/quiz-tiers.js?v=64db95e6"></script>
-<script src="assets/quiz.js?v=b337e449"></script>
+<script src="assets/quiz.js?v=3589396e"></script>
 </body>
 </html>

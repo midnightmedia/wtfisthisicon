@@ -1,8 +1,10 @@
 {
+  "id": "/",
   "name": "WTF is this icon?",
   "short_name": "WTF icon",
   "description": "Describe the symbol. Get a plain-English answer.",
-  "start_url": "/",
+  "start_url": "/?ref=app",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",

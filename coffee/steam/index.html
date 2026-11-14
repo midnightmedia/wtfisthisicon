@@ -21,6 +21,8 @@
 <link rel="icon" href="/assets/icon.svg?v=b0456ce1" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WTF icon">
 <script>
   (function () {
     var t;
@@ -29,7 +31,7 @@
     document.documentElement.setAttribute("data-theme", t);
   })();
 </script>
-<link rel="stylesheet" href="/assets/styles.css?v=4a5ed2f7">
+<link rel="stylesheet" href="/assets/styles.css?v=e9be9cdd">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WTF is this icon?","item":"https://wtfisthisicon.com/"},{"@type":"ListItem","position":2,"name":"Coffee machines","item":"https://wtfisthisicon.com/coffee/"},{"@type":"ListItem","position":3,"name":"Steam (milk frothing)","item":"https://wtfisthisicon.com/coffee/steam/"}]}</script>
 </head>
 <body>
@@ -41,6 +43,7 @@
     <nav class="top__right" aria-label="Site">
       <a class="top__link" href="/#/quiz">Quiz</a>
       <a class="top__link top__link--browse" href="/#browse">Browse</a>
+      <button type="button" class="top__link" id="install-btn" hidden><span class="install-btn__long">Get the app</span><span class="install-btn__short">App</span></button>
       <button type="button" class="top__link theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
         <span class="theme-toggle__off">Lights off</span><span class="theme-toggle__on">Lights on</span>
       </button>
@@ -122,6 +125,9 @@
   </div>
 </footer>
 
+<script src="/assets/config.js?v=f71af180"></script>
+<script src="/assets/stats.js?v=3de45805"></script>
+<script src="/assets/install.js?v=c68be86b"></script>
 <script>
 (function () {
   var root = document.documentElement, btn = document.getElementById("theme-toggle"), meta = document.querySelector('meta[name="theme-color"]');
@@ -143,6 +149,7 @@
     var q = f.q.value.trim();
     location.href = "/" + (q ? "#/?q=" + encodeURIComponent(q) : "");
   });
+  if (window.WTF && WTF.stats) WTF.stats.page(location.pathname);
 })();
 </script>
 </body>

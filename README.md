@@ -53,7 +53,9 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `assets/icon.svg` | **The site icon** (the "unknown character" diamond). The master for every icon size |
 | `dev/build-post.mjs` | Social media post generator: any icon → a 5-slide carousel + caption (see below) |
 | `dev/build-icons.mjs` | Makes `favicon.ico`, `apple-touch-icon.png`, `assets/icon-*.png` and `site.webmanifest` from `assets/icon.svg` |
-| `assets/config.js` | Site settings (the photo Worker URL) |
+| `assets/config.js` | Site settings (the photo Worker URL, the GoatCounter code) |
+| `assets/stats.js` | Visitor stats: pageviews and searches that found nothing (see below) |
+| `assets/install.js` | The "Get the app" button: install prompt or a how-to for the visitor's phone (see below) |
 | `worker/` | Cloudflare Worker that identifies photos with Claude |
 
 ## Social posts
@@ -102,6 +104,44 @@ npx wrangler secret put ANTHROPIC_API_KEY   # paste your key when asked
 
 Then put the Worker URL in `assets/config.js` and push. After adding or changing icons,
 run `npm run deploy` inside `worker/` so the Worker knows about them.
+
+## Get the app
+
+The header's **Get the app** button (just **App** on narrow phones) puts the site on the home screen,
+where it opens full screen like an app. `assets/install.js` runs it on every page:
+
+- **Chrome, Edge, Samsung Internet** offer their own install prompt once a visitor has tapped around for
+  half a minute or so; from then on the button opens that prompt directly. This is also the only way
+  the button shows on a computer.
+- **Before that, and on iPhone and iPad**, the button opens a short how-to for the browser they're in
+  (Safari's Share then Add to Home Screen, Chrome's menu then Install app, and so on).
+- **In-app browsers** (Instagram, Facebook, TikTok, WhatsApp...) can't install anything, so the how-to
+  tells people to open the page in their real browser first. Worth having, since that's where
+  Instagram visitors land.
+- Hidden once the site is running as an app. `site.webmanifest` (made by `dev/build-icons.mjs`) sets
+  the name, icons and full-screen mode; its start address has `?ref=app`, so opens from the home
+  screen show up as "app" in the visitor stats. Events: `App: how-to (iphone)` and friends,
+  `App: install accepted`, `App: installed`.
+
+## Visitor stats
+
+Visits are counted with [GoatCounter](https://www.goatcounter.com): no cookies, no personal data,
+so no cookie banner. It's switched on by `GOATCOUNTER` in `assets/config.js` (the `abc` in
+`abc.goatcounter.com`); leave it empty and nothing is sent. `assets/stats.js` does the counting and
+is loaded on the home page and on every icon and category page.
+
+- **Pages.** Every page counts as itself. On the home page, the icon pop-up counts as that icon's page
+  (`/car/check-engine/`, the same row as the real page), the quiz as `/quiz/` and a category filter as
+  the category's page.
+- **Where people came from.** Add `?ref=` to links you post, e.g. `wtfisthisicon.com/?ref=instagram`
+  in the Instagram bio, since in-app browsers often hide where a visit came from.
+- **Searches that found nothing** show up as events named `No results: <what they typed>`, sent once
+  the person stops typing, once per wording per visit, skipping anything that looks like an email or
+  a long number. This is the list of symbols to add next.
+- **Photo lookups** show up as `Photo: no match` (the title says what the photo showed) and
+  `Photo: matched` (the title lists the icons).
+- Nothing is sent from localhost. To check what a page has counted, run `WTF.stats.sent` in the
+  browser console (it fills up on localhost too, when `GOATCOUNTER` is set).
 
 ## Icon of the week
 

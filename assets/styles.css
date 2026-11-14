@@ -765,3 +765,47 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Get the app (assets/install.js) */
+.install-btn__short { display: none; }
+.install {
+  width: min(520px, 100% - 32px); max-height: min(92dvh, 760px);
+  padding: 0; border: 0; border-radius: 24px;
+  background: var(--bg); color: var(--fg); box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.install::backdrop { background: var(--backdrop); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.install[open] { animation: rise .22s cubic-bezier(.2, .8, .2, 1); }
+.install__inner { position: relative; max-height: inherit; overflow-y: auto; overscroll-behavior: contain; padding: 40px; }
+.install .detail__close { top: 16px; right: 16px; }
+.install__label { margin: 0 0 14px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.install__title { margin: 0; padding-right: 44px; font-size: 36px; font-weight: 800; line-height: 1.02; letter-spacing: -0.045em; }
+.install__intro { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
+.install__steps { display: grid; gap: 18px; margin: 32px 0 0; padding: 0; list-style: none; counter-reset: step; }
+.install__steps li { display: grid; grid-template-columns: 32px 1fr; gap: 14px; align-items: start; counter-increment: step; font-size: 16px; line-height: 1.45; }
+.install__steps li::before {
+  content: counter(step);
+  display: grid; place-items: center; width: 32px; height: 32px; margin-top: -4px;
+  border-radius: 50%; background: var(--neon); color: var(--on-neon);
+  font-size: 15px; font-weight: 800;
+}
+.install__steps b { font-weight: 700; }
+.install__steps svg { display: inline-block; width: 1.2em; height: 1.2em; margin: 0 1px; vertical-align: -0.25em; }
+.install__done { margin-top: 32px; }
+@media (max-width: 760px) {
+  .install {
+    width: 100%; max-width: none; max-height: 92dvh; margin: auto 0 0;
+    border-radius: 24px 24px 0 0;
+  }
+  .install__inner { padding: 28px 20px calc(20px + env(safe-area-inset-bottom)); }
+  .install__title { font-size: 30px; }
+  .install__done { width: 100%; justify-content: center; padding: 14px 16px; font-size: 15px; }
+}
+@media (max-width: 480px) {
+  .install-btn__long { display: none; }
+  .install-btn__short { display: inline; }
+}
+@media (max-width: 374px) {
+  .top__right { gap: 14px; }
+  .logo { font-size: 16px; }
+}

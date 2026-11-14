@@ -396,6 +396,7 @@
     var html = "";
     var status = "";
 
+    noteMiss("");
     if (q) {
       var hits = search(q, filter);
       var where = state.c !== "all" ? " in " + catById[state.c].name : "";
@@ -405,6 +406,7 @@
       } else {
         status = "";
         html = emptyHtml(q, where);
+        if (state.c === "all" || !search(q).length) noteMiss(q);
       }
     } else if (state.c === "all") {
       status = "";
@@ -433,6 +435,35 @@
     el.status.innerHTML = status;
     el.status.hidden = !status;
     el.results.innerHTML = html;
+  }
+
+  // Visitor stats (assets/stats.js). Searches that find nothing anywhere are counted once the
+  // person stops typing, so the list of them says which symbols to add next. Each wording is
+  // counted once per visit, and anything that looks like an email or a long number is skipped.
+  var missTimer = null, missPending = "", missSent = {};
+  function noteMiss(q) {
+    clearTimeout(missTimer);
+    missPending = q.toLowerCase().replace(/\s+/g, " ").trim().slice(0, 60);
+    if (missPending) missTimer = setTimeout(sendMiss, 2000);
+  }
+  function sendMiss() {
+    var q = missPending;
+    clearTimeout(missTimer);
+    missPending = "";
+    if (!q || missSent[q] || /@|\d{5,}/.test(q)) return;
+    missSent[q] = true;
+    WTF.stats.event("No results: " + q, "A search that found nothing");
+  }
+  document.addEventListener("visibilitychange", function () { if (document.hidden) sendMiss(); });
+  window.addEventListener("pagehide", sendMiss);
+
+  // The pop-up counts as the icon's own page, the quiz as /quiz/ and a category filter as that category's page.
+  function countPage() {
+    var icon = state.icon && iconById[state.icon];
+    if (icon) WTF.stats.page(pagePath(icon), icon.name);
+    else if (/^#\/?quiz(\/|\?|$)/.test(location.hash)) WTF.stats.page("/quiz/", "Quiz");
+    else if (state.c !== "all") WTF.stats.page("/" + state.c + "/", catById[state.c].name);
+    else WTF.stats.page("/");
   }
 
   function emptyHtml(q, where) {
@@ -602,6 +633,7 @@
       document.title = "WTF is this icon? Decode the symbols on your car, oven, washing machine and more";
       if (el.dialog.open) el.dialog.close();
     }
+    countPage();
   }
 
   function openIcon(id) {
@@ -636,6 +668,7 @@
     el.clear.hidden = !state.q;
     renderCats();
     renderResults();
+    countPage();
   }
 
   function setQuery(q, opts) {
@@ -704,7 +737,7 @@
       photo = null; syncSearching();
       state.c = t.getAttribute("data-cat");
       replaceUrl();
-      renderCats(); renderResults();
+      renderCats(); renderResults(); countPage();
       if (t.classList.contains("section__more") || t.hasAttribute("data-scroll")) { e.preventDefault(); scrollToBrowse(); }
     } else if (t.hasAttribute("data-search")) {
       var q = t.getAttribute("data-search");
@@ -742,7 +775,7 @@
       photo = null;
       state.c = "all";
       replaceUrl();
-      renderCats(); renderResults();
+      renderCats(); renderResults(); countPage();
     }
   });
 
@@ -989,6 +1022,9 @@
         photo.status = "done";
         photo.seen = r.data.seen || "";
         photo.matches = (r.data.matches || []).filter(function (m) { return iconById[m.id]; });
+        // A photo that matches nothing is a symbol we're missing; what the model saw says which.
+        if (photo.matches.length) WTF.stats.event("Photo: matched", photo.matches.map(function (m) { return m.id; }).join(", "));
+        else WTF.stats.event("Photo: no match", photo.seen || "No description");
       }
       renderResults();
     }).catch(function (err) {
@@ -1052,7 +1088,7 @@
   // Shared with assets/quiz.js
   WTF.ui = {
     esc: esc, tileClass: tileClass, lookalikes: lookalikes, teaser: teaser, shortName: shortName, pagePath: pagePath,
-    ukToday: ukToday, isoDay: isoDay, catById: catById, coarsePointer: coarsePointer
+    ukToday: ukToday, isoDay: isoDay, catById: catById, coarsePointer: coarsePointer, countPage: countPage
   };
 
   // Expose for debugging / tests

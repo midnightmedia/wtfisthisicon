@@ -378,12 +378,14 @@
       dlg.close();
       if (Q.screen === "question" && Q.mode === "practice") Q.screen = "intro";
     }
+    ui.countPage();
   }
   function open(start) {
     hideNudge(true);
     if (start === "daily") startDaily(); else { Q.screen = "intro"; render(); }
     if (!wanted()) { history.pushState(null, "", "#/quiz"); pushed = true; }
     if (!dlg.open) dlg.showModal();
+    ui.countPage();
   }
   function close() {
     if (pushed) { pushed = false; history.back(); }

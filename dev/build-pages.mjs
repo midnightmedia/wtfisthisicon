@@ -114,7 +114,7 @@ function clip(t, max) {
 
 // Fingerprints, same as dev/stamp-assets.mjs, so these pages never get stale CSS
 const ver = (f) => crypto.createHash("sha1").update(fs.readFileSync(path.join(root, f))).digest("hex").slice(0, 8);
-const V = { css: ver("assets/styles.css"), icon: ver("assets/icon.svg") };
+const V = { css: ver("assets/styles.css"), icon: ver("assets/icon.svg"), config: ver("assets/config.js"), stats: ver("assets/stats.js"), install: ver("assets/install.js") };
 const indexPath = path.join(root, "index.html");
 const siteCard = (fs.readFileSync(indexPath, "utf8").match(/<meta property="og:image" content="([^"]+)"/) || [])[1] || `${SITE}/assets/og-card.png`;
 
@@ -145,6 +145,7 @@ const PAGE_JS = `(function () {
     var q = f.q.value.trim();
     location.href = "/" + (q ? "#/?q=" + encodeURIComponent(q) : "");
   });
+  if (window.WTF && WTF.stats) WTF.stats.page(location.pathname);
 })();`;
 
 const HEADER = `<header class="top">
@@ -153,6 +154,7 @@ const HEADER = `<header class="top">
     <nav class="top__right" aria-label="Site">
       <a class="top__link" href="/#/quiz">Quiz</a>
       <a class="top__link top__link--browse" href="/#browse">Browse</a>
+      <button type="button" class="top__link" id="install-btn" hidden><span class="install-btn__long">Get the app</span><span class="install-btn__short">App</span></button>
       <button type="button" class="top__link theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
         <span class="theme-toggle__off">Lights off</span><span class="theme-toggle__on">Lights on</span>
       </button>
@@ -217,6 +219,8 @@ function shell({ title, description, url, ogTitle, image, imageAlt, jsonld, body
 <link rel="icon" href="/assets/icon.svg?v=${V.icon}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WTF icon">
 <script>
   ${THEME_PICK}
 </script>
@@ -232,6 +236,9 @@ ${body}
 
 ${FOOTER}
 
+<script src="/assets/config.js?v=${V.config}"></script>
+<script src="/assets/stats.js?v=${V.stats}"></script>
+<script src="/assets/install.js?v=${V.install}"></script>
 <script>
 ${PAGE_JS}
 </script>

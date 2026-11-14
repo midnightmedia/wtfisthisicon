@@ -62,11 +62,14 @@ write("apple-touch-icon.png", png(square, 180));
 write("assets/icon-192.png", png(master, 192));
 write("assets/icon-512.png", png(master, 512));
 write("assets/icon-maskable-512.png", png(square, 512));
+// start_url carries ?ref=app so opens from the home screen show up as "app" in the visitor stats
 write("site.webmanifest", JSON.stringify({
+  id: "/",
   name: "WTF is this icon?",
   short_name: "WTF icon",
   description: "Describe the symbol. Get a plain-English answer.",
-  start_url: "/",
+  start_url: "/?ref=app",
+  scope: "/",
   display: "standalone",
   background_color: "#ffffff",
   theme_color: "#ffffff",
