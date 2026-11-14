@@ -1,4 +1,4 @@
-/* WTF is this icon? — Phones & gadgets (tech) and Packaging & labels (packaging).
+/* Phones & gadgets (tech) and Packaging & labels (packaging).
  * Recycling symbols live in data/recycling.js.
  * Format and drawing rules: see data/README.md. All symbols are simplified, original drawings
  * for identification purposes (trademarked marks such as CE, UKCA and the Green Dot included). */
@@ -21,9 +21,9 @@ WTF.add([
     category: "tech",
     aka: ["rocker switch", "on/off switch", "I/O switch", "power switch"],
     looksLike: ["line and circle", "i and o", "1 and 0", "stick and ring", "| o", "switch with a line and a circle"],
-    meaning: "I means On and O means Off — they come from the binary digits 1 and 0. You'll find them on rocker switches on PCs, extension leads, kettles and power supplies.",
+    meaning: "I means On and O means Off. They come from the binary digits 1 and 0. You'll find them on rocker switches on PCs, extension leads, kettles and power supplies.",
     action: "Press the I side to switch on and the O side to switch off. On extension leads the switch usually lights up when it's on.",
-    tip: "A switch marked 0, I and II (like on many hair dryers and fans) means off, low and high — II is not \"on twice\".",
+    tip: "A switch marked 0, I and II (like on many hair dryers and fans) means off, low and high. II is not \"on twice\".",
     svg: `<rect x="7" y="13" width="50" height="38" rx="7" stroke-width="3"/><line x1="32" y1="13" x2="32" y2="51" stroke-width="2.5"/><line x1="19.5" y1="23" x2="19.5" y2="41" stroke-width="4"/><circle cx="44.5" cy="32" r="8" stroke-width="4"/>`
   },
   {
@@ -33,8 +33,8 @@ WTF.add([
     aka: ["BT", "wireless pairing", "Bluetooth rune"],
     looksLike: ["angular b", "pointy b", "b made of triangles", "bow tie with a line", "rune", "arrow b", "x with a line"],
     meaning: "Bluetooth: short-range wireless for headphones, speakers, watches, keyboards and cars. In a phone's status bar it means Bluetooth is on; extra dots or a little battery next to it mean something is connected.",
-    action: "Switch it on or off in Control Centre / Quick Settings. On a gadget, holding the button with this symbol usually starts pairing — a fast-flashing light means it's ready to be found by your phone.",
-    tip: "The logo merges two Viking runes, ᚼ (H) and ᛒ (B) — the initials of Harald Bluetooth, a 10th-century Danish king famous for uniting tribes, just as Bluetooth unites gadgets.",
+    action: "Switch it on or off in Control Centre / Quick Settings. On a gadget, holding the button with this symbol usually starts pairing, and a fast-flashing light means it's ready to be found by your phone.",
+    tip: "The logo merges two Viking runes, ᚼ (H) and ᛒ (B). They're the initials of Harald Bluetooth, a 10th-century Danish king famous for uniting tribes, just as Bluetooth unites gadgets.",
     svg: `<polyline points="18,21 46,43 32,54 32,10 46,21 18,43" stroke-width="4"/>`
   },
   {
@@ -43,8 +43,8 @@ WTF.add([
     category: "tech",
     aka: ["USB trident", "USB-A", "universal serial bus", "SS USB", "SuperSpeed"],
     looksLike: ["pitchfork", "trident", "fork with a circle square and triangle", "branching arrow", "tree with a circle and square", "arrow with branches"],
-    meaning: "Marks a USB port or cable — the everyday plug for charging and connecting mice, keyboards, memory sticks and drives.",
-    action: "Plug USB things in here. If you see \"SS\" (SuperSpeed) next to it, that port is the faster USB 3 kind — use it for external drives. A battery or lightning-bolt icon beside a port means it can charge your phone, sometimes even while the computer is asleep.",
+    meaning: "Marks a USB port or cable, the everyday plug for charging and connecting mice, keyboards, memory sticks and drives.",
+    action: "Plug USB things in here. If you see \"SS\" (SuperSpeed) next to it, that port is the faster USB 3 kind, so use it for external drives. A battery or lightning-bolt icon beside a port means it can charge your phone, sometimes even while the computer is asleep.",
     tip: "The circle, square and triangle on the branches are said to show that USB connects all kinds of devices. A blue plastic tongue inside a rectangular USB port usually means USB 3.",
     svg: `<line x1="32" y1="51" x2="32" y2="15"/><polygon points="32,6 25.5,16 38.5,16" fill="currentColor" stroke-width="2"/><circle cx="32" cy="51.5" r="5.5" fill="currentColor" stroke="none"/><polyline points="32,45 19,34 19,27"/><circle cx="19" cy="23" r="4.5" fill="currentColor" stroke="none"/><polyline points="32,39 45,29 45,23"/><rect x="40.5" y="14.5" width="9" height="9" rx="1" fill="currentColor" stroke="none"/>`
   },
@@ -66,7 +66,7 @@ WTF.add([
     aka: ["Thunderbolt 3", "Thunderbolt 4", "Thunderbolt 5", "TB3", "TB4", "Intel Thunderbolt"],
     looksLike: ["lightning bolt with an arrow", "zigzag arrow", "lightning arrow", "bolt with arrowhead", "zigzag line pointing down"],
     meaning: "This port supports Thunderbolt, a super-fast connection for docks, multiple monitors, fast external drives and graphics boxes. Since Thunderbolt 3 it uses the USB-C shape, so it also works as a normal USB-C port.",
-    action: "Plug docks, high-end monitors and fast drives into this port for best results — and use a Thunderbolt cable (it has the same bolt logo) to get full speed.",
+    action: "Plug docks, high-end monitors and fast drives into this port for best results, and use a Thunderbolt cable (it has the same bolt logo) to get full speed.",
     tip: "A plain lightning bolt without the arrowhead next to a port usually means charging, not Thunderbolt. On Macs from about 2011–2015 Thunderbolt used the smaller, square Mini DisplayPort shape.",
     svg: `<polyline points="40,6 22,32 42,32 28,50" stroke-width="4"/><polygon points="23.09,56.31 22.87,46.01 33.13,53.99" fill="currentColor" stroke-width="1.5"/>`
   },
@@ -78,7 +78,7 @@ WTF.add([
     looksLike: ["wide trapezoid slot", "flat port with cut corners", "hdmi", "letters hdmi", "squashed hexagon port"],
     meaning: "HDMI carries picture and sound together from a laptop, console, streaming stick or set-top box to a TV, monitor or projector.",
     action: "Plug the cable in, then press Input or Source on the TV remote and choose the matching number (HDMI 1, HDMI 2…). No picture? Check you're on the right input before blaming the cable.",
-    tip: "The port labelled ARC or eARC is the one to use for a soundbar — it lets the TV send its sound back down the same cable.",
+    tip: "The port labelled ARC or eARC is the one to use for a soundbar. It lets the TV send its sound back down the same cable.",
     svg: `<polygon points="7,12 57,12 57,21 50,30 14,30 7,21"/><line x1="16" y1="19" x2="48" y2="19" stroke-width="3"/><text x="32" y="52" font-size="16">HDMI</text>`
   },
   {
@@ -88,7 +88,7 @@ WTF.add([
     aka: ["LAN", "RJ45", "network cable", "wired internet", "Cat 5", "Cat 6"],
     looksLike: ["three squares connected", "boxes joined by lines", "three boxes", "family tree", "square socket with a notch", "squares with lines between"],
     meaning: "The wired network (LAN) socket for an internet cable from your router. It's the chunky square socket with a clip notch, a bit wider than a phone socket.",
-    action: "Plug an Ethernet cable from the router into here for internet that's usually faster and more reliable than Wi-Fi — great for TVs, consoles and desktop PCs.",
+    action: "Plug an Ethernet cable from the router into here for internet that's usually faster and more reliable than Wi-Fi. It's great for TVs, consoles and desktop PCs.",
     tip: "The little lights next to the socket should blink when data flows; no lights usually means a dead cable or the router end isn't plugged in. A phone cable will fit, but it won't work.",
     svg: `<rect x="23" y="9" width="18" height="14" rx="2"/><rect x="7" y="41" width="18" height="14" rx="2"/><rect x="39" y="41" width="18" height="14" rx="2"/><polyline points="32,23 32,32"/><polyline points="16,41 16,32 48,32 48,41"/>`
   },
@@ -111,7 +111,7 @@ WTF.add([
     looksLike: ["fan", "curved lines", "quarter circle lines", "radar waves", "slice of pizza lines", "rainbow with a dot", "wifi bars"],
     meaning: "You're connected to a Wi-Fi network; the number of filled arcs shows the signal strength. Variations: an ! or ✕ next to it means connected to Wi-Fi but no internet; a padlock (in the network list) means it needs a password; a 6, 6E or 7 means a newer, faster Wi-Fi standard.",
     action: "No internet with an !? Restart your router (unplug it for 30 seconds). Weak signal? Move closer to the router or away from thick walls and microwaves.",
-    tip: "\"Wi-Fi\" doesn't actually stand for \"wireless fidelity\" — it was a catchy name invented by a branding agency, and the backronym came later.",
+    tip: "\"Wi-Fi\" doesn't actually stand for \"wireless fidelity\". It was a catchy name invented by a branding agency, and the backronym came later.",
     svg: `<g stroke-width="4.5"><path d="M24.93 38.93A10 10 0 0 1 39.07 38.93"/><path d="M17.86 31.86A20 20 0 0 1 46.14 31.86"/><path d="M10.79 24.79A30 30 0 0 1 53.21 24.79"/></g><circle cx="32" cy="46" r="3.5" fill="currentColor" stroke="none"/>`
   },
   {
@@ -122,7 +122,7 @@ WTF.add([
     looksLike: ["sideways wifi", "four curved lines", "radio waves going right", "brackets getting bigger", "))))", "letter n in the status bar"],
     meaning: "Contactless: tap a card, phone or watch here to pay or scan. On a card it means it can pay by tapping; on a phone it means it has NFC, the tiny radio behind tap-to-pay, transit cards and quick-pairing.",
     action: "Hold your card or phone flat on the symbol on the reader for a second or two until it beeps. On Android, check NFC is switched on in Quick Settings if tapping does nothing.",
-    tip: "Some Android phones show a small \"N\" in the status bar when NFC is on. Your bank will occasionally ask for a PIN on a contactless payment — that's a normal security check.",
+    tip: "Some Android phones show a small \"N\" in the status bar when NFC is on. Your bank will occasionally ask for a PIN on a contactless payment. That's a normal security check.",
     svg: `<path d="M14 26A7.5 7.5 0 0 1 14 38M23 21A14.6 14.6 0 0 1 23 43M32 16A21.79 21.79 0 0 1 32 48M41 11A29 29 0 0 1 41 53" stroke-width="4.5"/>`
   },
   {
@@ -133,7 +133,7 @@ WTF.add([
     looksLike: ["airplane", "aeroplane", "plane", "jet", "plane from above"],
     meaning: "Flight mode is on: the phone's mobile signal is switched off, so no calls, texts or mobile data. Wi-Fi and Bluetooth usually switch off too, but you can turn them back on while staying in flight mode.",
     action: "Didn't mean to? Swipe down to Control Centre / Quick Settings and tap the plane to turn it off.",
-    tip: "Turning flight mode on and off again is a quick fix when your phone is stuck with no signal — it forces it to search for the network afresh.",
+    tip: "Turning flight mode on and off again is a quick fix when your phone is stuck with no signal, as it forces it to search for the network afresh.",
     svg: `<path d="M32 6C34.5 6 36 8.5 36 12V24L56 36V41L36 35V47L43 52V56L32 53L21 56V52L28 47V35L8 41V36L28 24V12C28 8.5 29.5 6 32 6Z" fill="currentColor" stroke-width="2"/>`
   },
   {
@@ -154,7 +154,7 @@ WTF.add([
     aka: ["mobile hotspot", "tethering", "personal hotspot", "portable hotspot"],
     looksLike: ["dot with circles around it", "radiating circles", "dot with brackets", "((•))", "broadcast", "chain links", "two loops linked"],
     meaning: "Your phone is sharing its mobile data with other devices over Wi-Fi, acting as a mini router. Android shows a dot with arcs around it; iPhone uses a chain-link icon and a coloured bubble around the clock when someone is connected.",
-    action: "If you don't need it, turn it off in Quick Settings / Control Centre — it uses your data allowance and drains the battery quickly.",
+    action: "If you don't need it, turn it off in Quick Settings / Control Centre. It uses your data allowance and drains the battery quickly.",
     tip: "Some phone plans limit or charge extra for hotspot data, even if your normal data is \"unlimited\".",
     svg: `<circle cx="32" cy="34" r="4.5" fill="currentColor" stroke="none"/><g stroke-width="4"><path d="M24.61 42.81A11.5 11.5 0 1 1 39.39 42.81"/><path d="M18.18 50.47A21.5 21.5 0 1 1 45.82 50.47"/></g>`
   },
@@ -164,9 +164,9 @@ WTF.add([
     category: "tech",
     aka: ["roaming", "R icon", "roaming indicator"],
     looksLike: ["letter r", "r next to signal bars", "small r", "r on the triangle", "r with bars"],
-    meaning: "Your phone is connected to a network that isn't your own — usually because you're abroad, sometimes because your provider borrows another network's masts.",
+    meaning: "Your phone is connected to a network that isn't your own, usually because you're abroad and sometimes because your provider borrows another network's masts.",
     action: "Check your plan's roaming rules before using lots of data. To avoid surprise bills, turn off Data Roaming in your mobile network settings and use Wi-Fi instead.",
-    tip: "Seeing R at home? Some providers piggyback on partner masts in rural areas — normally free, but worth checking with them.",
+    tip: "Seeing R at home? Some providers piggyback on partner masts in rural areas. It's normally free, but worth checking with them.",
     svg: `<text x="16" y="31" font-size="25">R</text><g fill="currentColor" stroke="none"><rect x="26" y="40" width="6" height="11" rx="1"/><rect x="34.5" y="32" width="6" height="19" rx="1"/><rect x="43" y="24" width="6" height="27" rx="1"/><rect x="51.5" y="16" width="6" height="35" rx="1"/></g>`
   },
   {
@@ -176,7 +176,7 @@ WTF.add([
     aka: ["LTE", "4G", "4G+", "LTE+", "5G", "5G+", "5G UW", "H+", "E", "EDGE", "G", "GPRS", "3G"],
     looksLike: ["letters next to signal bars", "lte", "4g", "5g", "e", "h+", "3g"],
     meaning: "Shows which kind of mobile data connection you've got, slowest to fastest: G (GPRS) and E (EDGE) are ancient 2G and very slow; 3G and H/H+ are okay; 4G/LTE is fast; 4G+/LTE+ combines several channels; 5G is the newest.",
-    action: "If you see E or G, the internet will crawl — move somewhere with better signal or switch to Wi-Fi. Never see 5G? Your phone, plan or area may not support it yet.",
+    action: "If you see E or G, the internet will crawl, so move somewhere with better signal or switch to Wi-Fi. Never see 5G? Your phone, plan or area may not support it yet.",
     tip: "In the US, AT&T's old \"5G E\" icon was actually souped-up 4G with a marketing makeover.",
     svg: `<text x="32" y="28" font-size="20">LTE</text><text x="32" y="52" font-size="20">4G+</text>`
   },
@@ -187,7 +187,7 @@ WTF.add([
     aka: ["Voice over LTE", "HD voice", "VoWiFi", "Wi-Fi calling", "Vo LTE", "4G calling"],
     looksLike: ["volte", "vo lte", "letters in a box", "hd", "phone with wifi"],
     meaning: "Your calls are going over the 4G network (Voice over LTE), which means clearer \"HD\" sound, faster connecting and still being able to use data during a call. A phone with a Wi-Fi symbol, or \"Wi-Fi\" next to the carrier name, means Wi-Fi calling.",
-    action: "Nothing to do — it's a good thing. If calls keep failing, try switching VoLTE / 4G calling off and on in your mobile network settings.",
+    action: "Nothing to do. It's a good thing. If calls keep failing, try switching VoLTE / 4G calling off and on in your mobile network settings.",
     tip: "As old 3G networks are switched off, phones that can't do VoLTE may lose the ability to make normal calls on some networks.",
     svg: `<rect x="5" y="19" width="54" height="26" rx="6" stroke-width="3"/><text x="32" y="37.3" font-size="14.5">VoLTE</text>`
   },
@@ -209,8 +209,8 @@ WTF.add([
     aka: ["Low Power Mode", "power saving mode", "battery saver", "yellow battery"],
     looksLike: ["battery with a plus", "yellow battery", "battery with a cross", "orange battery", "battery outline with plus"],
     meaning: "Battery-saving mode is on: the phone cuts background activity, dims things and slows down a little to make the charge last. On iPhone the battery icon turns yellow; Android shows a battery with a plus sign.",
-    action: "Leave it on if you're low. To switch it off, tap it in Control Centre / Quick Settings — iPhone switches it off automatically once it's charged past 80%.",
-    tip: "A plus inside the battery isn't charging — charging is shown by a lightning bolt.",
+    action: "Leave it on if you're low. To switch it off, tap it in Control Centre / Quick Settings (iPhone switches it off automatically once it's charged past 80%).",
+    tip: "A plus inside the battery isn't charging. Charging is shown by a lightning bolt.",
     svg: `<rect x="27" y="7" width="10" height="5" rx="1.5" fill="currentColor" stroke="none"/><rect x="19.5" y="12.5" width="25" height="43" rx="4.5"/><line x1="32" y1="25" x2="32" y2="43"/><line x1="23" y1="34" x2="41" y2="34"/>`
   },
   {
@@ -220,7 +220,7 @@ WTF.add([
     aka: ["AirPlay", "screen mirroring", "stream to TV", "Apple TV"],
     looksLike: ["rectangle with a triangle", "tv with triangle", "screen with arrow", "triangle under a box", "monitor with triangle"],
     meaning: "Apple's AirPlay: send the video, music or whole screen from your iPhone, iPad or Mac to an Apple TV, AirPlay TV or speaker. A version with circles instead of a rectangle means audio-only AirPlay.",
-    action: "Tap it and choose the TV or speaker. Both devices must be on the same Wi-Fi. Sound suddenly vanished from your phone? It may still be playing on another device — tap here and choose your phone.",
+    action: "Tap it and choose the TV or speaker. Both devices must be on the same Wi-Fi. Sound suddenly vanished from your phone? It may still be playing on another device, so tap here and choose your phone.",
     tip: "Screen Mirroring in iPhone's Control Centre is the icon of two overlapping rectangles.",
     svg: `<path d="M22 46H13A5 5 0 0 1 8 41V15A5 5 0 0 1 13 10H51A5 5 0 0 1 56 15V41A5 5 0 0 1 51 46H42"/><polygon points="32,36 44,52 20,52" fill="currentColor" stroke-width="2"/>`
   },
@@ -232,7 +232,7 @@ WTF.add([
     looksLike: ["rectangle with wifi in the corner", "screen with waves", "tv with radio waves", "box with curved lines in corner", "quarter circles in corner"],
     meaning: "The Cast button: send a video or music from an app on your phone or laptop to a Chromecast, Google TV or cast-enabled speaker. Filled in means you're currently casting.",
     action: "Tap it and choose your TV or speaker; your phone and the TV need to be on the same Wi-Fi.",
-    tip: "Once it's casting, your phone is just the remote — you can lock it or use other apps and the video keeps playing.",
+    tip: "Once it's casting, your phone is just the remote: you can lock it or use other apps and the video keeps playing.",
     svg: `<path d="M8 21V16A4 4 0 0 1 12 12H52A4 4 0 0 1 56 16V48A4 4 0 0 1 52 52H39"/><path d="M8 44.5A7.5 7.5 0 0 1 15.5 52H8Z" fill="currentColor" stroke-width="2"/><path d="M8 36.5A15.5 15.5 0 0 1 23.5 52M8 28.5A23.5 23.5 0 0 1 31.5 52"/>`
   },
   {
@@ -243,7 +243,7 @@ WTF.add([
     looksLike: ["triangle on a line", "triangle over a bar", "up arrow with line", "house shape", "triangle and rectangle"],
     meaning: "Eject: open a disc tray, or (on a computer) safely disconnect a drive or memory stick.",
     action: "Before pulling out a USB stick or memory card on a Mac, click the eject symbol next to it in Finder (or \"Safely Remove\" on Windows) so files finish saving and don't get corrupted.",
-    tip: "Same triangle-on-a-bar on old video and DVD remotes — it opens the tray.",
+    tip: "Same triangle-on-a-bar on old video and DVD remotes, where it opens the tray.",
     svg: `<polygon points="32,12 53,37 11,37" fill="currentColor" stroke-width="3"/><rect x="11" y="44" width="42" height="7" rx="1.5" fill="currentColor" stroke="none"/>`
   },
   {
@@ -274,7 +274,7 @@ WTF.add([
     category: "tech",
     aka: ["alarm clock", "alarm on", "wake-up alarm"],
     looksLike: ["alarm clock", "clock with ears", "clock with bells", "clock with legs", "mickey mouse clock"],
-    meaning: "An alarm is set on your phone. It doesn't mean anything is ringing — just that one is armed and ready.",
+    meaning: "An alarm is set on your phone. It doesn't mean anything is ringing, just that one is armed and ready.",
     action: "Open the Clock app to see, change or switch off the alarm.",
     tip: "Phone alarms normally still ring even when the phone is on silent or Do Not Disturb, so you won't sleep through them.",
     svg: `<circle cx="32" cy="35" r="17"/><polyline points="32,25 32,35 39,39"/><path d="M10 20A10 10 0 0 1 20 10M44 10A10 10 0 0 1 54 20" stroke-width="4.5"/><path d="M21.07 48.02L17 53M42.93 48.02L47 53"/>`
@@ -287,7 +287,7 @@ WTF.add([
     looksLike: ["phone with zigzag lines", "phone shaking", "rectangle with squiggles", "phone with wavy lines", "zigzags either side"],
     meaning: "The ringer is off and the phone will buzz instead of ring for calls and notifications.",
     action: "To get the sound back, press volume up, or tap the sound icon in Quick Settings / the volume panel until it shows a bell.",
-    tip: "A bell with a line through it means fully silent — on some phones, not even a buzz.",
+    tip: "A bell with a line through it means fully silent (on some phones, not even a buzz).",
     svg: `<rect x="23" y="10" width="18" height="44" rx="4"/><polyline points="15,20 10,26 15,32 10,38 15,44" stroke-width="3"/><polyline points="49,20 54,26 49,32 54,38 49,44" stroke-width="3"/>`
   },
   {
@@ -298,7 +298,7 @@ WTF.add([
     looksLike: ["padlock in a circle", "lock with a circular arrow", "padlock with arrow around it", "lock in a circle arrow"],
     meaning: "The screen is locked in its current orientation, so it won't turn sideways when you rotate the phone or tablet.",
     action: "Want videos to go full-screen sideways? Open Control Centre (iPhone) and tap the padlock-and-arrow button, or switch on Auto-rotate in Android's Quick Settings.",
-    tip: "Great for reading in bed on your side — that's exactly why it exists.",
+    tip: "Great for reading in bed on your side. That's exactly why it exists.",
     svg: `<path d="M37.69 10.75A22 22 0 1 1 17.86 15.15"/><polygon points="23.22,10.65 21.39,19.36 14.32,10.93" fill="currentColor" stroke-width="1.5"/><rect x="23" y="30" width="18" height="14" rx="2.5" fill="currentColor" stroke="none"/><path d="M26.5 30.5V26A5.5 5.5 0 0 1 37.5 26V30.5" stroke-width="3"/>`
   },
   {
@@ -320,7 +320,7 @@ WTF.add([
     looksLike: ["ear with a t", "ear", "ear and letter t", "question mark with t", "ear symbol"],
     meaning: "A hearing loop is installed: sound from the counter, venue, lift or device is sent straight to hearing aids switched to T (telecoil), cutting out background noise.",
     action: "If you wear hearing aids with a telecoil, switch them to the T or \"loop\" programme. If you don't wear hearing aids, you can ignore it.",
-    tip: "On a phone box, a T rating (like T3 or T4) means it works with a hearing aid's telecoil — higher is better. An ear with a diagonal line through it is the general symbol for deaf or hard-of-hearing access.",
+    tip: "On a phone box, a T rating (like T3 or T4) means it works with a hearing aid's telecoil, and higher is better. An ear with a diagonal line through it is the general symbol for deaf or hard-of-hearing access.",
     svg: `<path d="M9 26C9 15 17 8 26 8C35 8 41 15 41 24C41 32 35 35 32 40C29 45 30 51 24 53C19 54.5 15 51 15 47"/><path d="M18 26C18 19 22 15 27 15C32 15 35 19 34 24C33.5 28 29 29 28 33" stroke-width="3"/><text x="47" y="56" font-size="24">T</text>`
   },
   {
@@ -329,7 +329,7 @@ WTF.add([
     category: "tech",
     aka: ["SOS only", "emergency calls only", "no service"],
     looksLike: ["sos", "letters sos", "sos instead of bars"],
-    meaning: "Your phone can't connect to your own network, but it can still make emergency calls using any other network that's available. It isn't an alarm — nothing has been sent.",
+    meaning: "Your phone can't connect to your own network, but it can still make emergency calls using any other network that's available. It isn't an alarm. Nothing has been sent.",
     action: "Move somewhere with better signal, toggle flight mode on and off, or restart the phone. If it lasts, check your SIM and account with your provider. Emergency calls still work.",
     tip: "Android shows \"Emergency calls only\" in the same situation. Newer iPhones may also show a satellite icon where emergency texts by satellite are possible.",
     svg: `<text x="32" y="40" font-size="22">SOS</text>`
@@ -342,9 +342,9 @@ WTF.add([
     category: "packaging",
     aka: ["PAO", "period after opening", "12M", "6M", "24M", "use within months", "open jar symbol"],
     looksLike: ["open jar", "jar with lid open", "pot with lid tilted", "tub with 12m", "jar with a number and m", "open box with number"],
-    meaning: "How many months a cosmetic or toiletry stays good once you've opened it — 12M means 12 months.",
+    meaning: "How many months a cosmetic or toiletry stays good once you've opened it (12M means 12 months).",
     action: "Make a note when you open it and replace it after that time, sooner if it smells, separates or changes texture. Be strict with eye products like mascara.",
-    tip: "An hourglass symbol with a date means \"best before\" — it's used for cosmetics that last less than 30 months even unopened.",
+    tip: "An hourglass symbol with a date means \"best before\". It's used for cosmetics that last less than 30 months even unopened.",
     svg: `<rect x="14" y="31" width="36" height="24" rx="3"/><rect x="14" y="20" width="38" height="6" rx="1.5" transform="rotate(-20 14 26)"/><text x="32" y="48.5" font-size="14">12M</text>`
   },
   {
@@ -354,7 +354,7 @@ WTF.add([
     aka: ["e-mark", "estimated sign", "℮ symbol", "average quantity"],
     looksLike: ["e", "small e next to weight", "funny e", "e with a line", "rounded e", "e after grams"],
     meaning: "The \"estimated\" sign means the pack was filled under the EU/UK average-quantity rules: the average across a batch must be at least the amount stated, and only a few packs may be slightly under, within strict limits.",
-    action: "Nothing to do — it's consumer protection, not a warning.",
+    action: "Nothing to do: it's consumer protection, not a warning.",
     tip: "It's not \"e for electric\", energy or eco. It's always printed right next to the weight or volume, like \"500 g ℮\".",
     svg: `<path d="M14 32H50A18 18 0 1 0 45.79 43.57" stroke-width="4.5"/>`
   },
@@ -364,9 +364,9 @@ WTF.add([
     category: "packaging",
     aka: ["CE", "Conformité Européenne", "European conformity", "CE marking"],
     looksLike: ["ce", "letters ce", "two c's", "c and e", "ce in circles"],
-    meaning: "The manufacturer declares the product meets EU safety, health and environmental rules. For most products it's self-declared — not a quality mark or proof of independent testing.",
+    meaning: "The manufacturer declares the product meets EU safety, health and environmental rules. For most products it's self-declared, not a quality mark or proof of independent testing.",
     action: "Nothing to do. For electrical items and toys, a CE mark from a reputable seller is a basic sign it's been made for the EU market.",
-    tip: "The story of a lookalike \"China Export\" mark is largely a myth — but badly copied or fake CE marks do exist, so the logo alone isn't a guarantee.",
+    tip: "The story of a lookalike \"China Export\" mark is largely a myth, but badly copied or fake CE marks do exist, so the logo alone isn't a guarantee.",
     svg: `<path d="M31.5 21.28A14 14 0 1 0 31.5 42.72M55.5 21.28A14 14 0 1 0 55.5 42.72M32.5 32H51" stroke-width="5" stroke-linecap="butt"/>`
   },
   {
@@ -386,7 +386,7 @@ WTF.add([
     category: "packaging",
     aka: ["food contact material", "food grade", "suitable for food contact", "glass and fork symbol"],
     looksLike: ["wine glass and fork", "glass and fork", "cup and fork", "goblet and fork", "glass with fork"],
-    meaning: "The material is safe to come into contact with food — fine for storing, preparing or serving it.",
+    meaning: "The material is safe to come into contact with food, so it's fine for storing, preparing or serving it.",
     action: "Use it for food. It says nothing about dishwasher, microwave or oven use; check for those symbols separately.",
     tip: "The same glass and fork crossed out is an unofficial but common way of saying \"not for food\".",
     svg: `<g stroke-width="3"><path d="M12 10H32C32 22 28 28 22 28C16 28 12 22 12 10Z"/><path d="M22 28V53M14 53H30"/><path d="M40 10V21Q40 27 46 27Q52 27 52 21V10M46 10V53"/></g>`
@@ -397,9 +397,9 @@ WTF.add([
     category: "packaging",
     aka: ["microwavable", "microwave safe", "suitable for microwave"],
     looksLike: ["wavy lines", "microwave with wavy lines", "box with squiggles", "squiggly lines in a rectangle", "waves", "tv with wavy lines"],
-    meaning: "The container can go in the microwave without melting, warping or cracking. There's no single official design, so it varies — wavy lines are the giveaway.",
-    action: "Remove or loosen the lid (or pierce the film) before heating, and never microwave anything metallic. Some containers say \"reheat only\" — not for long cooking.",
-    tip: "\"Microwave safe\" means the container won't be damaged — it can still get very hot, so use oven gloves.",
+    meaning: "The container can go in the microwave without melting, warping or cracking. There's no single official design, so it varies, but wavy lines are the giveaway.",
+    action: "Remove or loosen the lid (or pierce the film) before heating, and never microwave anything metallic. Some containers say \"reheat only\", which means they're not for long cooking.",
+    tip: "\"Microwave safe\" means the container won't be damaged. It can still get very hot, so use oven gloves.",
     svg: `<rect x="7" y="14" width="50" height="36" rx="4"/><line x1="44" y1="14" x2="44" y2="50" stroke-width="3"/><g fill="currentColor" stroke="none"><circle cx="50.5" cy="23" r="2"/><circle cx="50.5" cy="31" r="2"/></g><path d="M13 24q2.5 -3.2 5 0t5 0t5 0t5 0t5 0M13 32q2.5 -3.2 5 0t5 0t5 0t5 0t5 0M13 40q2.5 -3.2 5 0t5 0t5 0t5 0t5 0" stroke-width="2.75"/>`
   },
   {
@@ -410,7 +410,7 @@ WTF.add([
     looksLike: ["snowflake", "star with branches", "asterisk", "ice crystal", "six-pointed star"],
     meaning: "Freezer safe: the container can go in the freezer without cracking. On food packaging, a snowflake means the food is suitable for home freezing.",
     action: "Freeze away. Leave a little space for liquids to expand, and don't move glass straight from freezer to hot oven.",
-    tip: "No snowflake on a container doesn't always mean it'll crack — but thin or brittle plastics often do in the cold.",
+    tip: "No snowflake on a container doesn't always mean it'll crack, but thin or brittle plastics often do in the cold.",
     svg: `<path d="M32 32L32 8M32 18L26.34 12.34M32 18L37.66 12.34M32 32L52.78 20M44.12 25L46.19 17.27M44.12 25L51.85 27.07M32 32L52.78 44M44.12 39L51.85 36.93M44.12 39L46.19 46.73M32 32L32 56M32 46L37.66 51.66M32 46L26.34 51.66M32 32L11.22 44M19.88 39L17.81 46.73M19.88 39L12.15 36.93M32 32L11.22 20M19.88 25L12.15 27.07M19.88 25L17.81 17.27" stroke-width="3.25"/>`
   },
   {
@@ -420,8 +420,8 @@ WTF.add([
     aka: ["dishwasher proof", "dishwasher safe", "top rack safe"],
     looksLike: ["plate and glass with water drops", "plates with drops", "dishes in the rain", "plate and cup with lines", "glass and plate with water"],
     meaning: "Dishwasher safe: it can be washed in a dishwasher without damage.",
-    action: "Put it in the dishwasher. If it says \"top rack only\", keep it away from the hotter bottom element. No symbol? Hand-wash to be safe — especially wood, cast iron, insulated mugs, sharp knives and anything with metallic trim.",
-    tip: "Repeated dishwasher runs can still fade prints and cloud glassware over time — \"safe\" means it won't break, not that it will look new forever.",
+    action: "Put it in the dishwasher. If it says \"top rack only\", keep it away from the hotter bottom element. No symbol? Hand-wash to be safe, especially wood, cast iron, insulated mugs, sharp knives and anything with metallic trim.",
+    tip: "Repeated dishwasher runs can still fade prints and cloud glassware over time. \"Safe\" means it won't break, not that it will look new forever.",
     svg: `<g stroke-width="3"><circle cx="24" cy="42" r="12"/><polygon points="40,29 52,29 50,54 42,54"/></g><circle cx="24" cy="42" r="6" stroke-width="2.5"/><path d="M19 6L17 11M32 6L30 11M45 6L43 11M25.5 15L23.5 20M38.5 15L36.5 20" stroke-width="3"/>`
   },
   {
@@ -431,7 +431,7 @@ WTF.add([
     aka: ["ovenproof", "oven safe", "suitable for oven"],
     looksLike: ["oven", "box with a window", "square with a window", "cooker", "oven with knobs"],
     meaning: "Oven safe: the dish or container can go in a conventional oven. There's no single official symbol; it's usually an oven shape, sometimes with a maximum temperature.",
-    action: "Check the maximum temperature, avoid the grill unless it says so, and don't put cold glass or ceramic straight into a very hot oven — sudden temperature changes can crack it.",
+    action: "Check the maximum temperature, avoid the grill unless it says so, and don't put cold glass or ceramic straight into a very hot oven, as sudden temperature changes can crack it.",
     tip: "Oven safe doesn't automatically mean hob safe or microwave safe; those have their own symbols.",
     svg: `<rect x="8" y="10" width="48" height="44" rx="4"/><line x1="8" y1="20" x2="56" y2="20" stroke-width="3"/><g fill="currentColor" stroke="none"><circle cx="16" cy="15" r="2"/><circle cx="23" cy="15" r="2"/></g><rect x="16" y="27" width="32" height="19" rx="2.5" stroke-width="3"/>`
   },
@@ -443,7 +443,7 @@ WTF.add([
     looksLike: ["baby face crossed out", "0-3 crossed out", "face in a circle with a line", "no babies sign", "circle with a line through a face", "0-3 in a circle"],
     meaning: "Not suitable for children under 3 (0–36 months), usually because of small parts that could be swallowed or choke a young child.",
     action: "Keep it away from babies and toddlers, including older siblings' toys left on the floor.",
-    tip: "It does NOT mean \"for ages 0–3\" — the diagonal line means the exact opposite.",
+    tip: "It does NOT mean \"for ages 0–3\". The diagonal line means the exact opposite.",
     svg: `<circle cx="32" cy="32" r="26"/><circle cx="31" cy="23.5" r="9" stroke-width="2.5"/><g fill="currentColor" stroke="none"><circle cx="27.5" cy="22.5" r="1.5"/><circle cx="34.5" cy="22.5" r="1.5"/></g><path d="M27.5 27Q31 30 34.5 27M29 15Q31 12 33 14.5" stroke-width="2"/><text x="29" y="48.5" font-size="12.5">0-3</text><line x1="13.6" y1="13.6" x2="50.4" y2="50.4"/>`
   },
   {
@@ -452,7 +452,7 @@ WTF.add([
     category: "packaging",
     aka: ["keep dry", "protect from moisture", "keep away from rain", "umbrella symbol"],
     looksLike: ["umbrella", "umbrella with rain", "umbrella with drops", "parasol", "brolly"],
-    meaning: "Keep this parcel or product dry — the contents can be damaged by rain or damp.",
+    meaning: "Keep this parcel or product dry, as the contents can be damaged by rain or damp.",
     action: "Store it indoors, off damp floors, and don't leave it on the doorstep in the rain.",
     tip: "It's one of the international ISO 780 handling marks for parcels, alongside the wine glass (fragile) and the two arrows (this way up).",
     svg: `<path d="M12 38A20 20 0 0 1 52 38Q47 34 42 38Q37 34 32 38Q27 34 22 38Q17 34 12 38Z" fill="currentColor" stroke-width="2.5"/><path d="M32 38V52A4 4 0 0 1 24 52"/><path d="M19 6L17 12M33 4L31 10M47 6L45 12" stroke-width="3"/>`
@@ -464,7 +464,7 @@ WTF.add([
     aka: ["this side up", "keep upright", "orientation arrows", "up arrows"],
     looksLike: ["two arrows", "two arrows pointing up", "arrows on a line", "double arrows", "two up arrows with a bar"],
     meaning: "This way up: the arrows point to the top of the box. Keep it upright.",
-    action: "Carry, store and stack the box with the arrows pointing up — especially important for liquids, appliances and anything fragile inside.",
+    action: "Carry, store and stack the box with the arrows pointing up. This is especially important for liquids, appliances and anything fragile inside.",
     tip: "Fridges and freezers often carry this mark because they should travel upright.",
     svg: `<g stroke-width="4"><line x1="22" y1="49" x2="22" y2="18"/><line x1="42" y1="49" x2="42" y2="18"/></g><polygon points="22,8 14.5,20 29.5,20" fill="currentColor" stroke-width="2"/><polygon points="42,8 34.5,20 49.5,20" fill="currentColor" stroke-width="2"/><line x1="10" y1="55" x2="54" y2="55" stroke-width="4"/>`
   },
@@ -474,9 +474,9 @@ WTF.add([
     category: "packaging",
     aka: ["fragile", "handle with care", "breakable", "glass symbol"],
     looksLike: ["wine glass", "broken glass", "cracked glass", "goblet", "cocktail glass", "glass with a crack"],
-    meaning: "Fragile — handle with care. The contents can break.",
+    meaning: "Fragile: handle with care. The contents can break.",
     action: "Don't drop, throw or stack heavy things on it. Open carefully and check the contents straight away so you can report any damage quickly.",
-    tip: "It's sometimes shown as a whole glass and sometimes cracked — both mean the same.",
+    tip: "It's sometimes shown as a whole glass and sometimes cracked, but both mean the same.",
     svg: `<g fill="currentColor" stroke="none"><path d="M18 10H28.5L33 17L28 23L31 29L30.5 34C24 34 18 28 18 10Z"/><path d="M31.5 10H46C46 28 40 34 33.5 34L34 29L31 23L36 17Z"/><rect x="30" y="33" width="4" height="16"/><rect x="20" y="48" width="24" height="5.5" rx="2"/></g>`
   },
   {
@@ -485,9 +485,9 @@ WTF.add([
     category: "packaging",
     aka: ["do not stack", "no stacking", "stacking prohibited"],
     looksLike: ["box with a crossed out box on top", "two boxes with an x", "box with x on top", "crossed out box", "stacked boxes crossed out"],
-    meaning: "Don't put anything on top of this box — the contents or the box itself can't take the weight.",
+    meaning: "Don't put anything on top of this box. The contents or the box itself can't take the weight.",
     action: "Keep it on top of the pile, or on its own.",
-    tip: "A related symbol shows stacked boxes with a number or weight — that's the maximum you can stack on it.",
+    tip: "A related symbol shows stacked boxes with a number or weight, which is the maximum you can stack on it.",
     svg: `<rect x="21" y="12" width="22" height="16" rx="1.5" stroke-width="3"/><line x1="15" y1="7" x2="49" y2="33"/><line x1="49" y1="7" x2="15" y2="33"/><rect x="12" y="38" width="40" height="18" rx="2" fill="currentColor" stroke="none"/>`
   },
   {
@@ -497,7 +497,7 @@ WTF.add([
     aka: ["GHS02", "flammable", "highly flammable", "fire hazard", "CLP flame"],
     looksLike: ["flame in a diamond", "fire in a red diamond", "red diamond with fire", "flame on a line", "fire symbol"],
     meaning: "Flammable: the product, its vapour or its spray can catch fire easily. Common on aerosols, nail varnish remover, lighter fluid and some cleaning sprays.",
-    action: "Keep away from heat, sparks and naked flames — don't spray near a hob, candle or cigarette. Store somewhere cool and don't puncture or burn aerosol cans.",
+    action: "Keep away from heat, sparks and naked flames. Don't spray near a hob, candle or cigarette. Store somewhere cool and don't puncture or burn aerosol cans.",
     tip: "These red-diamond pictograms replaced the old orange-square hazard symbols in the UK and EU around 2015–2017.",
     svg: `<polygon points="32,6 58,32 32,58 6,32" stroke-width="4"/><path d="M32 41C25 41 21.5 36 22.5 30.5C23.2 27 25 25 26.5 23.5C26.3 26.5 27 28.5 28.8 29.5C28 23 30 17.5 34 13.5C34 18 36.5 21 38.5 24C39.3 22.3 39.3 20.5 38.8 19C42.5 22.5 43.5 27 43 31.5C42.5 37 38 41 32 41Z" fill="currentColor" stroke-width="1.5"/><line x1="24" y1="45" x2="40" y2="45" stroke-width="3"/>`
   },
@@ -509,7 +509,7 @@ WTF.add([
     looksLike: ["test tubes dripping on a hand", "liquid dripping on hand and metal", "red diamond with dripping tubes", "acid symbol", "hand being burned"],
     meaning: "Corrosive: can cause severe skin burns and eye damage, and may eat into metal. Found on oven cleaners, drain unblockers, strong descalers and some dishwasher products.",
     action: "Wear gloves, avoid splashes and keep it away from children. If it gets on skin or in eyes, rinse with plenty of water for several minutes and get medical advice.",
-    tip: "Never mix cleaning products — bleach mixed with acidic descalers or ammonia releases dangerous gases.",
+    tip: "Never mix cleaning products: bleach mixed with acidic descalers or ammonia releases dangerous gases.",
     svg: `<polygon points="32,6 58,32 32,58 6,32" stroke-width="4"/><g transform="translate(32 32.5) scale(0.92) translate(-32 -31)"><path d="M20.23 22.73L27.73 15.23A2.5 2.5 0 0 1 31.27 18.77L23.77 26.27M40.23 26.27L32.73 18.77A2.5 2.5 0 0 1 36.27 15.23L43.77 22.73" stroke-width="2.5"/><polygon points="25.24,19.49 21.12,23.62 22.88,25.38 27.01,21.26" fill="currentColor" stroke="none"/><polygon points="36.99,21.26 41.12,25.38 42.88,23.62 38.76,19.49" fill="currentColor" stroke="none"/><g fill="currentColor" stroke="none"><circle cx="21" cy="28.5" r="1.4"/><circle cx="21" cy="32" r="1.4"/><circle cx="43" cy="28.5" r="1.4"/><circle cx="43" cy="32" r="1.4"/></g><g fill="currentColor" stroke-width="1"><path d="M19.5 41.5V38.5Q21.5 40.5 23.5 37.5H30.5V41.5Z"/><path d="M44.5 39Q42.5 41 41 37.5H35.5Q33.5 37.5 33.5 39.5Q33.5 41.5 35.5 41.5H44.5Z"/></g><path d="M37.5 37.5L35.5 35" stroke-width="2.25"/></g>`
   },
   {
@@ -520,7 +520,7 @@ WTF.add([
     looksLike: ["exclamation mark in a diamond", "! in a red diamond", "red diamond with !", "warning diamond", "exclamation mark"],
     meaning: "A less severe hazard: it may irritate skin or eyes, cause an allergic skin reaction or drowsiness, or be harmful if swallowed. Common on washing-up liquid, laundry capsules and many cleaners.",
     action: "Read the warnings on the label, keep it away from eyes and out of reach of children. If swallowed, get medical advice and have the pack with you.",
-    tip: "\"Less severe\" isn't \"harmless\" — laundry capsules carry this symbol and are a real danger to small children.",
+    tip: "\"Less severe\" isn't \"harmless\". Laundry capsules carry this symbol and are a real danger to small children.",
     svg: `<polygon points="32,6 58,32 32,58 6,32" stroke-width="4"/><line x1="32" y1="18" x2="32" y2="36" stroke-width="6"/><circle cx="32" cy="45" r="3.5" fill="currentColor" stroke="none"/>`
   },
   {
@@ -531,7 +531,7 @@ WTF.add([
     looksLike: ["dead fish and tree", "tree and fish in a diamond", "red diamond with fish", "bare tree and fish", "fish upside down"],
     meaning: "Toxic to aquatic life: harmful to fish and other creatures if it gets into rivers, lakes or the sea. Found on some bleaches, insecticides, fuels and laundry products.",
     action: "Use it as directed, but don't pour leftovers down drains, toilets or onto the ground. Take unwanted product to a household hazardous waste collection.",
-    tip: "It doesn't mean the product is dangerous to you in normal use — it's about how it's disposed of.",
+    tip: "It doesn't mean the product is dangerous to you in normal use. It's about how it's disposed of.",
     svg: `<polygon points="32,6 58,32 32,58 6,32" stroke-width="4"/><g stroke-width="2.75"><line x1="26" y1="42" x2="26" y2="20"/><line x1="26" y1="28" x2="21" y2="24"/><line x1="26" y1="24" x2="31" y2="19"/><line x1="26" y1="32" x2="30" y2="29"/><line x1="22" y1="42.5" x2="42" y2="42.5"/></g><path d="M30 36Q36 31 42 36Q36 41 30 36Z" fill="currentColor" stroke-width="1.5"/><polygon points="41.5,36 45.5,33 45.5,39" fill="currentColor" stroke-width="1.5"/>`
   },
   {
@@ -541,7 +541,7 @@ WTF.add([
     aka: ["GHS08", "health hazard", "CMR", "aspiration hazard", "starburst person"],
     looksLike: ["person with a star on chest", "man with a starburst", "silhouette with a star", "body with explosion on chest", "red diamond with a person"],
     meaning: "A serious or long-term health hazard: it may damage organs, cause cancer or harm fertility, cause breathing allergies, or be fatal if swallowed and it gets into the lungs. Common on lamp oil, white spirit and some fuels.",
-    action: "Follow the precautions exactly, use in a well-ventilated area and store it out of reach of children. If swallowed, do NOT make the person vomit — get medical help immediately.",
+    action: "Follow the precautions exactly, use in a well-ventilated area and store it out of reach of children. If swallowed, do NOT make the person vomit. Get medical help immediately.",
     tip: "Lamp oil and white spirit get this symbol because a tiny sip can slip into a child's lungs.",
     svg: `<polygon points="32,6 58,32 32,58 6,32" stroke-width="4"/><circle cx="32" cy="19.5" r="4.5" fill="currentColor" stroke="none"/><path d="M23 42V35Q23 28 29 27H35Q41 28 41 35V42Z" fill="currentColor" stroke-width="1.5"/><polygon class="knock" points="32,29.8 32.84,32.97 35.68,31.32 34.03,34.16 37.2,35 34.03,35.84 35.68,38.68 32.84,37.03 32,40.2 31.16,37.03 28.32,38.68 29.97,35.84 26.8,35 29.97,34.16 28.32,31.32 31.16,32.97" stroke-width="0.5"/>`
   }

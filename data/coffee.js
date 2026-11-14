@@ -1,7 +1,7 @@
-/* WTF is this icon? — coffee machines: bean-to-cup (De'Longhi, Philips, Sage,
+/* Coffee machines: bean-to-cup (De'Longhi, Philips, Sage,
  * Jura, Melitta, Krups, Bosch / Siemens) and pod machines (Nespresso Original
  * and Vertuo, Dolce Gusto, Tassimo) (coffee).
- * Format & drawing rules: see data/README.md.
+ * Format and drawing rules are in data/README.md.
  *
  * Every brand draws its own icons, so each entry says who uses which version.
  * Shared parts below keep the families consistent: one cup on a saucer (used by

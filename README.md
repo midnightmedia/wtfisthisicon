@@ -1,8 +1,8 @@
 # WTF is this icon?
 
-A website where people describe a confusing symbol — on a car dashboard, washing machine,
-fridge, oven, clothing label, phone, recycling label or medicine box — and find out what it
-means (and whether to panic).
+A website where people describe a confusing symbol (on a car dashboard, washing machine,
+fridge, oven, clothing label, phone, recycling label or medicine box) and find out what it
+means, and whether to panic.
 
 Plain HTML/CSS/JS. No build step, no dependencies, no backend.
 
@@ -22,7 +22,7 @@ files (GitHub Pages lets browsers cache for 10 minutes). It also rebuilds the li
 the site's preview card (`assets/og-card.png`) and the Icon of the week share pages in `week/`
 (needs Google Chrome installed, to draw the images).
 
-Upload the folder as-is to any static host — Netlify (drag-and-drop), Vercel, Cloudflare Pages
+Upload the folder as-is to any static host: Netlify (drag-and-drop), Vercel, Cloudflare Pages
 or GitHub Pages. The `dev/` folder isn't needed in production.
 
 ## How it's organised
@@ -32,16 +32,18 @@ or GitHub Pages. The `dev/` folder isn't needed in production.
 | `index.html` | The page |
 | `assets/styles.css` | All styling |
 | `assets/app.js` | Search, filters, routing (`#/icon/<id>`), detail view |
+| `assets/quiz.js` | The daily quiz and practice rounds (`#/quiz`) |
 | `data/_registry.js` | Category list + helpers; loaded first |
 | `data/*.js` | The icons, one file per group of categories |
-| `data/README.md` | **Icon format and drawing rules — read this before adding icons** |
+| `data/README.md` | **Icon format and drawing rules. Read this before adding icons** |
 | `data/featured.js` | Icon of the week schedule (see below) |
 | `dev/check.mjs` | `node dev/check.mjs` validates all icon data |
 | `dev/gallery.html` | Every icon on one page for visual checking (`?cat=car` to filter) |
-| `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` and rebuilds `week/` — run before every push |
+| `dev/stamp-assets.mjs` | Fingerprints asset links in `index.html` and rebuilds the share previews. Run before every push |
 | `dev/build-share.mjs` | Builds the link-preview images: the site card and the Icon of the week pages |
-| `assets/og-card.png` | Generated preview image for any wtfisthisicon.com link — don't edit by hand |
-| `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week — don't edit by hand |
+| `assets/og-card.png` | Generated preview image for any wtfisthisicon.com link (don't edit by hand) |
+| `quiz/` | Generated share page for the quiz (`/quiz/`) (don't edit by hand) |
+| `week/` | Generated share pages (`/week/<monday>/`), one per scheduled week (don't edit by hand) |
 | `dev/build-catalog.mjs` | Exports the icon list the photo Worker matches against |
 | `assets/config.js` | Site settings (the photo Worker URL) |
 | `worker/` | Cloudflare Worker that identifies photos with Claude |
@@ -100,10 +102,24 @@ straight to that icon on the site. The Share button on the home page uses this l
 - Pages are never deleted, so a link shared in an old week keeps its preview.
 - Automatic picks (weeks with no entry) don't get a page; Share falls back to the plain icon link.
 
+## Quiz
+
+"Do you speak symbol?" opens from the **Quiz** link in the header or the card on the home page.
+
+- **Daily quiz:** the same ten questions for everyone, changing at midnight UK time. Your score and
+  streak are saved on your own device, and **Share your score** copies a result like
+  `8/10 🟩🟩🟥🟩…` with a link to `wtfisthisicon.com/quiz/` (which has its own preview card).
+- **Practice:** unlimited rounds by topic (Car, Laundry, Kitchen, Home, Tech, Labels & packs, Everything).
+- Questions are made from the icon data, so new icons join the quiz automatically. Two kinds:
+  "What's this?" (pick the name) and "Which one is the…?" (pick the icon). Wrong answers come from
+  each icon's lookalikes, so they're tricky in a fair way.
+- Icons that print their own answer (ECO, LOT, 30, 止…) are left out.
+- `WTF.quiz.daily()` in the browser console lists today's questions.
+
 ## Adding an icon
 
 1. Add an entry to the right `data/*.js` file (see `data/README.md`).
-2. Fill in `looksLike` generously — it's what makes search work, because people describe
+2. Fill in `looksLike` generously: it's what makes search work, because people describe
    shapes ("horseshoe with !") rather than names ("TPMS").
 3. Run `node dev/check.mjs`, then eyeball it in `dev/gallery.html`.
 4. Redeploy the photo Worker (`cd worker && npm run deploy`) so photo lookups can find it.

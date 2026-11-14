@@ -1,4 +1,4 @@
-/* WTF is this icon? — icon registry.
+/* Icon registry.
  * Loaded before every other data/*.js file. Each data file calls WTF.add([...]).
  * See data/README.md for the icon format and drawing rules. */
 window.WTF = window.WTF || {};

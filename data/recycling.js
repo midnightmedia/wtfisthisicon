@@ -1,4 +1,4 @@
-/* WTF is this icon? — Recycling labels (recycling).
+/* Recycling labels (recycling).
  * Format and drawing rules: see data/README.md. All symbols are simplified, original drawings
  * for identification purposes (trademarked marks such as the Green Dot included).
  * The first twelve entries moved here from the Packaging category (old ids "packaging-…";
@@ -22,36 +22,36 @@ WTF.add([
     category: "recycling",
     aka: ["recycled content", "Mobius loop with percentage", "% recycled"],
     looksLike: ["triangle of arrows with a percentage", "recycling triangle with %", "arrows with a number and percent", "three arrows with 50%"],
-    meaning: "The packaging contains that percentage of recycled material — e.g. 60% means 60% of it was made from recycled stuff.",
+    meaning: "The packaging contains that percentage of recycled material (e.g. 60% means 60% of it was made from recycled stuff).",
     action: "Nothing to do; it's information about what it's made of. Whether you can recycle it again depends on your local rules.",
     tip: "Not to be confused with the plastic resin codes, which have a single digit 1–7 inside the triangle.",
     svg: `<path d="M22.3 24.3L29.75 11.4Q32 7.5 34.25 11.4L37.82 17.58M46.55 32.7L54 45.6Q56.25 49.5 51.75 49.5L44.61 49.5M27.15 49.5L12.25 49.5Q7.75 49.5 10 45.6L13.57 39.42" stroke-width="3.5"/><polygon points="42.18,25.14 33.66,19.98 41.98,15.18" fill="currentColor" stroke-width="1.5"/><polygon points="35.88,49.5 44.61,44.7 44.61,54.3" fill="currentColor" stroke-width="1.5"/><polygon points="17.94,31.86 17.73,41.82 9.41,37.02" fill="currentColor" stroke-width="1.5"/><text x="33" y="39.5" font-size="10.5">60%</text>`
   },
   {
     id: "recycling-resin-1",
-    name: "Plastic code 1 — PET",
+    name: "Plastic code 1 (PET)",
     category: "recycling",
     aka: ["PET", "PETE", "polyethylene terephthalate", "resin identification code 1", "RIC 1"],
     looksLike: ["triangle of arrows with a number", "triangle with 1", "recycling triangle with 1", "number 1 in a triangle", "pet"],
     meaning: "Identifies the plastic type, not whether it can be recycled. 1 = PET: clear drinks bottles, food trays and punnets. It happens to be one of the most widely recycled plastics.",
-    action: "Bottles usually go in household recycling — empty them and put the lid back on if your council asks. Check local rules for trays and punnets.",
+    action: "Bottles usually go in household recycling. Empty them and put the lid back on if your council asks. Check local rules for trays and punnets.",
     tip: "Recycled PET is turned into new bottles and polyester fabric like fleece.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">1</text><text x="32" y="58" font-size="11">PET</text>`
   },
   {
     id: "recycling-resin-2",
-    name: "Plastic code 2 — HDPE",
+    name: "Plastic code 2 (HDPE)",
     category: "recycling",
     aka: ["HDPE", "PE-HD", "high-density polyethylene", "resin identification code 2", "RIC 2"],
     looksLike: ["triangle of arrows with a number", "triangle with 2", "recycling triangle with 2", "number 2 in a triangle", "hdpe"],
     meaning: "Identifies the plastic type, not whether it can be recycled. 2 = HDPE: milk bottles, shampoo, detergent and cleaning-product bottles. Widely recycled.",
-    action: "Usually fine for household recycling — rinse it out, and check your council's rules.",
-    tip: "Newer packs may show the number in a plain solid triangle without arrows — the industry standard switched to that in 2013 precisely so people stop reading these codes as \"recyclable\".",
+    action: "Usually fine for household recycling. Rinse it out, and check your council's rules.",
+    tip: "Newer packs may show the number in a plain solid triangle without arrows. The industry standard switched to that in 2013 precisely so people stop reading these codes as \"recyclable\".",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">2</text><text x="32" y="58" font-size="11">HDPE</text>`
   },
   {
     id: "recycling-resin-3",
-    name: "Plastic code 3 — PVC",
+    name: "Plastic code 3 (PVC)",
     category: "recycling",
     aka: ["PVC", "V", "vinyl", "polyvinyl chloride", "resin identification code 3", "RIC 3"],
     looksLike: ["triangle of arrows with a number", "triangle with 3", "recycling triangle with 3", "number 3 in a triangle", "pvc"],
@@ -62,40 +62,40 @@ WTF.add([
   },
   {
     id: "recycling-resin-4",
-    name: "Plastic code 4 — LDPE",
+    name: "Plastic code 4 (LDPE)",
     category: "recycling",
     aka: ["LDPE", "PE-LD", "low-density polyethylene", "soft plastic", "plastic film", "resin identification code 4", "RIC 4"],
     looksLike: ["triangle of arrows with a number", "triangle with 4", "recycling triangle with 4", "number 4 in a triangle", "ldpe"],
     meaning: "Identifies the plastic type, not whether it can be recycled. 4 = LDPE: carrier bags, bread bags, bubble wrap, squeezy bottles and plastic film.",
-    action: "Soft film often isn't collected from your doorstep — many supermarkets have collection points for bags and wrappers. Check local rules.",
+    action: "Soft film often isn't collected from your doorstep, but many supermarkets have collection points for bags and wrappers. Check local rules.",
     tip: "Soft plastic can jam sorting machines, which is why many councils still don't want it in the household recycling bin.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">4</text><text x="32" y="58" font-size="11">LDPE</text>`
   },
   {
     id: "recycling-resin-5",
-    name: "Plastic code 5 — PP",
+    name: "Plastic code 5 (PP)",
     category: "recycling",
     aka: ["PP", "polypropylene", "resin identification code 5", "RIC 5"],
     looksLike: ["triangle of arrows with a number", "triangle with 5", "recycling triangle with 5", "number 5 in a triangle", "pp"],
     meaning: "Identifies the plastic type, not whether it can be recycled. 5 = PP (polypropylene): margarine and yoghurt tubs, ready-meal trays, bottle caps and takeaway tubs.",
-    action: "Increasingly accepted in household recycling — rinse it and check your council's list.",
+    action: "Increasingly accepted in household recycling. Rinse it and check your council's list.",
     tip: "PP copes with heat, which is why it's popular for microwaveable containers.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">5</text><text x="32" y="58" font-size="11">PP</text>`
   },
   {
     id: "recycling-resin-6",
-    name: "Plastic code 6 — PS",
+    name: "Plastic code 6 (PS)",
     category: "recycling",
     aka: ["PS", "polystyrene", "EPS", "Styrofoam", "resin identification code 6", "RIC 6"],
     looksLike: ["triangle of arrows with a number", "triangle with 6", "recycling triangle with 6", "number 6 in a triangle", "ps"],
     meaning: "Identifies the plastic type, not whether it can be recycled. 6 = PS (polystyrene): foam takeaway boxes and packing blocks, disposable cups and cutlery, some yoghurt pots. Rarely recycled.",
-    action: "Usually general waste. Some recycling centres take clean packing foam — check before you drive there.",
+    action: "Usually general waste. Some recycling centres take clean packing foam, but check before you drive there.",
     tip: "Expanded polystyrene foam is around 98% air, which is a big part of why it's so uneconomical to collect and transport.",
     svg: `<path d="M22.91 20.75L30 8.46Q32 5 34 8.46L37.63 14.75M44.56 26.75L51.65 39.04Q53.65 42.5 49.65 42.5L42.39 42.5M28.54 42.5L14.35 42.5Q10.35 42.5 12.35 39.04L15.98 32.75" stroke-width="2.75"/><polygon points="41.09,20.75 34.34,16.65 40.92,12.85" fill="currentColor" stroke-width="1.5"/><polygon points="35.46,42.5 42.39,38.7 42.39,46.3" fill="currentColor" stroke-width="1.5"/><polygon points="19.44,26.75 19.27,34.65 12.69,30.85" fill="currentColor" stroke-width="1.5"/><text x="32" y="36.5" font-size="15">6</text><text x="32" y="58" font-size="11">PS</text>`
   },
   {
     id: "recycling-resin-7",
-    name: "Plastic code 7 — Other",
+    name: "Plastic code 7 (Other)",
     category: "recycling",
     aka: ["Other", "O", "polycarbonate", "PC", "PLA", "bioplastic", "mixed plastic", "resin identification code 7", "RIC 7"],
     looksLike: ["triangle of arrows with a number", "triangle with 7", "recycling triangle with 7", "number 7 in a triangle", "other"],
@@ -111,7 +111,7 @@ WTF.add([
     aka: ["Der Grüne Punkt", "Grüne Punkt", "Green Point", "Point Vert", "Punto Verde"],
     looksLike: ["two arrows in a circle", "circle with two arrows", "yin yang arrows", "green circle with arrows", "arrows chasing in a circle", "two-tone circle"],
     meaning: "The manufacturer has paid into a packaging recovery scheme in some European countries. It does NOT mean the packaging is recyclable or made from recycled material.",
-    action: "Ignore it when sorting your rubbish — follow your local rules or other recycling labels instead.",
+    action: "Ignore it when sorting your rubbish. Follow your local rules or other recycling labels instead.",
     tip: "Started in Germany in 1991. It's so widely mistaken for a recycling symbol that some countries now actively discourage it. Usually printed in two shades of green, but it can be any colour.",
     svg: `<circle cx="32" cy="32" r="26"/><path d="M27.55 44.22A13 13 0 0 1 27.55 19.78" stroke-width="5"/><polygon points="34.6,17.22 29.78,25.89 25.33,13.68" fill="currentColor" stroke-width="1.5"/><g transform="rotate(180 32 32)"><path d="M27.55 44.22A13 13 0 0 1 27.55 19.78" stroke-width="5"/><polygon points="34.6,17.22 29.78,25.89 25.33,13.68" fill="currentColor" stroke-width="1.5"/></g>`
   },
@@ -132,7 +132,7 @@ WTF.add([
     category: "recycling",
     aka: ["Tidyman", "Tidy Man", "dispose of tidily", "keep tidy", "litter symbol"],
     looksLike: ["person putting litter in a bin", "stick man with a bin", "man throwing rubbish", "person and bin", "figure dropping something in a bin"],
-    meaning: "Please dispose of this tidily — in a bin, not on the street. It's an anti-litter reminder, not a recycling symbol.",
+    meaning: "Please dispose of this tidily: in a bin, not on the street. It's an anti-litter reminder, not a recycling symbol.",
     action: "Bin it. Look at the other symbols on the pack to see whether that should be the recycling or the general waste bin.",
     tip: "Popularised in the UK by the Keep Britain Tidy campaign.",
     svg: `<circle cx="16" cy="12" r="5" fill="currentColor" stroke="none"/><g stroke-width="5"><line x1="17" y1="20" x2="20" y2="36"/><polyline points="14,54 20,36 27,54"/></g><line x1="18" y1="23" x2="31" y2="27" stroke-width="4.5"/><rect x="34" y="29.5" width="5" height="5" fill="currentColor" stroke="none" transform="rotate(20 36.5 32)"/><polygon points="31,38 51,38 48,56 34,56" fill="currentColor" stroke-width="2"/>`

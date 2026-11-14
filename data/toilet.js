@@ -1,6 +1,6 @@
-/* WTF is this icon? — Japanese-style washlet / shower-toilet control panels and
+/* Japanese-style washlet / shower-toilet control panels and
  * public-toilet wall buttons (toilet).
- * Format & drawing rules: see data/README.md.
+ * Format and drawing rules are in data/README.md.
  *
  * The first eight entries are the standard pictograms agreed by the Japan
  * Sanitary Equipment Industry Association (日本レストルーム工業会) in January 2017,

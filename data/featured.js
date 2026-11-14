@@ -1,4 +1,4 @@
-/* WTF is this icon? — Icon of the week (hand-picked schedule).
+/* Icon of the week (hand-picked schedule).
  *
  * week: the Monday the pick goes live (YYYY-MM-DD). It switches over at midnight UK time,
  *       straight from this list, so you can queue up weeks in advance without a deploy.

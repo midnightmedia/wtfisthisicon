@@ -1,6 +1,6 @@
-/* WTF is this icon? — home climate: air conditioners / heat pumps (aircon) and
+/* Home climate: air conditioners / heat pumps (aircon) and
  * boilers, heating controls, thermostats and radiator valves (heating).
- * Format & drawing rules: see data/README.md.
+ * Format and drawing rules are in data/README.md.
  *
  * Shared parts below keep each symbol family consistent: one snowflake, one sun,
  * one flame, one radiator, one fan, used at different sizes. */

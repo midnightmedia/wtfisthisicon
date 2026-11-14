@@ -2,6 +2,7 @@
 //
 //   assets/og-card.png         the site's own 1200×630 preview; index.html's og:image points at it
 //                              (any wtfisthisicon.com link, including #/icon/… ones, shows this)
+//   quiz/index.html + card.png the daily quiz link people share with their score; forwards to #/quiz
 //
 // and the Icon of the week share pages from data/featured.js:
 //
@@ -35,7 +36,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const weekDir = path.join(root, "week");
 const force = process.argv.includes("--force");
 
-// ── Load the icons exactly as the site does (script order from index.html) ──
+// Load the icons exactly as the site does (script order from index.html)
 const sb = {};
 sb.window = sb;
 vm.createContext(sb);
@@ -47,7 +48,7 @@ const WTF = sb.WTF;
 const byId = new Map(WTF.icons.map((i) => [i.id, i]));
 const weeks = ((WTF.featured && WTF.featured.weeks) || []).filter((w) => byId.has(w.id));
 
-// ── Helpers (kept in step with the Icon of the week code in assets/app.js) ──
+// Helpers (kept in step with the Icon of the week code in assets/app.js)
 const MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
 const DAY = 864e5;
 function weekLabel(iso) {
@@ -61,7 +62,7 @@ const shortName = (icon) => icon.name.replace(/\s*\([^)]*\)\s*$/, "") || icon.na
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const hash = (obj) => crypto.createHash("sha1").update(JSON.stringify(obj)).digest("hex").slice(0, 8);
 
-// ── The preview card (1200×630) ──
+// The preview card (1200×630)
 function cardHtml({ art, tag, label, title, hook }) {
   const size = title.length > 30 ? 52 : title.length > 18 ? 60 : 72;
   return `<!doctype html><html><head><meta charset="utf-8"><style>
@@ -123,7 +124,7 @@ h1 mark { background: ${NEON}; color: ${INK}; padding: 0 .08em; margin: 0 -.02em
 const iconArt = (icon) =>
   `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">${icon.svg}</svg>`;
 
-// ── Headless Chrome, with a throwaway profile so it never touches your own browser ──
+// Headless Chrome, with a throwaway profile so it never touches your own browser
 function findChrome() {
   const candidates = [
     process.env.CHROME,
@@ -146,7 +147,7 @@ function render(html, outPng) {
   if (!fs.existsSync(outPng)) throw new Error("Chrome produced no image for " + outPng);
 }
 
-// ── Pages ──
+// Pages
 function pageHtml({ title, ogTitle, description, url, image, imageAlt, script, fallbackHref, fallbackText }) {
   return `<!doctype html>
 <html lang="en">
@@ -209,7 +210,7 @@ for (const w of weeks) {
   const h = card(w.week, { art: iconArt(icon), tag: "Icon of the week", label: weekLabel(w.week), title, hook: w.hook }, path.join(dir, "card.png"));
   const url = `${SITE}/week/${w.week}/`;
   fs.writeFileSync(path.join(dir, "index.html"), pageHtml({
-    title: `${title} — Icon of the week · WTF is this icon?`,
+    title: `${title} · Icon of the week · WTF is this icon?`,
     ogTitle: `Icon of the week: ${title}`,
     description: w.hook,
     url,
@@ -248,6 +249,28 @@ fs.writeFileSync(path.join(weekDir, "index.html"), pageHtml({
   fallbackText: "Icon of the week on WTF is this icon?",
 }));
 
+// The quiz link (shared with daily scores): its own card, then forwards to #/quiz.
+const quizArt = '<div style="display:grid;grid-template-columns:repeat(2,140px);gap:40px">' +
+  ["oven-true-fan", "car-oil-pressure", "laundry-tumble-dry"].map((id) => byId.get(id)).filter(Boolean)
+    .map((i) => iconArt(i).replace("<svg ", '<svg style="width:140px;height:140px" ')).join("") +
+  '<div style="width:118px;height:118px;margin:11px;box-sizing:border-box;border:9px solid currentColor;border-radius:24px;display:grid;place-items:center;font-size:80px;font-weight:800;line-height:1">?</div></div>';
+fs.mkdirSync(path.join(root, "quiz"), { recursive: true });
+const qh = card("_quiz", {
+  art: quizArt, tag: "Daily quiz", label: "",
+  title: "Do you speak symbol?", hook: "Ten confusing symbols a day. How many do you know?",
+}, path.join(root, "quiz", "card.png"));
+fs.writeFileSync(path.join(root, "quiz", "index.html"), pageHtml({
+  title: "Daily quiz: do you speak symbol? · WTF is this icon?",
+  ogTitle: "Do you speak symbol? The WTF is this icon? daily quiz",
+  description: "Ten confusing symbols a day. How many do you know?",
+  url: `${SITE}/quiz/`,
+  image: qh ? `${SITE}/quiz/card.png?v=${qh}` : "",
+  imageAlt: "The WTF is this icon? daily symbol quiz",
+  script: 'location.replace("/#/quiz");',
+  fallbackHref: "/#/quiz",
+  fallbackText: "Play the daily symbol quiz on WTF is this icon?",
+}));
+
 // The site's own preview card, and its cache-busting version in index.html's og:image.
 const WALL = ["car-check-engine", "car-oil-pressure", "car-tyre-pressure", "laundry-tumble-dry", "laundry-hand-wash",
   "oven-true-fan", "recycling-mobius-loop", "fridge-freezer-four-star", "toilet-rear-wash"];
@@ -264,5 +287,5 @@ if (sh) {
 fs.writeFileSync(manifestPath, JSON.stringify(next, null, 2) + "\n");
 fs.rmSync(tmp, { recursive: true, force: true });
 
-if (!chrome) console.warn("build-share: Chrome not found (set CHROME=/path/to/chrome) — share pages written without new preview images");
-console.log(`Icon of the week pages: ${weeks.length} weeks, ${rendered} card(s) rendered, ${skipped} unchanged`);
+if (!chrome) console.warn("build-share: Chrome not found (set CHROME=/path/to/chrome), so share pages were written without new preview images");
+console.log(`Share previews: site + quiz cards, Icon of the week pages: ${weeks.length} weeks, ${rendered} card(s) rendered, ${skipped} unchanged`);

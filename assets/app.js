@@ -1,4 +1,4 @@
-/* WTF is this icon? — search, browse & detail view. No dependencies. */
+/* WTF is this icon?: search, browse and the detail view. No dependencies. */
 (function () {
   "use strict";
 
@@ -27,7 +27,7 @@
     "upside down triangle", "tree with a tick"
   ];
 
-  // ───────────── Text processing ─────────────
+  // Text processing
   var STOP = toSet("a an the with and or of in on at to my is it its this that what whats which does do mean means meaning icon icons symbol symbols sign thing like looks look looking some kind sort has have there one inside shaped shape shaped little small big weird funny help please".split(" "));
 
   var GROUPS = [
@@ -133,7 +133,7 @@
     return edits + (la - i) + (lb - j) <= 1;
   }
 
-  // ───────────── Search index ─────────────
+  // Search index
   var INDEX = ICONS.map(function (icon) {
     var cat = catById[icon.category] || { name: "", blurb: "" };
     var colorWords = icon.color ? (COLOR_WORDS[icon.color] || [icon.color]).join(" ") : "";
@@ -237,7 +237,7 @@
     return scored.slice(0, limit).map(function (s) { return s.icon; });
   }
 
-  // ───────────── State & routing (#/icon/<id>?q=…&c=…&color=…) ─────────────
+  // State & routing (#/icon/<id>?q=…&c=…&color=…)
   var state = { q: "", c: "all", color: "", icon: null };
   var pushedIcon = false;
 
@@ -273,7 +273,7 @@
     history.replaceState(null, "", buildHash(state.icon));
   }
 
-  // ───────────── DOM ─────────────
+  // DOM
   var $ = function (s) { return document.querySelector(s); };
   var el = {
     form: $("#search-form"), q: $("#q"), clear: $("#clear"), tryBox: $("#try"),
@@ -334,7 +334,7 @@
       "</div>";
   }
 
-  // ───────────── Render: categories, filters, results ─────────────
+  // Render: categories, filters, results
   function renderCats() {
     var html = '<button type="button" class="cat" data-cat="all" aria-pressed="' + (state.c === "all") + '">' +
       'Everything<span class="cat__n">' + ICONS.length + "</span></button>";
@@ -453,12 +453,12 @@
       (q ? "<p>Nothing matched <strong>&ldquo;" + esc(q) + "&rdquo;</strong>" + esc(where) + ". A few tips:</p>" : "<p>Nothing here with those filters.</p>") +
       "<ul>" + alsoAll +
       "<li>Describe the <strong>shape</strong>, not the meaning: <em>circle with a line</em>, <em>wavy lines</em>, <em>square with a dot</em>.</li>" +
-      "<li>Use fewer words — <em>horseshoe</em> works better than <em>yellow horseshoe thing on my dashboard</em>.</li>" +
+      "<li>Use fewer words: <em>horseshoe</em> works better than <em>yellow horseshoe thing on my dashboard</em>.</li>" +
       "<li>Try where you saw it: <em>car</em>, <em>oven</em>, <em>washing machine</em>, <em>label</em>.</li>" +
       "</ul></div>";
   }
 
-  // ───────────── Icon of the week ─────────────
+  // Icon of the week
   // Weeks start on Monday, UK time. data/featured.js holds the hand-picked schedule; a week
   // with no entry gets an automatic pick that's the same for everyone (seeded by the week).
   var DAY = 864e5;
@@ -563,7 +563,7 @@
     else prompt("Copy this link:", url);
   }
 
-  // ───────────── Detail view ─────────────
+  // Detail view
   function renderDetail(icon) {
     var cat = catById[icon.category];
     var similar = lookalikes(icon, 6);
@@ -607,10 +607,10 @@
     if (state.icon) {
       var icon = iconById[state.icon];
       renderDetail(icon);
-      document.title = icon.name + " — WTF is this icon?";
+      document.title = icon.name + " · WTF is this icon?";
       if (!el.dialog.open) el.dialog.showModal();
     } else {
-      document.title = "WTF is this icon? — decode the symbols on your car, oven, washing machine & more";
+      document.title = "WTF is this icon? Decode the symbols on your car, oven, washing machine and more";
       if (el.dialog.open) el.dialog.close();
     }
   }
@@ -635,7 +635,7 @@
     }
   }
 
-  // ───────────── Wiring ─────────────
+  // Wiring
   function syncSearching() {
     document.body.classList.toggle("is-searching", !!state.q.trim() || !!photo);
   }
@@ -784,7 +784,7 @@
   window.addEventListener("popstate", onNavigate);
   window.addEventListener("hashchange", onNavigate);
 
-  // ───────────── Light / dark theme ─────────────
+  // Light / dark theme
   // The <head> script already picked the theme (saved choice, else the device setting).
   var themeBtn = $("#theme-toggle");
   var themeMeta = document.querySelector('meta[name="theme-color"]');
@@ -825,7 +825,7 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // ───────────── Photo lookup (Claude vision via worker/) ─────────────
+  // Photo lookup (Claude vision via worker/)
   var PHOTO_API = ((window.WTF_CONFIG && window.WTF_CONFIG.PHOTO_API) || "").replace(/\/+$/, "");
   var photo = null;      // { status: "loading" | "done" | "error", thumb, seen, matches, error }
   var photoSeq = 0;      // ignores responses for photos the user has since replaced
@@ -870,7 +870,7 @@
     });
   }
 
-  // ── Camera ──
+  // Camera
   // Phones & tablets hand over to the native camera app (autofocus, flash, full resolution).
   // Laptops/desktops get a live viewfinder on the page.
   var cameraStream = null;
@@ -1066,6 +1066,12 @@
   renderWotw();
   renderAll();
   syncDialog();
+
+  // Shared with assets/quiz.js
+  WTF.ui = {
+    esc: esc, tileClass: tileClass, lookalikes: lookalikes, teaser: teaser, shortName: shortName,
+    ukToday: ukToday, isoDay: isoDay, catById: catById, coarsePointer: coarsePointer
+  };
 
   // Expose for debugging / tests
   WTF.iconOfTheWeek = function () { return wotw && { id: wotw.icon.id, hook: wotw.hook, week: isoDay(wotw.week) }; };

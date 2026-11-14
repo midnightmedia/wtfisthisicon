@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WTF is this icon? — decode the symbols on your car, oven, washing machine &amp; more</title>
+<title>WTF is this icon? Decode the symbols on your car, oven, washing machine and more</title>
 <meta name="description" content="Describe the symbol on your car dashboard, washing machine, oven, clothing label or packaging and get a plain-English answer.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WTF is this icon?">
@@ -26,21 +26,21 @@
     document.documentElement.setAttribute("data-theme", t);
   })();
 </script>
-<link rel="stylesheet" href="assets/styles.css?v=97460c3e">
+<link rel="stylesheet" href="assets/styles.css?v=def66ce6">
 </head>
 <body>
 <a class="skip" href="#results">Skip to results</a>
 
 <header class="top">
   <div class="wrap top__inner">
-    <a class="logo" href="#/">WTF is this icon?</a>
-    <div class="top__right">
-      <a class="top__link" href="#browse" data-scroll-browse>Browse all</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
-        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
-        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+    <a class="logo" href="#/"><mark>WTF</mark> is this icon?</a>
+    <nav class="top__right" aria-label="Site">
+      <a class="top__link" href="#/quiz" data-quiz-open="intro">Quiz</a>
+      <a class="top__link top__link--browse" href="#browse" data-scroll-browse>Browse</a>
+      <button type="button" class="top__link theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+        <span class="theme-toggle__off">Lights off</span><span class="theme-toggle__on">Lights on</span>
       </button>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -80,6 +80,7 @@
 </section>
 
 <section class="wrap wotw" id="wotw" aria-labelledby="wotw-title" hidden></section>
+<section class="wrap quiz-cta" id="quiz-cta" aria-label="Daily quiz" hidden></section>
 
 <main class="wrap main" id="browse">
   <div class="toolbar">
@@ -118,6 +119,13 @@
   </div>
 </dialog>
 
+<dialog class="detail quiz" id="quiz" aria-labelledby="quiz-title">
+  <button type="button" class="detail__close" data-quiz="close" aria-label="Close quiz">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+  </button>
+  <div class="detail__inner quiz__inner" id="quiz-inner"></div>
+</dialog>
+
 <dialog class="detail" id="detail" aria-labelledby="d-title">
   <button type="button" class="detail__close" data-close aria-label="Close">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
@@ -126,20 +134,21 @@
 </dialog>
 
 <script src="assets/config.js?v=9664b819"></script>
-<script src="data/_registry.js?v=9b28b9db"></script>
-<script src="data/car.js?v=a3b17f14"></script>
-<script src="data/laundry.js?v=250dd544"></script>
-<script src="data/kitchen.js?v=9c6ab55e"></script>
-<script src="data/tech.js?v=654c3b00"></script>
-<script src="data/ev-power.js?v=46922b8e"></script>
-<script src="data/home-climate.js?v=82492da4"></script>
-<script src="data/keyboard.js?v=0eeb9ee1"></script>
-<script src="data/fridge.js?v=5bd6029b"></script>
-<script src="data/recycling.js?v=9a2fc7e6"></script>
-<script src="data/medicine.js?v=baf9fe61"></script>
-<script src="data/toilet.js?v=8a62a011"></script>
-<script src="data/coffee.js?v=563856a6"></script>
-<script src="data/featured.js?v=f7e8f9ec"></script>
-<script src="assets/app.js?v=b46b5350"></script>
+<script src="data/_registry.js?v=bbd6258d"></script>
+<script src="data/car.js?v=51a1ac6c"></script>
+<script src="data/laundry.js?v=fc3b2bf6"></script>
+<script src="data/kitchen.js?v=587577ec"></script>
+<script src="data/tech.js?v=ae4aa2e8"></script>
+<script src="data/ev-power.js?v=ef801185"></script>
+<script src="data/home-climate.js?v=e015d298"></script>
+<script src="data/keyboard.js?v=0905a8a1"></script>
+<script src="data/fridge.js?v=b8956207"></script>
+<script src="data/recycling.js?v=088e09a9"></script>
+<script src="data/medicine.js?v=f64caa9f"></script>
+<script src="data/toilet.js?v=fd0e1b22"></script>
+<script src="data/coffee.js?v=eaede077"></script>
+<script src="data/featured.js?v=3a39c639"></script>
+<script src="assets/app.js?v=b097577d"></script>
+<script src="assets/quiz.js?v=095eba5e"></script>
 </body>
 </html>

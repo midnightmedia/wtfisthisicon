@@ -1,4 +1,4 @@
-/* WTF is this icon? — Keyboard symbols (keyboard).
+/* Keyboard symbols (keyboard).
  * Format and drawing rules: see data/README.md. Every key glyph is drawn as plain geometry
  * (no Unicode symbols inside the SVG), because many phones and PCs lack fonts for ⌘ ⌥ ⏏ etc.
  * The Windows logo is a simplified, original drawing for identification purposes. */

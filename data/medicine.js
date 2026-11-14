@@ -1,7 +1,7 @@
-/* WTF is this icon? — medicine & medical: symbols on medicine boxes, leaflets and
+/* Medicine & medical: symbols on medicine boxes, leaflets and
  * pharmacy labels, ISO 15223-1 medical-device symbols (plasters, tests, thermometers,
  * first-aid kits), and signs in public places.
- * Format & drawing rules: see data/README.md.
+ * Format and drawing rules are in data/README.md.
  *
  * Not repeated here because they already live elsewhere: the open book "read the
  * instructions" (power-read-manual), umbrella "keep dry" (packaging-keep-dry),

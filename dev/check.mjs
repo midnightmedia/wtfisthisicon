@@ -22,7 +22,7 @@ for (const f of files) {
   try {
     vm.runInContext(fs.readFileSync(path.join(dataDir, f), "utf8"), sandbox, { filename: f });
   } catch (e) {
-    errors.push(`${f}: failed to load — ${e.message}`);
+    errors.push(`${f}: failed to load: ${e.message}`);
     continue;
   }
   for (const icon of sandbox.WTF.icons.slice(before)) origin.set(icon, f);
@@ -55,7 +55,7 @@ function checkSvg(svg, where) {
       if (a === "id") errors.push(`${where}: id attributes not allowed`);
       if (/^(fill|stroke|color|stop-color)$/.test(a)) {
         const val = v.slice(1, -1).trim();
-        if (!/^(none|currentColor)$/.test(val)) errors.push(`${where}: ${a}="${val}" — only currentColor/none allowed`);
+        if (!/^(none|currentColor)$/.test(val)) errors.push(`${where}: ${a}="${val}": only currentColor/none allowed`);
       }
       if (a === "style") errors.push(`${where}: style attributes not allowed`);
       return "";
@@ -112,7 +112,7 @@ if (featured) {
     try { page = fs.readFileSync(path.join(root, "week", f.week, "index.html"), "utf8"); } catch {}
     return !page.includes(`og:description" content="${esc(f.hook)}"`) || !page.includes(`/#/icon/${f.id}"`);
   });
-  if (stale.length) warn.push(`featured.js: share pages out of date for ${stale.map((f) => f.week).join(", ")} — run node dev/stamp-assets.mjs`);
+  if (stale.length) warn.push(`featured.js: share pages out of date for ${stale.map((f) => f.week).join(", ")}. Run node dev/stamp-assets.mjs`);
   const today = new Date().toISOString().slice(0, 10);
   const ahead = [...weeks].filter((w) => w >= today).length;
   console.log(`Icon of the week: ${weeks.size} weeks scheduled, ${ahead} still to come`);

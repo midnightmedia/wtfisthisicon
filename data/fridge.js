@@ -1,7 +1,7 @@
-/* WTF is this icon? — fridges, freezers and fridge-freezers (fridge).
+/* Fridges, freezers and fridge-freezers (fridge).
  * Freezer star ratings, control-panel buttons, alarms, dispensers and the
  * small print on the rating plate.
- * Format & drawing rules: see data/README.md.
+ * Format and drawing rules are in data/README.md.
  *
  * Shared parts below keep the families consistent: one six-pointed star (for the
  * freezer star ratings), one snowflake, one water drop and one drinking glass. */

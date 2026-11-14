@@ -1,5 +1,5 @@
-/* WTF is this icon? — kitchen appliances: oven / hob / microwave, and dishwasher.
- * Format & drawing rules: see data/README.md.
+/* Kitchen appliances: oven / hob / microwave, and dishwasher.
+ * Format and drawing rules are in data/README.md.
  *
  * Oven-function symbols share one visual language, built from the parts below:
  * the same square frame (the oven cavity), thick bars for heating elements,
