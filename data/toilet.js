@@ -132,7 +132,7 @@
       meaning:
         "Stops whatever the seat is doing: the rear wash, the bidet spray or the dryer. In the 2017 industry-standard set the symbol is a plain filled square, and the button is usually orange so you can find it in a hurry.",
       action:
-        "Water won't stop spraying? Press 止. The washes only run while a sensor in the seat knows you're sitting, so on most seats they also stop if you stand up, and many switch themselves off after a couple of minutes anyway.",
+        "Water won't stop spraying? Press 止. On most seats standing up stops it too, as the washes only run while a sensor in the seat knows you're sitting, but 止 is the more dignified exit. Many also switch themselves off after a couple of minutes anyway.",
       tip: "It doesn't flush and it isn't an off switch for the whole toilet. The flush is a separate button, lever or sensor: look for 大 / 小 or 流す.",
       svg:
         '<text x="32" y="27" font-size="22">止</text>' +
@@ -145,7 +145,7 @@
       aka: ["おしり (oshiri)", "おしり洗浄 (oshiri senjō)", "rear wash", "rear cleansing", "REAR", "washlet", "spray wash"],
       looksLike: ["bum with water", "bottom with a fountain", "w with dots", "fountain", "dots spraying up", "dotted fountain", "butt", "bum"],
       meaning:
-        "A thin nozzle slides out from under the back of the seat and sprays warm water up at your bottom to wash it. The standard picture is a bottom (the curvy 'w') with a dotted fountain of water hitting it from below.",
+        "A thin nozzle slides out from under the back of the seat and sprays warm water up at your bottom to wash it. The standard picture is admirably frank: a bottom (the curvy 'w') with a dotted fountain of water hitting it from below.",
       action:
         "Stay sitting (it won't work if you're standing), press it, then press 止 (stop) when you're done: 10–20 seconds is plenty. Pat dry with paper or use the dryer. Too fierce? Press − on the pressure (水勢) buttons.",
       tip: "Before 2017 every maker drew this differently: a plain fountain, a side-on person, just a nozzle. Older panels still use their own pictures, but the button is nearly always labelled おしり.",
@@ -175,7 +175,7 @@
       looksLike: ["three wavy lines", "wavy lines", "wind", "waves", "squiggly lines", "air blowing", "three lines"],
       meaning: "Blows warm air from under the back of the seat to dry your bottom after a wash.",
       action:
-        "Press it while you're still sitting, and 止 (stop) when you've had enough. It's slow, so most people pat dry with paper first (or instead). On some seats pressing it again changes the air temperature.",
+        "Press it while you're still sitting, and 止 (stop) when you've had enough. It's in no hurry, so most people pat dry with paper first (or instead). On some seats pressing it again changes the air temperature.",
       tip: "It isn't a hand dryer or a fan for the room. Like the washes it only works while you're sitting, and it switches itself off after a few minutes.",
       svg:
         '<path d="' + wave(10, 54, 19, 5) + wave(10, 54, 32, 5) + wave(10, 54, 45, 5) + '"/>'
@@ -204,7 +204,7 @@
       meaning:
         "A shorter flush with less water: for a wee and a little paper. The standard symbol is a smaller swirl with fewer drops, and buttons and levers usually say 小, 'small'.",
       action: "Use it after a wee. If it doesn't clear everything, press 大 (big) as well.",
-      tip: "TOTO's guidance for one of its toilets: small flush for a wee and up to about 3 metres of single-ply paper, big flush for anything more.",
+      tip: "TOTO's guidance for one of its toilets: small flush for a wee and up to about 3 metres of single-ply paper, big flush for anything more. Measuring is optional.",
       svg: swirl(35.5, 36, 2.2, 13.5, -270, 180, 3, 32, 28)
     },
     {
@@ -216,7 +216,7 @@
       meaning:
         "Opens or closes the lid by motor. The standard picture shows the toilet from the side, with the lid half-raised and a curved arrow showing it swing.",
       action:
-        "Press once to open, again to close. Many toilets also lift the lid by themselves when you walk in and close it after you leave, so don't be alarmed if it moves on its own. You can still open and close it by hand.",
+        "Press once to open, again to close. Many toilets also lift the lid by themselves when you walk in and close it after you leave, so don't be alarmed if it moves on its own: it's being polite, not haunted. You can still open and close it by hand.",
       tip: "Some toilets (TOTO, for one) can be set to flush only once the lid has shut itself, so a short wait after you stand up is normal.",
       svg: BOWL + '<path d="M18 37.5H46"/>' + lever(46, 34, 20) + swingArrow(46, 34, 28, 200, 254)
     },
@@ -230,7 +230,7 @@
         "Lifts or lowers the seat ring by motor, for anyone who wants to stand to wee. In the standard picture the lid is already fully up (the upright line) and the seat is half-raised with a curved arrow.",
       action:
         "Press once to raise the seat, again to lower it. On toilets that open the lid automatically, only the lid lifts by itself: one TOTO manual tells you to raise the seat with this button.",
-      tip: "The two pictograms look almost the same. Lid: one slanted line above a flat seat. Seat: a slanted line plus an upright one behind it.",
+      tip: "The two pictograms are near-identical twins, which helps nobody. Lid: one slanted line above a flat seat. Seat: a slanted line plus an upright one behind it.",
       svg: BOWL + '<path d="M50 13V37"/>' + lever(44, 37, 20) + swingArrow(44, 37, 27, 200, 250)
     },
 
@@ -246,7 +246,7 @@
       meaning:
         "Makes the wash spray weaker (−) or stronger (+), usually in five steps. Older panels may have a dial instead, or buttons marked 弱 (weak) and 強 (strong).",
       action:
-        "Press − straight away if the spray is too fierce; it only works while a wash is running. Some seats go back to the middle setting after you've finished.",
+        "Press − straight away if the spray is too fierce. It only works while a wash is running, and some seats go back to the middle setting after you've finished.",
       tip: "If nothing comes out at all on the weakest setting, turn it up: on low mains pressure some seats can't push the nozzle out.",
       svg:
         '<text x="32" y="24" font-size="17">水勢</text>' +
@@ -309,7 +309,7 @@
       meaning:
         "A small fan in the seat pulls air out of the bowl and through a filter to take the smell away. Most seats run it automatically while you sit; パワー脱臭 (power deodorise) is a stronger burst.",
       action:
-        "Nothing to do: it switches itself on and off. Press it for an extra blast if you need one. A faint whirr while you're sitting is just this fan.",
+        "Nothing to do: it switches itself on and off. Press it for an extra blast if the situation calls for one. A faint whirr while you're sitting is just this fan.",
       tip: "It clears the air in the bowl, not the whole room, so it's no substitute for the extractor fan.",
       svg:
         '<path d="' + wisp(21, 31, 7, 3.5) + wisp(32, 31, 7, 3.5) + wisp(43, 31, 7, 3.5) + '" stroke-width="3"/>' +
@@ -363,7 +363,7 @@
       meaning:
         "Gentler versions of the two washes: おしりソフト is a softer rear spray that 'wraps round', ワイドビデ a wider, gentler front spray.",
       action: "On TOTO remotes they share a button with the normal washes (labelled おしり / ソフト and ビデ / ワイド): press it again during the wash to switch. Press 止 (stop) to end it.",
-      tip: "There's no standard picture for this one: many remotes just show the normal rear or bidet pictogram with ソフト (soft) or ワイド (wide) written next to it.",
+      tip: "There's no standard picture for this one, so many remotes just shrug and show the normal rear or bidet pictogram with ソフト (soft) or ワイド (wide) written next to it.",
       svg: fountain(32, 20, 4, 21, 3) +
         '<g fill="currentColor" stroke="none">' + dot(32, 10) + dot(21, 12.5) + dot(43, 12.5) + dot(11, 19) + dot(53, 19) + '</g>'
     },
@@ -427,7 +427,7 @@
         "Plays the sound of running water for about 25 seconds to cover any noises you'd rather nobody heard. TOTO launched it in 1988 as Otohime, the 'sound princess', because people were flushing again and again to drown out sounds and wasting a lot of water.",
       action:
         "Press the button or hold your hand over the sensor; do it again to keep it going. It doesn't flush anything and stops on its own.",
-      tip: "Most common in women's toilets. Some versions mix birdsong in with the water. 音姫 is TOTO's name; LIXIL's version is called Sound Decorator.",
+      tip: "Most common in women's toilets, and some versions mix birdsong in with the water. 音姫 is TOTO's name; LIXIL's version is called Sound Decorator.",
       svg:
         '<ellipse cx="18" cy="47" rx="7.5" ry="6" transform="rotate(-20 18 47)" fill="currentColor" stroke="none"/>' +
         '<ellipse cx="43" cy="41" rx="7.5" ry="6" transform="rotate(-20 43 41)" fill="currentColor" stroke="none"/>' +

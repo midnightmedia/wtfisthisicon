@@ -26,12 +26,36 @@ WTF.add([
 ## Writing the text
 
 - Audience: a normal person standing in front of the thing, slightly panicked. Plain English, no jargon without explanation.
-- Accurate first. Light, friendly humour is welcome (the site is called "WTF is this icon?") but never at the expense of clarity or safety.
+- Accurate first, then the voice (see "The voice" below). Humour never at the expense of clarity or safety.
 - `looksLike` is the most important field for search. People don't know the name, so they type what they see:
   "squiggly lines", "horseshoe with exclamation mark", "triangle with two lines", "square with a circle inside",
   "fan", "wavy lines", "genie lamp", "dots". Give 3–8 phrases, lowercase.
 - `urgency` only where it genuinely applies (dashboard lights, appliance faults). Omit for care-label symbols, modes, ports, etc.
 - `color` only for things that are actually shown in a specific colour (dashboard lights). Omit otherwise.
+
+## The voice
+
+The site talks like **your unflappable mate who's read every manual**: someone who fixes things for a
+living, has seen every symbol going, nothing fazes them, and they're quietly baffled by whoever
+designed these icons. Dry British understatement, warm, on your side.
+
+1. **Answer first, joke second.** The first sentence of `meaning` is always the plain answer. Humour,
+   if any, comes after it, or in `tip`.
+2. **The joke is on the symbol (and its designers), never on the reader.** Not knowing is normal.
+   ("Some engineer decided a glowing submarine was the clearest way to say 'engine problem'.")
+3. **Danger stays straight.** For `urgency: "stop"` entries, `meaning` and `action` stay plain and
+   calm, with no jokes at all. For medicine and medical entries, `meaning` and `action` stay plain.
+   In both cases a light `tip` is fine, but never joke about the risk itself.
+4. **One joke per entry at most, and many entries need none.** A forced joke is worse than none.
+   Best spots: naming the absurdity of the symbol, the gotcha in `action` ("it won't reset unless the
+   machine is switched on"), and the trivia in `tip`.
+5. **Facts never move for a joke.** Every number, temperature, time, brand, model and step stays
+   exactly as it is.
+6. **Style:** short sentences, understatement over exclamation marks, UK English, no emoji, no
+   swearing beyond the WTF itself, no em dashes, no "Oops!"-style cuteness, no pun pile-ups.
+
+Example (dishwasher salt), `meaning`: "Your dishwasher's water softener has run out of salt. No, not
+the stuff on your chips. Without it, hard water leaves limescale and that cloudy film on your glasses."
 
 ## Quiz label (`quiz`)
 

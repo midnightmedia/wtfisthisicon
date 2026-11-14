@@ -10,9 +10,9 @@ WTF.add([
     category: "tech",
     aka: ["power symbol", "standby", "on/off button", "IEC 5009", "⏻"],
     looksLike: ["circle with a line through the top", "broken circle with a line", "circle with a stick", "lollipop", "o with a line at the top", "c with a line"],
-    meaning: "It's the power button. Strictly, the broken circle with a line poking through means \"standby\": pressing it often sends the device to sleep rather than cutting the power completely.",
-    action: "Press once to switch on or wake up. To turn off properly, hold it for a few seconds or use the on-screen menu. Holding it for around 10 seconds usually forces a frozen gadget off.",
-    tip: "It's a mash-up of binary 1 (on) and 0 (off). The family: a plain line | means On, a circle O means Off, a line sitting inside a complete circle means an on/off toggle, and a crescent moon means Sleep.",
+    meaning: "It's the power button. Strictly, the broken circle with a line poking through means \"standby\", so pressing it often sends the device to sleep rather than cutting the power completely.",
+    action: "Press once to switch on or wake up. To turn off properly, hold it for a few seconds or use the on-screen menu. Gadget frozen? Holding it for around 10 seconds usually forces it off.",
+    tip: "It's a mash-up of binary 1 (on) and 0 (off). Very tidy, if you happen to think in binary. The rest of the family: a plain line | means On, a circle O means Off, a line inside a complete circle means an on/off toggle, and a crescent moon means Sleep.",
     svg: `<g stroke-width="4"><path d="M44.86 18.68A20 20 0 1 1 19.14 18.68"/><line x1="32" y1="8" x2="32" y2="31"/></g>`
   },
   {
@@ -22,7 +22,7 @@ WTF.add([
     category: "tech",
     aka: ["rocker switch", "on/off switch", "I/O switch", "power switch"],
     looksLike: ["line and circle", "i and o", "1 and 0", "stick and ring", "| o", "switch with a line and a circle"],
-    meaning: "I means On and O means Off. They come from the binary digits 1 and 0. You'll find them on rocker switches on PCs, extension leads, kettles and power supplies.",
+    meaning: "I means On and O means Off, from the binary digits 1 and 0. You'll find them on rocker switches on PCs, extension leads, kettles and power supplies.",
     action: "Press the I side to switch on and the O side to switch off. On extension leads the switch usually lights up when it's on.",
     tip: "A switch marked 0, I and II (like on many hair dryers and fans) means off, low and high. II is not \"on twice\".",
     svg: `<rect x="7" y="13" width="50" height="38" rx="7" stroke-width="3"/><line x1="32" y1="13" x2="32" y2="51" stroke-width="2.5"/><line x1="19.5" y1="23" x2="19.5" y2="41" stroke-width="4"/><circle cx="44.5" cy="32" r="8" stroke-width="4"/>`
@@ -33,9 +33,9 @@ WTF.add([
     category: "tech",
     aka: ["BT", "wireless pairing", "Bluetooth rune"],
     looksLike: ["angular b", "pointy b", "b made of triangles", "bow tie with a line", "rune", "arrow b", "x with a line"],
-    meaning: "Bluetooth: short-range wireless for headphones, speakers, watches, keyboards and cars. In a phone's status bar it means Bluetooth is on; extra dots or a little battery next to it mean something is connected.",
-    action: "Switch it on or off in Control Centre / Quick Settings. On a gadget, holding the button with this symbol usually starts pairing, and a fast-flashing light means it's ready to be found by your phone.",
-    tip: "The logo merges two Viking runes, ᚼ (H) and ᛒ (B). They're the initials of Harald Bluetooth, a 10th-century Danish king famous for uniting tribes, just as Bluetooth unites gadgets.",
+    meaning: "Bluetooth: short-range wireless for headphones, speakers, watches, keyboards and cars. In a phone's status bar it means Bluetooth is on. Extra dots or a little battery next to it mean something is connected.",
+    action: "Switch it on or off in Control Centre / Quick Settings. On a gadget, holding the button with this symbol usually starts pairing. A fast-flashing light means it's ready to be found by your phone.",
+    tip: "The logo merges two Viking runes, ᚼ (H) and ᛒ (B). They're the initials of Harald Bluetooth, a 10th-century Danish king famous for uniting tribes, just as Bluetooth unites gadgets. On a good day.",
     svg: `<polyline points="18,21 46,43 32,54 32,10 46,21 18,43" stroke-width="4"/>`
   },
   {
@@ -44,8 +44,8 @@ WTF.add([
     category: "tech",
     aka: ["USB trident", "USB-A", "universal serial bus", "SS USB", "SuperSpeed"],
     looksLike: ["pitchfork", "trident", "fork with a circle square and triangle", "branching arrow", "tree with a circle and square", "arrow with branches"],
-    meaning: "Marks a USB port or cable, the everyday plug for charging and connecting mice, keyboards, memory sticks and drives.",
-    action: "Plug USB things in here. If you see \"SS\" (SuperSpeed) next to it, that port is the faster USB 3 kind, so use it for external drives. A battery or lightning-bolt icon beside a port means it can charge your phone, sometimes even while the computer is asleep.",
+    meaning: "Marks a USB port or cable: the everyday plug for charging and connecting mice, keyboards, memory sticks and drives.",
+    action: "Plug USB things in here. \"SS\" (SuperSpeed) next to it means the port is the faster USB 3 kind, so use it for external drives. A battery or lightning-bolt icon beside a port means it can charge your phone, sometimes even while the computer is asleep.",
     tip: "The circle, square and triangle on the branches are said to show that USB connects all kinds of devices. A blue plastic tongue inside a rectangular USB port usually means USB 3.",
     svg: `<line x1="32" y1="51" x2="32" y2="15"/><polygon points="32,6 25.5,16 38.5,16" fill="currentColor" stroke-width="2"/><circle cx="32" cy="51.5" r="5.5" fill="currentColor" stroke="none"/><polyline points="32,45 19,34 19,27"/><circle cx="19" cy="23" r="4.5" fill="currentColor" stroke="none"/><polyline points="32,39 45,29 45,23"/><rect x="40.5" y="14.5" width="9" height="9" rx="1" fill="currentColor" stroke="none"/>`
   },
@@ -55,9 +55,9 @@ WTF.add([
     category: "tech",
     aka: ["Type-C", "USB Type-C", "USB4", "oval port"],
     looksLike: ["rounded oval slot", "pill-shaped hole", "small oval port", "capsule", "rounded rectangle slot", "flat oval with a line"],
-    meaning: "USB-C is the small, rounded, reversible plug used by most new phones, laptops and gadgets. The shape is the same everywhere, but what each port can do (charging, fast data, video, Thunderbolt) varies.",
+    meaning: "USB-C is the small, rounded, reversible plug used by most new phones, laptops and gadgets. The shape is the same everywhere, but what each port can do (charging, fast data, video, Thunderbolt) varies. Every port is a bit of a lucky dip.",
     action: "Look at the little symbol beside the port: a lightning bolt with an arrowhead = Thunderbolt, a D-shaped \"DP\" icon = can send video to a monitor, a battery or plug icon = charging port, a number like 10/20/40 = speed in Gbps. If a monitor or dock doesn't work, try a different port and a better cable.",
-    tip: "Cables matter too: many cheap USB-C cables only charge and copy files slowly, and won't carry video at all.",
+    tip: "Cables matter too. Many cheap USB-C cables only charge and copy files slowly, and won't carry video at all.",
     svg: `<rect x="7" y="21" width="50" height="22" rx="11"/><line x1="19" y1="32" x2="45" y2="32" stroke-width="4.5"/>`
   },
   {
@@ -67,8 +67,8 @@ WTF.add([
     aka: ["Thunderbolt 3", "Thunderbolt 4", "Thunderbolt 5", "TB3", "TB4", "Intel Thunderbolt"],
     looksLike: ["lightning bolt with an arrow", "zigzag arrow", "lightning arrow", "bolt with arrowhead", "zigzag line pointing down"],
     meaning: "This port supports Thunderbolt, a super-fast connection for docks, multiple monitors, fast external drives and graphics boxes. Since Thunderbolt 3 it uses the USB-C shape, so it also works as a normal USB-C port.",
-    action: "Plug docks, high-end monitors and fast drives into this port for best results, and use a Thunderbolt cable (it has the same bolt logo) to get full speed.",
-    tip: "A plain lightning bolt without the arrowhead next to a port usually means charging, not Thunderbolt. On Macs from about 2011–2015 Thunderbolt used the smaller, square Mini DisplayPort shape.",
+    action: "Plug docks, high-end monitors and fast drives in here for the best results. Use a Thunderbolt cable (it has the same bolt logo) to get full speed.",
+    tip: "A plain lightning bolt without the arrowhead next to a port usually means charging, not Thunderbolt, so that little arrowhead is doing a lot of work. On Macs from about 2011–2015, Thunderbolt used the smaller, square Mini DisplayPort shape.",
     svg: `<polyline points="40,6 22,32 42,32 28,50" stroke-width="4"/><polygon points="23.09,56.31 22.87,46.01 33.13,53.99" fill="currentColor" stroke-width="1.5"/>`
   },
   {
@@ -80,7 +80,7 @@ WTF.add([
     looksLike: ["wide trapezoid slot", "flat port with cut corners", "hdmi", "letters hdmi", "squashed hexagon port"],
     meaning: "HDMI carries picture and sound together from a laptop, console, streaming stick or set-top box to a TV, monitor or projector.",
     action: "Plug the cable in, then press Input or Source on the TV remote and choose the matching number (HDMI 1, HDMI 2…). No picture? Check you're on the right input before blaming the cable.",
-    tip: "The port labelled ARC or eARC is the one to use for a soundbar. It lets the TV send its sound back down the same cable.",
+    tip: "The port labelled ARC or eARC is the one for a soundbar. It lets the TV send its sound back down the same cable.",
     svg: `<polygon points="7,12 57,12 57,21 50,30 14,30 7,21"/><line x1="16" y1="19" x2="48" y2="19" stroke-width="3"/><text x="32" y="52" font-size="16">HDMI</text>`
   },
   {
@@ -90,8 +90,8 @@ WTF.add([
     aka: ["LAN", "RJ45", "network cable", "wired internet", "Cat 5", "Cat 6"],
     looksLike: ["three squares connected", "boxes joined by lines", "three boxes", "family tree", "square socket with a notch", "squares with lines between"],
     meaning: "The wired network (LAN) socket for an internet cable from your router. It's the chunky square socket with a clip notch, a bit wider than a phone socket.",
-    action: "Plug an Ethernet cable from the router into here for internet that's usually faster and more reliable than Wi-Fi. It's great for TVs, consoles and desktop PCs.",
-    tip: "The little lights next to the socket should blink when data flows; no lights usually means a dead cable or the router end isn't plugged in. A phone cable will fit, but it won't work.",
+    action: "Plug an Ethernet cable from the router in here for internet that's usually faster and more reliable than Wi-Fi. Great for TVs, consoles and desktop PCs.",
+    tip: "The little lights next to the socket should blink when data flows. No lights usually means a dead cable, or the router end isn't plugged in. A phone cable will fit, but it won't work.",
     svg: `<rect x="23" y="9" width="18" height="14" rx="2"/><rect x="7" y="41" width="18" height="14" rx="2"/><rect x="39" y="41" width="18" height="14" rx="2"/><polyline points="32,23 32,32"/><polyline points="16,41 16,32 48,32 48,41"/>`
   },
   {
@@ -102,7 +102,7 @@ WTF.add([
     looksLike: ["headphones", "earmuffs", "headset", "headphones with a microphone", "arch with two blocks", "microphone"],
     meaning: "Marks the 3.5mm socket for wired headphones. A headset icon (headphones with a little microphone) means it's a combo jack that also takes a microphone.",
     action: "Plug headphones in here. On computers with separate sockets, the green one is for headphones/speakers and the pink one (with a microphone icon) is for a microphone. A light-blue socket is line-in.",
-    tip: "If your headset mic doesn't work in a combo jack, the plug may need four contacts (three black rings), or you need a cheap splitter for separate-socket computers.",
+    tip: "Headset mic not working in a combo jack? The plug may need four contacts (three black rings). For computers with separate sockets, you need a cheap splitter.",
     svg: `<path d="M13 40V31A19 19 0 0 1 51 31V40"/><rect x="8" y="35" width="11" height="19" rx="4" fill="currentColor" stroke-width="2"/><rect x="45" y="35" width="11" height="19" rx="4" fill="currentColor" stroke-width="2"/>`
   },
   {
@@ -111,9 +111,9 @@ WTF.add([
     category: "tech",
     aka: ["WiFi", "wireless internet", "WLAN", "Wi-Fi 6", "Wi-Fi 7"],
     looksLike: ["fan", "curved lines", "quarter circle lines", "radar waves", "slice of pizza lines", "rainbow with a dot", "wifi bars"],
-    meaning: "You're connected to a Wi-Fi network; the number of filled arcs shows the signal strength. Variations: an ! or ✕ next to it means connected to Wi-Fi but no internet; a padlock (in the network list) means it needs a password; a 6, 6E or 7 means a newer, faster Wi-Fi standard.",
+    meaning: "You're connected to a Wi-Fi network, and the number of filled arcs shows the signal strength. An ! or ✕ next to it means connected to Wi-Fi but no internet. A padlock (in the network list) means it needs a password. A 6, 6E or 7 means a newer, faster Wi-Fi standard.",
     action: "No internet with an !? Restart your router (unplug it for 30 seconds). Weak signal? Move closer to the router or away from thick walls and microwaves.",
-    tip: "\"Wi-Fi\" doesn't actually stand for \"wireless fidelity\". It was a catchy name invented by a branding agency, and the backronym came later.",
+    tip: "\"Wi-Fi\" doesn't actually stand for \"wireless fidelity\". A branding agency invented the catchy name, and the backronym came later.",
     svg: `<g stroke-width="4.5"><path d="M24.93 38.93A10 10 0 0 1 39.07 38.93"/><path d="M17.86 31.86A20 20 0 0 1 46.14 31.86"/><path d="M10.79 24.79A30 30 0 0 1 53.21 24.79"/></g><circle cx="32" cy="46" r="3.5" fill="currentColor" stroke="none"/>`
   },
   {
@@ -122,7 +122,7 @@ WTF.add([
     category: "tech",
     aka: ["tap to pay", "NFC", "near-field communication", "PayWave", "PayPass", "contactless indicator"],
     looksLike: ["sideways wifi", "four curved lines", "radio waves going right", "brackets getting bigger", "))))", "letter n in the status bar"],
-    meaning: "Contactless: tap a card, phone or watch here to pay or scan. On a card it means it can pay by tapping; on a phone it means it has NFC, the tiny radio behind tap-to-pay, transit cards and quick-pairing.",
+    meaning: "Contactless: tap a card, phone or watch here to pay or scan. On a card it means it can pay by tapping. On a phone it means it has NFC, the tiny radio behind tap-to-pay, transit cards and quick-pairing.",
     action: "Hold your card or phone flat on the symbol on the reader for a second or two until it beeps. On Android, check NFC is switched on in Quick Settings if tapping does nothing.",
     tip: "Some Android phones show a small \"N\" in the status bar when NFC is on. Your bank will occasionally ask for a PIN on a contactless payment. That's a normal security check.",
     svg: `<path d="M14 26A7.5 7.5 0 0 1 14 38M23 21A14.6 14.6 0 0 1 23 43M32 16A21.79 21.79 0 0 1 32 48M41 11A29 29 0 0 1 41 53" stroke-width="4.5"/>`
@@ -135,7 +135,7 @@ WTF.add([
     looksLike: ["airplane", "aeroplane", "plane", "jet", "plane from above"],
     meaning: "Flight mode is on: the phone's mobile signal is switched off, so no calls, texts or mobile data. Wi-Fi and Bluetooth usually switch off too, but you can turn them back on while staying in flight mode.",
     action: "Didn't mean to? Swipe down to Control Centre / Quick Settings and tap the plane to turn it off.",
-    tip: "Turning flight mode on and off again is a quick fix when your phone is stuck with no signal, as it forces it to search for the network afresh.",
+    tip: "Turning flight mode on and off again is a quick fix when your phone is stuck with no signal, as it forces it to search for the network afresh. It's the phone's version of turning it off and on again.",
     svg: `<path d="M32 6C34.5 6 36 8.5 36 12V24L56 36V41L36 35V47L43 52V56L32 53L21 56V52L28 47V35L8 41V36L28 24V12C28 8.5 29.5 6 32 6Z" fill="currentColor" stroke-width="2"/>`
   },
   {
@@ -144,7 +144,7 @@ WTF.add([
     category: "tech",
     aka: ["DND", "Focus mode", "quiet mode", "silent notifications", "sleep"],
     looksLike: ["moon", "crescent moon", "half moon", "banana", "c shape", "crescent"],
-    meaning: "On a phone the moon means Do Not Disturb (on iPhone, one of the Focus modes): calls and notifications arrive silently. On a Windows power menu or some PC keyboards the moon means Sleep, but on newer Mac keyboards (2021 onwards) the moon key switches Do Not Disturb on and off. Next to a chat in Messages, it means you've muted that conversation.",
+    meaning: "On a phone the moon means Do Not Disturb (on iPhone, one of the Focus modes): calls and notifications arrive silently. The moon gets around, though. On a Windows power menu or some PC keyboards it means Sleep, but on newer Mac keyboards (2021 onwards) the moon key switches Do Not Disturb on and off. Next to a chat in Messages, it means you've muted that conversation.",
     action: "Missing calls? Open Control Centre / Quick Settings and tap the moon (or Focus) to switch it off, and check it isn't scheduled to turn on automatically at night.",
     tip: "Many Android phones use a different Do Not Disturb icon: a circle with a horizontal line, like a no-entry sign.",
     svg: `<path d="M30.54 10.05A22 22 0 1 0 53.32 37.39A18 18 0 0 1 30.54 10.05Z" fill="currentColor" stroke-width="2"/>`
@@ -155,8 +155,8 @@ WTF.add([
     category: "tech",
     aka: ["mobile hotspot", "tethering", "personal hotspot", "portable hotspot"],
     looksLike: ["dot with circles around it", "radiating circles", "dot with brackets", "((•))", "broadcast", "chain links", "two loops linked"],
-    meaning: "Your phone is sharing its mobile data with other devices over Wi-Fi, acting as a mini router. Android shows a dot with arcs around it; iPhone uses a chain-link icon and a coloured bubble around the clock when someone is connected.",
-    action: "If you don't need it, turn it off in Quick Settings / Control Centre. It uses your data allowance and drains the battery quickly.",
+    meaning: "Your phone is sharing its mobile data with other devices over Wi-Fi, acting as a mini router. Android shows a dot with arcs around it. iPhone uses a chain-link icon, plus a coloured bubble around the clock when someone is connected.",
+    action: "Don't need it? Turn it off in Quick Settings / Control Centre. It uses your data allowance and drains the battery quickly.",
     tip: "Some phone plans limit or charge extra for hotspot data, even if your normal data is \"unlimited\".",
     svg: `<circle cx="32" cy="34" r="4.5" fill="currentColor" stroke="none"/><g stroke-width="4"><path d="M24.61 42.81A11.5 11.5 0 1 1 39.39 42.81"/><path d="M18.18 50.47A21.5 21.5 0 1 1 45.82 50.47"/></g>`
   },
@@ -166,9 +166,9 @@ WTF.add([
     category: "tech",
     aka: ["roaming", "R icon", "roaming indicator"],
     looksLike: ["letter r", "r next to signal bars", "small r", "r on the triangle", "r with bars"],
-    meaning: "Your phone is connected to a network that isn't your own, usually because you're abroad and sometimes because your provider borrows another network's masts.",
+    meaning: "Your phone is connected to a network that isn't your own. Usually that's because you're abroad, and sometimes because your provider borrows another network's masts.",
     action: "Check your plan's roaming rules before using lots of data. To avoid surprise bills, turn off Data Roaming in your mobile network settings and use Wi-Fi instead.",
-    tip: "Seeing R at home? Some providers piggyback on partner masts in rural areas. It's normally free, but worth checking with them.",
+    tip: "Seeing R at home? You haven't wandered abroad by mistake. Some providers piggyback on partner masts in rural areas. It's normally free, but worth checking with them.",
     svg: `<text x="16" y="31" font-size="25">R</text><g fill="currentColor" stroke="none"><rect x="26" y="40" width="6" height="11" rx="1"/><rect x="34.5" y="32" width="6" height="19" rx="1"/><rect x="43" y="24" width="6" height="27" rx="1"/><rect x="51.5" y="16" width="6" height="35" rx="1"/></g>`
   },
   {
@@ -178,8 +178,8 @@ WTF.add([
     category: "tech",
     aka: ["LTE", "4G", "4G+", "LTE+", "5G", "5G+", "5G UW", "H+", "E", "EDGE", "G", "GPRS", "3G"],
     looksLike: ["letters next to signal bars", "lte", "4g", "5g", "e", "h+", "3g"],
-    meaning: "Shows which kind of mobile data connection you've got, slowest to fastest: G (GPRS) and E (EDGE) are ancient 2G and very slow; 3G and H/H+ are okay; 4G/LTE is fast; 4G+/LTE+ combines several channels; 5G is the newest.",
-    action: "If you see E or G, the internet will crawl, so move somewhere with better signal or switch to Wi-Fi. Never see 5G? Your phone, plan or area may not support it yet.",
+    meaning: "Shows which kind of mobile data connection you've got. From slowest to fastest: G (GPRS) and E (EDGE) are ancient 2G and very slow; 3G and H/H+ are okay; 4G/LTE is fast; 4G+/LTE+ combines several channels; 5G is the newest.",
+    action: "See E or G? The internet will crawl, so move somewhere with better signal or switch to Wi-Fi. Never see 5G? Your phone, plan or area may not support it yet.",
     tip: "In the US, AT&T's old \"5G E\" icon was actually souped-up 4G with a marketing makeover.",
     svg: `<text x="32" y="28" font-size="20">LTE</text><text x="32" y="52" font-size="20">4G+</text>`
   },
@@ -191,7 +191,7 @@ WTF.add([
     aka: ["Voice over LTE", "HD voice", "VoWiFi", "Wi-Fi calling", "Vo LTE", "4G calling"],
     looksLike: ["volte", "vo lte", "letters in a box", "hd", "phone with wifi"],
     meaning: "Your calls are going over the 4G network (Voice over LTE), which means clearer \"HD\" sound, faster connecting and still being able to use data during a call. A phone with a Wi-Fi symbol, or \"Wi-Fi\" next to the carrier name, means Wi-Fi calling.",
-    action: "Nothing to do. It's a good thing. If calls keep failing, try switching VoLTE / 4G calling off and on in your mobile network settings.",
+    action: "Nothing to do. For once, a status icon with only good news. If calls keep failing, try switching VoLTE / 4G calling off and on in your mobile network settings.",
     tip: "As old 3G networks are switched off, phones that can't do VoLTE may lose the ability to make normal calls on some networks.",
     svg: `<rect x="5" y="19" width="54" height="26" rx="6" stroke-width="3"/><text x="32" y="37.3" font-size="14.5">VoLTE</text>`
   },
@@ -202,7 +202,7 @@ WTF.add([
     aka: ["location services", "GPS", "navigation arrow", "location arrow"],
     looksLike: ["arrow pointing up right", "paper plane", "cursor arrow", "triangle arrow", "pointer", "pin", "teardrop"],
     meaning: "An app is using your location (GPS). iPhone shows this slanted arrow; Android shows a map pin or a target.",
-    action: "To see which app and stop it, go to Settings › Privacy & Security › Location Services (iPhone) or Settings › Location (Android) and set apps to \"While Using\" or \"Never\".",
+    action: "To see which app it is and stop it, go to Settings › Privacy & Security › Location Services (iPhone) or Settings › Location (Android). Then set apps to \"While Using\" or \"Never\".",
     tip: "In the iPhone Location Services list, a purple arrow means an app used your location recently, grey means within the last 24 hours, and a hollow outline means it may get your location under certain conditions.",
     svg: `<polygon points="53,11 11,28 30,34 36,53" fill="currentColor" stroke-width="3"/>`
   },
@@ -212,9 +212,9 @@ WTF.add([
     category: "tech",
     aka: ["Low Power Mode", "power saving mode", "battery saver", "yellow battery"],
     looksLike: ["battery with a plus", "yellow battery", "battery with a cross", "orange battery", "battery outline with plus"],
-    meaning: "Battery-saving mode is on: the phone cuts background activity, dims things and slows down a little to make the charge last. On iPhone the battery icon turns yellow; Android shows a battery with a plus sign.",
-    action: "Leave it on if you're low. To switch it off, tap it in Control Centre / Quick Settings (iPhone switches it off automatically once it's charged past 80%).",
-    tip: "A plus inside the battery isn't charging. Charging is shown by a lightning bolt.",
+    meaning: "Battery-saving mode is on: the phone cuts background activity, dims things and slows down a little to make the charge last. On iPhone the battery icon turns yellow. Android shows a battery with a plus sign.",
+    action: "Leave it on if you're low. To switch it off, tap it in Control Centre / Quick Settings. iPhone switches it off by itself once it's charged past 80%.",
+    tip: "A plus inside the battery doesn't mean charging. Charging is shown by a lightning bolt.",
     svg: `<rect x="27" y="7" width="10" height="5" rx="1.5" fill="currentColor" stroke="none"/><rect x="19.5" y="12.5" width="25" height="43" rx="4.5"/><line x1="32" y1="25" x2="32" y2="43"/><line x1="23" y1="34" x2="41" y2="34"/>`
   },
   {
@@ -224,7 +224,7 @@ WTF.add([
     aka: ["AirPlay", "screen mirroring", "stream to TV", "Apple TV"],
     looksLike: ["rectangle with a triangle", "tv with triangle", "screen with arrow", "triangle under a box", "monitor with triangle"],
     meaning: "Apple's AirPlay: send the video, music or whole screen from your iPhone, iPad or Mac to an Apple TV, AirPlay TV or speaker. A version with circles instead of a rectangle means audio-only AirPlay.",
-    action: "Tap it and choose the TV or speaker. Both devices must be on the same Wi-Fi. Sound suddenly vanished from your phone? It may still be playing on another device, so tap here and choose your phone.",
+    action: "Tap it and choose the TV or speaker. Both devices must be on the same Wi-Fi. Sound suddenly vanished from your phone? It may still be playing on another device, possibly to an empty room. Tap here and choose your phone.",
     tip: "Screen Mirroring in iPhone's Control Centre is the icon of two overlapping rectangles.",
     svg: `<path d="M22 46H13A5 5 0 0 1 8 41V15A5 5 0 0 1 13 10H51A5 5 0 0 1 56 15V41A5 5 0 0 1 51 46H42"/><polygon points="32,36 44,52 20,52" fill="currentColor" stroke-width="2"/>`
   },
@@ -234,8 +234,8 @@ WTF.add([
     category: "tech",
     aka: ["Google Cast", "Chromecast", "cast to TV", "Google TV"],
     looksLike: ["rectangle with wifi in the corner", "screen with waves", "tv with radio waves", "box with curved lines in corner", "quarter circles in corner"],
-    meaning: "The Cast button: send a video or music from an app on your phone or laptop to a Chromecast, Google TV or cast-enabled speaker. Filled in means you're currently casting.",
-    action: "Tap it and choose your TV or speaker; your phone and the TV need to be on the same Wi-Fi.",
+    meaning: "The Cast button: send a video or music from an app on your phone or laptop to a Chromecast, Google TV or cast-enabled speaker. When it's filled in, you're currently casting.",
+    action: "Tap it and choose your TV or speaker. Your phone and the TV need to be on the same Wi-Fi.",
     tip: "Once it's casting, your phone is just the remote: you can lock it or use other apps and the video keeps playing.",
     svg: `<path d="M8 21V16A4 4 0 0 1 12 12H52A4 4 0 0 1 56 16V48A4 4 0 0 1 52 52H39"/><path d="M8 44.5A7.5 7.5 0 0 1 15.5 52H8Z" fill="currentColor" stroke-width="2"/><path d="M8 36.5A15.5 15.5 0 0 1 23.5 52M8 28.5A23.5 23.5 0 0 1 31.5 52"/>`
   },
@@ -247,7 +247,7 @@ WTF.add([
     looksLike: ["triangle on a line", "triangle over a bar", "up arrow with line", "house shape", "triangle and rectangle"],
     meaning: "Eject: open a disc tray, or (on a computer) safely disconnect a drive or memory stick.",
     action: "Before pulling out a USB stick or memory card on a Mac, click the eject symbol next to it in Finder (or \"Safely Remove\" on Windows) so files finish saving and don't get corrupted.",
-    tip: "Same triangle-on-a-bar on old video and DVD remotes, where it opens the tray.",
+    tip: "You'll see the same triangle-on-a-bar on old video and DVD remotes, where it opens the tray.",
     svg: `<polygon points="32,12 53,37 11,37" fill="currentColor" stroke-width="3"/><rect x="11" y="44" width="42" height="7" rx="1.5" fill="currentColor" stroke="none"/>`
   },
   {
@@ -256,9 +256,9 @@ WTF.add([
     category: "tech",
     aka: ["brightness up", "brightness down", "display brightness", "auto-brightness"],
     looksLike: ["sun", "circle with rays", "star with lines", "flower", "sunshine", "circle with spikes"],
-    meaning: "Screen brightness. A small sun usually means dimmer and a big sun brighter. A sun with an \"A\" means automatic brightness.",
+    meaning: "Screen brightness. Refreshingly, the sun really does mean light. A small sun usually means dimmer and a big sun brighter, and a sun with an \"A\" means automatic brightness.",
     action: "On a laptop, press the key (sometimes together with Fn) to change brightness. On a phone, use the slider in Control Centre / Quick Settings.",
-    tip: "If the screen keeps dimming by itself, auto-brightness or battery saver is probably on.",
+    tip: "Screen keeps dimming by itself? Auto-brightness or battery saver is probably on.",
     svg: `<circle cx="32" cy="32" r="9" fill="currentColor" stroke-width="2"/><path d="M48 32L55 32M43.31 43.31L48.26 48.26M32 48L32 55M20.69 43.31L15.74 48.26M16 32L9 32M20.69 20.69L15.74 15.74M32 16L32 9M43.31 20.69L48.26 15.74"/>`
   },
   {
@@ -269,7 +269,7 @@ WTF.add([
     looksLike: ["keyboard with rays", "rectangle with rays", "half sun", "sunrise", "box with lines above", "lit up keyboard"],
     meaning: "Turns the light behind the laptop keys on, off or brighter. It usually looks like a little keyboard or rectangle with rays shining out of the top.",
     action: "Press it (often together with Fn) repeatedly to cycle through the light levels. On newer Macs you'll also find Keyboard Brightness in Control Centre.",
-    tip: "Won't light up in a bright room? Many laptops have a light sensor that turns the backlight off automatically in daylight.",
+    tip: "Won't light up in a bright room? It may not be broken. Many laptops have a light sensor that turns the backlight off automatically in daylight.",
     svg: `<rect x="14" y="34" width="36" height="16" rx="3" stroke-width="3"/><g fill="currentColor" stroke="none"><circle cx="20" cy="39.8" r="1.5"/><circle cx="26" cy="39.8" r="1.5"/><circle cx="32" cy="39.8" r="1.5"/><circle cx="38" cy="39.8" r="1.5"/><circle cx="44" cy="39.8" r="1.5"/><circle cx="20" cy="45" r="1.5"/><circle cx="44" cy="45" r="1.5"/></g><line x1="25.5" y1="45" x2="38.5" y2="45" stroke-width="2.5"/><path d="M20.72 29.9L13.21 27.16M25.12 24.17L20.53 17.62M32 22L32 14M38.88 24.17L43.47 17.62M43.28 29.9L50.79 27.16"/>`
   },
   {
@@ -278,9 +278,9 @@ WTF.add([
     category: "tech",
     aka: ["alarm clock", "alarm on", "wake-up alarm"],
     looksLike: ["alarm clock", "clock with ears", "clock with bells", "clock with legs", "mickey mouse clock"],
-    meaning: "An alarm is set on your phone. It doesn't mean anything is ringing, just that one is armed and ready.",
+    meaning: "An alarm is set on your phone. Nothing is ringing; one is just armed and ready.",
     action: "Open the Clock app to see, change or switch off the alarm.",
-    tip: "Phone alarms normally still ring even when the phone is on silent or Do Not Disturb, so you won't sleep through them.",
+    tip: "Phone alarms normally still ring even when the phone is on silent or Do Not Disturb. The alarm outranks them both, so you won't sleep through it.",
     svg: `<circle cx="32" cy="35" r="17"/><polyline points="32,25 32,35 39,39"/><path d="M10 20A10 10 0 0 1 20 10M44 10A10 10 0 0 1 54 20" stroke-width="4.5"/><path d="M21.07 48.02L17 53M42.93 48.02L47 53"/>`
   },
   {
@@ -289,7 +289,7 @@ WTF.add([
     category: "tech",
     aka: ["vibration", "buzz mode", "silent with vibrate", "meeting mode"],
     looksLike: ["phone with zigzag lines", "phone shaking", "rectangle with squiggles", "phone with wavy lines", "zigzags either side"],
-    meaning: "The ringer is off and the phone will buzz instead of ring for calls and notifications.",
+    meaning: "The ringer is off, so the phone will buzz instead of ring for calls and notifications.",
     action: "To get the sound back, press volume up, or tap the sound icon in Quick Settings / the volume panel until it shows a bell.",
     tip: "A bell with a line through it means fully silent (on some phones, not even a buzz).",
     svg: `<rect x="23" y="10" width="18" height="44" rx="4"/><polyline points="15,20 10,26 15,32 10,38 15,44" stroke-width="3"/><polyline points="49,20 54,26 49,32 54,38 49,44" stroke-width="3"/>`
@@ -311,9 +311,9 @@ WTF.add([
     category: "tech",
     aka: ["syncing", "refresh", "reload", "auto-sync", "update"],
     looksLike: ["two arrows in a circle", "arrows chasing each other", "circle of arrows", "broken circle with arrows", "spinning arrows"],
-    meaning: "Syncing: the app or device is updating itself with the cloud or another device (email, photos, contacts, files). On a web page or app, the same idea means refresh / reload.",
+    meaning: "Syncing: the app or device is updating itself with the cloud or another device (email, photos, contacts, files). On a web page or in an app, the same idea means refresh / reload.",
     action: "Usually just wait. If it spins forever, check your internet connection, then try closing and reopening the app.",
-    tip: "A single curved arrow usually means reload or retry; two arrows chasing each other usually means sync.",
+    tip: "A single curved arrow usually means reload or retry. Two arrows chasing each other usually means sync. They never do catch up.",
     svg: `<path d="M15.09 25.84A18 18 0 0 1 48.91 25.84"/><polygon points="51.31,32.42 44.22,27.55 53.61,24.13" fill="currentColor" stroke-width="1.5"/><g transform="rotate(180 32 32)"><path d="M15.09 25.84A18 18 0 0 1 48.91 25.84"/><polygon points="51.31,32.42 44.22,27.55 53.61,24.13" fill="currentColor" stroke-width="1.5"/></g>`
   },
   {
@@ -323,7 +323,7 @@ WTF.add([
     category: "tech",
     aka: ["hearing loop", "induction loop", "T-coil", "telecoil", "hearing aid compatible", "HAC", "T setting"],
     looksLike: ["ear with a t", "ear", "ear and letter t", "question mark with t", "ear symbol"],
-    meaning: "A hearing loop is installed: sound from the counter, venue, lift or device is sent straight to hearing aids switched to T (telecoil), cutting out background noise.",
+    meaning: "A hearing loop is installed. Sound from the counter, venue, lift or device goes straight to hearing aids switched to T (telecoil), cutting out background noise.",
     action: "If you wear hearing aids with a telecoil, switch them to the T or \"loop\" programme. If you don't wear hearing aids, you can ignore it.",
     tip: "On a phone box, a T rating (like T3 or T4) means it works with a hearing aid's telecoil, and higher is better. An ear with a diagonal line through it is the general symbol for deaf or hard-of-hearing access.",
     svg: `<path d="M9 26C9 15 17 8 26 8C35 8 41 15 41 24C41 32 35 35 32 40C29 45 30 51 24 53C19 54.5 15 51 15 47"/><path d="M18 26C18 19 22 15 27 15C32 15 35 19 34 24C33.5 28 29 29 28 33" stroke-width="3"/><text x="47" y="56" font-size="24">T</text>`
@@ -335,7 +335,7 @@ WTF.add([
     category: "tech",
     aka: ["SOS only", "emergency calls only", "no service"],
     looksLike: ["sos", "letters sos", "sos instead of bars"],
-    meaning: "Your phone can't connect to your own network, but it can still make emergency calls using any other network that's available. It isn't an alarm. Nothing has been sent.",
+    meaning: "Your phone can't connect to your own network, but it can still make emergency calls using any other network that's available. It isn't an alarm, and nothing has been sent.",
     action: "Move somewhere with better signal, toggle flight mode on and off, or restart the phone. If it lasts, check your SIM and account with your provider. Emergency calls still work.",
     tip: "Android shows \"Emergency calls only\" in the same situation. Newer iPhones may also show a satellite icon where emergency texts by satellite are possible.",
     svg: `<text x="32" y="40" font-size="22">SOS</text>`
@@ -348,8 +348,8 @@ WTF.add([
     category: "packaging",
     aka: ["PAO", "period after opening", "12M", "6M", "24M", "use within months", "open jar symbol"],
     looksLike: ["open jar", "jar with lid open", "pot with lid tilted", "tub with 12m", "jar with a number and m", "open box with number"],
-    meaning: "How many months a cosmetic or toiletry stays good once you've opened it (12M means 12 months).",
-    action: "Make a note when you open it and replace it after that time, sooner if it smells, separates or changes texture. Be strict with eye products like mascara.",
+    meaning: "How many months a cosmetic or toiletry stays good once you've opened it (12M means 12 months). That's why the jar on the symbol has its lid open.",
+    action: "Make a note when you open it and replace it after that time, or sooner if it smells, separates or changes texture. Be strict with eye products like mascara.",
     tip: "An hourglass symbol with a date means \"best before\". It's used for cosmetics that last less than 30 months even unopened.",
     svg: `<rect x="14" y="31" width="36" height="24" rx="3"/><rect x="14" y="20" width="38" height="6" rx="1.5" transform="rotate(-20 14 26)"/><text x="32" y="48.5" font-size="14">12M</text>`
   },
@@ -360,9 +360,9 @@ WTF.add([
     category: "packaging",
     aka: ["e-mark", "estimated sign", "℮ symbol", "average quantity"],
     looksLike: ["e", "small e next to weight", "funny e", "e with a line", "rounded e", "e after grams"],
-    meaning: "The \"estimated\" sign means the pack was filled under the EU/UK average-quantity rules: the average across a batch must be at least the amount stated, and only a few packs may be slightly under, within strict limits.",
-    action: "Nothing to do: it's consumer protection, not a warning.",
-    tip: "It's not \"e for electric\", energy or eco. It's always printed right next to the weight or volume, like \"500 g ℮\".",
+    meaning: "The \"estimated\" sign means the pack was filled under the EU/UK average-quantity rules. The average across a batch must be at least the amount stated, and only a few packs may be slightly under, within strict limits. A small letter doing serious legal work.",
+    action: "Nothing to do. It's consumer protection, not a warning.",
+    tip: "It's not \"e for electric\", energy or eco. It always sits right next to the weight or volume, like \"500 g ℮\".",
     svg: `<path d="M14 32H50A18 18 0 1 0 45.79 43.57" stroke-width="4.5"/>`
   },
   {
@@ -372,7 +372,7 @@ WTF.add([
     category: "packaging",
     aka: ["CE", "Conformité Européenne", "European conformity", "CE marking"],
     looksLike: ["ce", "letters ce", "two c's", "c and e", "ce in circles"],
-    meaning: "The manufacturer declares the product meets EU safety, health and environmental rules. For most products it's self-declared, not a quality mark or proof of independent testing.",
+    meaning: "The manufacturer declares that the product meets EU safety, health and environmental rules. For most products it's self-declared, not a quality mark or proof of independent testing.",
     action: "Nothing to do. For electrical items and toys, a CE mark from a reputable seller is a basic sign it's been made for the EU market.",
     tip: "The story of a lookalike \"China Export\" mark is largely a myth, but badly copied or fake CE marks do exist, so the logo alone isn't a guarantee.",
     svg: `<path d="M31.5 21.28A14 14 0 1 0 31.5 42.72M55.5 21.28A14 14 0 1 0 55.5 42.72M32.5 32H51" stroke-width="5" stroke-linecap="butt"/>`
@@ -395,8 +395,8 @@ WTF.add([
     category: "packaging",
     aka: ["food contact material", "food grade", "suitable for food contact", "glass and fork symbol"],
     looksLike: ["wine glass and fork", "glass and fork", "cup and fork", "goblet and fork", "glass with fork"],
-    meaning: "The material is safe to come into contact with food, so it's fine for storing, preparing or serving it.",
-    action: "Use it for food. It says nothing about dishwasher, microwave or oven use; check for those symbols separately.",
+    meaning: "The material is safe to come into contact with food, so it's fine for storing, preparing or serving it. It's not advertising a wine bar.",
+    action: "Use it for food. It says nothing about the dishwasher, microwave or oven, so check for those symbols separately.",
     tip: "The same glass and fork crossed out is an unofficial but common way of saying \"not for food\".",
     svg: `<g stroke-width="3"><path d="M12 10H32C32 22 28 28 22 28C16 28 12 22 12 10Z"/><path d="M22 28V53M14 53H30"/><path d="M40 10V21Q40 27 46 27Q52 27 52 21V10M46 10V53"/></g>`
   },
@@ -406,7 +406,7 @@ WTF.add([
     category: "packaging",
     aka: ["microwavable", "microwave safe", "suitable for microwave"],
     looksLike: ["wavy lines", "microwave with wavy lines", "box with squiggles", "squiggly lines in a rectangle", "waves", "tv with wavy lines"],
-    meaning: "The container can go in the microwave without melting, warping or cracking. There's no single official design, so it varies, but wavy lines are the giveaway.",
+    meaning: "The container can go in the microwave without melting, warping or cracking. There's no single official design, but wavy lines are the giveaway.",
     action: "Remove or loosen the lid (or pierce the film) before heating, and never microwave anything metallic. Some containers say \"reheat only\", which means they're not for long cooking.",
     tip: "\"Microwave safe\" means the container won't be damaged. It can still get very hot, so use oven gloves.",
     svg: `<rect x="7" y="14" width="50" height="36" rx="4"/><line x1="44" y1="14" x2="44" y2="50" stroke-width="3"/><g fill="currentColor" stroke="none"><circle cx="50.5" cy="23" r="2"/><circle cx="50.5" cy="31" r="2"/></g><path d="M13 24q2.5 -3.2 5 0t5 0t5 0t5 0t5 0M13 32q2.5 -3.2 5 0t5 0t5 0t5 0t5 0M13 40q2.5 -3.2 5 0t5 0t5 0t5 0t5 0" stroke-width="2.75"/>`
@@ -419,7 +419,7 @@ WTF.add([
     looksLike: ["snowflake", "star with branches", "asterisk", "ice crystal", "six-pointed star"],
     meaning: "Freezer safe: the container can go in the freezer without cracking. On food packaging, a snowflake means the food is suitable for home freezing.",
     action: "Freeze away. Leave a little space for liquids to expand, and don't move glass straight from freezer to hot oven.",
-    tip: "No snowflake on a container doesn't always mean it'll crack, but thin or brittle plastics often do in the cold.",
+    tip: "No snowflake on a container doesn't always mean it'll crack. But thin or brittle plastics often do in the cold.",
     svg: `<path d="M32 32L32 8M32 18L26.34 12.34M32 18L37.66 12.34M32 32L52.78 20M44.12 25L46.19 17.27M44.12 25L51.85 27.07M32 32L52.78 44M44.12 39L51.85 36.93M44.12 39L46.19 46.73M32 32L32 56M32 46L37.66 51.66M32 46L26.34 51.66M32 32L11.22 44M19.88 39L17.81 46.73M19.88 39L12.15 36.93M32 32L11.22 20M19.88 25L12.15 27.07M19.88 25L17.81 17.27" stroke-width="3.25"/>`
   },
   {
@@ -428,7 +428,7 @@ WTF.add([
     category: "packaging",
     aka: ["dishwasher proof", "dishwasher safe", "top rack safe"],
     looksLike: ["plate and glass with water drops", "plates with drops", "dishes in the rain", "plate and cup with lines", "glass and plate with water"],
-    meaning: "Dishwasher safe: it can be washed in a dishwasher without damage.",
+    meaning: "Dishwasher safe: it can be washed in a dishwasher without damage. The symbol shows dishes being rained on, which is roughly what happens in there.",
     action: "Put it in the dishwasher. If it says \"top rack only\", keep it away from the hotter bottom element. No symbol? Hand-wash to be safe, especially wood, cast iron, insulated mugs, sharp knives and anything with metallic trim.",
     tip: "Repeated dishwasher runs can still fade prints and cloud glassware over time. \"Safe\" means it won't break, not that it will look new forever.",
     svg: `<g stroke-width="3"><circle cx="24" cy="42" r="12"/><polygon points="40,29 52,29 50,54 42,54"/></g><circle cx="24" cy="42" r="6" stroke-width="2.5"/><path d="M19 6L17 11M32 6L30 11M45 6L43 11M25.5 15L23.5 20M38.5 15L36.5 20" stroke-width="3"/>`
@@ -439,7 +439,7 @@ WTF.add([
     category: "packaging",
     aka: ["ovenproof", "oven safe", "suitable for oven"],
     looksLike: ["oven", "box with a window", "square with a window", "cooker", "oven with knobs"],
-    meaning: "Oven safe: the dish or container can go in a conventional oven. There's no single official symbol; it's usually an oven shape, sometimes with a maximum temperature.",
+    meaning: "Oven safe: the dish or container can go in a conventional oven. There's no single official symbol. It's usually an oven shape, sometimes with a maximum temperature.",
     action: "Check the maximum temperature, avoid the grill unless it says so, and don't put cold glass or ceramic straight into a very hot oven, as sudden temperature changes can crack it.",
     tip: "Oven safe doesn't automatically mean hob safe or microwave safe; those have their own symbols.",
     svg: `<rect x="8" y="10" width="48" height="44" rx="4"/><line x1="8" y1="20" x2="56" y2="20" stroke-width="3"/><g fill="currentColor" stroke="none"><circle cx="16" cy="15" r="2"/><circle cx="23" cy="15" r="2"/></g><rect x="16" y="27" width="32" height="19" rx="2.5" stroke-width="3"/>`
@@ -462,9 +462,9 @@ WTF.add([
     category: "packaging",
     aka: ["keep dry", "protect from moisture", "keep away from rain", "umbrella symbol"],
     looksLike: ["umbrella", "umbrella with rain", "umbrella with drops", "parasol", "brolly"],
-    meaning: "Keep this parcel or product dry, as the contents can be damaged by rain or damp.",
+    meaning: "Keep this parcel or product dry. Rain or damp can damage the contents.",
     action: "Store it indoors, off damp floors, and don't leave it on the doorstep in the rain.",
-    tip: "It's one of the international ISO 780 handling marks for parcels, alongside the wine glass (fragile) and the two arrows (this way up).",
+    tip: "It's one of the international ISO 780 handling marks for parcels, alongside the wine glass (fragile) and the two arrows (this way up). No umbrella is supplied.",
     svg: `<path d="M12 38A20 20 0 0 1 52 38Q47 34 42 38Q37 34 32 38Q27 34 22 38Q17 34 12 38Z" fill="currentColor" stroke-width="2.5"/><path d="M32 38V52A4 4 0 0 1 24 52"/><path d="M19 6L17 12M33 4L31 10M47 6L45 12" stroke-width="3"/>`
   },
   {
@@ -474,7 +474,7 @@ WTF.add([
     aka: ["this side up", "keep upright", "orientation arrows", "up arrows"],
     looksLike: ["two arrows", "two arrows pointing up", "arrows on a line", "double arrows", "two up arrows with a bar"],
     meaning: "This way up: the arrows point to the top of the box. Keep it upright.",
-    action: "Carry, store and stack the box with the arrows pointing up. This is especially important for liquids, appliances and anything fragile inside.",
+    action: "Carry, store and stack the box with the arrows pointing up. It matters most for liquids, appliances and anything fragile inside.",
     tip: "Fridges and freezers often carry this mark because they should travel upright.",
     svg: `<g stroke-width="4"><line x1="22" y1="49" x2="22" y2="18"/><line x1="42" y1="49" x2="42" y2="18"/></g><polygon points="22,8 14.5,20 29.5,20" fill="currentColor" stroke-width="2"/><polygon points="42,8 34.5,20 49.5,20" fill="currentColor" stroke-width="2"/><line x1="10" y1="55" x2="54" y2="55" stroke-width="4"/>`
   },
@@ -486,7 +486,7 @@ WTF.add([
     looksLike: ["wine glass", "broken glass", "cracked glass", "goblet", "cocktail glass", "glass with a crack"],
     meaning: "Fragile: handle with care. The contents can break.",
     action: "Don't drop, throw or stack heavy things on it. Open carefully and check the contents straight away so you can report any damage quickly.",
-    tip: "It's sometimes shown as a whole glass and sometimes cracked, but both mean the same.",
+    tip: "It's sometimes shown as a whole glass and sometimes cracked. Both mean the same; the cracked one is just more dramatic.",
     svg: `<g fill="currentColor" stroke="none"><path d="M18 10H28.5L33 17L28 23L31 29L30.5 34C24 34 18 28 18 10Z"/><path d="M31.5 10H46C46 28 40 34 33.5 34L34 29L31 23L36 17Z"/><rect x="30" y="33" width="4" height="16"/><rect x="20" y="48" width="24" height="5.5" rx="2"/></g>`
   },
   {
@@ -495,8 +495,8 @@ WTF.add([
     category: "packaging",
     aka: ["do not stack", "no stacking", "stacking prohibited"],
     looksLike: ["box with a crossed out box on top", "two boxes with an x", "box with x on top", "crossed out box", "stacked boxes crossed out"],
-    meaning: "Don't put anything on top of this box. The contents or the box itself can't take the weight.",
-    action: "Keep it on top of the pile, or on its own.",
+    meaning: "Don't put anything on top of this box. The contents, or the box itself, can't take the weight.",
+    action: "Keep it on top of the pile, or give it a spot of its own.",
     tip: "A related symbol shows stacked boxes with a number or weight, which is the maximum you can stack on it.",
     svg: `<rect x="21" y="12" width="22" height="16" rx="1.5" stroke-width="3"/><line x1="15" y1="7" x2="49" y2="33"/><line x1="49" y1="7" x2="15" y2="33"/><rect x="12" y="38" width="40" height="18" rx="2" fill="currentColor" stroke="none"/>`
   },
@@ -541,7 +541,7 @@ WTF.add([
     looksLike: ["dead fish and tree", "tree and fish in a diamond", "red diamond with fish", "bare tree and fish", "fish upside down"],
     meaning: "Toxic to aquatic life: harmful to fish and other creatures if it gets into rivers, lakes or the sea. Found on some bleaches, insecticides, fuels and laundry products.",
     action: "Use it as directed, but don't pour leftovers down drains, toilets or onto the ground. Take unwanted product to a household hazardous waste collection.",
-    tip: "It doesn't mean the product is dangerous to you in normal use. It's about how it's disposed of.",
+    tip: "It doesn't mean the product is dangerous to you in normal use. It's about how you get rid of it.",
     svg: `<polygon points="32,6 58,32 32,58 6,32" stroke-width="4"/><g stroke-width="2.75"><line x1="26" y1="42" x2="26" y2="20"/><line x1="26" y1="28" x2="21" y2="24"/><line x1="26" y1="24" x2="31" y2="19"/><line x1="26" y1="32" x2="30" y2="29"/><line x1="22" y1="42.5" x2="42" y2="42.5"/></g><path d="M30 36Q36 31 42 36Q36 41 30 36Z" fill="currentColor" stroke-width="1.5"/><polygon points="41.5,36 45.5,33 45.5,39" fill="currentColor" stroke-width="1.5"/>`
   },
   {

@@ -10,9 +10,9 @@
   ICONS.forEach(function (i, n) { i._order = n; iconById[i.id] = i; });
 
   var URGENCY = {
-    stop: { label: "Act now", rank: 0 },
+    stop: { label: "Deal with it now", rank: 0 },
     soon: { label: "Sort it soon", rank: 1 },
-    info: { label: "Just FYI", rank: 2 }
+    info: { label: "Relax, it's fine", rank: 2 }
   };
   var COLOR_WORDS = {
     red: ["red"], amber: ["amber", "yellow", "orange"], green: ["green"], blue: ["blue"], white: ["white", "grey", "gray"]
@@ -564,7 +564,7 @@
         "</div>" +
         '<aside class="detail__side detail__side--extra">' +
           (icon.looksLike && icon.looksLike.length
-            ? "<h3>People describe it as</h3><div class=\"detail__looks\">" + icon.looksLike.map(function (l) {
+            ? "<h3>What normal people call it</h3><div class=\"detail__looks\">" + icon.looksLike.map(function (l) {
                 return '<button type="button" data-search="' + esc(l) + '">' + esc(l) + "</button>";
               }).join("") + "</div>"
             : "") +
@@ -576,10 +576,10 @@
           (icon.aka && icon.aka.length ? '<p class="detail__aka">Also called: ' + esc(icon.aka.join(", ")) + "</p>" : "") +
           badge(icon) +
           '<div class="detail__block"><h3>WTF it means</h3><p>' + esc(icon.meaning) + "</p></div>" +
-          '<div class="' + todoCls + '"><h3>What to do</h3><p>' + esc(icon.action) + "</p></div>" +
-          (icon.tip ? '<div class="detail__block detail__block--tip"><h3>Good to know</h3><p>' + esc(icon.tip) + "</p></div>" : "") +
+          '<div class="' + todoCls + '"><h3>What to do about it</h3><p>' + esc(icon.action) + "</p></div>" +
+          (icon.tip ? '<div class="detail__block detail__block--tip"><h3>For the record</h3><p>' + esc(icon.tip) + "</p></div>" : "") +
           (similar.length
-            ? '<div class="detail__similar"><h3>Easily confused with</h3><div class="mini-grid">' + similar.map(function (s) {
+            ? '<div class="detail__similar"><h3>Not to be confused with</h3><div class="mini-grid">' + similar.map(function (s) {
                 return '<a class="mini" href="' + iconHref(s) + '" data-icon="' + s.id + '"><div class="' + tileClass(s) + '">' + WTF.svg(s) + "</div>" +
                   "<span>" + esc(s.name) + "<small>" + esc(catById[s.category].name) + "</small></span></a>";
               }).join("") + "</div></div>"
@@ -810,15 +810,15 @@
   var photoSeq = 0;      // ignores responses for photos the user has since replaced
   var CONFIDENCE = { high: "Strong match", medium: "Likely", low: "Possible" };
   var PHOTO_ERRORS = {
-    rate_limited: "Whoa, easy. That's a lot of photos. Try again in a minute.",
+    rate_limited: "Easy, tiger. That's a lot of photos. Try again in a minute.",
     decode: "Couldn't open that image. Try a regular photo (JPEG or PNG).",
     too_large: "That image is too big. Try a regular photo (JPEG or PNG).",
     refused: "Couldn't read that photo. Try a clearer, closer shot of the symbol.",
     unreadable_image: "Couldn't read that photo. Try a clearer, closer shot of the symbol.",
-    not_configured: "Photo lookup isn't switched on yet. Describe it instead for now.",
+    not_configured: "Photo lookup is having a day off. Describe it instead for now.",
     camera_denied: "Camera access is blocked. Allow the camera for this site in your browser settings, or upload a photo instead.",
     camera_missing: "Couldn't find a camera on this device. Upload a photo instead.",
-    other: "Couldn't reach the photo service. Check your connection and try again."
+    other: "Couldn't reach the photo service. Check your connection and have another go."
   };
 
   // Photo button → small menu: "Take a photo" or "Upload a photo"
@@ -1000,8 +1000,8 @@
     var loading = photo.status === "loading";
     var title, sub = "", grid = "";
     if (loading) {
-      title = "Looking at your photo&hellip;";
-      sub = "This usually takes a few seconds.";
+      title = "Squinting at your photo&hellip;";
+      sub = "Give it a few seconds.";
     } else if (photo.status === "error") {
       title = "Well, that didn&rsquo;t work.";
       sub = PHOTO_ERRORS[photo.error] || PHOTO_ERRORS.other;
@@ -1010,7 +1010,7 @@
       sub = (photo.seen ? photo.seen + " " : "") + "Try a closer, sharper photo, or describe it instead.";
     } else {
       var strong = photo.matches.filter(function (m) { return m.confidence === "high"; }).length;
-      title = photo.matches.length === 1 ? "We think it&rsquo;s this."
+      title = photo.matches.length === 1 ? "Pretty sure it&rsquo;s this."
         : strong >= 2 ? "We spotted these symbols."
         : "We think it&rsquo;s one of these.";
       sub = photo.seen;

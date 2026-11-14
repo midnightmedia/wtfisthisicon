@@ -11,7 +11,7 @@ WTF.add([
     looksLike: ["genie lamp", "aladdin lamp", "oil can", "teapot", "magic lamp with a drip", "watering can"],
     meaning: "The engine has lost oil pressure, so its moving parts aren't being lubricated properly. Running an engine without oil pressure can wreck it in minutes.",
     action: "Pull over safely and switch the engine off as soon as you can. Once it's cooled, check the oil level with the dipstick and top up. If the level is fine and the light stays on, don't drive. Get it towed.",
-    tip: "If the same oil-can symbol is amber/yellow (sometimes with a wavy line), many cars mean 'oil level low' rather than 'no pressure'. That's less urgent, but top up soon.",
+    tip: "It's an oil can, though most people see a genie lamp. If the same symbol is amber/yellow (sometimes with a wavy line), many cars mean 'oil level low' rather than 'no pressure'. That's less urgent, but top up soon.",
     svg: `<path d="M20 30h-6a3 3 0 0 0 0 6h6"/><path d="M20 30h6l3-4h8l3 4h4l14-6v3L46 40H22a2 2 0 0 1-2-2z"/><path d="M33 26v-5M29 21h8"/><path d="M56 32c-2 3-3 4.5-3 6a3 3 0 0 0 6 0c0-1.5-1-3-3-6z" fill="currentColor" stroke="none"/>`
   },
   {
@@ -24,7 +24,7 @@ WTF.add([
     looksLike: ["thermometer in water", "thermometer with waves", "thermometer in the sea", "thermometer with wavy lines", "key in water"],
     meaning: "The engine is overheating, usually because of low coolant, a leak, a failed fan or a stuck thermostat.",
     action: "Pull over and turn the engine off. Do NOT open the coolant cap while hot, as it can spray boiling liquid. Once cool, check the coolant level and top up; if it keeps happening, get it looked at.",
-    tip: "A blue version of this symbol just means the engine is still cold, so take it easy until it goes out.",
+    tip: "A blue version of this symbol is the opposite: the engine is still cold. Take it easy until it goes out.",
     svg: `<path d="M29 37V12a3 3 0 0 1 6 0v25"/><circle cx="32" cy="42" r="5.5"/><path d="M35 17h6M35 24h6M35 31h6"/><path d="M8 46c3 0 3 2 6 2s3-2 6-2M44 46c3 0 3 2 6 2s3-2 6-2"/><path d="M8 54c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 6-2 3 2 6 2 3-2 6-2 3 2 6 2"/>`
   },
   {
@@ -37,7 +37,7 @@ WTF.add([
     looksLike: ["battery", "box with plus and minus", "rectangle with two bumps", "plus minus box"],
     meaning: "The battery isn't being charged. Usually the alternator, its drive belt or the wiring has failed. The car is running on battery power alone and will die when it's flat.",
     action: "Turn off everything you don't need (heater, radio, heated seats) and drive straight to a garage or somewhere safe. Avoid switching the engine off: it might not start again.",
-    tip: "It's normal for this light to come on briefly when you turn the key, before the engine starts.",
+    tip: "Seeing it briefly when you turn the key, before the engine starts, is perfectly normal.",
     svg: `<rect x="9" y="20" width="46" height="30" rx="3"/><path d="M16 20v-5h8v5M40 20v-5h8v5"/><path d="M16 35h9M39 35h9M43.5 30.5v9"/>`
   },
   {
@@ -61,8 +61,8 @@ WTF.add([
     urgency: "info",
     aka: ["handbrake", "electronic parking brake", "EPB"],
     looksLike: ["p in a circle", "circle with p", "p in brackets", "circle with letter p"],
-    meaning: "The parking brake (handbrake) is on.",
-    action: "Release the handbrake before driving. If it's released and the light is still on (or flashing), there may be a fault with the electronic parking brake. Get it checked.",
+    meaning: "The parking brake (handbrake) is on. As dashboard mysteries go, this is one of the gentler ones.",
+    action: "Release the handbrake before driving. If it's off and the light is still on (or flashing), the electronic parking brake may have a fault. Get it checked.",
     svg: `<circle cx="32" cy="32" r="14"/><path d="M14 18a20 20 0 0 0 0 28M50 18a20 20 0 0 1 0 28"/><text x="32" y="38.5" font-size="18">P</text>`
   },
   {
@@ -74,7 +74,7 @@ WTF.add([
     aka: ["SRS", "supplemental restraint system", "airbag fault"],
     looksLike: ["person with a ball", "seated person with a circle", "person and big circle", "man sitting with a balloon", "beach ball"],
     meaning: "There's a fault in the airbag system. In a crash, the airbags (and sometimes the seatbelt pre-tensioners) might not deploy.",
-    action: "The car is drivable, but get it checked as soon as possible, because you're less protected until it's fixed.",
+    action: "You can still drive the car, but get it checked as soon as possible. Until it's fixed, you're less protected.",
     svg: `<circle cx="18" cy="13" r="5"/><path d="M18 21l4 17h14l4 14" stroke-width="5"/><path d="M20 28l8 5"/><circle cx="42" cy="22" r="10"/>`
   },
   {
@@ -97,8 +97,8 @@ WTF.add([
     urgency: "soon",
     aka: ["EPS", "electric power steering", "EPAS", "steering fault"],
     looksLike: ["steering wheel with exclamation mark", "wheel and !", "steering wheel"],
-    meaning: "The power steering has a fault. The steering will still work, but it may suddenly become very heavy.",
-    action: "Drive carefully (especially at low speeds and when parking) and get it checked soon. Some cars show it in amber for a less serious fault.",
+    meaning: "The power steering has a fault. The steering still works, but it may suddenly become very heavy.",
+    action: "Drive carefully, especially at low speeds and when parking, and get it checked soon. Some cars show it in amber for a less serious fault.",
     svg: `<circle cx="27" cy="32" r="16"/><circle cx="27" cy="32" r="4.5"/><path d="M11 30h11.5M31.5 30H43M27 36.5V48"/><path d="M53 22v12"/><circle cx="53" cy="40.5" r="2.2" fill="currentColor" stroke="none"/>`
   },
   {
@@ -123,8 +123,8 @@ WTF.add([
     urgency: "soon",
     aka: ["engine management light", "EML", "MIL", "malfunction indicator lamp", "CEL", "service engine soon"],
     looksLike: ["submarine", "engine", "motor", "boxy blob", "engine block", "brick with pipes", "lego brick"],
-    meaning: "The engine's computer has spotted a problem with the engine or emissions system. It could be anything from a loose fuel cap to a misfiring engine.",
-    action: "If it's steady: get it scanned at a garage (or with a cheap OBD-II reader) soon. If it's FLASHING: the engine is misfiring badly, so slow down and get it checked immediately to avoid damaging the catalytic converter.",
+    meaning: "The engine's computer has spotted a problem with the engine or emissions system. It could be anything from a loose fuel cap to a misfiring engine. Quite a range for one little submarine.",
+    action: "Steady: get it scanned at a garage (or with a cheap OBD-II reader) soon. FLASHING: the engine is misfiring badly. Slow down and get it checked immediately to avoid damaging the catalytic converter.",
     tip: "A loose fuel cap is a classic cause. Tighten it and the light may go off by itself after a few drives.",
     svg: `<path d="M20 24h22l4 4h6v-4h4v20h-4v-4h-6l-6 8H24l-4-4h-4v-6h-4v6H8V28h4v6h4V24z"/><path d="M24 18h12M30 18v6"/>`
   },
@@ -136,8 +136,8 @@ WTF.add([
     urgency: "soon",
     aka: ["TPMS", "low tire pressure", "tire pressure monitoring system"],
     looksLike: ["horseshoe with exclamation mark", "u with exclamation mark", "flat tyre", "bracket with !", "pot with exclamation mark", "cauldron"],
-    meaning: "At least one tyre is significantly under-inflated (it's a cross-section of a flat tyre).",
-    action: "Check all tyre pressures (including the spare if it's monitored) and inflate to the figure on the sticker inside the driver's door. If one keeps losing air, you have a puncture. If the light flashes then stays on, the sensor system itself has a fault.",
+    meaning: "At least one tyre is significantly under-inflated. The symbol is a cross-section of a flat tyre.",
+    action: "Check all the tyre pressures (including the spare, if it's monitored) and inflate them to the figure on the sticker inside the driver's door. If one keeps losing air, it's a puncture. If the light flashes and then stays on, the sensor system itself has a fault.",
     tip: "Cold weather drops tyre pressure, which is why this light loves frosty mornings.",
     svg: `<path d="M18 14C10 22 10 38 16 46h32c6-8 6-24-2-32"/><path d="M20 46v5M28 46v5M36 46v5M44 46v5"/><path d="M32 21v13"/><circle cx="32" cy="40" r="2.3" fill="currentColor" stroke="none"/>`
   },
@@ -149,8 +149,8 @@ WTF.add([
     urgency: "info",
     aka: ["ESC", "ESP", "TCS", "DSC", "VSC", "stability control", "skid light"],
     looksLike: ["car with squiggly lines", "car with wavy lines", "skidding car", "car with s lines", "car drifting", "car with snakes"],
-    meaning: "If it FLASHES while driving: the system is actively stopping your wheels from slipping (normal on wet, icy or loose roads). If it stays ON: there's a fault and the system is off.",
-    action: "Flashing: ease off the accelerator and drive gently. Constantly on: you can drive, but carefully. Get it checked soon.",
+    meaning: "If it FLASHES while you're driving, the system is actively stopping your wheels from slipping. That's normal on wet, icy or loose roads. If it stays ON, there's a fault and the system is off.",
+    action: "Flashing: ease off the accelerator and drive gently. Constantly on: you can drive, but carefully, and get it checked soon.",
     svg: `<path d="M18 24l4-11h20l4 11"/><rect x="11" y="24" width="42" height="11" rx="3"/><path d="M15 35v4h6v-4M43 35v4h6v-4"/><path d="M25 43c-6 3 6 8 0 12M39 43c-6 3 6 8 0 12"/>`
   },
   {
@@ -161,8 +161,8 @@ WTF.add([
     urgency: "info",
     aka: ["ESC OFF", "ESP OFF", "TCS OFF", "DSC OFF"],
     looksLike: ["car with squiggly lines and off", "skidding car off", "car with wavy lines off"],
-    meaning: "The traction / stability control has been switched off, usually because someone pressed the button.",
-    action: "Press the button with the same symbol (often near the gear lever or on the dash) to turn it back on. Only switch it off deliberately, e.g. to get out of snow or mud.",
+    meaning: "The traction / stability control has been switched off, usually because someone pressed the button. A rare symbol that actually spells it out.",
+    action: "Press the button with the same symbol (often near the gear lever or on the dash) to switch it back on. Only turn it off deliberately, for example to get out of snow or mud.",
     svg: `<path d="M20 20l3-9h18l3 9"/><rect x="14" y="20" width="36" height="9" rx="2.5"/><path d="M17 29v3h5v-3M42 29v3h5v-3"/><path d="M26 35c-5 2 5 6 0 9M38 35c-5 2 5 6 0 9"/><text x="32" y="59" font-size="13">OFF</text>`
   },
   {
@@ -175,7 +175,7 @@ WTF.add([
     aka: ["anti-lock braking system", "anti-lock brakes"],
     looksLike: ["abs in a circle", "abs in brackets", "circle with abs"],
     meaning: "There's a fault in the anti-lock braking system. Your normal brakes still work, but the wheels could lock up in an emergency stop.",
-    action: "Drive carefully, leave extra stopping distance, and get it checked soon. If the red brake light is on too, stop. That's more serious.",
+    action: "Drive carefully, leave extra stopping distance and get it checked soon. If the red brake light is on as well, stop: that's more serious.",
     svg: `<circle cx="32" cy="32" r="14"/><path d="M14 18a20 20 0 0 0 0 28M50 18a20 20 0 0 1 0 28"/><text x="32" y="36" font-size="11">ABS</text>`
   },
   {
@@ -186,8 +186,8 @@ WTF.add([
     urgency: "soon",
     aka: ["brake pads worn", "brake lining"],
     looksLike: ["circle with dashed brackets", "circle with dotted lines", "circle in dashed parentheses"],
-    meaning: "Your brake pads are worn down to the sensor and need replacing.",
-    action: "Book a brake service soon. Leave it too long and you'll start damaging the brake discs (more expensive).",
+    meaning: "Your brake pads have worn down to the sensor and need replacing.",
+    action: "Book a brake service soon. Leave it too long and you'll start damaging the brake discs, which turns a routine job into a pricier one.",
     svg: `<circle cx="32" cy="32" r="13"/><path d="M14 18a20 20 0 0 0 0 28M50 18a20 20 0 0 1 0 28" stroke-dasharray="4 5"/>`
   },
   {
@@ -198,9 +198,9 @@ WTF.add([
     urgency: "soon",
     aka: ["fuel warning", "reserve", "low gas"],
     looksLike: ["petrol pump", "gas pump", "fuel pump", "pump with a hose"],
-    meaning: "You're running low on fuel. There's typically somewhere between 30 and 80 km (20–50 miles) left, depending on the car.",
-    action: "Find a fuel station. Running completely dry can damage the fuel pump (and is very annoying).",
-    tip: "The little arrow next to the pump symbol on your fuel gauge points to the side of the car the filler cap is on.",
+    meaning: "You're running low on fuel. There's usually somewhere between 30 and 80 km (20–50 miles) left, depending on the car.",
+    action: "Find a fuel station. Running completely dry can damage the fuel pump, not to mention your afternoon.",
+    tip: "The little arrow beside the pump symbol on your fuel gauge points to the side of the car with the filler cap.",
     svg: `<rect x="13" y="12" width="23" height="40" rx="2"/><rect x="18" y="17" width="13" height="10" rx="1"/><path d="M36 24h4a4 4 0 0 1 4 4v15a3 3 0 0 0 6 0V22l-6-6"/><path d="M9 52h31"/>`
   },
   {
@@ -211,8 +211,8 @@ WTF.add([
     urgency: "info",
     aka: ["diesel preheat", "heater plug"],
     looksLike: ["spring", "coil", "curly wire", "pigtail", "loops", "squiggle", "slinky"],
-    meaning: "Diesel cars only: the glow plugs are warming up the engine so it will start. It's normal for it to light up when you turn the key.",
-    action: "Wait for it to go out before cranking the engine. If it FLASHES while driving or stays on, there's an engine fault, so get it checked.",
+    meaning: "Diesel cars only: the glow plugs are warming up the engine so it will start. It's normal for it to light up when you turn the key. And no, it isn't a Slinky.",
+    action: "Wait for it to go out before you start the engine. If it FLASHES while you're driving, or stays on, there's an engine fault, so get it checked.",
     svg: `<path d="M8 40h8a6 8 0 1 1 6 0a6 8 0 1 1 6 0a6 8 0 1 1 6 0a6 8 0 1 1 6 0a6 8 0 1 1 6 0h8"/>`
   },
   {
@@ -223,8 +223,8 @@ WTF.add([
     urgency: "soon",
     aka: ["DPF warning", "particulate filter blocked", "soot filter"],
     looksLike: ["box with dots", "rectangle with dots and pipes", "filter", "dotted box", "domino", "sponge"],
-    meaning: "The diesel particulate filter in the exhaust is clogging up with soot. It normally burns this off on longer, faster drives, but lots of short trips stop that happening.",
-    action: "Drive at a steady 60+ km/h (40+ mph) for 15–20 minutes on a motorway or main road to let it regenerate. If the light doesn't clear, see a garage.",
+    meaning: "The diesel particulate filter in the exhaust is clogging up with soot. It normally burns this off on longer, faster drives, but lots of short trips stop that happening. In short, your car fancies a proper run out.",
+    action: "Drive at a steady 60+ km/h (40+ mph) for 15–20 minutes on a motorway or main road so it can regenerate. If the light doesn't clear, see a garage.",
     svg: `<rect x="14" y="20" width="36" height="24" rx="4"/><path d="M6 32h8M50 32h8"/><g fill="currentColor" stroke="none"><circle cx="22" cy="27" r="2"/><circle cx="32" cy="27" r="2"/><circle cx="42" cy="27" r="2"/><circle cx="27" cy="32" r="2"/><circle cx="37" cy="32" r="2"/><circle cx="22" cy="37" r="2"/><circle cx="32" cy="37" r="2"/><circle cx="42" cy="37" r="2"/></g>`
   },
   {
@@ -235,8 +235,8 @@ WTF.add([
     urgency: "soon",
     aka: ["diesel exhaust fluid", "DEF", "AdBlue", "SCR"],
     looksLike: ["drop with waves", "water drop", "droplet", "teardrop with a wavy line"],
-    meaning: "Diesel cars with AdBlue: the exhaust-cleaning fluid tank is running low.",
-    action: "Top up with AdBlue / DEF (sold at fuel stations). Don't ignore it: when the tank runs dry, most cars won't restart until you refill.",
+    meaning: "Diesel cars with AdBlue: the tank of exhaust-cleaning fluid is running low.",
+    action: "Top up with AdBlue / DEF (sold at fuel stations). Don't ignore it: when the tank runs dry, most cars won't restart until you refill. They're surprisingly strict about it.",
     svg: `<path d="M32 10c-8 12-14 20-14 28a14 14 0 0 0 28 0c0-8-6-16-14-28z"/><path d="M23 40c3-3 6-3 9 0s6 3 9 0"/>`
   },
   {
@@ -247,8 +247,8 @@ WTF.add([
     urgency: "info",
     aka: ["windscreen washer", "windshield washer fluid"],
     looksLike: ["windscreen with fountain", "windshield with dotted line", "fountain", "trapezoid with spray", "rainbow over a screen"],
-    meaning: "The windscreen washer bottle is running low.",
-    action: "Top up with screenwash (not just water in winter, because it freezes). The filler cap usually has this same symbol on it.",
+    meaning: "The windscreen washer bottle is running low. That's a windscreen with a fountain, if you squint.",
+    action: "Top up with screenwash (not just water in winter, because it freezes). The filler cap usually has the same symbol on it.",
     svg: `<path d="M12 56Q32 49 52 56L47 38Q32 33 17 38Z"/><path d="M32 44C31 26 24 12 12 10M32 44C33 26 40 12 52 10" stroke-dasharray="0.5 6"/>`
   },
   {
@@ -261,7 +261,7 @@ WTF.add([
     looksLike: ["snowflake", "star", "asterisk", "ice crystal"],
     meaning: "The outside temperature is close to freezing (usually 3–4 °C / 37–39 °F or below), so there could be ice on the road.",
     action: "Drive gently and watch for black ice, especially on bridges and shaded roads.",
-    tip: "On the climate-control panel (not the dashboard) the same snowflake usually means the air conditioning button.",
+    tip: "On the climate-control panel (not the dashboard), the same snowflake usually means the air conditioning button. One snowflake, two jobs.",
     svg: `<path d="M32 32V9M26 14l6 6 6-6"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(60 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(120 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(180 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(240 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(300 32 32)"/>`
   },
   {
@@ -272,8 +272,8 @@ WTF.add([
     urgency: "info",
     aka: ["maintenance required", "service reminder", "spanner light", "wrench light"],
     looksLike: ["spanner", "wrench", "tool"],
-    meaning: "Your car is due for its scheduled service. It's a reminder, not a fault.",
-    action: "Book a service. After the service the garage resets the reminder.",
+    meaning: "Your car is due its scheduled service. It's a reminder, not a fault.",
+    action: "Book a service. The garage resets the reminder afterwards.",
     svg: `<path d="M18 46L38 26" stroke-width="8"/><path d="M41.2 17.2L48.4 9.9A11 11 0 1 0 54.1 15.6L46.8 22.8Z" fill="currentColor"/>`
   },
   {
@@ -284,8 +284,8 @@ WTF.add([
     urgency: "soon",
     aka: ["transmission temperature", "automatic transmission fault", "AT warning"],
     looksLike: ["gear with thermometer", "cog with thermometer", "cog", "gear wheel", "sun with thermometer"],
-    meaning: "There's a problem with the (usually automatic) gearbox. Often it's overheating, for example from towing or crawling in heavy traffic.",
-    action: "If it's overheating, pull over and let it cool with the engine idling in Park. If it comes back or stays on, get the transmission checked soon.",
+    meaning: "There's a problem with the gearbox (usually an automatic). Often it's overheating, for example from towing or crawling along in heavy traffic. Nobody enjoys a traffic jam, gearboxes included.",
+    action: "If it's overheating, pull over and let it cool down with the engine idling in Park. If the light comes back or stays on, get the transmission checked soon.",
     svg: `<circle cx="32" cy="32" r="20" stroke-width="6" stroke-dasharray="5 5.47" stroke-linecap="butt"/><circle cx="32" cy="32" r="16.5"/><path d="M32 22v11"/><circle cx="32" cy="38" r="3.5" fill="currentColor"/>`
   },
   {
@@ -296,8 +296,8 @@ WTF.add([
     urgency: "info",
     aka: ["immobiliser", "smart key not found", "key fob battery low", "security light"],
     looksLike: ["key", "key symbol", "key in a car"],
-    meaning: "The car can't detect your key, often because the key fob battery is dying, or the key is out of range. If it flashes while the car is parked and locked, it's just the security system showing it's armed.",
-    action: "Hold the key fob right against the start button (or steering column). Most cars can read it there even with a dead battery. Replace the fob battery soon.",
+    meaning: "The car can't detect your key, often because the fob battery is dying or the key is out of range. If it flashes while the car is parked and locked, that's just the security system showing it's armed.",
+    action: "Hold the key fob right against the start button (or steering column), as if introducing them. Most cars can read it there even with a dead battery. Replace the fob battery soon.",
     svg: `<circle cx="19" cy="32" r="9"/><path d="M28 32h26M47 32v8M53 32v6"/>`
   },
   {
@@ -309,7 +309,7 @@ WTF.add([
     aka: ["lamp out", "light failure", "exterior light fault"],
     looksLike: ["light bulb with exclamation mark", "bulb with !", "lightbulb"],
     meaning: "One of the exterior lights (headlight, brake light, indicator, number plate light) has blown.",
-    action: "Walk around the car with the lights on (and get someone to press the brake) to find the dead bulb, then replace it. Driving with a blown light can get you fined.",
+    action: "Walk round the car with the lights on (and get someone to press the brake) to find the dead bulb, then replace it. Driving with a blown light can get you fined.",
     svg: `<path d="M32 10a14 14 0 0 0-8 25.5V42h16v-6.5A14 14 0 0 0 32 10z"/><path d="M26 48h12"/><path d="M32 18v9"/><circle cx="32" cy="32.5" r="2" fill="currentColor" stroke="none"/>`
   },
   {
@@ -320,7 +320,7 @@ WTF.add([
     urgency: "info",
     aka: ["lane departure warning", "lane keeping assist", "LKA", "LDW"],
     looksLike: ["car between lines", "car on a road", "car between two dashed lines", "car with lanes"],
-    meaning: "Green/white: lane assist is on and can see the lane markings. Amber/flashing: you're drifting out of your lane (or the system can't see the lines or has a fault).",
+    meaning: "Green or white: lane assist is on and can see the lane markings. Amber or flashing: you're drifting out of your lane, or the system can't see the lines or has a fault.",
     action: "If it flashes, check your position and steer back into lane. If it's amber all the time, the camera may be dirty or blocked, so clean the windscreen in front of the mirror.",
     svg: `<path d="M20 38l4-12h16l4 12v8H20z"/><path d="M20 38h24M23 46v4M41 46v4"/><path d="M14 10L6 54M50 10l8 44" stroke-dasharray="7 5"/>`
   },
@@ -334,7 +334,7 @@ WTF.add([
     urgency: "info",
     aka: ["low beam", "dipped beam", "headlights on"],
     looksLike: ["d with slanted lines", "headlight with lines pointing down", "jellyfish", "half moon with lines", "comb"],
-    meaning: "Your normal headlights are on.",
+    meaning: "Your normal headlights are on. Comfortably the least alarming jellyfish on the dashboard.",
     action: "Nothing to do. This is the setting for night driving and bad weather.",
     svg: `<path d="M36 16c10 0 18 7 18 16s-8 16-18 16c-3 0-4-4-4-16s1-16 4-16z"/><path d="M24 20l-14 4M24 28l-14 4M24 36l-14 4M24 44l-14 4"/>`
   },
@@ -347,7 +347,7 @@ WTF.add([
     aka: ["high beam", "main beam", "brights"],
     looksLike: ["d with straight lines", "headlight with horizontal lines", "blue jellyfish", "half moon with lines", "comb"],
     meaning: "Your full-beam / high-beam headlights are on.",
-    action: "Great on empty dark roads, but switch back to dipped beam (usually pull or push the indicator stalk) when there's oncoming traffic or a car in front, or you'll dazzle them.",
+    action: "Great on empty, dark roads. Switch back to dipped beam (usually by pulling or pushing the indicator stalk) when there's oncoming traffic or a car in front, or you'll dazzle them. They tend to let you know.",
     svg: `<path d="M36 16c10 0 18 7 18 16s-8 16-18 16c-3 0-4-4-4-16s1-16 4-16z"/><path d="M24 20H10M24 28H10M24 36H10M24 44H10"/>`
   },
   {
@@ -359,7 +359,7 @@ WTF.add([
     aka: ["fog lamps", "front fog lamps"],
     looksLike: ["headlight with a wavy line", "d with lines crossed by a squiggle", "jellyfish with a wave"],
     meaning: "The front fog lights are on.",
-    action: "Use them only in fog or heavy rain/snow, and switch them off when visibility improves.",
+    action: "Use them only in fog or heavy rain or snow, and switch them off once visibility improves.",
     svg: `<path d="M36 16c10 0 18 7 18 16s-8 16-18 16c-3 0-4-4-4-16s1-16 4-16z"/><path d="M26 20L8 24M26 28L8 32M26 36L8 40M26 44L8 48" stroke-width="3"/><path d="M17 14c-3 4 3 8 0 12s3 8 0 12 3 8 0 12"/>`
   },
   {
@@ -370,8 +370,8 @@ WTF.add([
     urgency: "info",
     aka: ["rear fog lamp"],
     looksLike: ["backwards d with a wavy line", "headlight facing right with squiggle", "jellyfish facing right"],
-    meaning: "The rear fog light is on: a very bright red light on the back of the car.",
-    action: "Only use it when visibility is really poor (roughly under 100 m / 330 ft). Leaving it on in clear weather dazzles the driver behind and can hide your brake lights.",
+    meaning: "The rear fog light is on. It's a very bright red light on the back of the car.",
+    action: "Only use it when visibility is really poor (roughly under 100 m / 330 ft). Left on in clear weather, it dazzles the driver behind and can hide your brake lights. They won't thank you for it.",
     svg: `<path d="M28 16c-10 0-18 7-18 16s8 16 18 16c3 0 4-4 4-16s-1-16-4-16z"/><path d="M38 20h18M38 28h18M38 36h18M38 44h18" stroke-width="3"/><path d="M47 14c-3 4 3 8 0 12s3 8 0 12 3 8 0 12"/>`
   },
   {
@@ -382,8 +382,8 @@ WTF.add([
     urgency: "info",
     aka: ["position lights", "parking lamps", "side lights"],
     looksLike: ["two half circles back to back", "two d shapes with rays", "two light bulbs facing away", "butterfly"],
-    meaning: "Your sidelights (small parking/position lights) are on, but not your headlights.",
-    action: "Fine for parking or dusk, but switch to proper headlights when it's dark. Sidelights alone aren't enough to see or be seen.",
+    meaning: "Your sidelights (the small parking/position lights) are on, but your headlights aren't.",
+    action: "Fine for parking or at dusk, but switch to proper headlights when it's dark. Sidelights alone aren't enough to see or be seen.",
     svg: `<path d="M24 22c5 0 8 4.5 8 10s-3 10-8 10c-2 0-2-3-2-10s0-10 2-10zM40 22c-5 0-8 4.5-8 10s3 10 8 10c2 0 2-3 2-10s0-10-2-10z"/><path d="M16 25l-7-3M16 32H8M16 39l-7 3M48 25l7-3M48 32h8M48 39l7 3"/>`
   },
   {
@@ -395,7 +395,7 @@ WTF.add([
     aka: ["blinkers", "turn signal", "hazard lights"],
     looksLike: ["two arrows", "green arrows", "left and right arrows", "flashing arrows"],
     meaning: "Your indicator is on (one arrow flashing), or your hazard lights are on (both flashing).",
-    action: "If it's flashing much faster than usual, one of the indicator bulbs has probably blown.",
+    action: "If it's flashing much faster than usual, one of the indicator bulbs has probably blown. The frantic blinking is the car's way of telling you.",
     svg: `<path d="M6 32l13-12v7h8v10h-8v7z" fill="currentColor"/><path d="M58 32L45 20v7h-8v10h8v7z" fill="currentColor"/>`
   },
   {
@@ -406,7 +406,7 @@ WTF.add([
     urgency: "info",
     aka: ["speed control", "adaptive cruise control", "ACC"],
     looksLike: ["speedometer", "gauge with arrow", "dial", "speedo with needle"],
-    meaning: "Cruise control is on (white/grey usually = ready, green = active and holding a speed).",
+    meaning: "Cruise control is on. White or grey usually means it's ready; green means it's active and holding a speed.",
     action: "Tap the brake or the cancel button to switch it off.",
     svg: `<path d="M12 46a22 22 0 1 1 40 0"/><path d="M18 31l3 2M32 22v4M46 31l-3 2"/><path d="M32 42l10-12"/><circle cx="32" cy="42" r="3.5" fill="currentColor"/>`
   },
@@ -418,8 +418,8 @@ WTF.add([
     urgency: "info",
     aka: ["ECO", "economy mode", "eco drive"],
     looksLike: ["leaf", "green leaf", "plant"],
-    meaning: "Eco driving mode is on: the car softens the accelerator, changes gear earlier and dials back the air-con to save fuel.",
-    action: "Nothing. Switch it off with the drive-mode button if you want more response.",
+    meaning: "Eco driving mode is on. To save fuel, the car softens the accelerator, changes gear earlier and dials back the air-con. Hence the leaf.",
+    action: "Nothing to do. If you want more response, switch it off with the drive-mode button.",
     svg: `<path d="M14 50C14 26 28 14 52 12c-2 24-14 38-38 38z"/><path d="M14 50l22-22"/>`
   },
   {
@@ -431,8 +431,8 @@ WTF.add([
     urgency: "info",
     aka: ["start/stop", "stop-start", "idle stop", "ISG"],
     looksLike: ["a in a circle", "a with circular arrow", "letter a in a circle arrow", "refresh with a"],
-    meaning: "Green: the engine has switched itself off to save fuel while you're stopped, and restarts when you lift off the brake or press the clutch. Crossed out or amber: the feature is off or unavailable (cold engine, low battery, air-con working hard…).",
-    action: "Nothing. It's normal. Most cars have a button with this symbol to disable it for the current trip.",
+    meaning: "Green: the engine has switched itself off to save fuel while you're stopped, and it restarts when you lift off the brake or press the clutch. Crossed out or amber: the feature is off or unavailable (cold engine, low battery, air-con working hard…).",
+    action: "Nothing to do. It's normal, even if the sudden silence at the lights takes some getting used to. Most cars have a button with this symbol to disable it for the current trip.",
     svg: `<path d="M45.8 20.4A18 18 0 1 1 28.9 14.3"/><path d="M23.5 9.5l5.4 4.8-4.6 5.4"/><text x="32" y="39" font-size="19">A</text>`
   },
   {
@@ -443,8 +443,8 @@ WTF.add([
     urgency: "info",
     aka: ["HDC", "downhill assist", "descent control"],
     looksLike: ["car on a slope", "car going downhill", "tilted car"],
-    meaning: "Hill descent control is on: the car will brake automatically to crawl slowly down steep, slippery slopes.",
-    action: "Nothing. It's for off-road or very steep descents. Flashing usually means it's actively braking.",
+    meaning: "Hill descent control is on. The car brakes automatically so you crawl slowly down steep, slippery slopes.",
+    action: "Nothing to do. It's meant for off-road or very steep descents. Flashing usually means it's actively braking.",
     svg: `<g transform="rotate(18 32 32)"><path d="M8 38v-7l6-2 6-9h20l8 9 8 2v7"/><path d="M8 38h7M25 38h14M49 38h7"/><circle cx="20" cy="38" r="5"/><circle cx="44" cy="38" r="5"/><path d="M6 47h52"/></g>`
   },
 
@@ -456,7 +456,7 @@ WTF.add([
     aka: ["recirc", "recycled air", "inside air"],
     looksLike: ["car with a u-turn arrow", "car with circular arrow inside", "car with arrow going round", "car with loop"],
     meaning: "The ventilation recycles the air already inside the car instead of pulling in fresh air from outside.",
-    action: "Great for blocking smells and fumes (tunnels, traffic) or cooling down fast with air-con. Don't leave it on for long, because the windows fog up and the air gets stuffy (and CO₂ builds up, making you drowsy).",
+    action: "Great for keeping out smells and fumes (tunnels, traffic, that farm) or cooling down fast with the air-con. Don't leave it on for long: the windows fog up and the air gets stuffy (and CO₂ builds up, making you drowsy).",
     svg: `<path d="M6 46V38c0-2 1-3 3-3.5l6-1.5 8-10h17l9 10 7 1.5c2 .5 2 1.5 2 3.5v8z"/><path d="M40 43v-4a8 8 0 0 0-16 0v4"/><path d="M20 39.5l4 4.5 4-4.5"/>`
   },
   {
@@ -466,7 +466,7 @@ WTF.add([
     aka: ["outside air", "air intake", "fresh air mode"],
     looksLike: ["car with arrow going in", "car with an arrow from outside", "arrow into a car"],
     meaning: "The ventilation is pulling fresh air in from outside (the opposite of recirculation).",
-    action: "Use this most of the time. It keeps the windows clear and the air fresh.",
+    action: "Use this most of the time: it keeps the windows clear and the air fresh.",
     svg: `<path d="M6 52V44c0-2 1-3 3-3.5l6-1.5 8-10h17l9 10 7 1.5c2 .5 2 1.5 2 3.5v8z"/><path d="M4 10h17l11 22"/><path d="M26.7 29.2L32 32l.9-6"/>`
   },
   {
@@ -475,8 +475,8 @@ WTF.add([
     category: "carcontrols",
     aka: ["front defrost", "windshield defroster", "front demist", "max defrost"],
     looksLike: ["windscreen with wavy arrows", "curved trapezoid with three squiggly arrows", "shield with wavy lines", "bucket with steam"],
-    meaning: "Blasts warm, dry air onto the inside of the windscreen to clear fog or frost.",
-    action: "Press it on cold or rainy mornings. Turning on the A/C at the same time clears fog faster, because it dries the air.",
+    meaning: "Blasts warm, dry air at the inside of the windscreen to clear fog or frost. Those wavy arrows are the warm air, not steam off a bucket.",
+    action: "Press it on cold or rainy mornings. Switching on the A/C at the same time clears fog faster, because it dries the air.",
     svg: `<path d="M8 50Q32 42 56 50L50 14Q32 8 14 14Z"/><path d="M22 41c-3-3 3-6 0-9s3-6 0-9M32 40c-3-3 3-6 0-9s3-6 0-9M42 41c-3-3 3-6 0-9s3-6 0-9" stroke-width="3"/><path d="M18.5 26.5L22 22l3.5 4.5M28.5 25.5L32 21l3.5 4.5M38.5 26.5L42 22l3.5 4.5" stroke-width="3"/>`
   },
   {
@@ -485,8 +485,8 @@ WTF.add([
     category: "carcontrols",
     aka: ["rear defrost", "rear demister", "heated rear window", "rear defogger"],
     looksLike: ["rectangle with wavy arrows", "box with three squiggly arrows", "square with wavy lines going up"],
-    meaning: "Switches on the thin heating wires in the rear window to melt frost and clear fog. Often heats the door mirrors too.",
-    action: "Press to switch on; most cars turn it off automatically after 10–15 minutes.",
+    meaning: "Switches on the thin heating wires in the rear window to melt frost and clear fog. It often heats the door mirrors too. So that's what those faint lines are for.",
+    action: "Press to switch it on. Most cars turn it off automatically after 10–15 minutes.",
     svg: `<rect x="9" y="12" width="46" height="38" rx="5"/><path d="M22 43c-3-3 3-6 0-9s3-6 0-9M32 43c-3-3 3-6 0-9s3-6 0-9M42 43c-3-3 3-6 0-9s3-6 0-9" stroke-width="3"/><path d="M18.5 28.5L22 24l3.5 4.5M28.5 28.5L32 24l3.5 4.5M38.5 28.5L42 24l3.5 4.5" stroke-width="3"/>`
   },
   {
@@ -496,7 +496,7 @@ WTF.add([
     aka: ["A/C", "AC", "aircon", "air con"],
     looksLike: ["snowflake", "star", "asterisk", "ice crystal"],
     meaning: "On the climate-control panel, the snowflake turns the air conditioning compressor on or off.",
-    action: "Use it to cool the car, and also in winter: A/C dries the air, so it clears foggy windows much faster.",
+    action: "Use it to cool the car, and in winter too. It sounds backwards, but A/C dries the air, so it clears foggy windows much faster.",
     tip: "The same snowflake glowing amber on the dashboard is the frost/ice warning instead.",
     svg: `<path d="M32 32V9M26 14l6 6 6-6"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(60 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(120 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(180 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(240 32 32)"/><path d="M32 32V9M26 14l6 6 6-6" transform="rotate(300 32 32)"/>`
   },
@@ -506,7 +506,7 @@ WTF.add([
     category: "carcontrols",
     aka: ["vent mode", "air distribution", "face and feet vents"],
     looksLike: ["person sitting with arrows", "seated person with arrows to face and feet", "man in a chair with arrows"],
-    meaning: "Chooses where the air comes out: the arrows show the vents (at the face, at the feet, or both). A version with a windscreen line sends air to the windscreen too.",
+    meaning: "Chooses where the air comes out. The arrows point at the vents in use: face, feet or both. A version with a windscreen line sends air to the windscreen too. The little seated person is you, looking admirably relaxed.",
     action: "Feet in winter (heat rises), face in summer, windscreen + feet when the windows fog up.",
     svg: `<circle cx="44" cy="11" r="5.5"/><path d="M44 20l2 18H31l-2 17" stroke-width="5.5"/><path d="M6 16h24M24 10l6 6-6 6M6 49h16M16 43l6 6-6 6"/>`
   },
@@ -517,7 +517,7 @@ WTF.add([
     aka: ["seat heater", "seat warmer"],
     looksLike: ["chair with wavy lines", "seat with squiggles", "seat with steam"],
     meaning: "Turns on the seat heater. Pressing it repeatedly usually cycles through heat levels (shown by little lights).",
-    action: "Toasty. A version with a fan or blue arrows is seat ventilation/cooling instead.",
+    action: "Enjoy. A version with a fan or blue arrows is seat ventilation or cooling instead, which is a chilly surprise in winter.",
     svg: `<path d="M18 10l5 32a4 4 0 0 0 4 4h20" stroke-width="5"/><path d="M32 38c-3-3 3-6 0-9s3-6 0-9M40 38c-3-3 3-6 0-9s3-6 0-9M48 38c-3-3 3-6 0-9s3-6 0-9" stroke-width="3"/>`
   },
   {
@@ -526,8 +526,8 @@ WTF.add([
     category: "carcontrols",
     aka: ["steering wheel heater"],
     looksLike: ["steering wheel with wavy lines", "wheel with steam", "steering wheel with squiggles"],
-    meaning: "Turns on the heater built into the steering wheel rim.",
-    action: "Press once to switch on; it usually switches itself off after a while.",
+    meaning: "Turns on the heater built into the rim of the steering wheel.",
+    action: "Press once to switch it on. It usually switches itself off after a while.",
     svg: `<circle cx="32" cy="40" r="15"/><circle cx="32" cy="40" r="4"/><path d="M17 38h11M36 38h11M32 44v11"/><path d="M24 20c-2-2 2-4 0-6s2-4 0-6M32 20c-2-2 2-4 0-6s2-4 0-6M40 20c-2-2 2-4 0-6s2-4 0-6" stroke-width="3"/>`
   },
   {
@@ -537,7 +537,7 @@ WTF.add([
     aka: ["hazards", "flashers", "emergency lights"],
     looksLike: ["triangle in a triangle", "red triangle", "double triangle", "warning triangle"],
     meaning: "Flashes all the indicators at once to warn other drivers that you're stopped or a hazard is ahead.",
-    action: "Use when broken down, stopped in an unsafe place, or (in some countries) to warn of a sudden queue on a motorway. Don't use them as a 'parking anywhere' card.",
+    action: "Use them when you've broken down, when you're stopped somewhere unsafe, or (in some countries) to warn of a sudden queue on a motorway. They're not a 'park anywhere' card, however often they get used as one.",
     svg: `<path d="M32 9L57 53H7z"/><path d="M32 25l11 19H21z"/>`
   }
 ]);

@@ -68,7 +68,7 @@
         "The medicine is being watched extra closely for side effects, usually because it's new to the market or it's a biological medicine (such as some vaccines). You'll find it in the patient leaflet, next to a line saying the medicine is 'subject to additional monitoring'.",
       action:
         "Take it as prescribed: it doesn't mean the medicine is unsafe or experimental. If you notice a side effect, even one you're not sure is linked, report it: in the UK through the Yellow Card scheme (website or app), elsewhere through your national medicines regulator. Talk to your doctor or pharmacist about anything worrying.",
-      tip: "Medicines with a new active ingredient usually keep the triangle for about five years while real-world experience builds up. Great Britain and the EU keep separate lists, so the same medicine can have it in one place and not the other.",
+      tip: "Medicines with a new active ingredient usually keep the triangle for about five years while real-world experience builds up. Great Britain and the EU keep separate lists, so the same medicine can wear the triangle in one place and not the other.",
       svg: '<polygon points="9,12 55,12 32,52" fill="currentColor" stroke-width="3"/>'
     },
     {
@@ -98,7 +98,7 @@
         "℞ is the old symbol for a prescription, from the Latin 'recipe', meaning 'take'. 'Rx only' on US medicines and medical devices means they can legally be supplied only on a prescription or on the order of a licensed healthcare professional.",
       action:
         "Only use it if it's been prescribed for you. Bought something marked Rx only online? Check with a pharmacist before using it: it may well be a prescription-only medicine where you live too.",
-      tip: "You'll mostly see it on products made for the US. UK packs use 'POM' in a box instead, though many pharmacies use ℞ in their signs and logos.",
+      tip: "You'll mostly see it on products made for the US. UK packs use 'POM' in a box instead, though plenty of pharmacies use ℞ in their signs and logos.",
       svg:
         '<path d="M20.5 42V8H30.5A8.5 8.5 0 0 1 30.5 25H20.5M28.5 25L43.5 43M34.4 41.4L43.6 33.8" stroke-width="4.5"/>' +
         '<text x="32" y="56" font-size="13">only</text>'
@@ -176,7 +176,7 @@
         "The name and address next to the filled-in factory belong to the manufacturer: the company legally responsible for the product. You'll see it on medical devices such as plasters, thermometers, home tests, condoms and first-aid kits.",
       action:
         "Nothing to do. It's who to contact, or to name when you report a problem, if the product is faulty.",
-      tip: "An empty, outline factory is a different symbol: date of manufacture, with a date next to it instead of an address. Products made outside Europe often also list an EU representative, marked 'EC REP'.",
+      tip: "Spot the difference: an empty, outline factory is a different symbol, meaning date of manufacture, with a date next to it instead of an address. Products made outside Europe often also list an EU representative, marked 'EC REP'.",
       svg: '<path d="' + FACTORY + '" fill="currentColor" stroke-width="2"/>'
     },
     {
@@ -190,7 +190,7 @@
         "The date next to the outline (not filled-in) factory is when the product was made. It's usually written year first, like 2026-03 or 2026-03-14.",
       action:
         "Nothing to do: it isn't an expiry date. Look for the hourglass for the date to use it by.",
-      tip: "Don't mix it up with the solid black factory, which marks the manufacturer's name and address.",
+      tip: "Don't mix it up with the solid black factory, which marks the manufacturer's name and address. Same factory, different job, depending entirely on the colouring-in.",
       svg: '<path d="' + FACTORY + '"/>'
     },
     {
@@ -236,7 +236,7 @@
         "Single use: use it once, then throw it away. Common on needles, lancets, syringes, dressings, catheters, test kits and some masks.",
       action:
         "Don't wash, sterilise or use it again, even on the same person: it may not stay clean, sharp or safe. Put used needles and lancets in a sharps bin.",
-      tip: "It doesn't mean 'two' of anything or 'use within 2 days': the 2 stands for 'a second time'. 'Single patient use' is a different label, meaning one person can use it more than once.",
+      tip: "Whatever it looks like, it doesn't mean 'two' of anything or 'use within 2 days': the 2 stands for 'a second time'. 'Single patient use' is a different label, meaning one person can use it more than once.",
       svg: noSign('<path d="M23.5 24.5A8.5 8.5 0 1 1 37.5 31L23 45H41" stroke-width="5"/>', true)
     },
     {
@@ -300,7 +300,7 @@
         "Store (and transport) it between the two temperatures printed at the ends of the lines: the lower one is the minimum, the upper one the maximum. Many home test kits say 2°C and 30°C; things that belong in the fridge say 2°C and 8°C.",
       action:
         "Keep it within that range: not in a hot car, on a sunny windowsill or anywhere it could freeze. If it says 2–8°C, keep it in the fridge, not the freezer. Some tests need to warm up to room temperature before use: the instructions say how long.",
-      tip: "With only the top line it's a maximum (store below); with only the bottom line, a minimum. A sun symbol means keep away from sunlight, and an umbrella means keep dry.",
+      tip: "With only the top line it's a maximum (store below); with only the bottom line, a minimum. A sun symbol means keep away from sunlight, and an umbrella means keep dry, not that rain is forecast.",
       svg:
         '<path d="M27.5 40.89V12.5A4.5 4.5 0 0 1 36.5 12.5V40.89A8 8 0 1 1 27.5 40.89Z" stroke-width="3"/>' +
         '<circle cx="32" cy="47.5" r="4.4" fill="currentColor" stroke="none"/><rect x="30.3" y="31" width="3.4" height="16" fill="currentColor" stroke="none"/>' +
