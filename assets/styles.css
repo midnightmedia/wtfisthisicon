@@ -657,6 +657,11 @@ a { color: inherit; }
   font-size: 13px; color: var(--muted);
 }
 .foot__credit strong { color: var(--fg); font-weight: 600; }
+.foot__credit a {
+  color: inherit; text-decoration: underline; text-decoration-color: transparent;
+  text-decoration-thickness: 2px; text-underline-offset: 4px; transition: text-decoration-color .15s;
+}
+.foot__credit a:hover { text-decoration-color: var(--neon); }
 .foot__cats { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 40px; font-size: 13px; }
 .foot__cats a {
   color: var(--fg-2); text-decoration: underline; text-decoration-color: transparent;

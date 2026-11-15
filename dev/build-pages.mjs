@@ -174,7 +174,7 @@ const FOOTER = `<footer class="foot">
   ${footCats()}
   <div class="wrap foot__credit">
     <span>&copy; 2026 WTF is this icon?</span>
-    <span>Made by <strong>Midnight Media</strong></span>
+    <span>Made by <a href="https://midnightmedia.io" target="_blank" rel="noopener"><strong>Midnight Media</strong></a></span>
   </div>
 </footer>`;
 
