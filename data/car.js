@@ -599,16 +599,17 @@ WTF.add([
   },
   {
     id: "car-press-brake",
-    name: "Foot on a pedal (press the brake to start)",
-    quiz: "Press the brake to start",
+    name: "Shoe in a circle (press the brake pedal)",
+    quiz: "Press the brake pedal",
     category: "car",
     color: "green",
     urgency: "info",
-    aka: ["depress brake pedal", "brake pedal reminder", "push start reminder", "foot on brake light"],
-    looksLike: ["foot in a circle", "foot on a pedal", "shoe in a circle", "boot pressing a pedal", "foot pressing down", "leg in a circle"],
-    meaning: "On cars with a start button, this is the car asking you to press the brake pedal. Most automatics won't start, or move out of Park, until you do. On a manual it's usually the clutch it wants pressed instead.",
-    action: "Press the brake firmly (or the clutch all the way down), then press the start button. If the light stays on while your foot is definitely on the brake, the brake light switch may have failed, which can also mean your brake lights aren't working. Get that checked soon.",
-    svg: `<circle cx="32" cy="32" r="24"/><g transform="rotate(28 32 32)"><path d="M22 16l1 17c0 6 2 9 6 9h13c4 0 6-2 6-4.5 0-2-1.5-3.5-4-4.5l-10-4c-2-1-3-2.5-3.5-4.5L29 16"/></g><path d="M36 51.5l12-6.5" stroke-width="4.5"/>`
+    aka: ["press brake pedal", "depress brake pedal", "shift lock indicator", "push start reminder", "foot on brake light"],
+    looksLike: ["shoe in a circle", "foot in a circle", "shoe in brackets", "foot in a circle with brackets", "boot in a circle", "shoe pointing down", "foot pressing down"],
+    meaning: "The car is asking you to press the brake pedal. On automatics with a start button, it won't start, or come out of Park, until you do. The same shoe in yellow usually means press the clutch instead (on manuals).",
+    action: "Press the brake firmly (or the clutch all the way down), then press the start button or move the gear lever. If the light stays on while your foot is definitely on the brake, the brake light switch may have failed, which can also mean your brake lights aren't working. Get that checked soon.",
+    tip: "VW and Audi show it inside the same brackets as the brake warning light, so it's easy to mistake for a brake fault at a glance. Some makers call it the shift lock indicator.",
+    svg: `<circle cx="32" cy="32" r="18.9" stroke-width="4"/><path d="M13.87 14.49A25.2 25.2 0 0 0 13.87 49.51M50.13 14.49A25.2 25.2 0 0 1 50.13 49.51" stroke-width="4.6" stroke-linecap="butt"/><path d="M18.8 24.9 L21.1 22.2 L22.8 21.9 L26.9 24.1 L32 26.3 L37.1 27.6 L39.8 27.8 L40.8 28.7 L41.1 29.9 L42.3 31.7 L44.4 34.1 L46.4 36.2 L46.7 37 L43.3 41.3 L41.9 43 L41.5 43.8 L39.5 45.7 L37.1 43.4 L33.6 39.8 L34.6 38.7 L29 34.6Z" fill="currentColor" stroke-width=".6"/>`
   },
   {
     id: "car-auto-hold",
