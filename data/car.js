@@ -124,7 +124,7 @@ WTF.add([
     looksLike: ["car with bonnet up", "car with boot open", "car with the front open", "car with lid up", "car with a raised panel", "car side view with flap up"],
     meaning: "The bonnet or the boot isn't fully shut. The picture shows which: a raised panel at the front is the bonnet, at the back it's the boot or tailgate.",
     action: "Stop somewhere safe and shut it properly. A bonnet that flies up at speed blocks your view completely. Drop the bonnet from about 30 cm so the catch locks, rather than pressing it down. If the light stays on with everything shut, the latch sensor may be dirty or faulty: get it checked.",
-    svg: `<g transform="translate(-3 -6) scale(1.1)"><path d="M50 43h6v-8h-8M38 43H26M14 43H8v-8l6-2 6-9h20l7 9"/><path d="M47 33l8-10"/><circle cx="20" cy="43" r="5"/><circle cx="44" cy="43" r="5"/></g>`
+    svg: `<g transform="translate(-3.8 -7) scale(1.12)"><path d="M8 41v-2.5C8 37 9 36 10.5 36H22M22 34l6-10h16l6 8 6 1.5V41"/><path d="M22 34L11 23.5"/><path d="M8 41h4M22 41h19M51 41h5"/><circle cx="17" cy="41" r="5"/><circle cx="46" cy="41" r="5"/></g>`
   },
 
   // ───────────────────────── AMBER: sort it soon ─────────────────────────
@@ -390,7 +390,7 @@ WTF.add([
     looksLike: ["genie lamp with wavy line", "oil can with a wavy line", "oil can with water", "yellow genie lamp", "lamp with squiggle underneath", "oil can with min"],
     meaning: "The engine oil level is getting low. It's the calmer, amber cousin of the red oil pressure light: the engine is still being lubricated, but it wants a top-up before that changes.",
     action: "Check the level soon: park on level ground, switch off, wait a few minutes, then use the dipstick (or the oil level menu, if your car has no dipstick). Top up with the oil grade in your handbook, a little at a time, and don't overfill. If it keeps dropping quickly, get it checked for leaks.",
-    tip: "If this symbol is red, or the red genie lamp comes on without a wavy line, stop and switch off. That's the oil pressure warning.",
+    tip: "VW, Audi, Skoda and Seat show low oil level as the same oil can in yellow, without the wavy line. If the oil can is red, stop and switch off: that's the oil pressure warning.",
     svg: `<g transform="translate(0 -7)"><path d="M20 30h-6a3 3 0 0 0 0 6h6"/><path d="M20 30h6l3-4h8l3 4h4l14-6v3L46 40H22a2 2 0 0 1-2-2z"/><path d="M33 26v-5M29 21h8"/><path d="M56 32c-2 3-3 4.5-3 6a3 3 0 0 0 6 0c0-1.5-1-3-3-6z" fill="currentColor" stroke="none"/></g><path d="M9 47c4-4 7-4 11 0s7 4 11 0 7-4 11 0 7 4 11 0"/>`
   },
   {
@@ -401,11 +401,11 @@ WTF.add([
     color: "amber",
     urgency: "soon",
     aka: ["coolant warning", "antifreeze low", "radiator fluid low", "expansion tank low"],
-    looksLike: ["box with wavy line", "tank with water line", "container with arrow down", "square with waves and arrow", "radiator with water", "jar with arrow"],
+    looksLike: ["box with wavy line", "tank with water line", "rectangle with waves and an arrow", "container with arrow down", "radiator with water", "box with mountains at the bottom"],
     meaning: "The coolant (antifreeze) in the expansion tank has dropped below the minimum mark. Coolant stops the engine overheating, so this is the early warning before the temperature light comes on.",
     action: "When the engine is cold, open the bonnet, find the expansion tank (usually a see-through plastic bottle with MIN and MAX marks) and top up with the coolant type in your handbook. Never open the cap while the engine is hot. If it needs topping up again soon, there's a leak: get it checked.",
     tip: "Some cars use the thermometer-in-waves symbol for low coolant too, so read any message on the display. If the light turns red or the temperature gauge climbs, pull over and switch off.",
-    svg: `<rect x="16" y="17" width="32" height="37" rx="5"/><path d="M25 17v-5h14v5"/><path d="M21 45c3.5-3 7.5-3 11 0s7.5 3 11 0"/><path d="M32 24v12M27 31l5 5 5-5"/>`
+    svg: `<rect x="9" y="20" width="46" height="28" rx="3"/><path d="M43 20v-5h7v5"/><path d="M32 24v9M27.5 29l4.5 4.5 4.5-4.5"/><path d="M12 42c2-2 3-2 5 0s3 2 5 0 3-2 5 0 3 2 5 0 3-2 5 0 3 2 5 0 3-2 5 0 3 2 5 0" stroke-width="3"/>`
   },
   {
     id: "car-water-in-fuel",
@@ -415,10 +415,11 @@ WTF.add([
     color: "amber",
     urgency: "soon",
     aka: ["water in fuel filter", "fuel filter water warning", "WIF", "drain fuel filter"],
-    looksLike: ["drop in a cup", "drop in a container", "filter with a drop", "tank with water and a drop", "bucket with a drop", "drop with wavy line"],
+    looksLike: ["petrol pump with drops", "fuel pump with water drops", "pump with raindrops", "fuel pump and three drops", "filter with a drop", "pump with tears"],
     meaning: "The fuel filter's water trap has collected water. Diesel picks up water from condensation (and the odd bad batch of fuel), and the filter catches it before it reaches the injection system, which really doesn't like water.",
     action: "Get the filter drained or replaced soon, at a garage unless you know your way round a diesel fuel system. Drive gently until then. Ignoring it can damage the high-pressure fuel pump and injectors, which is an eye-watering bill.",
-    svg: `<path d="M25 13V9h14v4"/><path d="M19 13h26v29a13 13 0 0 1-26 0z"/><path d="M23 41c3-2.5 6-2.5 9 0s6 2.5 9 0"/><path d="M32 20c-3.5 5-5 7.5-5 9.5a5 5 0 0 0 10 0c0-2-1.5-4.5-5-9.5z" fill="currentColor" stroke="none"/>`
+    tip: "Some makes show a fuel filter with a drop or wavy lines instead of the pump. Same message either way.",
+    svg: `<rect x="8" y="14" width="20" height="36" rx="2"/><rect x="12" y="18" width="12" height="9" rx="1"/><path d="M28 22h3a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0 5 0V21l-5-5"/><path d="M5 50h26"/><path d="M48 18c-2.6 3.6-3.8 5.4-3.8 6.9a3.8 3.8 0 0 0 7.6 0c0-1.5-1.2-3.3-3.8-6.9zM56 28c-2.6 3.6-3.8 5.4-3.8 6.9a3.8 3.8 0 0 0 7.6 0c0-1.5-1.2-3.3-3.8-6.9zM47 36c-2.6 3.6-3.8 5.4-3.8 6.9a3.8 3.8 0 0 0 7.6 0c0-1.5-1.2-3.3-3.8-6.9z" fill="currentColor" stroke="none"/>`
   },
   {
     id: "car-collision-warning",
@@ -428,10 +429,10 @@ WTF.add([
     color: "amber",
     urgency: "soon",
     aka: ["forward collision warning", "FCW", "AEB", "autonomous emergency braking", "pre-collision system", "PCS", "front assist", "city safety"],
-    looksLike: ["car with a star", "car crashing into a star", "car with explosion", "car with a burst", "car hitting something", "car with off"],
+    looksLike: ["car in a circle with a star", "car in brackets", "circle with a car and a star", "car with a star", "car crash in a circle", "car with explosion"],
     meaning: "This is the car's forward collision warning and automatic emergency braking. Flashing red with beeps means the car thinks you're about to hit something ahead. Steady amber (often with OFF) means the system is switched off or can't see, usually because the camera behind the windscreen or the radar in the front grille is dirty, iced up or blocked.",
     action: "Flashing red: brake now. Steady amber: clean the windscreen in front of the mirror and the badge or panel on the front grille, and check it hasn't been switched off in the settings. If it stays on, get it checked, especially after a new windscreen, as the camera needs recalibrating.",
-    svg: `<g transform="translate(0 12) scale(.75)"><path d="M8 38v-7l6-2 6-9h20l8 9 8 2v7"/><path d="M8 38h7M25 38h14M49 38h7"/><circle cx="20" cy="38" r="5"/><circle cx="44" cy="38" r="5"/></g><polygon points="51 20.5 52.5 25.4 57 23 54.6 27.5 59.5 29 54.6 30.5 57 35 52.5 32.6 51 37.5 49.5 32.6 45 35 47.4 30.5 42.5 29 47.4 27.5 45 23 49.5 25.4" stroke-width="2.5"/>`
+    svg: `<circle cx="32" cy="32" r="17.5"/><path d="M10.5 15a24 24 0 0 0 0 34M53.5 15a24 24 0 0 1 0 34"/><g transform="translate(-0.5 -3.5)"><path d="M21 41v-3.5l4-1.2 4.5-5h7.5l5 5 3 1.2V41" stroke-width="3"/><path d="M21 41h2M29 41h6M41 41h2" stroke-width="3"/><circle cx="26" cy="41" r="2.6" stroke-width="2.5"/><circle cx="38" cy="41" r="2.6" stroke-width="2.5"/></g><circle cx="19.5" cy="19.5" r="8" class="knock" stroke="none"/><polygon points="19.5 11.5 21.3 16.5 26.4 15.5 23 19.5 26.4 23.5 21.3 22.5 19.5 27.5 17.7 22.5 12.6 23.5 16 19.5 12.6 15.5 17.7 16.5" fill="currentColor" stroke="none"/>`
   },
   {
     id: "car-blind-spot",
@@ -441,11 +442,11 @@ WTF.add([
     color: "amber",
     urgency: "info",
     aka: ["blind spot monitoring", "BSM", "BLIS", "blind spot information system", "side assist", "lane change assist"],
-    looksLike: ["car with waves", "car with radar waves", "car from above with curved lines", "car with signal lines behind", "car with brackets either side"],
+    looksLike: ["two cars with waves", "two cars", "cars with curved lines between", "car with radar waves", "two cars side by side", "car and a car behind"],
     meaning: "This is the car's blind spot monitoring. Radar in the rear bumper watches the lanes beside and behind you, and lights a symbol in (or next to) the door mirror when something's lurking where you can't see it. On the dashboard, an amber symbol (often with OFF) means the system is switched off or can't see.",
     action: "If the light in the mirror is on or flashing, don't change lanes until it goes out. If the dashboard warning stays on, check the rear bumper corners for dirt, snow, stickers or a bike rack, which block the radar. Still on? It may be switched off in the settings, or need a garage.",
     tip: "It's a helper, not a replacement for a look over your shoulder.",
-    svg: `<rect x="23" y="10" width="18" height="36" rx="6"/><path d="M25 21h14M25 36h14"/><path d="M18 35a9 9 0 0 0 0 12M12 31a15 15 0 0 0 0 20M46 35a9 9 0 0 1 0 12M52 31a15 15 0 0 1 0 20"/>`
+    svg: `<path d="M6 54V39c0-7 4-12 10-12s10 5 10 12v15M6 44h20"/><rect x="44" y="9" width="12" height="22" rx="4"/><path d="M44 16h12"/><path d="M30 34c2.5-2 3.8-4.8 3.8-8.5M35.5 39.5c4-3 6-7.5 6-13"/>`
   },
   {
     id: "car-key-battery",
@@ -455,10 +456,10 @@ WTF.add([
     color: "amber",
     urgency: "info",
     aka: ["key battery low", "remote key battery", "smart key battery", "replace key battery"],
-    looksLike: ["key with a battery", "battery in a key", "remote with battery inside", "key fob with battery", "rectangle with a battery inside"],
+    looksLike: ["key with a battery", "battery and a key", "key next to a battery", "battery with plus and minus and a key", "key and battery", "key with battery symbol"],
     meaning: "The battery in your remote key is running out. The remote locking range gets shorter first, then keyless entry and start get unreliable.",
     action: "Replace the battery soon. It's usually a coin cell (often a CR2032, but check the old one) behind a small panel or a hidden release button. If it dies completely, most cars have a backup: a hidden key blade for the door, and a spot on the steering column or start button where you hold the key to start the car.",
-    svg: `<rect x="18" y="12" width="28" height="44" rx="10"/><path d="M28 12a4 4 0 0 1 8 0"/><rect x="25.5" y="26" width="13" height="20" rx="2"/><path d="M29 26v-3h6v3"/><rect x="28.5" y="40" width="7" height="3" rx="1" fill="currentColor" stroke="none"/>`
+    svg: `<rect x="6" y="22" width="13" height="22" rx="2"/><path d="M10 22v-3h5v3"/><path d="M10 28h5M12.5 25.5v5M10 38.5h5" stroke-width="2.5"/><circle cx="49" cy="33" r="8"/><circle cx="51" cy="33" r="2.4" fill="currentColor" stroke="none"/><path d="M41 33H24v5M30 33v4"/>`
   },
   {
     id: "car-passenger-airbag-off",
@@ -468,11 +469,11 @@ WTF.add([
     color: "amber",
     urgency: "info",
     aka: ["PASSENGER AIRBAG OFF", "airbag deactivated", "passenger air bag off light", "airbag off switch"],
-    looksLike: ["person with crossed out circle", "airbag crossed out", "seated person crossed out", "person with ball crossed out", "off with a person", "airbag off"],
+    looksLike: ["person with crossed out circle", "airbag crossed out", "seated person with a crossed circle", "person and circle with x", "off with a person", "airbag off"],
     meaning: "The front passenger airbag is switched off. Either someone has turned it off with the key switch (usually in the glovebox or on the end of the dashboard), or the seat has decided nobody heavy enough is sitting there, which is normal for an empty seat or a small child.",
     action: "If you have a rear-facing baby seat in the front, it must be OFF: it's illegal to fit one in front of an active airbag. If an adult is sitting there and it says OFF, check the switch is set to ON and that they're sitting back properly in the seat. If it still says OFF, get the seat sensor checked.",
     tip: "There's usually a matching ON light. Seeing OFF next to an empty seat is normal on cars that detect who's sitting there.",
-    svg: `<g transform="translate(7 2) scale(.8)" stroke-width="4.4"><circle cx="18" cy="13" r="5"/><path d="M18 21l4 17h14l4 14" stroke-width="6.25"/><path d="M20 28l8 5"/><circle cx="42" cy="22" r="10"/></g><path d="M12 9l40 36" class="knock" stroke-width="9"/><path d="M12 9l40 36"/><text x="32" y="59" font-size="13">OFF</text>`
+    svg: `<g transform="translate(2 0) scale(.85)" stroke-width="4.1"><circle cx="18" cy="13" r="5"/><path d="M18 21l4 17h14l4 14" stroke-width="5.9"/><path d="M20 28l8 5"/></g><circle cx="47" cy="17" r="9"/><path d="M40.6 10.6l12.8 12.8M53.4 10.6L40.6 23.4" stroke-width="3"/><text x="45" y="59" font-size="14">OFF</text>`
   },
 
   // ───────────────────────── GREEN / BLUE: just letting you know ─────────────────────────
@@ -613,17 +614,17 @@ WTF.add([
   },
   {
     id: "car-auto-hold",
-    name: "Auto Hold (A in a circle with brackets)",
+    name: "AUTO HOLD (brake hold)",
     quiz: "Brakes held automatically when stopped",
     category: "car",
     color: "green",
     urgency: "info",
     aka: ["AUTO HOLD", "brake hold", "automatic vehicle hold", "AVH", "hold assist"],
-    looksLike: ["a in a circle", "a in brackets", "circle with letter a", "(a)", "a in a circle with brackets", "letter a in parentheses"],
-    meaning: "Auto Hold is holding the brakes for you. When you stop at lights or in a queue, you can take your foot off the brake and the car stays put, then it lets go when you press the accelerator. Green usually means it's holding the car right now.",
+    looksLike: ["auto hold", "auto over hold", "a in a circle with hold", "brake hold", "hold light"],
+    meaning: "Auto Hold is holding the brakes for you. When you stop at lights or in a queue, you can take your foot off the brake and the car stays put, then it lets go when you press the accelerator. White usually means it's switched on and ready; green means it's holding the car right now.",
     action: "Nothing to do. There's usually a button by the gear lever or the parking brake switch to turn it on or off. Most cars only allow it with your seatbelt on and the door shut.",
-    tip: "Not to be confused with auto start-stop, which is an A inside a circular arrow and switches the engine off, not the brakes on.",
-    svg: `<circle cx="32" cy="32" r="14"/><path d="M14 18a20 20 0 0 0 0 28M50 18a20 20 0 0 1 0 28"/><text x="32" y="38.5" font-size="18">A</text>`
+    tip: "Some cars show an A in a circle with brackets above the word HOLD, and Honda says BRAKE HOLD. Not to be confused with auto start-stop, which is an A inside a circular arrow and switches the engine off, not the brakes on.",
+    svg: `<text x="32" y="29" font-size="17">AUTO</text><text x="32" y="49" font-size="17">HOLD</text>`
   },
   {
     id: "car-speed-limiter",
@@ -637,7 +638,7 @@ WTF.add([
     meaning: "The speed limiter is on. You set a top speed and the car won't go faster than that, however hard you press the accelerator. Handy for 20 mph zones and average speed cameras.",
     action: "Set or adjust the speed with the cruise control buttons on the steering wheel (often a LIM button or switch picks the limiter instead of cruise). Need a burst of speed to overtake? On most cars, pushing the pedal right to the floor overrides it.",
     tip: "Many newer cars also read speed limit signs and beep when you go over (intelligent speed assistance). You can usually turn that off for the journey, but it switches itself back on next time.",
-    svg: `<path d="M12 33a20 20 0 1 1 40 0"/><path d="M17.9 18.9l2.8 2.8M32 13v4M46.1 18.9l-2.8 2.8"/><path d="M32 33l9-10.5"/><circle cx="32" cy="33" r="3.2" fill="currentColor"/><text x="32" y="53" font-size="13">LIM</text>`
+    svg: `<path d="M10.4 47A18 18 0 1 1 35 22.4"/><path d="M8 38h4M13.3 25.3l2.8 2.8M26 20v4"/><path d="M26 38l-9.2-7.7"/><circle cx="26" cy="38" r="3" fill="currentColor"/><text x="46" y="27" font-size="15">LIM</text><path d="M44 35v3" stroke-width="3"/>`
   },
   {
     id: "car-auto-high-beam",
@@ -767,7 +768,7 @@ WTF.add([
     looksLike: ["windscreen with an a", "wiper with a", "windscreen with letter a", "wiper and auto", "windscreen with wiper and a"],
     meaning: "In this position the wipers run themselves: a rain sensor behind the windscreen (by the mirror) speeds them up or slows them down as the rain changes.",
     action: "Move the wiper stalk to AUTO (often the first click). The ring or wheel on the stalk sets how sensitive they are. Switch it off before a car wash, or the wipers may start halfway through.",
-    svg: `<path d="M8 50Q32 42 56 50L50 14Q32 8 14 14Z"/><path d="M17.5 38.2A16 16 0 0 1 46.5 38.2" stroke-width="3"/><path d="M32 45L25 32.9" stroke-width="4"/><text x="32" y="25" font-size="13">A</text>`
+    svg: `<path d="M8 22Q32 10 56 22L42 47H22Z"/><path d="M32 51L25.5 21.5" stroke-width="3.5"/><circle cx="32" cy="51.5" r="3" fill="currentColor" stroke="none"/><text x="39.5" y="41" font-size="12">A</text>`
   },
   {
     id: "carcontrols-intermittent-wipers",
@@ -775,10 +776,10 @@ WTF.add([
     quiz: "Intermittent wipers",
     category: "carcontrols",
     aka: ["INT", "intermittent wipe", "wiper delay", "occasional wipe"],
-    looksLike: ["windscreen with dashed line", "wiper with dotted line", "windscreen with wiper and dashes", "arc with dashes", "dotted arc"],
+    looksLike: ["windscreen with dashed line", "wiper with dotted line", "fan shape with wiper and dashes", "dotted arc", "wiper with dashes"],
     meaning: "The wipers make one sweep, pause, then sweep again, for drizzle that isn't worth the full-time wipers. The dashed line is the pause.",
     action: "Select INT (or the dashed-line symbol) on the wiper stalk, and use the ring or wheel on the stalk to set the gap between wipes. Pulling the stalk towards you usually squirts washer fluid.",
-    svg: `<path d="M8 50Q32 42 56 50L50 14Q32 8 14 14Z"/><path d="M13.8 34.5A21 21 0 0 1 50.2 34.5" stroke-width="3" stroke-dasharray="3.5 4.5"/><path d="M32 45L21.7 30.3" stroke-width="4"/>`
+    svg: `<path d="M8 22Q32 10 56 22L42 47H22Z"/><path d="M15 29Q32 20 49 29" stroke-width="3" stroke-dasharray="3.5 4"/><path d="M32 51L25.5 21.5" stroke-width="3.5"/><circle cx="32" cy="51.5" r="3" fill="currentColor" stroke="none"/>`
   },
   {
     id: "carcontrols-rear-wiper",
@@ -789,7 +790,7 @@ WTF.add([
     looksLike: ["rectangle with a wiper", "box with an arc", "square with wiper and spray", "rear window with wiper", "rounded square with an arc"],
     meaning: "Controls the wiper on the rear window. A version with a little fountain squirts washer fluid on it too.",
     action: "On most cars, push the wiper stalk away from you (or twist its end) to switch the rear wiper on, and push or twist further to wash. Many cars also wipe the back window automatically when you select reverse with the front wipers on.",
-    svg: `<rect x="9" y="13" width="46" height="38" rx="7"/><path d="M13.8 38.5A21 21 0 0 1 50.2 38.5" stroke-width="3"/><path d="M32 49L21.7 34.3" stroke-width="4"/>`
+    svg: `<rect x="9" y="12" width="46" height="34" rx="6"/><path d="M32 50L24.5 18.5" stroke-width="3.5"/><circle cx="32" cy="50.5" r="3" fill="currentColor" stroke="none"/>`
   },
   {
     id: "carcontrols-auto-headlights",
@@ -887,11 +888,11 @@ WTF.add([
     quiz: "Emergency call button",
     category: "carcontrols",
     aka: ["eCall", "emergency call", "SOS call button", "roof SOS button"],
-    looksLike: ["sos", "sos in the roof", "sos on the ceiling", "sos in a box", "sos above the mirror"],
+    looksLike: ["sos", "sos with a phone", "sos and a phone handset", "sos in the roof", "sos on the ceiling", "sos above the mirror"],
     meaning: "The emergency call button, usually in the roof panel above the mirror. It calls the emergency services and sends them the car's location. The car also calls by itself after a serious crash, for example if the airbags go off.",
     action: "Only press it in a real emergency on the road. Pressed it by mistake? Don't hang up: stay on the line and tell the operator it was an accident.",
     tip: "It's been required on every new car model sold in the EU since 2018. A button next to it with a spanner or an i is usually for breakdown help or the car maker's assistance line instead.",
-    svg: `<rect x="9" y="17" width="46" height="30" rx="9"/><text x="32" y="39" font-size="17">SOS</text>`
+    svg: `<text x="28" y="52" font-size="23">SOS</text><g transform="rotate(-38 45 18)"><path d="M33 21.5c0-5.5 5.4-8.5 12-8.5s12 3 12 8.5v2h-7v-3h-10v3h-7z" fill="currentColor" stroke="none"/></g><path d="M51 6a11 11 0 0 1 7.5 7.5" stroke-width="2.5"/>`
   },
   {
     id: "carcontrols-heated-windscreen",
