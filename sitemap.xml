@@ -29,6 +29,7 @@
   <url><loc>https://wtfisthisicon.com/car/seatbelt/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/power-steering/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/door-open/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/bonnet-boot-open/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/check-engine/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/tyre-pressure/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/traction-control/</loc></url>
@@ -46,6 +47,16 @@
   <url><loc>https://wtfisthisicon.com/car/key-warning/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/bulb-failure/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/lane-departure/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/master-warning/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/epc/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/driver-alert/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/oil-level/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/coolant-level/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/water-in-fuel/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/collision-warning/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/blind-spot/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/key-battery/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/passenger-airbag-off/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/low-beam/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/high-beam/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/front-fog/</loc></url>
@@ -56,6 +67,11 @@
   <url><loc>https://wtfisthisicon.com/car/eco-mode/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/auto-start-stop/</loc></url>
   <url><loc>https://wtfisthisicon.com/car/hill-descent/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/press-brake/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/auto-hold/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/speed-limiter/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/auto-high-beam/</loc></url>
+  <url><loc>https://wtfisthisicon.com/car/fuel-side-arrow/</loc></url>
   <url><loc>https://wtfisthisicon.com/carcontrols/recirculation/</loc></url>
   <url><loc>https://wtfisthisicon.com/carcontrols/fresh-air/</loc></url>
   <url><loc>https://wtfisthisicon.com/carcontrols/front-demist/</loc></url>
@@ -65,6 +81,19 @@
   <url><loc>https://wtfisthisicon.com/carcontrols/heated-seat/</loc></url>
   <url><loc>https://wtfisthisicon.com/carcontrols/heated-steering-wheel/</loc></url>
   <url><loc>https://wtfisthisicon.com/carcontrols/hazard/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/auto-wipers/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/intermittent-wipers/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/rear-wiper/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/auto-headlights/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/headlight-levelling/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/window-lock/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/mirror-fold/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/sync-dual/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/parking-sensors/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/seat-memory/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/ventilated-seat/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/sos-button/</loc></url>
+  <url><loc>https://wtfisthisicon.com/carcontrols/heated-windscreen/</loc></url>
   <url><loc>https://wtfisthisicon.com/laundry/machine-wash/</loc></url>
   <url><loc>https://wtfisthisicon.com/laundry/wash-30/</loc></url>
   <url><loc>https://wtfisthisicon.com/laundry/wash-40/</loc></url>
