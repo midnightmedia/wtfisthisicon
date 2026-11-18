@@ -46,6 +46,7 @@ const CAT_TITLES = {
   washer: "Washing machine symbols",
   dryer: "Tumble dryer symbols",
   oven: "Oven, hob and microwave symbols",
+  airfryer: "Air fryer symbols",
   dishwasher: "Dishwasher symbols",
   fridge: "Fridge and freezer symbols",
   coffee: "Coffee machine symbols",
@@ -337,7 +338,7 @@ function catPage(cat) {
   <div class="section__head page__head">
     <div>
       <h1 class="section__title">${esc(title)}</h1>
-      <p class="section__blurb">${esc(cat.blurb)}. ${list.length} of them, decoded.</p>
+      <p class="section__blurb">${esc(cat.blurb)}${/[.?!]$/.test(cat.blurb) ? "" : "."} ${list.length} of them, decoded.</p>
     </div>
   </div>
   ${legend}

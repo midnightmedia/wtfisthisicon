@@ -24,7 +24,7 @@
     { id: "all",     name: "Everything",     cats: null },
     { id: "car",     name: "Car",            cats: ["car", "carcontrols", "ev"] },
     { id: "laundry", name: "Laundry",        cats: ["laundry", "washer", "dryer"] },
-    { id: "kitchen", name: "Kitchen",        cats: ["oven", "dishwasher", "fridge", "coffee"] },
+    { id: "kitchen", name: "Kitchen",        cats: ["oven", "airfryer", "dishwasher", "fridge", "coffee"] },
     { id: "home",    name: "Home",           cats: ["aircon", "heating", "toilet"] },
     { id: "tech",    name: "Tech",           cats: ["tech", "keyboard", "power"] },
     { id: "labels",  name: "Labels & packs", cats: ["recycling", "packaging", "medicine"] }

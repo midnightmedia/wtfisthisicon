@@ -200,6 +200,28 @@
       svg: FRAME + GRILL + fanAt(4.5)
     },
     {
+      id: "oven-air-fry",
+      name: "Air fry (fan above a basket)",
+      quiz: "Air fry",
+      category: "oven",
+      aka: ["air fry", "airfry", "air fryer mode", "air fry function", "air fry setting", "AirFry"],
+      looksLike: ["fan above a basket", "fan over a basket", "fan and a basket in a box", "basket with a fan", "fan over a chip basket"],
+      meaning:
+        "Air fry mode: your oven doing an impression of an air fryer. The oven heats up while the fan blows hot air hard round the food, for crisp results with less oil. Hotpoint describes its symbol as a fan above a basket.",
+      action:
+        "Use the air fry basket or tray if your oven came with one, spread the food out in a single layer with nothing overlapping, and follow the air fry cooking table in the manual. Hotpoint suggests a baking tray on a lower shelf to catch crumbs and drips.",
+      tip: "Stick to one tray of food: Hotpoint says more than one stops it cooking evenly. On some Hotpoint ovens Air Fry hides in the special functions menu rather than getting its own symbol.",
+      svg:
+        FRAME +
+        // Hotpoint's version, drawn a touch smaller to sit inside the frame: a three-bladed fan in a broken circle above a basket.
+        '<g transform="matrix(0.93 0 0 0.93 2.24 2.24)">' +
+        '<path stroke-width="2.8" d="M11.6 27.2H15.7V47Q15.7 50 18.7 50H44.8Q47.8 50 47.8 47V27.2H52.4"/>' +
+        '<path stroke-width="2.3" d="M15.7 37.2H47.8M15.7 43.4H47.8M24.7 37.2V50M38.8 37.2V50"/>' +
+        '<g stroke-width="2.3"><polygon points="26,12.4 31.7,12.4 31.8,19.4 28.4,21.3"/><polygon points="33.6,19.4 42,21.2 40,25.9 33.4,22.6"/>' +
+        '<polygon points="31,22.4 23.7,26.1 26.3,30.6 33,25"/>' +
+        '<path d="M35.68 13.21A10 10 0 0 1 39.18 16.04M21.3 22.37A10 10 0 0 1 22.03 18.45M37.04 30.39A10 10 0 0 1 33.55 31.94"/></g></g>'
+    },
+    {
       id: "oven-defrost",
       name: "Defrost",
       category: "oven",

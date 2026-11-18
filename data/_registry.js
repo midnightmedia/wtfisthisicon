@@ -11,6 +11,7 @@ WTF.categories = [
   { id: "washer",      name: "Washing machine",    blurb: "Dials, buttons & blinking lights",       tile: "panel"  },
   { id: "dryer",       name: "Tumble dryer",       blurb: "Why is it beeping?",                     tile: "panel"  },
   { id: "oven",        name: "Oven, hob & microwave", blurb: "Fans, squiggles & lines",             tile: "panel"  },
+  { id: "airfryer",    name: "Air fryers",         blurb: "Shake? Hold? Why is it beeping now?",    tile: "panel"  },
   { id: "dishwasher",  name: "Dishwasher",         blurb: "Salt? Rinse aid? Sparkles?",             tile: "panel"  },
   { id: "fridge",      name: "Fridge & freezer",   blurb: "Stars, snowflakes & beeping doors",      tile: "panel"  },
   { id: "coffee",      name: "Coffee machines",    blurb: "Descale? Grounds? Why is it blinking?",  tile: "panel"  },

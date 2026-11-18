@@ -91,7 +91,10 @@
     "coffee espresso",
     "cup mug",
     "descale descaling limescale decalcify decalcification calc",
-    "steam vapour vapor"
+    "steam vapour vapor",
+    "airfryer fryer",
+    "prawn shrimp",
+    "drumstick chicken poultry"
   ].map(function (g) { return g.split(" ").map(stem); });
   var groupOf = {};
   GROUPS.forEach(function (g, n) { g.forEach(function (w) { groupOf[w] = n; }); });
