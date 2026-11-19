@@ -46,7 +46,6 @@
     return d;
   }
   function outline(list) { return "M" + p1(list[0]) + curve(list) + "Z"; }
-  function line(list) { return "M" + p1(list[0]) + curve(list, true); }
 
   // A band of width w along a smooth line, round at both ends, shifted by (dx, dy).
   // Inside a filled shape drawn with fill-rule="evenodd" it becomes a cut-out.
@@ -212,7 +211,7 @@
       tip: "Not brown enough? Press the timer button and add a few minutes. The chips with a potato next to them are the same idea for home-made chips.",
       svg:
         PHILIPS_CHIPS +
-        '<circle class="knock" stroke="none" cx="43.6" cy="38.6" r="18"/>' +
+        '<circle class="knock" stroke-width="0" cx="43.6" cy="38.6" r="18"/>' +
         '<g transform="rotate(30 43.6 38.6)">' + snowflake(43.6, 38.6, 14.5, 9.5, 5.5, 2.2, 55) + '</g>' +
         '<polygon fill="currentColor" stroke="none" points="' + pts([0, 60, 120, 180, 240, 300].map(function (a) { return pt(43.6, 38.6, 4.2, a); })) + '"/>'
     },
@@ -334,7 +333,7 @@
           [38.9, 41], [33.8, 43.9], [28.7, 45.3], [23.5, 45.3], [18.9, 43.9], [13, 40.5], [8, 35.9], [8, 34.5], [10.3, 32, 1], [8, 29.3],
           [8.2, 27.7], [11.6, 24.5], [16.7, 21]
         ]) + '"/>' +
-        '<circle class="knock" stroke="none" cx="20.1" cy="28.9" r="2.2"/>'
+        '<circle class="knock" stroke-width="0" cx="20.1" cy="28.9" r="2.2"/>'
     },
     {
       id: "airfryer-shrimp",

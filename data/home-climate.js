@@ -59,42 +59,17 @@
   function fan(cx, cy, s) {
     var b = place(BLADE, cx, cy, s);
     return '<g fill="currentColor" stroke="none">' +
-      '<path d="' + b + '" transform="rotate(-10 ' + cx + " " + cy + ')"/>' +
-      '<path d="' + b + '" transform="rotate(110 ' + cx + " " + cy + ')"/>' +
-      '<path d="' + b + '" transform="rotate(230 ' + cx + " " + cy + ')"/>' +
+      // Four blades, as on Mitsubishi, Daikin, LG and Midea remotes
+      '<path d="' + b + '" transform="rotate(-20 ' + cx + " " + cy + ')"/>' +
+      '<path d="' + b + '" transform="rotate(70 ' + cx + " " + cy + ')"/>' +
+      '<path d="' + b + '" transform="rotate(160 ' + cx + " " + cy + ')"/>' +
+      '<path d="' + b + '" transform="rotate(250 ' + cx + " " + cy + ')"/>' +
       '<circle cx="' + cx + '" cy="' + cy + '" r="' + r2(3.5 * s) + '"/></g>';
   }
 
-  // Radiator: n rounded columns of width w, straight sides from y to y + h, with slots and feet.
-  function radiator(x, y, w, n, h, sw) {
-    var r = w / 2, x1 = x + n * w, d = "M" + x + " " + (y + h) + "V" + y, i;
-    for (i = 1; i <= n; i++) d += "A" + r + " " + r + " 0 0 1 " + r2(x + i * w) + " " + y;
-    d += "V" + (y + h);
-    for (i = n - 1; i >= 0; i--) d += "A" + r + " " + r + " 0 0 1 " + r2(x + i * w) + " " + (y + h);
-    d += "Z";
-    var slots = "", inset = Math.max(2.5, h * 0.12);
-    for (i = 1; i < n; i++) slots += "M" + r2(x + i * w) + " " + r2(y + inset) + "V" + r2(y + h - inset);
-    var feet = "M" + r2(x + r) + " " + r2(y + h + r) + "v4M" + r2(x1 - r) + " " + r2(y + h + r) + "v4";
-    return '<g stroke-width="' + sw + '"><path d="' + d + '"/><path d="' + slots + feet + '"/></g>';
-  }
 
-  // Four-pointed sparkle (solid), centred on (cx, cy), radius s.
-  function sparkle(cx, cy, s) {
-    var k = s * 0.22;
-    return '<path fill="currentColor" stroke="none" d="M' + cx + " " + (cy - s) +
-      "C" + r2(cx + k) + " " + r2(cy - k) + " " + r2(cx + k) + " " + r2(cy - k) + " " + (cx + s) + " " + cy +
-      "C" + r2(cx + k) + " " + r2(cy + k) + " " + r2(cx + k) + " " + r2(cy + k) + " " + cx + " " + (cy + s) +
-      "C" + r2(cx - k) + " " + r2(cy + k) + " " + r2(cx - k) + " " + r2(cy + k) + " " + (cx - s) + " " + cy +
-      "C" + r2(cx - k) + " " + r2(cy - k) + " " + r2(cx - k) + " " + r2(cy - k) + " " + cx + " " + (cy - s) + 'Z"/>';
-  }
 
-  // Wall-mounted air-con indoor unit (top edge at y), with the air outlet line.
-  function unit(y) {
-    return '<rect x="8" y="' + y + '" width="48" height="20" rx="5.5"/><path d="M15 ' + (y + 14) + 'H49" stroke-width="3"/>';
-  }
 
-  // Crescent moons (outer circle minus an offset inner circle), opening to the upper right.
-  var MOON_BIG = "M25.49 19.68A18 18 0 1 0 45.82 40.01A14.5 14.5 0 0 1 25.49 19.68Z";
   var MOON_SMALL = "M41.27 32.14A11 11 0 1 0 53.86 44.73A9 9 0 0 1 41.27 32.14Z";
 
   WTF.add([
@@ -147,7 +122,7 @@
       name: "Fan only mode",
       category: "aircon",
       aka: ["fan", "FAN", "fan only", "ventilation", "circulate", "air circulation"],
-      looksLike: ["fan", "propeller", "windmill", "three blades", "pinwheel", "flower"],
+      looksLike: ["fan", "propeller", "windmill", "four blades", "pinwheel", "flower"],
       meaning:
         "The indoor fan blows air round the room with no cooling or heating at all. Your air conditioner is moonlighting as an ordinary electric fan.",
       action:
@@ -183,10 +158,8 @@
       action:
         "Press it to start the sweep and again to freeze the flap where you like it. For cooling, aim it slightly upwards (cold air sinks); for heating, point it down (warm air rises).",
       tip: "Brands call it Swing, Vane, Flap or Air Direction, as one name would have been too easy. Some remotes have two buttons, up/down and left/right. Don't push the flap by hand: its little motor gears break easily.",
-      svg:
-        unit(12) +
-        '<path d="M32 37V44M25 36.5L21 42.5M39 36.5L43 42.5" stroke-width="3"/>' +
-        '<path d="M8.44 35.99A26 26 0 0 0 55.56 35.99M57.32 41.73L55.56 35.99L50.04 38.33M13.96 38.33L8.44 35.99L6.68 41.73"/>'
+      // Mitsubishi wide vane: the unit, a fan of air lines and a curved double arrow.
+      svg: '<rect x="8" y="12" width="48" height="20" rx="5.5"/><path d="M15 26H49" stroke-width="3"/><path d="M32 37V45M26 36.5L22.5 44M38 36.5L41.5 44M20.5 35.5L15 41.5M43.5 35.5L49 41.5" stroke-width="2.6"/><path d="M8.44 35.99A26 26 0 0 0 55.56 35.99M57.32 41.73L55.56 35.99L50.04 38.33M13.96 38.33L8.44 35.99L6.68 41.73"/>'
     },
     {
       id: "aircon-fan-speed",
@@ -208,15 +181,14 @@
       name: "Sleep / night mode",
       category: "aircon",
       aka: ["sleep", "SLEEP", "night mode", "good sleep", "comfort sleep", "night setback"],
-      looksLike: ["moon", "crescent moon", "moon with zz", "zz", "banana", "moon and letters"],
+      looksLike: ["moon", "crescent moon", "moon with stars", "moon and stars", "moon with zz", "banana"],
       meaning:
         "A bedtime setting: the unit runs quietly and slowly shifts the set temperature over the first hour or two (usually up by 1–2°C when cooling, or down when heating), so you don't wake up too cold or too hot. For once, the symbol is exactly what it looks like.",
       action:
         "Press it when you go to bed. Pair it with the off timer if you only want the unit running for the first part of the night.",
       tip: "Some units also dim their display in sleep mode. If the glowing numbers are still lighting up the room, look for a separate 'LED', 'LIGHT' or 'DISPLAY' button: that's the one that turns them off.",
-      svg:
-        '<path d="' + MOON_BIG + '"/>' +
-        '<path d="M38 8.5H49L38 19.5H49"/><path d="M48.5 26H55L48.5 32.5H55" stroke-width="3"/>'
+      // Crescent moon with stars, as on Midea and Hisense remotes.
+      svg: '<path d="M25.49 19.68A18 18 0 1 0 45.82 40.01A14.5 14.5 0 0 1 25.49 19.68Z"/><path fill="currentColor" stroke="none" d="M46 6.5C47.43 11.57 47.43 11.57 52.5 13C47.43 14.43 47.43 14.43 46 19.5C44.57 14.43 44.57 14.43 39.5 13C44.57 11.57 44.57 11.57 46 6.5Z"/><path fill="currentColor" stroke="none" d="M55 21C55.88 24.12 55.88 24.12 59 25C55.88 25.88 55.88 25.88 55 29C54.12 25.88 54.12 25.88 51 25C54.12 24.12 54.12 24.12 55 21Z"/><path fill="currentColor" stroke="none" d="M38 22.5C38.77 25.23 38.77 25.23 41.5 26C38.77 26.77 38.77 26.77 38 29.5C37.23 26.77 37.23 26.77 34.5 26C37.23 25.23 37.23 25.23 38 22.5Z"/>'
     },
     {
       id: "aircon-eco",
@@ -238,31 +210,28 @@
       name: "Turbo / powerful / jet mode",
       category: "aircon",
       aka: ["turbo", "TURBO", "powerful", "jet", "jet cool", "super", "hi power", "fast cool", "boost"],
-      looksLike: ["double arrow", "fast forward", "arrows with speed lines", "chevrons", "rocket", "two arrows"],
+      looksLike: ["turbo", "word turbo", "jet", "powerful", "double arrow", "fast forward"],
       meaning:
         "Maximum blast: the fan and compressor run flat out for a short time to cool (or heat) the room as fast as possible.",
       action:
         "Use it when you walk into a hot or freezing room. Most units drop back to normal by themselves after about 15–30 minutes, or once the room is at temperature. It's louder and uses more power while it's on.",
       tip: "Every brand names this differently (Turbo, Powerful, Jet, Super, Hi Power, Fast), and the symbol varies too: arrows, a rocket, a fan with speed lines, or just the word. Understatement isn't its strong point.",
-      svg:
-        '<path d="M28 17L42 32L28 47M40 17L54 32L40 47" stroke-width="4.5"/>' +
-        '<path d="M13 23H21M9 32H21M13 41H21"/>'
+      // Most remotes print the word on the button (Samsung, Mitsubishi); there is no common pictogram.
+      svg: '<rect x="4" y="20" width="56" height="24" rx="6" stroke-width="3"/><text x="32" y="37.6" font-size="12.5">TURBO</text>'
     },
     {
       id: "aircon-timer",
       name: "Timer on / off",
       category: "aircon",
       aka: ["timer", "TIMER", "on timer", "off timer", "sleep timer", "delay"],
-      looksLike: ["clock", "clock with a power button", "clock face", "watch", "clock with on/off symbol"],
+      looksLike: ["clock", "clock with on off", "clock with on", "clock face", "watch", "clock with a power button"],
       meaning:
         "Sets the unit to switch itself on or off later, so the room is comfortable by the time you get in. 'Timer on' starts it after a set time (or at a set clock time on some remotes); 'timer off' stops it.",
       action:
         "Press timer on or timer off, use the arrows to set the hours, then confirm (often by pressing the timer button again, or SET). A clock icon on the remote or a timer light on the indoor unit shows a timer is active.",
       tip: "A timer light on the indoor unit that keeps flashing may be an error code, not a timer. Several brands report faults by blinking the timer and power lights in a pattern, a sort of Morse code only the manual can translate.",
-      svg:
-        '<circle cx="30" cy="29" r="19"/><path d="M30 17V29H38"/>' +
-        '<circle class="knock" cx="47" cy="47" r="11.5" stroke="none"/>' +
-        '<path d="M50.44 42.09A6 6 0 1 1 43.56 42.09M47 38.5V45.5" stroke-width="3"/>'
+      // Clock with ON and OFF, as on Daikin, Midea and LG remotes.
+      svg: '<circle cx="17" cy="32" r="11"/><path d="M17 25V32H22" stroke-width="3"/><text x="44" y="29" font-size="14">ON</text><text x="44" y="47" font-size="14">OFF</text>'
     },
     {
       id: "aircon-i-feel",
@@ -288,14 +257,14 @@
       name: "Self-clean / iClean",
       category: "aircon",
       aka: ["self clean", "iClean", "auto clean", "clean", "X-fan", "mould prevention", "internal clean"],
-      looksLike: ["air conditioner with sparkles", "unit with stars", "box with sparkles", "sparkles", "stars"],
+      looksLike: ["air conditioner with sparkles", "unit with stars above", "box with sparkles", "sparkles", "stars"],
       meaning:
         "A cleaning cycle for the inside of the indoor unit: it dries out the coil and fan (some models frost the coil over and then melt it to rinse off dust) to stop mould and musty smells. Sadly, it does NOT clean the filters.",
       action:
         "Start it when you don't need the room cooled or heated: it can take from 20 minutes to over an hour and may blow warm or cool air or drip a little. Keep washing the filters yourself every few weeks.",
       tip: "Names vary: Self Clean, iClean, Auto Clean, X-Fan. Some units dry themselves out every time you switch off cooling, which is why the fan carries on after you've pressed off.",
-      svg:
-        unit(10) + sparkle(25, 44.5, 9.5) + sparkle(42, 42.5, 5.5) + sparkle(47, 52.5, 3.5)
+      // LG and Midea: sparkles above the unit.
+      svg: '<rect x="8" y="30" width="48" height="20" rx="5.5"/><path d="M15 44H49" stroke-width="3"/><path fill="currentColor" stroke="none" d="M24 6C25.98 13.02 25.98 13.02 33 15C25.98 16.98 25.98 16.98 24 24C22.02 16.98 22.02 16.98 15 15C22.02 13.02 22.02 13.02 24 6Z"/><path fill="currentColor" stroke="none" d="M38 4C39.1 7.9 39.1 7.9 43 9C39.1 10.1 39.1 10.1 38 14C36.9 10.1 36.9 10.1 33 9C36.9 7.9 36.9 7.9 38 4Z"/><path fill="currentColor" stroke="none" d="M41 17C41.88 20.12 41.88 20.12 45 21C41.88 21.88 41.88 21.88 41 25C40.12 21.88 40.12 21.88 37 21C40.12 20.12 40.12 20.12 41 17Z"/>'
     },
     {
       id: "aircon-filter",
@@ -333,14 +302,14 @@
       name: "Quiet mode",
       category: "aircon",
       aka: ["quiet", "QUIET", "silent", "silence", "whisper", "low noise", "outdoor unit quiet"],
-      looksLike: ["speaker", "speaker with one line", "low volume", "loudspeaker", "speaker with a small wave"],
+      looksLike: ["face with a finger to its lips", "shh", "finger on lips", "head with a finger", "face profile", "speaker", "ear"],
       meaning:
         "Runs the indoor fan (and on some models the outdoor unit too) at its slowest, quietest speed. The trade-off: it cools or heats more slowly.",
       action:
         "Use it at night, on calls, or when the room is already at temperature. Switch it off if the room isn't keeping up.",
       tip: "Some brands show a fan with a tiny bar, a moon, or just the word QUIET or SILENT. On some remotes it isn't its own button at all, just the lowest step of the fan speed button.",
-      svg:
-        '<path d="M15 24H24L37 13V51L24 40H15Z"/><path d="M45.5 24A11 11 0 0 1 45.5 40"/>'
+      // Midea quiet button: a face with a finger to its lips.
+      svg: '<path fill="currentColor" stroke="none" fill-rule="evenodd" d="M53.6 8.1C54.9 8.2 55.6 9.1 56 9.7C56.3 10.2 56.1 10.7 56 11.2C55.8 11.6 56.6 11.7 55.1 12.2C53.7 12.6 49 13.3 47 13.9C45.1 14.6 44.5 15.4 43.5 16.2C42.6 17.1 41.9 18.1 41.2 19.1C40.6 20.2 40 21.2 39.8 22.8C39.5 24.2 40.4 25.5 39.5 28.1C38.7 30.8 35.4 36.7 34.6 38.6C33.9 40.6 34.3 39.5 35 39.8C35.8 40 38.5 39.7 39.4 39.9C40.2 40 40 39.3 40.2 40.5C40.5 41.8 40.5 46 41 47.5C41.6 49.1 42.4 49.5 43.4 50C44.3 50.5 45.1 50.7 47 50.5C48.8 50.4 52.9 49 54.4 49C55.8 48.9 55.6 49.9 55.9 50.4C56.1 50.9 56 51.5 55.8 52C55.5 52.4 55.4 52.8 54.2 53.2C53.1 53.7 51 54.4 49.1 54.6C47.3 54.9 44.9 54.9 43.4 54.6C41.8 54.4 40.9 53.7 40 53.1C39.2 52.6 38.7 52.2 38.1 51.4C37.6 50.5 37 49.5 36.6 48.2C36.3 47 36 44.1 36 44.1C36 44.1 32.4 43.9 31.4 43.6C30.5 43.4 30.5 43.3 30.1 42.6C29.8 42 28.7 42 29.6 39.5C30.4 36.9 34.3 30.2 35.2 27.4C36.2 24.5 34.9 24.4 35.4 22.6C35.8 20.7 37.1 17.7 38 16.1C38.8 14.6 39.4 14.1 40.5 13.2C41.7 12.2 43.4 11 44.8 10.2C46.1 9.5 47.1 9.1 48.5 8.8C50 8.4 52.4 7.9 53.6 8.1ZM21.8 26.9C22.6 27 23.5 27.2 24.4 27.9C25.2 28.5 25.7 26.7 26.8 31.1C27.8 35.4 30.3 50 30.6 54.1C31 58.3 31.8 55.7 28.6 56C25.4 56.2 14.8 56.9 11.4 55.9C8.1 54.8 9.3 51.4 8.8 49.6C8.2 47.9 7.9 46.8 8.2 45.6C8.6 44.5 9.5 43.7 10.9 42.5C12.4 41.4 16.1 40.7 17.1 39C18 37.2 16.6 33.5 16.6 31.9C16.7 30.4 16.8 30.5 17.2 29.8C17.7 29 18.5 28.1 19.2 27.6C20 27.2 20.9 26.9 21.8 26.9ZM21.8 31.6C21.8 31.6 22.2 30.3 22.9 33.5C23.5 36.8 25.6 51 25.6 51C25.6 51 21.7 51.8 19.9 52C18 52.1 14.6 52 14.6 52L12.8 47C12.8 47 20 42.6 21.6 41.4C23.1 40.1 22.1 40.9 22.1 39.5C22 38 21.1 33.8 21.1 32.5C21 31.1 21.8 31.6 21.8 31.6Z"/>'
     },
 
     // =====================================================================
@@ -357,22 +326,22 @@
       action:
         "Next to a temperature or +/− buttons, it sets how hot the water sent to the radiators gets (the 'flow temperature'). On a modern condensing boiler, turning it down to around 55–60°C (from the 70–80°C many are left on) usually saves gas. The house just warms up a little more slowly.",
       tip: "The radiator setting on the boiler controls how hot the radiators get, not how warm the room gets: that's your room thermostat's job. Got a hot water cylinder? Check the manual before turning it right down, as on some boilers one setting heats both.",
-      svg: radiator(10, 17, 11, 4, 26, 3.5)
+      // As on Vaillant and Worcester displays: straight bars on top and bottom rails.
+      svg: '<g stroke-width="4.5"><path d="M16 11V53M24 11V53M32 11V53M40 11V53M48 11V53"/><path d="M10 18H54M10 46H54"/></g>'
     },
     {
       id: "heating-hot-water-tap",
       name: "Hot water (tap symbol)",
       category: "heating",
       aka: ["hot water", "DHW", "domestic hot water", "HW", "tap", "faucet"],
-      looksLike: ["tap", "faucet", "tap with a drop", "water tap", "spigot", "dripping tap"],
+      looksLike: ["tap", "faucet", "water tap", "spigot", "tap with a drop", "dripping tap"],
       meaning:
         "The tap means hot water for your taps, showers and baths, as opposed to the heating. Refreshingly literal, by boiler standards. On a combi boiler it lights up while you're running hot water; next to a temperature it sets how hot the water comes out.",
       action:
         "Use the tap's +/− buttons or dial to set the hot water temperature: about 50–55°C on a combi is plenty and less likely to scald. On a programmer, the tap (or 'HW') is the timer for a hot water cylinder.",
       tip: "Stored hot water in a cylinder should reach 60°C regularly to keep legionella bacteria away. Combis heat water as you use it, so there's nothing stored.",
-      svg:
-        '<g transform="translate(3.5 0)"><path d="M12 17H37A12 12 0 0 1 49 29V34H41V29A4 4 0 0 0 37 25H12Z"/>' +
-        '<path d="M8 13V29M26 17V11M19 10.5H33"/>' + drop(45, 47.5, 3.6) + "</g>"
+      // Vaillant and Worcester: a plain tap, no wall plate or drop.
+      svg: '<g transform="translate(1 4)"><path d="M12 17H37A12 12 0 0 1 49 29V34H41V29A4 4 0 0 0 37 25H12Z"/><path d="M26 17V11M19 10.5H33"/></g>'
     },
     {
       id: "heating-flame",
@@ -401,9 +370,8 @@
       action:
         "If your heating and hot water work, it's almost certainly a normal status. If it flashes alongside a fault code, a spanner or a red light, or you have no heat, look up that code for your exact boiler model.",
       tip: "Boiler makers have politely agreed to disagree on this one, so the quickest real answer is the manual: search your boiler's make and model (on the front or underneath) plus 'user manual'. Most are free online.",
-      svg:
-        radiator(16, 27, 8, 4, 15, 3) +
-        '<path d="M32 18V12M20 20L16 16M44 20L48 16M10 28L6 26M54 28L58 26" stroke-width="3"/>'
+      // The boiler display radiator, with flash lines.
+      svg: '<g transform="matrix(0.62 0 0 0.62 12.16 18)"><g stroke-width="4.5"><path d="M16 11V53M24 11V53M32 11V53M40 11V53M48 11V53"/><path d="M10 18H54M10 46H54"/></g></g><path d="M32 13V7M20 15L16 11M44 15L48 11M10 23L6 21M54 23L58 21" stroke-width="3"/>'
     },
     {
       id: "heating-lockout-reset",
@@ -419,7 +387,7 @@
       tip: "If you can smell gas, don't reset anything and don't use light switches: open windows, turn the gas off at the meter if you can, leave and call the gas emergency line (0800 111 999 in Great Britain, 0800 002 001 in Northern Ireland, or your local emergency number).",
       svg:
         flame(28, 30, 0.92) +
-        '<circle class="knock" cx="45" cy="45" r="11.5" stroke="none"/>' +
+        '<circle class="knock" cx="45" cy="45" r="11.5" stroke-width="0"/>' +
         '<path d="M39.5 39.5L50.5 50.5M50.5 39.5L39.5 50.5" stroke-width="4"/>'
     },
     {
@@ -453,8 +421,8 @@
       action:
         "If it's on its own and everything works, book a service: boilers should be checked every year by a Gas Safe registered engineer (OFTEC for oil). If it comes with a code and no heat, note the code and call an engineer. Don't open the boiler casing yourself.",
       tip: "Many installers set a reminder to pop up 12 months after fitting, and the engineer clears it at the service. UK landlords must have gas appliances safety-checked every year.",
-      svg:
-        '<path transform="rotate(-45 32 32) translate(-0.5 0)" d="M13 28H34.75A11 11 0 0 1 55.04 27.5H46A4.5 4.5 0 0 0 46 36.5H55.04A11 11 0 0 1 34.75 36H13A4 4 0 0 1 13 28Z"/>'
+      // Vaillant: a double-ended open spanner.
+      svg: '<path stroke-width="5.5" d="M22.5 41.5L41.5 22.5"/><path stroke-width="5" d="M52 18A6 6 0 1 1 46 12M12 46A6 6 0 1 1 18 52"/>'
     },
     {
       id: "heating-frost-protection",
@@ -505,13 +473,14 @@
       quiz: "Heating is on right now",
       category: "heating",
       aka: ["heat demand", "calling for heat", "heating on", "thermostat flame", "HEAT ON"],
-      looksLike: ["flame in a circle", "flame on the thermostat", "fire on the thermostat", "flame on a screen", "flame symbol"],
+      looksLike: ["flame", "flame on the thermostat", "fire on the thermostat", "flame on a screen", "flame symbol", "flame in a circle"],
       meaning:
         "The room thermostat is telling the boiler (or heat pump) to heat, because the room is colder than the temperature you've set. It goes out once the room has warmed up.",
       action:
         "Nothing to do. If the flame stays on but the radiators stay cold, check the boiler is on with no fault code and enough pressure, the thermostat's batteries, and (for wireless thermostats) that the receiver box near the boiler has power and its light comes on.",
       tip: "Turning the thermostat right up doesn't usually heat the house any faster: the boiler works just as hard either way, and the room simply overshoots. Some thermostats show wavy lines, a radiator, 'HEAT' or 'ON' instead of a flame.",
-      svg: '<circle cx="32" cy="32" r="22"/>' + flame(32, 32.5, 0.6)
+      // Honeywell T6 heating demand: a plain flame with an inner lick, no ring.
+      svg: '<g transform="matrix(1.4 0 0 1.4 -12.8 -12.8)"><path stroke-width="2.5" d="M33.2 18.1C34.4 24.1 41.6 27.7 41.6 36.1C41.6 42.7 37.4 46.9 32 46.9C26.6 46.9 22.4 42.7 22.4 36.7C22.4 31.3 25.4 27.7 28.4 25.3C28.4 28.9 29.6 30.7 31.4 31.3C30.8 26.5 31.4 21.7 33.2 18.1Z"/><path fill="currentColor" stroke="none" d="M31.4 33.7C34.4 36.1 36.8 38.5 36.8 41.5C36.8 43.9 34.7 45.4 32 45.4C29.3 45.4 27.2 43.9 27.2 41.5C27.2 39.7 28.4 38.5 29.6 37.6C29.6 39.1 30.2 40 31.1 40.3C30.5 38.2 30.5 35.8 31.4 33.7Z"/></g>'
     },
     {
       id: "heating-heat-waves",

@@ -72,6 +72,11 @@ Keep it short (under ~48 characters), sentence case, no em dashes.
 
 ## Drawing rules (`svg`)
 
+**Match the real symbol.** Draw from the official artwork: the standard (ISO 2575 / UN R121 for cars, ISO 3758 / GINETEX for care
+labels, IEC 60417 / ISO 7000 / ISO 7010 for equipment and safety, JIS S 0103 for toilets) or the maker's own manual or symbol guide.
+Trace it or measure it, then compare the drawing laid over the reference. Having the right parts is not enough: if the construction,
+proportions or orientation differ, it is a different drawing of the same idea, and it is wrong. Say in a comment where the drawing comes from.
+
 The site wraps your markup like this:
 
 ```html
@@ -83,6 +88,8 @@ The site wraps your markup like this:
 - Use **only `currentColor`**, never hex/rgb/named colours. The site colours the icon (e.g. glowing amber on a dark dashboard tile).
 - Default is a 3.5 stroke outline. For solid shapes add `fill="currentColor"` (and `stroke="none"` if you don't want the outline). You may change `stroke-width` per element (e.g. 2.5 for fine detail, 5 for chunky bodies).
 - Need a "cut-out" (e.g. a dark "!" inside a solid shape)? Use `class="knock"`: it is painted in the tile's background colour.
+  The CSS gives knock shapes a tile-coloured stroke, so a crisp cut-out needs `stroke-width="0"` (not `stroke="none"`, which the CSS overrides).
+  The same goes for `<text class="knock">`. Holes can also be made with `fill-rule="evenodd"` on a single filled path.
 - Text is allowed: `<text x="32" y="40" font-size="16">ABS</text>`. CSS automatically gives `<text>` a bold sans-serif font, `fill: currentColor`, no stroke and `text-anchor: middle`, so you only need x / y / font-size.
 - Allowed elements: `path`, `circle`, `ellipse`, `rect`, `line`, `polyline`, `polygon`, `text`, `g`. No `id` attributes, no `<defs>`, `<use>`, gradients, filters, images or scripts. `transform="rotate(...)"` / `translate(...)` / `scale(...)` on elements or `<g>` is fine.
 - Draw your own geometry. Aim for the recognisable standard shape (ISO 2575 dashboard symbols, ISO 3758 / GINETEX care symbols, IEC 60417 equipment symbols, etc.), simplified, bold and readable at 48px.

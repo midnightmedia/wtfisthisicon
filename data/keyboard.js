@@ -135,7 +135,8 @@ WTF.add([
     meaning: "Fn (function) switches keys to their second job. That's mainly the top row, which can be either F1–F12 or brightness, volume and media controls. On newer Macs and iPad keyboards it also has a globe, used for emoji and keyboard languages.",
     action: "Pressing F5 and getting volume or brightness instead, or the other way round? Hold Fn while you press it. On a Mac, tapping the globe key on its own opens the emoji picker or switches language, depending on System Settings › Keyboard. Fn + F switches full screen on or off.",
     tip: "On Windows laptops, Fn Lock (often Fn + Esc, sometimes marked with a padlock and \"Fn\") swaps the top row's default so you don't have to hold Fn every time. On a Mac the same choice is in System Settings › Keyboard › Keyboard Shortcuts › Function Keys.",
-    svg: `<circle cx="24" cy="40" r="15" stroke-width="3.5"/><ellipse cx="24" cy="40" rx="6.5" ry="15" stroke-width="2.5"/><line x1="9" y1="40" x2="39" y2="40" stroke-width="2.5"/><text x="47" y="23" font-size="22">fn</text>`
+    // Apple's globe: outline, meridian ellipse, centre line, equator and two curved latitude lines.
+    svg: '<circle cx="24" cy="40" r="15" stroke-width="3.5"/><ellipse cx="24" cy="40" rx="6.5" ry="15" stroke-width="2.5"/><path stroke-width="2.5" d="M24 25V55M9 40H39M11.6 32.2Q24 28.6 36.4 32.2M11.6 47.8Q24 51.4 36.4 47.8"/><text x="47" y="23" font-size="22">fn</text>'
   },
 
   /* ---------- Mac function-row icons ---------- */
@@ -148,7 +149,8 @@ WTF.add([
     meaning: "On a Mac this key (F3) opens Mission Control: all your open windows spread out so you can pick one, with your desktops (Spaces) along the top. A grand name for a simple, very handy trick.",
     action: "Press it, then click the window you want. You can also swipe up with three or four fingers on the trackpad, or press Control + Up Arrow. The Windows version is Task View: Windows key + Tab.",
     tip: "On older Macs this key was called Exposé. Drag a window onto a desktop at the top of Mission Control to move it there.",
-    svg: `<g stroke-width="3"><rect x="8" y="10" width="23" height="17" rx="2.5"/><rect x="8" y="35" width="23" height="19" rx="2.5"/><rect x="38" y="17" width="18" height="30" rx="2.5"/></g>`
+    // Apple's F3 symbol: a wide window top left, a smaller one below set in to the right, a tall one on the right.
+    svg: '<g stroke-width="2.8"><rect x="9.25" y="17.55" width="20.9" height="12.3" rx="2"/><rect x="13.75" y="36.05" width="18.5" height="10.2" rx="2"/><rect x="38.25" y="19.95" width="16.5" height="24.2" rx="2"/></g>'
   },
   {
     id: "keyboard-spotlight",
@@ -170,7 +172,8 @@ WTF.add([
     meaning: "On newer Macs (F5), the microphone starts Dictation: speak, and your words get typed wherever the cursor is. On some models, pressing and holding it calls Siri instead.",
     action: "Click in a text box, press the key and start talking. Press it again (or Esc) to stop. Say \"comma\" or \"new line\" for punctuation and layout. Yes, out loud. The Windows version is voice typing: Windows key + H.",
     tip: "On many Windows laptops, a microphone with a line through it is a different key: it mutes your mic for video calls, and its little light shows when you're muted.",
-    svg: `<rect x="24" y="9" width="16" height="27" rx="8" fill="currentColor" stroke="none"/><path d="M16 29A16 16 0 0 0 48 29"/><path d="M32 45V54M24 54H40"/>`
+    // Apple's dictation symbol: an outline microphone in a cradle.
+    svg: '<rect x="25" y="9.5" width="14" height="26" rx="7"/><path d="M16 29A16 16 0 0 0 48 29"/><path d="M32 45V54M24 54H40"/>'
   },
   {
     id: "keyboard-do-not-disturb",
@@ -264,7 +267,8 @@ WTF.add([
     meaning: "Home jumps the cursor to the start of the line and End jumps to the end of it. Some keyboards print them as diagonal arrows pointing into a corner, which is cryptic even by keyboard standards. Mac menus show them as up-left and down-right arrows.",
     action: "Ctrl + Home and Ctrl + End go to the very top or bottom of a document or spreadsheet. On a Mac, use Command + Left / Right Arrow for the start or end of a line, and Command + Up / Down Arrow for the top or bottom of the document.",
     tip: "Mac laptops have no Home or End keys. Fn + Left Arrow and Fn + Right Arrow stand in for them, but in most Mac apps they scroll to the top or bottom rather than moving the cursor.",
-    svg: `<polyline points="12,36 12,12 36,12" stroke-width="4"/><line x1="52" y1="52" x2="28" y2="28" stroke-width="4"/><polygon points="19,19 32.79,23.59 23.59,32.79" fill="currentColor" stroke-width="2"/>`
+    // Home is an arrow into the top-left corner, End an arrow into the bottom-right corner.
+    svg: '<g stroke-width="3.5"><polyline points="8,28 8,8 28,8"/><line x1="29" y1="29" x2="17" y2="17"/><polyline points="56,36 56,56 36,56"/><line x1="35" y1="35" x2="47" y2="47"/></g><g fill="currentColor" stroke="none"><polygon points="13,13 24.3,16.3 16.3,24.3"/><polygon points="51,51 39.7,47.7 47.7,39.7"/></g>'
   },
   {
     id: "keyboard-page-up-down",
