@@ -1,6 +1,7 @@
 // Builds every site icon from the one master drawing, assets/icon.svg:
 //
 //   favicon.ico                 16/32/48px, for browsers and anything that asks for /favicon.ico
+//   assets/icon-96.png          96px favicon, the size Google prefers next to search results
 //   apple-touch-icon.png        180px, iPhone/iPad home screen (square: iOS rounds the corners)
 //   assets/icon-192.png         Android / installed-site icons
 //   assets/icon-512.png
@@ -58,6 +59,7 @@ function ico(images) {
 const write = (rel, data) => { fs.writeFileSync(path.join(root, rel), data); console.log("  " + rel); };
 console.log("Site icons:");
 write("favicon.ico", ico([16, 32, 48].map((size) => ({ size, data: png(master, size) }))));
+write("assets/icon-96.png", png(master, 96));
 write("apple-touch-icon.png", png(square, 180));
 write("assets/icon-192.png", png(master, 192));
 write("assets/icon-512.png", png(master, 512));

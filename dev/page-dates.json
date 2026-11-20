@@ -1,0 +1,2066 @@
+{
+  "/aircon/": [
+    "d4b2ad96",
+    "2026-11-19"
+  ],
+  "/aircon/auto-mode/": [
+    "8e014cff",
+    "2026-11-19"
+  ],
+  "/aircon/cool-mode/": [
+    "d0ada561",
+    "2026-11-19"
+  ],
+  "/aircon/defrost/": [
+    "9df1780e",
+    "2026-11-19"
+  ],
+  "/aircon/dry-mode/": [
+    "0cb1448e",
+    "2026-11-19"
+  ],
+  "/aircon/eco/": [
+    "5d1aba5f",
+    "2026-11-19"
+  ],
+  "/aircon/fan-mode/": [
+    "5b9ebca4",
+    "2026-11-19"
+  ],
+  "/aircon/fan-speed/": [
+    "b6a31ec7",
+    "2026-11-19"
+  ],
+  "/aircon/filter/": [
+    "92cbaca7",
+    "2026-11-19"
+  ],
+  "/aircon/heat-mode/": [
+    "942bac2b",
+    "2026-11-19"
+  ],
+  "/aircon/i-feel/": [
+    "8717f63d",
+    "2026-11-19"
+  ],
+  "/aircon/quiet/": [
+    "37fc5cf3",
+    "2026-11-19"
+  ],
+  "/aircon/self-clean/": [
+    "b98cb1be",
+    "2026-11-19"
+  ],
+  "/aircon/sleep-mode/": [
+    "beb6be6a",
+    "2026-11-19"
+  ],
+  "/aircon/swing/": [
+    "bc25a1df",
+    "2026-11-19"
+  ],
+  "/aircon/timer/": [
+    "701447c6",
+    "2026-11-19"
+  ],
+  "/aircon/turbo/": [
+    "0cc3e28d",
+    "2026-11-19"
+  ],
+  "/airfryer/": [
+    "f6f60478",
+    "2026-11-19"
+  ],
+  "/airfryer/add-food/": [
+    "ce3507fb",
+    "2026-11-19"
+  ],
+  "/airfryer/bacon/": [
+    "7a0fb1ce",
+    "2026-11-19"
+  ],
+  "/airfryer/chicken/": [
+    "0ddf5840",
+    "2026-11-19"
+  ],
+  "/airfryer/dashes/": [
+    "9b181cf2",
+    "2026-11-19"
+  ],
+  "/airfryer/end/": [
+    "6da16b18",
+    "2026-11-19"
+  ],
+  "/airfryer/error/": [
+    "9faa8731",
+    "2026-11-19"
+  ],
+  "/airfryer/fan/": [
+    "5e876395",
+    "2026-11-19"
+  ],
+  "/airfryer/fish/": [
+    "6bca694a",
+    "2026-11-19"
+  ],
+  "/airfryer/fries/": [
+    "11f9404a",
+    "2026-11-19"
+  ],
+  "/airfryer/frozen-fries/": [
+    "06d04bb5",
+    "2026-11-19"
+  ],
+  "/airfryer/frozen/": [
+    "bc3295f8",
+    "2026-11-19"
+  ],
+  "/airfryer/hold/": [
+    "22cdb395",
+    "2026-11-19"
+  ],
+  "/airfryer/homemade-fries/": [
+    "0357a081",
+    "2026-11-19"
+  ],
+  "/airfryer/keep-warm/": [
+    "961f0509",
+    "2026-11-19"
+  ],
+  "/airfryer/match/": [
+    "11a925d1",
+    "2026-11-19"
+  ],
+  "/airfryer/shake/": [
+    "1d65013d",
+    "2026-11-19"
+  ],
+  "/airfryer/shrimp/": [
+    "13f14b01",
+    "2026-11-19"
+  ],
+  "/airfryer/steak/": [
+    "884c55d3",
+    "2026-11-19"
+  ],
+  "/airfryer/sync/": [
+    "049c300e",
+    "2026-11-19"
+  ],
+  "/airfryer/turn-food/": [
+    "22d2e96f",
+    "2026-11-19"
+  ],
+  "/airfryer/vegetables/": [
+    "4a86995e",
+    "2026-11-19"
+  ],
+  "/airfryer/whole-chicken/": [
+    "ff20592f",
+    "2026-11-19"
+  ],
+  "/car/": [
+    "4a1ecb00",
+    "2026-11-19"
+  ],
+  "/car/abs/": [
+    "63ba416e",
+    "2026-11-19"
+  ],
+  "/car/adblue/": [
+    "c9bba103",
+    "2026-11-19"
+  ],
+  "/car/airbag/": [
+    "42dd7b25",
+    "2026-11-19"
+  ],
+  "/car/auto-high-beam/": [
+    "e6c369f8",
+    "2026-11-19"
+  ],
+  "/car/auto-hold/": [
+    "87f287dc",
+    "2026-11-19"
+  ],
+  "/car/auto-start-stop/": [
+    "339b693e",
+    "2026-11-19"
+  ],
+  "/car/battery/": [
+    "c86f4ce2",
+    "2026-11-19"
+  ],
+  "/car/blind-spot/": [
+    "55c3738a",
+    "2026-11-19"
+  ],
+  "/car/bonnet-boot-open/": [
+    "7cb76ea9",
+    "2026-11-19"
+  ],
+  "/car/brake-pads/": [
+    "6e51b35b",
+    "2026-11-19"
+  ],
+  "/car/brake-warning/": [
+    "e9317e17",
+    "2026-11-19"
+  ],
+  "/car/bulb-failure/": [
+    "eabf9a48",
+    "2026-11-19"
+  ],
+  "/car/check-engine/": [
+    "20cd1b16",
+    "2026-11-19"
+  ],
+  "/car/collision-warning/": [
+    "ad5881f9",
+    "2026-11-19"
+  ],
+  "/car/coolant-level/": [
+    "e72db73b",
+    "2026-11-19"
+  ],
+  "/car/coolant-temperature/": [
+    "da21c41f",
+    "2026-11-19"
+  ],
+  "/car/cruise-control/": [
+    "6758c243",
+    "2026-11-19"
+  ],
+  "/car/door-open/": [
+    "30c99621",
+    "2026-11-19"
+  ],
+  "/car/dpf/": [
+    "19ded1f5",
+    "2026-11-19"
+  ],
+  "/car/driver-alert/": [
+    "c8393cac",
+    "2026-11-19"
+  ],
+  "/car/eco-mode/": [
+    "390624b3",
+    "2026-11-19"
+  ],
+  "/car/epc/": [
+    "5f45a9d3",
+    "2026-11-19"
+  ],
+  "/car/front-fog/": [
+    "3d873d6a",
+    "2026-11-19"
+  ],
+  "/car/frost-warning/": [
+    "37120015",
+    "2026-11-19"
+  ],
+  "/car/fuel-side-arrow/": [
+    "c1d5e07c",
+    "2026-11-19"
+  ],
+  "/car/gearbox/": [
+    "3df94718",
+    "2026-11-19"
+  ],
+  "/car/glow-plug/": [
+    "c4ba4831",
+    "2026-11-19"
+  ],
+  "/car/high-beam/": [
+    "ed571f4e",
+    "2026-11-19"
+  ],
+  "/car/hill-descent/": [
+    "e5bcd697",
+    "2026-11-19"
+  ],
+  "/car/key-battery/": [
+    "135c3351",
+    "2026-11-19"
+  ],
+  "/car/key-warning/": [
+    "b63c8779",
+    "2026-11-19"
+  ],
+  "/car/lane-departure/": [
+    "0153e9d1",
+    "2026-11-19"
+  ],
+  "/car/low-beam/": [
+    "1560cd25",
+    "2026-11-19"
+  ],
+  "/car/low-fuel/": [
+    "bb5626a9",
+    "2026-11-19"
+  ],
+  "/car/master-warning/": [
+    "879567b8",
+    "2026-11-19"
+  ],
+  "/car/oil-level/": [
+    "abaeb9b7",
+    "2026-11-19"
+  ],
+  "/car/oil-pressure/": [
+    "6c1276d2",
+    "2026-11-19"
+  ],
+  "/car/parking-brake/": [
+    "bfbd0f21",
+    "2026-11-19"
+  ],
+  "/car/passenger-airbag-off/": [
+    "1925d094",
+    "2026-11-19"
+  ],
+  "/car/power-steering/": [
+    "be2b6d77",
+    "2026-11-19"
+  ],
+  "/car/press-brake/": [
+    "2e119bec",
+    "2026-11-19"
+  ],
+  "/car/rear-fog/": [
+    "8196e49c",
+    "2026-11-19"
+  ],
+  "/car/seatbelt/": [
+    "4da3454b",
+    "2026-11-19"
+  ],
+  "/car/service-due/": [
+    "fbbe66d1",
+    "2026-11-19"
+  ],
+  "/car/sidelights/": [
+    "34e9916b",
+    "2026-11-19"
+  ],
+  "/car/speed-limiter/": [
+    "58c58a5e",
+    "2026-11-19"
+  ],
+  "/car/traction-control-off/": [
+    "c50c9598",
+    "2026-11-19"
+  ],
+  "/car/traction-control/": [
+    "f10f4d12",
+    "2026-11-19"
+  ],
+  "/car/turn-signals/": [
+    "ff611b62",
+    "2026-11-19"
+  ],
+  "/car/tyre-pressure/": [
+    "9c9c9a86",
+    "2026-11-19"
+  ],
+  "/car/washer-fluid/": [
+    "a377bd4e",
+    "2026-11-19"
+  ],
+  "/car/water-in-fuel/": [
+    "49719cc9",
+    "2026-11-19"
+  ],
+  "/carcontrols/": [
+    "f271f701",
+    "2026-11-19"
+  ],
+  "/carcontrols/air-conditioning/": [
+    "cff2f9a2",
+    "2026-11-19"
+  ],
+  "/carcontrols/airflow/": [
+    "1ab43b92",
+    "2026-11-19"
+  ],
+  "/carcontrols/auto-headlights/": [
+    "f3b48367",
+    "2026-11-19"
+  ],
+  "/carcontrols/auto-wipers/": [
+    "6785b357",
+    "2026-11-19"
+  ],
+  "/carcontrols/fresh-air/": [
+    "d8de534c",
+    "2026-11-19"
+  ],
+  "/carcontrols/front-demist/": [
+    "b837de26",
+    "2026-11-19"
+  ],
+  "/carcontrols/hazard/": [
+    "9830e455",
+    "2026-11-19"
+  ],
+  "/carcontrols/headlight-levelling/": [
+    "156c8753",
+    "2026-11-19"
+  ],
+  "/carcontrols/heated-seat/": [
+    "f42e8a23",
+    "2026-11-19"
+  ],
+  "/carcontrols/heated-steering-wheel/": [
+    "3c97c0e4",
+    "2026-11-19"
+  ],
+  "/carcontrols/heated-windscreen/": [
+    "0046d4bc",
+    "2026-11-19"
+  ],
+  "/carcontrols/intermittent-wipers/": [
+    "8fc51ce2",
+    "2026-11-19"
+  ],
+  "/carcontrols/mirror-fold/": [
+    "a44c460b",
+    "2026-11-19"
+  ],
+  "/carcontrols/parking-sensors/": [
+    "172ff584",
+    "2026-11-19"
+  ],
+  "/carcontrols/rear-demist/": [
+    "0caa34a2",
+    "2026-11-19"
+  ],
+  "/carcontrols/rear-wiper/": [
+    "03c06c75",
+    "2026-11-19"
+  ],
+  "/carcontrols/recirculation/": [
+    "ea369281",
+    "2026-11-19"
+  ],
+  "/carcontrols/seat-memory/": [
+    "59b36d76",
+    "2026-11-19"
+  ],
+  "/carcontrols/sos-button/": [
+    "4e4db5c4",
+    "2026-11-19"
+  ],
+  "/carcontrols/sync-dual/": [
+    "54e5bcf1",
+    "2026-11-19"
+  ],
+  "/carcontrols/ventilated-seat/": [
+    "fd559e13",
+    "2026-11-19"
+  ],
+  "/carcontrols/window-lock/": [
+    "6c6d60f4",
+    "2026-11-19"
+  ],
+  "/coffee/": [
+    "d159340e",
+    "2026-11-19"
+  ],
+  "/coffee/alarm/": [
+    "16ce6731",
+    "2026-11-19"
+  ],
+  "/coffee/aroma-strength/": [
+    "29864de3",
+    "2026-11-19"
+  ],
+  "/coffee/cleaning-cycle/": [
+    "497fbe38",
+    "2026-11-19"
+  ],
+  "/coffee/descale-calc-clean/": [
+    "17b77e66",
+    "2026-11-19"
+  ],
+  "/coffee/descale-calc/": [
+    "a16f34ab",
+    "2026-11-19"
+  ],
+  "/coffee/descale-spray/": [
+    "aeafb0d6",
+    "2026-11-19"
+  ],
+  "/coffee/descale/": [
+    "6ddae339",
+    "2026-11-19"
+  ],
+  "/coffee/drip-tray-full/": [
+    "0485f0cb",
+    "2026-11-19"
+  ],
+  "/coffee/eco/": [
+    "f1b0d97f",
+    "2026-11-19"
+  ],
+  "/coffee/espresso/": [
+    "b0524094",
+    "2026-11-19"
+  ],
+  "/coffee/flashing-power/": [
+    "e5a472c0",
+    "2026-11-19"
+  ],
+  "/coffee/grounds-container/": [
+    "534487e3",
+    "2026-11-19"
+  ],
+  "/coffee/hot-water/": [
+    "35d5201e",
+    "2026-11-19"
+  ],
+  "/coffee/lungo/": [
+    "c7731e63",
+    "2026-11-19"
+  ],
+  "/coffee/milk-drinks/": [
+    "91027796",
+    "2026-11-19"
+  ],
+  "/coffee/pre-ground/": [
+    "6010c1d7",
+    "2026-11-19"
+  ],
+  "/coffee/pressure-gauge/": [
+    "0469a0db",
+    "2026-11-19"
+  ],
+  "/coffee/rinse/": [
+    "ba26e833",
+    "2026-11-19"
+  ],
+  "/coffee/steam/": [
+    "eaf367e5",
+    "2026-11-19"
+  ],
+  "/coffee/thermometer/": [
+    "40af8016",
+    "2026-11-19"
+  ],
+  "/coffee/two-cups/": [
+    "ede82159",
+    "2026-11-19"
+  ],
+  "/coffee/vertuo-light/": [
+    "693ed7d1",
+    "2026-11-19"
+  ],
+  "/coffee/water-filter/": [
+    "9f2f0c41",
+    "2026-11-19"
+  ],
+  "/coffee/water-tank/": [
+    "14787b68",
+    "2026-11-19"
+  ],
+  "/dishwasher/": [
+    "7b132dad",
+    "2026-11-19"
+  ],
+  "/dishwasher/auto/": [
+    "be36d20c",
+    "2026-11-19"
+  ],
+  "/dishwasher/delay-start/": [
+    "59517657",
+    "2026-11-19"
+  ],
+  "/dishwasher/eco/": [
+    "8ef40857",
+    "2026-11-19"
+  ],
+  "/dishwasher/extra-dry/": [
+    "2e51d9ad",
+    "2026-11-19"
+  ],
+  "/dishwasher/glass/": [
+    "e4257c2b",
+    "2026-11-19"
+  ],
+  "/dishwasher/half-load/": [
+    "1407e2a7",
+    "2026-11-19"
+  ],
+  "/dishwasher/hygiene/": [
+    "ecae8d91",
+    "2026-11-19"
+  ],
+  "/dishwasher/intensive/": [
+    "9f76c9fd",
+    "2026-11-19"
+  ],
+  "/dishwasher/machine-care/": [
+    "bc88b253",
+    "2026-11-19"
+  ],
+  "/dishwasher/pre-rinse/": [
+    "cf3b358c",
+    "2026-11-19"
+  ],
+  "/dishwasher/quick/": [
+    "e456bc5e",
+    "2026-11-19"
+  ],
+  "/dishwasher/rinse-aid/": [
+    "9be2164f",
+    "2026-11-19"
+  ],
+  "/dishwasher/salt/": [
+    "57a7b55c",
+    "2026-11-19"
+  ],
+  "/dishwasher/water-tap/": [
+    "696cfe42",
+    "2026-11-19"
+  ],
+  "/dryer/": [
+    "ba9605b7",
+    "2026-11-19"
+  ],
+  "/dryer/anti-crease/": [
+    "4827e70f",
+    "2026-11-19"
+  ],
+  "/dryer/clean-condenser/": [
+    "c34f02d3",
+    "2026-11-19"
+  ],
+  "/dryer/clean-lint-filter/": [
+    "f8b4713c",
+    "2026-11-19"
+  ],
+  "/dryer/cupboard-dry/": [
+    "89a20615",
+    "2026-11-19"
+  ],
+  "/dryer/empty-water/": [
+    "6cb7f356",
+    "2026-11-19"
+  ],
+  "/dryer/extra-dry/": [
+    "7815481c",
+    "2026-11-19"
+  ],
+  "/dryer/iron-dry/": [
+    "cdc03919",
+    "2026-11-19"
+  ],
+  "/dryer/low-heat/": [
+    "702779ef",
+    "2026-11-19"
+  ],
+  "/dryer/timed-dry/": [
+    "f5e3fd4a",
+    "2026-11-19"
+  ],
+  "/ev/": [
+    "4420f78d",
+    "2026-11-19"
+  ],
+  "/ev/avas-off/": [
+    "a0ab74c7",
+    "2026-11-19"
+  ],
+  "/ev/b-mode/": [
+    "2460e6b5",
+    "2026-11-19"
+  ],
+  "/ev/battery-fault/": [
+    "4ba3ccb9",
+    "2026-11-19"
+  ],
+  "/ev/battery-overheat/": [
+    "667e2644",
+    "2026-11-19"
+  ],
+  "/ev/charge-mode/": [
+    "f9369597",
+    "2026-11-19"
+  ],
+  "/ev/charging-cable-connected/": [
+    "c72a72ed",
+    "2026-11-19"
+  ],
+  "/ev/charging/": [
+    "5e520ead",
+    "2026-11-19"
+  ],
+  "/ev/cold-battery/": [
+    "ab340cf7",
+    "2026-11-19"
+  ],
+  "/ev/ev-mode/": [
+    "7d9002b3",
+    "2026-11-19"
+  ],
+  "/ev/low-battery/": [
+    "49fa758c",
+    "2026-11-19"
+  ],
+  "/ev/ready-to-drive/": [
+    "e249c55d",
+    "2026-11-19"
+  ],
+  "/ev/ready/": [
+    "92d72e3f",
+    "2026-11-19"
+  ],
+  "/ev/system-fault/": [
+    "7b1c2c04",
+    "2026-11-19"
+  ],
+  "/ev/turtle-mode/": [
+    "69ee580a",
+    "2026-11-19"
+  ],
+  "/fridge/": [
+    "7b8186be",
+    "2026-11-19"
+  ],
+  "/fridge/alarm-off/": [
+    "7d2edf72",
+    "2026-11-19"
+  ],
+  "/fridge/child-lock/": [
+    "e8910936",
+    "2026-11-19"
+  ],
+  "/fridge/climate-class/": [
+    "c9be4489",
+    "2026-11-19"
+  ],
+  "/fridge/dispenser-crushed-ice/": [
+    "ddd448a3",
+    "2026-11-19"
+  ],
+  "/fridge/dispenser-cubed-ice/": [
+    "dd353c82",
+    "2026-11-19"
+  ],
+  "/fridge/dispenser-water/": [
+    "651f55dd",
+    "2026-11-19"
+  ],
+  "/fridge/door-alarm/": [
+    "fd2034aa",
+    "2026-11-19"
+  ],
+  "/fridge/eco-mode/": [
+    "42b0651e",
+    "2026-11-19"
+  ],
+  "/fridge/fan/": [
+    "9ba71044",
+    "2026-11-19"
+  ],
+  "/fridge/freezer-four-star/": [
+    "004cce16",
+    "2026-11-19"
+  ],
+  "/fridge/freezer-one-star/": [
+    "c9cd6b34",
+    "2026-11-19"
+  ],
+  "/fridge/freezer-three-star/": [
+    "5d239c67",
+    "2026-11-19"
+  ],
+  "/fridge/freezer-two-star/": [
+    "05761c64",
+    "2026-11-19"
+  ],
+  "/fridge/holiday-mode/": [
+    "6e48f631",
+    "2026-11-19"
+  ],
+  "/fridge/humidity-slider/": [
+    "d7fdb70e",
+    "2026-11-19"
+  ],
+  "/fridge/ice-maker-off/": [
+    "606445a3",
+    "2026-11-19"
+  ],
+  "/fridge/no-frost/": [
+    "d587364a",
+    "2026-11-19"
+  ],
+  "/fridge/ok-indicator/": [
+    "44a52c00",
+    "2026-11-19"
+  ],
+  "/fridge/sabbath-mode/": [
+    "50eb8fd3",
+    "2026-11-19"
+  ],
+  "/fridge/super-cool/": [
+    "611ebc9d",
+    "2026-11-19"
+  ],
+  "/fridge/super-freeze/": [
+    "8395ab23",
+    "2026-11-19"
+  ],
+  "/fridge/temperature-alarm/": [
+    "4331f4cb",
+    "2026-11-19"
+  ],
+  "/fridge/water-filter/": [
+    "178f623b",
+    "2026-11-19"
+  ],
+  "/fridge/zero-degree-zone/": [
+    "20dec6f9",
+    "2026-11-19"
+  ],
+  "/heating/": [
+    "a5ba69bc",
+    "2026-11-19"
+  ],
+  "/heating/boost/": [
+    "57225b5d",
+    "2026-11-19"
+  ],
+  "/heating/comfort-eco/": [
+    "76ae76ae",
+    "2026-11-19"
+  ],
+  "/heating/eco-preheat/": [
+    "a3897d16",
+    "2026-11-19"
+  ],
+  "/heating/flame/": [
+    "f692b001",
+    "2026-11-19"
+  ],
+  "/heating/flashing-symbol/": [
+    "0b07d4c0",
+    "2026-11-19"
+  ],
+  "/heating/frost-protection/": [
+    "ec38451b",
+    "2026-11-19"
+  ],
+  "/heating/heat-waves/": [
+    "1e9122ba",
+    "2026-11-19"
+  ],
+  "/heating/holiday/": [
+    "cbad37a3",
+    "2026-11-19"
+  ],
+  "/heating/hot-water-cylinder/": [
+    "7deb0622",
+    "2026-11-19"
+  ],
+  "/heating/hot-water-tap/": [
+    "83bdb028",
+    "2026-11-19"
+  ],
+  "/heating/lockout-reset/": [
+    "7f143a0e",
+    "2026-11-19"
+  ],
+  "/heating/low-pressure/": [
+    "15671c56",
+    "2026-11-19"
+  ],
+  "/heating/radiator-symbol/": [
+    "5d95b1f8",
+    "2026-11-19"
+  ],
+  "/heating/service/": [
+    "c2869829",
+    "2026-11-19"
+  ],
+  "/heating/thermostat-flame/": [
+    "45431fd7",
+    "2026-11-19"
+  ],
+  "/heating/trv/": [
+    "7ed6d6fa",
+    "2026-11-19"
+  ],
+  "/keyboard/": [
+    "7f8ce24f",
+    "2026-11-19"
+  ],
+  "/keyboard/caps-lock/": [
+    "83ed1683",
+    "2026-11-19"
+  ],
+  "/keyboard/command/": [
+    "b8075788",
+    "2026-11-19"
+  ],
+  "/keyboard/control/": [
+    "72812ec7",
+    "2026-11-19"
+  ],
+  "/keyboard/delete/": [
+    "7bcd4aec",
+    "2026-11-19"
+  ],
+  "/keyboard/dictation/": [
+    "0b993bf1",
+    "2026-11-19"
+  ],
+  "/keyboard/do-not-disturb/": [
+    "cbd47931",
+    "2026-11-19"
+  ],
+  "/keyboard/eject/": [
+    "a642201f",
+    "2026-11-19"
+  ],
+  "/keyboard/escape/": [
+    "8644b95f",
+    "2026-11-19"
+  ],
+  "/keyboard/forward-delete/": [
+    "b6cf7305",
+    "2026-11-19"
+  ],
+  "/keyboard/globe-fn/": [
+    "5857a6cb",
+    "2026-11-19"
+  ],
+  "/keyboard/home-end/": [
+    "5a2ad03d",
+    "2026-11-19"
+  ],
+  "/keyboard/insert/": [
+    "71910c66",
+    "2026-11-19"
+  ],
+  "/keyboard/menu/": [
+    "c1fdc5c0",
+    "2026-11-19"
+  ],
+  "/keyboard/mission-control/": [
+    "937f07c8",
+    "2026-11-19"
+  ],
+  "/keyboard/num-lock/": [
+    "9585dd72",
+    "2026-11-19"
+  ],
+  "/keyboard/option/": [
+    "947d873c",
+    "2026-11-19"
+  ],
+  "/keyboard/page-up-down/": [
+    "5a495e86",
+    "2026-11-19"
+  ],
+  "/keyboard/pause-break/": [
+    "5e3ca370",
+    "2026-11-19"
+  ],
+  "/keyboard/print-screen/": [
+    "56a935c1",
+    "2026-11-19"
+  ],
+  "/keyboard/return/": [
+    "8d5b51e1",
+    "2026-11-19"
+  ],
+  "/keyboard/scroll-lock/": [
+    "bff1ec4e",
+    "2026-11-19"
+  ],
+  "/keyboard/shift/": [
+    "2a1c5995",
+    "2026-11-19"
+  ],
+  "/keyboard/spotlight/": [
+    "8871f87d",
+    "2026-11-19"
+  ],
+  "/keyboard/tab/": [
+    "731f2b13",
+    "2026-11-19"
+  ],
+  "/keyboard/windows/": [
+    "2bd533e9",
+    "2026-11-19"
+  ],
+  "/laundry/": [
+    "27f0e90d",
+    "2026-11-19"
+  ],
+  "/laundry/bleach/": [
+    "24dfa6e2",
+    "2026-11-19"
+  ],
+  "/laundry/do-not-bleach/": [
+    "93a1ba4f",
+    "2026-11-19"
+  ],
+  "/laundry/do-not-dry-clean/": [
+    "2fc734f3",
+    "2026-11-19"
+  ],
+  "/laundry/do-not-iron/": [
+    "7cbd614e",
+    "2026-11-19"
+  ],
+  "/laundry/do-not-tumble-dry/": [
+    "4c36bad3",
+    "2026-11-19"
+  ],
+  "/laundry/do-not-wash/": [
+    "5d1648b2",
+    "2026-11-19"
+  ],
+  "/laundry/do-not-wring/": [
+    "5ff9413f",
+    "2026-11-19"
+  ],
+  "/laundry/drip-dry/": [
+    "5ee79ea6",
+    "2026-11-19"
+  ],
+  "/laundry/drip-line-dry/": [
+    "8e8cf39b",
+    "2026-11-19"
+  ],
+  "/laundry/dry-clean-f/": [
+    "3843db69",
+    "2026-11-19"
+  ],
+  "/laundry/dry-clean-p/": [
+    "c5a34745",
+    "2026-11-19"
+  ],
+  "/laundry/dry-clean/": [
+    "0eaf62ec",
+    "2026-11-19"
+  ],
+  "/laundry/dry-flat/": [
+    "7a27ff6e",
+    "2026-11-19"
+  ],
+  "/laundry/dry-in-shade/": [
+    "f4e29c26",
+    "2026-11-19"
+  ],
+  "/laundry/hand-wash/": [
+    "d57d94f5",
+    "2026-11-19"
+  ],
+  "/laundry/iron-high/": [
+    "c751f4c0",
+    "2026-11-19"
+  ],
+  "/laundry/iron-low/": [
+    "d2e2e7dd",
+    "2026-11-19"
+  ],
+  "/laundry/iron-medium/": [
+    "113b9f29",
+    "2026-11-19"
+  ],
+  "/laundry/line-dry-vertical/": [
+    "178ad3b8",
+    "2026-11-19"
+  ],
+  "/laundry/line-dry/": [
+    "22e62ea7",
+    "2026-11-19"
+  ],
+  "/laundry/machine-wash/": [
+    "a983b7f8",
+    "2026-11-19"
+  ],
+  "/laundry/no-steam/": [
+    "3f2da14b",
+    "2026-11-19"
+  ],
+  "/laundry/non-chlorine-bleach/": [
+    "d4c175b7",
+    "2026-11-19"
+  ],
+  "/laundry/tumble-dry-low/": [
+    "b30c87c3",
+    "2026-11-19"
+  ],
+  "/laundry/tumble-dry-no-heat/": [
+    "b7199250",
+    "2026-11-19"
+  ],
+  "/laundry/tumble-dry-normal/": [
+    "ba5f82df",
+    "2026-11-19"
+  ],
+  "/laundry/tumble-dry/": [
+    "50217a3c",
+    "2026-11-19"
+  ],
+  "/laundry/wash-30/": [
+    "ac360a60",
+    "2026-11-19"
+  ],
+  "/laundry/wash-40/": [
+    "f34626e0",
+    "2026-11-19"
+  ],
+  "/laundry/wash-60/": [
+    "ef5681bc",
+    "2026-11-19"
+  ],
+  "/laundry/wash-95/": [
+    "05802d57",
+    "2026-11-19"
+  ],
+  "/laundry/wash-gentle/": [
+    "aef9b526",
+    "2026-11-19"
+  ],
+  "/laundry/wash-very-gentle/": [
+    "0c3b5f49",
+    "2026-11-19"
+  ],
+  "/laundry/wet-clean-w/": [
+    "4b3881b3",
+    "2026-11-19"
+  ],
+  "/medicine/": [
+    "3a7b6660",
+    "2026-11-19"
+  ],
+  "/medicine/aed/": [
+    "8f4e9115",
+    "2026-11-19"
+  ],
+  "/medicine/biohazard/": [
+    "8b9b438c",
+    "2026-11-19"
+  ],
+  "/medicine/black-triangle/": [
+    "0039e547",
+    "2026-11-19"
+  ],
+  "/medicine/caution/": [
+    "f68048aa",
+    "2026-11-19"
+  ],
+  "/medicine/date-of-manufacture/": [
+    "bc4a2fe4",
+    "2026-11-19"
+  ],
+  "/medicine/do-not-reuse/": [
+    "9a3d0c22",
+    "2026-11-19"
+  ],
+  "/medicine/driving-warning/": [
+    "ca9d0632",
+    "2026-11-19"
+  ],
+  "/medicine/drowsiness/": [
+    "4b2db803",
+    "2026-11-19"
+  ],
+  "/medicine/first-aid/": [
+    "8db4a360",
+    "2026-11-19"
+  ],
+  "/medicine/latex/": [
+    "1d5eba2f",
+    "2026-11-19"
+  ],
+  "/medicine/lot/": [
+    "b5bc2f84",
+    "2026-11-19"
+  ],
+  "/medicine/manufacturer/": [
+    "30268d61",
+    "2026-11-19"
+  ],
+  "/medicine/medical-device/": [
+    "738f8f30",
+    "2026-11-19"
+  ],
+  "/medicine/mri/": [
+    "21a3d1b5",
+    "2026-11-19"
+  ],
+  "/medicine/no-alcohol/": [
+    "8781394b",
+    "2026-11-19"
+  ],
+  "/medicine/package-damaged/": [
+    "e8adf2af",
+    "2026-11-19"
+  ],
+  "/medicine/pill-calendar/": [
+    "10db371f",
+    "2026-11-19"
+  ],
+  "/medicine/pregnancy-warning/": [
+    "63cb8980",
+    "2026-11-19"
+  ],
+  "/medicine/rx-only/": [
+    "b27d35b0",
+    "2026-11-19"
+  ],
+  "/medicine/sterile/": [
+    "131bc7d1",
+    "2026-11-19"
+  ],
+  "/medicine/temperature-limit/": [
+    "79dd984a",
+    "2026-11-19"
+  ],
+  "/medicine/test-count/": [
+    "0cd9bb76",
+    "2026-11-19"
+  ],
+  "/medicine/test-lines/": [
+    "ba802213",
+    "2026-11-19"
+  ],
+  "/medicine/type-bf/": [
+    "fadf3e72",
+    "2026-11-19"
+  ],
+  "/medicine/uk-legal-category/": [
+    "9d562acc",
+    "2026-11-19"
+  ],
+  "/medicine/use-by/": [
+    "1ef09269",
+    "2026-11-19"
+  ],
+  "/oven/": [
+    "8e717441",
+    "2026-11-19"
+  ],
+  "/oven/air-fry/": [
+    "138322ae",
+    "2026-11-19"
+  ],
+  "/oven/auto-flashing/": [
+    "95b42053",
+    "2026-11-19"
+  ],
+  "/oven/bottom-heat/": [
+    "7974d753",
+    "2026-11-19"
+  ],
+  "/oven/child-lock/": [
+    "5c4bdd97",
+    "2026-11-19"
+  ],
+  "/oven/conventional/": [
+    "9207ec89",
+    "2026-11-19"
+  ],
+  "/oven/cook-time/": [
+    "eb1c45e2",
+    "2026-11-19"
+  ],
+  "/oven/defrost/": [
+    "bdc1e71a",
+    "2026-11-19"
+  ],
+  "/oven/end-time/": [
+    "a36230c3",
+    "2026-11-19"
+  ],
+  "/oven/fan-assisted/": [
+    "3d34940a",
+    "2026-11-19"
+  ],
+  "/oven/fan-bottom-heat/": [
+    "1ee307d8",
+    "2026-11-19"
+  ],
+  "/oven/fan-grill/": [
+    "cfd645a8",
+    "2026-11-19"
+  ],
+  "/oven/fan-only/": [
+    "20f5a4d4",
+    "2026-11-19"
+  ],
+  "/oven/full-grill/": [
+    "336b94b8",
+    "2026-11-19"
+  ],
+  "/oven/half-grill/": [
+    "3b91a487",
+    "2026-11-19"
+  ],
+  "/oven/hob-boost/": [
+    "5354b290",
+    "2026-11-19"
+  ],
+  "/oven/hob-dual-zone/": [
+    "344d4137",
+    "2026-11-19"
+  ],
+  "/oven/hob-pan-detect/": [
+    "c8153b4e",
+    "2026-11-19"
+  ],
+  "/oven/hob-residual-heat/": [
+    "0dc97f39",
+    "2026-11-19"
+  ],
+  "/oven/hob-ring-selector/": [
+    "ec48d9de",
+    "2026-11-19"
+  ],
+  "/oven/induction-compatible/": [
+    "1523e4b6",
+    "2026-11-19"
+  ],
+  "/oven/keep-warm/": [
+    "583124bb",
+    "2026-11-19"
+  ],
+  "/oven/light/": [
+    "93323b8b",
+    "2026-11-19"
+  ],
+  "/oven/manual/": [
+    "baa93b5e",
+    "2026-11-19"
+  ],
+  "/oven/microwave-defrost/": [
+    "1e3a3229",
+    "2026-11-19"
+  ],
+  "/oven/microwave-grill/": [
+    "b40ef57c",
+    "2026-11-19"
+  ],
+  "/oven/microwave-power/": [
+    "ab9818f9",
+    "2026-11-19"
+  ],
+  "/oven/proving/": [
+    "40d00394",
+    "2026-11-19"
+  ],
+  "/oven/rapid-preheat/": [
+    "31ae4801",
+    "2026-11-19"
+  ],
+  "/oven/self-clean/": [
+    "4a28a031",
+    "2026-11-19"
+  ],
+  "/oven/steam/": [
+    "9e3a6256",
+    "2026-11-19"
+  ],
+  "/oven/timer-bell/": [
+    "b5bb0232",
+    "2026-11-19"
+  ],
+  "/oven/top-heat/": [
+    "30bb5327",
+    "2026-11-19"
+  ],
+  "/oven/true-fan/": [
+    "fffd3e6c",
+    "2026-11-19"
+  ],
+  "/packaging/": [
+    "864c0552",
+    "2026-11-19"
+  ],
+  "/packaging/ce-mark/": [
+    "74b86b23",
+    "2026-11-19"
+  ],
+  "/packaging/dishwasher-safe/": [
+    "fa260739",
+    "2026-11-19"
+  ],
+  "/packaging/do-not-stack/": [
+    "7d57fe2e",
+    "2026-11-19"
+  ],
+  "/packaging/estimated/": [
+    "7f32bb17",
+    "2026-11-19"
+  ],
+  "/packaging/food-safe/": [
+    "030466f8",
+    "2026-11-19"
+  ],
+  "/packaging/fragile/": [
+    "8ee4a379",
+    "2026-11-19"
+  ],
+  "/packaging/freezer-safe/": [
+    "a5ad9e92",
+    "2026-11-19"
+  ],
+  "/packaging/ghs-corrosive/": [
+    "a25a9b09",
+    "2026-11-19"
+  ],
+  "/packaging/ghs-environment/": [
+    "fb324f4f",
+    "2026-11-19"
+  ],
+  "/packaging/ghs-exclamation/": [
+    "fc4ea33e",
+    "2026-11-19"
+  ],
+  "/packaging/ghs-flammable/": [
+    "9221b63c",
+    "2026-11-19"
+  ],
+  "/packaging/ghs-health/": [
+    "a10b6522",
+    "2026-11-19"
+  ],
+  "/packaging/keep-dry/": [
+    "371a2340",
+    "2026-11-19"
+  ],
+  "/packaging/microwave-safe/": [
+    "317b157f",
+    "2026-11-19"
+  ],
+  "/packaging/oven-safe/": [
+    "0b46a679",
+    "2026-11-19"
+  ],
+  "/packaging/pao/": [
+    "c9c772a6",
+    "2026-11-19"
+  ],
+  "/packaging/this-way-up/": [
+    "eaf3e089",
+    "2026-11-19"
+  ],
+  "/packaging/ukca/": [
+    "96b33bab",
+    "2026-11-19"
+  ],
+  "/packaging/under-3/": [
+    "8c997e44",
+    "2026-11-19"
+  ],
+  "/power/": [
+    "51784632",
+    "2026-11-19"
+  ],
+  "/power/ac/": [
+    "ccbffe3e",
+    "2026-11-19"
+  ],
+  "/power/ccc/": [
+    "2fcf508c",
+    "2026-11-19"
+  ],
+  "/power/dc/": [
+    "1299fcfe",
+    "2026-11-19"
+  ],
+  "/power/double-insulated/": [
+    "517a5355",
+    "2026-11-19"
+  ],
+  "/power/efficiency-level/": [
+    "7e420636",
+    "2026-11-19"
+  ],
+  "/power/fcc/": [
+    "3ea121ec",
+    "2026-11-19"
+  ],
+  "/power/fuse/": [
+    "bd501aea",
+    "2026-11-19"
+  ],
+  "/power/high-voltage/": [
+    "28d16da4",
+    "2026-11-19"
+  ],
+  "/power/hot-surface/": [
+    "26cd06fa",
+    "2026-11-19"
+  ],
+  "/power/indoor-use-only/": [
+    "4b4784bd",
+    "2026-11-19"
+  ],
+  "/power/polarity/": [
+    "d35cb87a",
+    "2026-11-19"
+  ],
+  "/power/protective-earth/": [
+    "cfaeaef1",
+    "2026-11-19"
+  ],
+  "/power/pse/": [
+    "22634d3d",
+    "2026-11-19"
+  ],
+  "/power/rcm/": [
+    "4d2173f0",
+    "2026-11-19"
+  ],
+  "/power/read-manual/": [
+    "006edb99",
+    "2026-11-19"
+  ],
+  "/power/safety-transformer/": [
+    "b3f01658",
+    "2026-11-19"
+  ],
+  "/power/ul/": [
+    "06cd8cc6",
+    "2026-11-19"
+  ],
+  "/recycling/": [
+    "5b02996d",
+    "2026-11-19"
+  ],
+  "/recycling/alu/": [
+    "2d88abc0",
+    "2026-11-19"
+  ],
+  "/recycling/batteries/": [
+    "fca0d174",
+    "2026-11-19"
+  ],
+  "/recycling/code-aluminium/": [
+    "411d37d5",
+    "2026-11-19"
+  ],
+  "/recycling/code-carton/": [
+    "3bf9dafb",
+    "2026-11-19"
+  ],
+  "/recycling/code-glass/": [
+    "3e98e8be",
+    "2026-11-19"
+  ],
+  "/recycling/code-paper/": [
+    "932bba81",
+    "2026-11-19"
+  ],
+  "/recycling/code-steel/": [
+    "6c9931a6",
+    "2026-11-19"
+  ],
+  "/recycling/fsc/": [
+    "1fd2b99e",
+    "2026-11-19"
+  ],
+  "/recycling/glass-bottle-bank/": [
+    "56443e2a",
+    "2026-11-19"
+  ],
+  "/recycling/green-dot/": [
+    "439281d4",
+    "2026-11-19"
+  ],
+  "/recycling/metal-recycles-forever/": [
+    "4ed13448",
+    "2026-11-19"
+  ],
+  "/recycling/mobius-loop-percent/": [
+    "b16843af",
+    "2026-11-19"
+  ],
+  "/recycling/mobius-loop/": [
+    "d7b0ffbc",
+    "2026-11-19"
+  ],
+  "/recycling/ok-compost-home/": [
+    "ba2d95ae",
+    "2026-11-19"
+  ],
+  "/recycling/ok-compost-industrial/": [
+    "8b60b896",
+    "2026-11-19"
+  ],
+  "/recycling/oprl-bags-at-supermarket/": [
+    "09846b5f",
+    "2026-11-19"
+  ],
+  "/recycling/oprl-dont-recycle/": [
+    "4ccf537f",
+    "2026-11-19"
+  ],
+  "/recycling/oprl-lid-on/": [
+    "ab9cf4f5",
+    "2026-11-19"
+  ],
+  "/recycling/oprl-recycle/": [
+    "0796eb90",
+    "2026-11-19"
+  ],
+  "/recycling/oprl-remove-film/": [
+    "345d5e5c",
+    "2026-11-19"
+  ],
+  "/recycling/oprl-rinse/": [
+    "f138e8fa",
+    "2026-11-19"
+  ],
+  "/recycling/pefc/": [
+    "9ffc18d0",
+    "2026-11-19"
+  ],
+  "/recycling/pfand/": [
+    "2b9a8e25",
+    "2026-11-19"
+  ],
+  "/recycling/recycled-paperboard/": [
+    "db66090a",
+    "2026-11-19"
+  ],
+  "/recycling/resin-1/": [
+    "e6033cc3",
+    "2026-11-19"
+  ],
+  "/recycling/resin-2/": [
+    "f41e118f",
+    "2026-11-19"
+  ],
+  "/recycling/resin-3/": [
+    "087e0a97",
+    "2026-11-19"
+  ],
+  "/recycling/resin-4/": [
+    "7c7fb718",
+    "2026-11-19"
+  ],
+  "/recycling/resin-5/": [
+    "76c99867",
+    "2026-11-19"
+  ],
+  "/recycling/resin-6/": [
+    "b649814a",
+    "2026-11-19"
+  ],
+  "/recycling/resin-7/": [
+    "bb949579",
+    "2026-11-19"
+  ],
+  "/recycling/seedling/": [
+    "16a2bab4",
+    "2026-11-19"
+  ],
+  "/recycling/single-use-plastic/": [
+    "bc43909a",
+    "2026-11-19"
+  ],
+  "/recycling/tidyman/": [
+    "9c86da52",
+    "2026-11-19"
+  ],
+  "/recycling/triman/": [
+    "acfed7d8",
+    "2026-11-19"
+  ],
+  "/recycling/weee/": [
+    "63727bc8",
+    "2026-11-19"
+  ],
+  "/tech/": [
+    "8e311b1e",
+    "2026-11-19"
+  ],
+  "/tech/airplane-mode/": [
+    "fb927a50",
+    "2026-11-19"
+  ],
+  "/tech/airplay/": [
+    "dfa2db51",
+    "2026-11-19"
+  ],
+  "/tech/alarm/": [
+    "a7a6f4bc",
+    "2026-11-19"
+  ],
+  "/tech/battery-charging/": [
+    "2ba6ffbf",
+    "2026-11-19"
+  ],
+  "/tech/battery-saver/": [
+    "a304dd8b",
+    "2026-11-19"
+  ],
+  "/tech/bluetooth/": [
+    "dfe272c5",
+    "2026-11-19"
+  ],
+  "/tech/brightness/": [
+    "60ed5efb",
+    "2026-11-19"
+  ],
+  "/tech/call-forwarding/": [
+    "650891c3",
+    "2026-11-19"
+  ],
+  "/tech/camera-in-use/": [
+    "bb561797",
+    "2026-11-19"
+  ],
+  "/tech/carplay/": [
+    "6baeaad7",
+    "2026-11-19"
+  ],
+  "/tech/cast/": [
+    "0929b7d6",
+    "2026-11-19"
+  ],
+  "/tech/contactless/": [
+    "a2637b1d",
+    "2026-11-19"
+  ],
+  "/tech/data-arrows/": [
+    "a10ad1f2",
+    "2026-11-19"
+  ],
+  "/tech/data-saver/": [
+    "b3829e95",
+    "2026-11-19"
+  ],
+  "/tech/dnd-android/": [
+    "dc7fbcef",
+    "2026-11-19"
+  ],
+  "/tech/do-not-disturb/": [
+    "01ac99b7",
+    "2026-11-19"
+  ],
+  "/tech/dual-sim/": [
+    "af4397e0",
+    "2026-11-19"
+  ],
+  "/tech/eject/": [
+    "fb408425",
+    "2026-11-19"
+  ],
+  "/tech/ethernet/": [
+    "731394cc",
+    "2026-11-19"
+  ],
+  "/tech/hdmi/": [
+    "ae39d2dd",
+    "2026-11-19"
+  ],
+  "/tech/headphones/": [
+    "da720380",
+    "2026-11-19"
+  ],
+  "/tech/hearing-loop/": [
+    "2fcb62f4",
+    "2026-11-19"
+  ],
+  "/tech/hotspot/": [
+    "12dd6e0e",
+    "2026-11-19"
+  ],
+  "/tech/keyboard-backlight/": [
+    "c9205db4",
+    "2026-11-19"
+  ],
+  "/tech/location/": [
+    "1e10f077",
+    "2026-11-19"
+  ],
+  "/tech/mic-in-use/": [
+    "f4c30814",
+    "2026-11-19"
+  ],
+  "/tech/missed-call/": [
+    "c83602d5",
+    "2026-11-19"
+  ],
+  "/tech/network-type/": [
+    "be3dff63",
+    "2026-11-19"
+  ],
+  "/tech/no-signal/": [
+    "63d4b61f",
+    "2026-11-19"
+  ],
+  "/tech/padlock/": [
+    "3d8efa7b",
+    "2026-11-19"
+  ],
+  "/tech/power-switch/": [
+    "d7e85482",
+    "2026-11-19"
+  ],
+  "/tech/power/": [
+    "93238da4",
+    "2026-11-19"
+  ],
+  "/tech/roaming/": [
+    "e429c844",
+    "2026-11-19"
+  ],
+  "/tech/rotation-lock/": [
+    "4a17c99e",
+    "2026-11-19"
+  ],
+  "/tech/satellite/": [
+    "b3215226",
+    "2026-11-19"
+  ],
+  "/tech/silent/": [
+    "8a8566f5",
+    "2026-11-19"
+  ],
+  "/tech/sos/": [
+    "ea03c961",
+    "2026-11-19"
+  ],
+  "/tech/sync/": [
+    "01f52ff7",
+    "2026-11-19"
+  ],
+  "/tech/thunderbolt/": [
+    "d6c2b3c8",
+    "2026-11-19"
+  ],
+  "/tech/time-bubble/": [
+    "9165c1c0",
+    "2026-11-19"
+  ],
+  "/tech/tty/": [
+    "f2524e92",
+    "2026-11-19"
+  ],
+  "/tech/usb-c/": [
+    "7d54b58f",
+    "2026-11-19"
+  ],
+  "/tech/usb/": [
+    "108726a1",
+    "2026-11-19"
+  ],
+  "/tech/vibrate/": [
+    "98c9c83b",
+    "2026-11-19"
+  ],
+  "/tech/volte/": [
+    "daffbd9b",
+    "2026-11-19"
+  ],
+  "/tech/vpn/": [
+    "707613e5",
+    "2026-11-19"
+  ],
+  "/tech/wifi-calling/": [
+    "1db04509",
+    "2026-11-19"
+  ],
+  "/tech/wifi-no-internet/": [
+    "d7c70355",
+    "2026-11-19"
+  ],
+  "/tech/wifi/": [
+    "d2e026b4",
+    "2026-11-19"
+  ],
+  "/toilet/": [
+    "672b0d4b",
+    "2026-11-19"
+  ],
+  "/toilet/bidet/": [
+    "2ddc2253",
+    "2026-11-19"
+  ],
+  "/toilet/deodoriser/": [
+    "15db581a",
+    "2026-11-19"
+  ],
+  "/toilet/dryer/": [
+    "e70e2e04",
+    "2026-11-19"
+  ],
+  "/toilet/emergency-call/": [
+    "580dd18e",
+    "2026-11-19"
+  ],
+  "/toilet/flush-button/": [
+    "e60b6419",
+    "2026-11-19"
+  ],
+  "/toilet/flush-full/": [
+    "e7a19ea4",
+    "2026-11-19"
+  ],
+  "/toilet/flush-sensor/": [
+    "229fa596",
+    "2026-11-19"
+  ],
+  "/toilet/flush-small/": [
+    "d02ecffd",
+    "2026-11-19"
+  ],
+  "/toilet/lid-open-close/": [
+    "d5fdf8cd",
+    "2026-11-19"
+  ],
+  "/toilet/nozzle-clean/": [
+    "f5bd6e3b",
+    "2026-11-19"
+  ],
+  "/toilet/nozzle-position/": [
+    "6c2ae566",
+    "2026-11-19"
+  ],
+  "/toilet/oscillating-wash/": [
+    "b360277a",
+    "2026-11-19"
+  ],
+  "/toilet/power-saving/": [
+    "8c6aafa6",
+    "2026-11-19"
+  ],
+  "/toilet/pulsating-wash/": [
+    "4054b7ed",
+    "2026-11-19"
+  ],
+  "/toilet/rear-wash/": [
+    "1bc02833",
+    "2026-11-19"
+  ],
+  "/toilet/seat-open-close/": [
+    "9ef9dbe1",
+    "2026-11-19"
+  ],
+  "/toilet/seat-temperature/": [
+    "2a40da85",
+    "2026-11-19"
+  ],
+  "/toilet/soft-wide-wash/": [
+    "dd5dd6ef",
+    "2026-11-19"
+  ],
+  "/toilet/sound-masking/": [
+    "e03596ce",
+    "2026-11-19"
+  ],
+  "/toilet/stop/": [
+    "db98546c",
+    "2026-11-19"
+  ],
+  "/toilet/water-pressure/": [
+    "c0577d60",
+    "2026-11-19"
+  ],
+  "/toilet/water-temperature/": [
+    "91080619",
+    "2026-11-19"
+  ],
+  "/washer/": [
+    "a7da8d4c",
+    "2026-11-19"
+  ],
+  "/washer/add-garment/": [
+    "3e327915",
+    "2026-11-19"
+  ],
+  "/washer/child-lock/": [
+    "750971c9",
+    "2026-11-19"
+  ],
+  "/washer/cotton/": [
+    "2c0e1829",
+    "2026-11-19"
+  ],
+  "/washer/delay-start/": [
+    "2e642c83",
+    "2026-11-19"
+  ],
+  "/washer/door-locked/": [
+    "0f101196",
+    "2026-11-19"
+  ],
+  "/washer/drain/": [
+    "3b13aae9",
+    "2026-11-19"
+  ],
+  "/washer/drum-clean/": [
+    "84263f32",
+    "2026-11-19"
+  ],
+  "/washer/eco-40-60/": [
+    "5624a784",
+    "2026-11-19"
+  ],
+  "/washer/extra-rinse/": [
+    "9b5eaecd",
+    "2026-11-19"
+  ],
+  "/washer/hand-wash/": [
+    "f2e19aaa",
+    "2026-11-19"
+  ],
+  "/washer/no-spin/": [
+    "d3918a91",
+    "2026-11-19"
+  ],
+  "/washer/prewash/": [
+    "4183124c",
+    "2026-11-19"
+  ],
+  "/washer/quick-wash/": [
+    "a09fc96b",
+    "2026-11-19"
+  ],
+  "/washer/rinse-hold/": [
+    "842ff726",
+    "2026-11-19"
+  ],
+  "/washer/rinse/": [
+    "ba03e638",
+    "2026-11-19"
+  ],
+  "/washer/softener/": [
+    "235cae1a",
+    "2026-11-19"
+  ],
+  "/washer/spin/": [
+    "19a64dc0",
+    "2026-11-19"
+  ],
+  "/washer/steam/": [
+    "fd103bf2",
+    "2026-11-19"
+  ],
+  "/washer/synthetics/": [
+    "b2ae4db2",
+    "2026-11-19"
+  ],
+  "/washer/temperature/": [
+    "0bf90f14",
+    "2026-11-19"
+  ],
+  "/washer/water-supply-fault/": [
+    "b380d48a",
+    "2026-11-19"
+  ],
+  "/washer/wool/": [
+    "a7c84199",
+    "2026-11-19"
+  ]
+}

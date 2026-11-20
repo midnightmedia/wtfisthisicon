@@ -506,6 +506,10 @@ a { color: inherit; }
 .ico { display: block; overflow: visible; }
 .ico text { font-family: var(--font); font-weight: 700; fill: currentColor; stroke: none; text-anchor: middle; }
 .ico .knock { fill: var(--tile-bg); stroke: var(--tile-bg); }
+/* Icon pages show the symbol as an image file so image search can find it. The image has a margin
+   of 4 units round the 64-unit drawing, hence the 72/64 scale to line it up with the inline SVG. */
+.ico--img { scale: 1.125; object-fit: contain; }
+:root[data-theme="dark"] .ico--ink { filter: invert(1); }
 .tile.is-red   { color: var(--red); }
 .tile.is-amber { color: var(--amber); }
 .tile.is-green { color: var(--green); }

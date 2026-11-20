@@ -104,6 +104,7 @@ function pageHtml({ title, ogTitle, description, url, image, imageAlt, script, f
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icon-96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WTF is this icon?">
